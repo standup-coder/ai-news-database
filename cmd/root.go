@@ -12,12 +12,28 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "news4coder",
-	Short: "程序员新闻订阅 CLI 工具",
-	Long: `news4coder 是一个为程序员设计的新闻订阅命令行工具。
-它可以帮助你订阅技术网站，并通过 Bing 站内搜索快速获取最新内容。
+	Short: "程序员个人信息终端 - 高质量技术资讯大本营",
+	Long: `news4coder 是专为程序员设计的 LLM-Native 个人信息终端。
+汇聚全球高质量技术源，支持智能网页抓取、LLM 内容增强、
+智能策展和本地知识库 RAG 问答，帮助你实现技术信息的断舍离。
 
-官方新闻源快捷访问:
-  infoq       InfoQ 中文站热点清单
+核心命令:
+  sync        同步所有官方源文章到本地数据库（API + 智能抓取）
+  enrich      调用 LLM 生成摘要、标签和质量评分
+  curate      智能策展：生成今日必读清单
+  ask         基于本地知识库进行 RAG 问答
+  list        查看订阅列表或本地文章 (-a 查看文章)
+  inbox       进入 TUI 收件箱快速浏览
+  read        标记文章为已读
+  star        收藏文章
+  discard     丢弃文章
+  archive     批量归档已读文章
+  search      全文搜索本地文章
+  stats       查看订阅健康度
+  note        为文章添加笔记
+  tag         为文章添加标签
+  export      导出文章为 Markdown
+  cleanup     清理过期文章
 
 使用 "news4coder sources" 查看所有官方新闻源`,
 	// 关闭默认的未知命令错误，允许自定义处理

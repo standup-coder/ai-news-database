@@ -182,70 +182,24 @@ func (f *InfoQFetcher) parseResults(doc *goquery.Document) ([]search.SearchResul
 
 // generateDemoResults 生成演示数据
 func (f *InfoQFetcher) generateDemoResults() []search.SearchResult {
-	// 演示数据链接到 InfoQ 热点清单页面
-	hotlistURL := "https://www.infoq.cn/hotlist"
-	return []search.SearchResult{
-		{
-			Index:   1,
-			Title:   "2025年技术趋势：AI原生应用的崛起",
-			URL:     hotlistURL,
-			Snippet: "随着大语言模型的不断进化，AI原生应用正在改变软件开发的范式。本文探讨2025年AI技术的发展趋势和最佳实践。",
-		},
-		{
-			Index:   2,
-			Title:   "Kubernetes 1.30 新特性深度解析",
-			URL:     hotlistURL,
-			Snippet: "Kubernetes 最新版本带来了更强大的容器编排能力和安全性增强，包括改进的资源管理和新的调度策略。",
-		},
-		{
-			Index:   3,
-			Title:   "Go 1.24 泛型最佳实践",
-			URL:     hotlistURL,
-			Snippet: "深入探讨 Go 语言泛型的使用场景和最佳实践，帮助开发者写出更优雅、更高效的代码。",
-		},
-		{
-			Index:   4,
-			Title:   "微服务架构下的可观测性实践",
-			URL:     hotlistURL,
-			Snippet: "在复杂的微服务架构中，如何构建完善的可观测性体系？本文分享一线大厂的实践经验。",
-		},
-		{
-			Index:   5,
-			Title:   "前端性能优化：从60fps到120fps",
-			URL:     hotlistURL,
-			Snippet: "随着高刷新率屏幕的普及，前端性能优化面临新挑战。本文介绍如何实现流畅的120fps体验。",
-		},
-		{
-			Index:   6,
-			Title:   "Rust 在云原生领域的应用",
-			URL:     hotlistURL,
-			Snippet: "Rust 凭借其内存安全和高性能特性，正在云原生领域崭露头角。探索 Rust 在容器运行时和服务网格中的应用。",
-		},
-		{
-			Index:   7,
-			Title:   "数据库选型指南：2025版",
-			URL:     hotlistURL,
-			Snippet: "面对众多数据库产品，如何根据业务场景做出正确选择？本文提供全面的数据库选型指南。",
-		},
-		{
-			Index:   8,
-			Title:   "大规模分布式系统的一致性保证",
-			URL:     hotlistURL,
-			Snippet: "深入分析分布式系统中的一致性问题，介绍 Paxos、Raft 等共识算法的实际应用。",
-		},
-		{
-			Index:   9,
-			Title:   "eBPF：Linux内核可编程的未来",
-			URL:     hotlistURL,
-			Snippet: "eBPF 技术正在改变我们与 Linux 内核的交互方式，为性能监控、安全和网络带来革命性变化。",
-		},
-		{
-			Index:   10,
-			Title:   "DevOps 2025：平台工程的崛起",
-			URL:     hotlistURL,
-			Snippet: "平台工程正在成为 DevOps 演进的下一个阶段，了解如何构建开发者友好的内部平台。",
-		},
+	// 演示数据链接到 InfoQ 热点清单页面（使用锚点区分不同文章，避免 URL 去重冲突）
+	baseURL := "https://www.infoq.cn/hotlist"
+	results := []search.SearchResult{
+		{Index: 1, Title: "2025年技术趋势：AI原生应用的崛起", Snippet: "随着大语言模型的不断进化，AI原生应用正在改变软件开发的范式。本文探讨2025年AI技术的发展趋势和最佳实践。"},
+		{Index: 2, Title: "Kubernetes 1.30 新特性深度解析", Snippet: "Kubernetes 最新版本带来了更强大的容器编排能力和安全性增强，包括改进的资源管理和新的调度策略。"},
+		{Index: 3, Title: "Go 1.24 泛型最佳实践", Snippet: "深入探讨 Go 语言泛型的使用场景和最佳实践，帮助开发者写出更优雅、更高效的代码。"},
+		{Index: 4, Title: "微服务架构下的可观测性实践", Snippet: "在复杂的微服务架构中，如何构建完善的可观测性体系？本文分享一线大厂的实践经验。"},
+		{Index: 5, Title: "前端性能优化：从60fps到120fps", Snippet: "随着高刷新率屏幕的普及，前端性能优化面临新挑战。本文介绍如何实现流畅的120fps体验。"},
+		{Index: 6, Title: "Rust 在云原生领域的应用", Snippet: "Rust 凭借其内存安全和高性能特性，正在云原生领域崭露头角。探索 Rust 在容器运行时和服务网格中的应用。"},
+		{Index: 7, Title: "数据库选型指南：2025版", Snippet: "面对众多数据库产品，如何根据业务场景做出正确选择？本文提供全面的数据库选型指南。"},
+		{Index: 8, Title: "大规模分布式系统的一致性保证", Snippet: "深入分析分布式系统中的一致性问题，介绍 Paxos、Raft 等共识算法的实际应用。"},
+		{Index: 9, Title: "eBPF：Linux内核可编程的未来", Snippet: "eBPF 技术正在改变我们与 Linux 内核的交互方式，为性能监控、安全和网络带来革命性变化。"},
+		{Index: 10, Title: "DevOps 2025：平台工程的崛起", Snippet: "平台工程正在成为 DevOps 演进的下一个阶段，了解如何构建开发者友好的内部平台。"},
 	}
+	for i := range results {
+		results[i].URL = fmt.Sprintf("%s#demo-%d", baseURL, results[i].Index)
+	}
+	return results
 }
 
 // normalizeURL 规范化 URL
