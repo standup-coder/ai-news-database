@@ -13,8 +13,8 @@ import (
 
 // Enricher 内容增强器
 type Enricher struct {
-	llmClient  *llm.Client
-	jinaReader *crawler.JinaReader
+	llmClient  llm.LLMClient
+	reader     crawler.ContentReader
 	db         *db.DB
 	cfg        *config.LLMConfig
 }
@@ -29,11 +29,16 @@ type Result struct {
 
 // New 创建 Enricher 实例
 func New(database *db.DB, cfg *config.LLMConfig) *Enricher {
+	return NewWithDeps(database, cfg, llm.NewClient(cfg), crawler.NewJinaReader())
+}
+
+// NewWithDeps 创建 Enricher 实例（支持依赖注入，用于测试）
+func NewWithDeps(database *db.DB, cfg *config.LLMConfig, llmClient llm.LLMClient, reader crawler.ContentReader) *Enricher {
 	return &Enricher{
-		llmClient:  llm.NewClient(cfg),
-		jinaReader: crawler.NewJinaReader(),
-		db:         database,
-		cfg:        cfg,
+		llmClient: llmClient,
+		reader:    reader,
+		db:        database,
+		cfg:       cfg,
 	}
 }
 
@@ -43,7 +48,7 @@ func (e *Enricher) EnrichArticle(a *article.Article) (*Result, error) {
 	content := a.RawContent
 	if len(content) < 200 {
 		// 尝试用 Jina Reader 抓取正文
-		content = e.jinaReader.FetchWithFallback(a.URL)
+		content = e.reader.FetchWithFallback(a.URL)
 		if content != "" {
 			_ = e.db.UpdateRawContent(a.ID, content)
 		}

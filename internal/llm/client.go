@@ -11,6 +11,16 @@ import (
 	"time"
 )
 
+// LLMClient defines the interface for LLM operations
+type LLMClient interface {
+	Chat(messages []Message, maxTokens int) (string, error)
+	SimpleChat(prompt string, maxTokens int) (string, error)
+	GetEmbedding(text string) ([]float64, error)
+}
+
+// Ensure Client implements LLMClient
+var _ LLMClient = (*Client)(nil)
+
 // Client LLM HTTP 客户端
 type Client struct {
 	cfg    *config.LLMConfig

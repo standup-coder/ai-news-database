@@ -12,15 +12,20 @@ import (
 // RAG 检索增强生成器
 type RAG struct {
 	db        *db.DB
-	llmClient *llm.Client
+	llmClient llm.LLMClient
 	cfg       *config.LLMConfig
 }
 
 // New 创建 RAG 实例
 func New(database *db.DB, cfg *config.LLMConfig) *RAG {
+	return NewWithDeps(database, cfg, llm.NewClient(cfg))
+}
+
+// NewWithDeps 创建 RAG 实例（支持依赖注入，用于测试）
+func NewWithDeps(database *db.DB, cfg *config.LLMConfig, llmClient llm.LLMClient) *RAG {
 	return &RAG{
 		db:        database,
-		llmClient: llm.NewClient(cfg),
+		llmClient: llmClient,
 		cfg:       cfg,
 	}
 }

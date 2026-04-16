@@ -8,6 +8,15 @@ import (
 	"time"
 )
 
+// ContentReader defines the interface for fetching web content
+type ContentReader interface {
+	Fetch(url string) (string, error)
+	FetchWithFallback(url string) string
+}
+
+// Ensure JinaReader implements ContentReader
+var _ ContentReader = (*JinaReader)(nil)
+
 // JinaReader 使用 Jina AI Reader 提取网页正文
 type JinaReader struct {
 	client *http.Client

@@ -10,6 +10,13 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// Version 信息由 Makefile 在构建时注入
+var (
+	version   = "dev"
+	buildTime = "unknown"
+	gitCommit = "unknown"
+)
+
 var rootCmd = &cobra.Command{
 	Use:   "news4coder",
 	Short: "程序员个人信息终端 - 高质量技术资讯大本营",
@@ -36,6 +43,7 @@ var rootCmd = &cobra.Command{
   cleanup     清理过期文章
 
 使用 "news4coder sources" 查看所有官方新闻源`,
+	Version: fmt.Sprintf("%s (commit: %s, built: %s)", version, gitCommit, buildTime),
 	// 关闭默认的未知命令错误，允许自定义处理
 	SilenceErrors: true,
 	SilenceUsage:  true,

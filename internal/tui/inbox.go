@@ -3,7 +3,7 @@ package tui
 import (
 	"fmt"
 	"news4coder/internal/article"
-	"news4coder/internal/db"
+	"news4coder/internal/i18n"
 	"strings"
 
 	"github.com/charmbracelet/bubbles/key"
@@ -43,7 +43,7 @@ func DefaultKeyMap() KeyMap {
 
 // Model is the inbox TUI model
 type Model struct {
-	db       *db.DB
+	db       DB
 	articles []article.Article
 	cursor   int
 	filter   article.ReadStatus // empty = all
@@ -55,7 +55,7 @@ type Model struct {
 }
 
 // NewModel creates a new inbox model
-func NewModel(database *db.DB) Model {
+func NewModel(database DB) Model {
 	return Model{
 		db:     database,
 		filter: article.StatusUnread,
@@ -150,16 +150,16 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		switch {
 		case key.Matches(msg, m.keys.Read):
 			newStatus = article.StatusRead
-			actionName = "已读"
+			actionName = i18n.T("action.read")
 		case key.Matches(msg, m.keys.Star):
 			newStatus = article.StatusStarred
-			actionName = "已收藏"
+			actionName = i18n.T("action.starred")
 		case key.Matches(msg, m.keys.Discard):
 			newStatus = article.StatusDiscarded
-			actionName = "已丢弃"
+			actionName = i18n.T("action.discarded")
 		case key.Matches(msg, m.keys.Archive):
 			newStatus = article.StatusArchived
-			actionName = "已归档"
+			actionName = i18n.T("action.archived")
 		default:
 			return m, nil
 		}
@@ -169,7 +169,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, nil
 		}
 		m.articles[m.cursor].ReadStatus = newStatus
-		m.infoMsg = fmt.Sprintf("文章 %d %s", id, actionName)
+		m.infoMsg = fmt.Sprintf(i18n.T("msg.action"), id, actionName)
 
 		// Auto-advance cursor for smoother flow
 		if m.cursor < len(m.articles)-1 {
@@ -189,7 +189,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 // View renders the TUI
 func (m Model) View() string {
 	if m.width == 0 || m.height == 0 {
-		return "Loading..."
+		return i18n.T("loading")
 	}
 
 	// Styles
@@ -206,14 +206,14 @@ func (m Model) View() string {
 	)
 
 	// Header
-	filterName := "全部"
+	filterName := i18n.T("filter.all")
 	switch m.filter {
 	case article.StatusUnread:
-		filterName = "未读"
+		filterName = i18n.T("filter.unread")
 	case article.StatusStarred:
-		filterName = "收藏"
+		filterName = i18n.T("filter.starred")
 	}
-	header := headerStyle.Width(m.width).Render(fmt.Sprintf(" %s inbox — %s (%d)", titleStyle.Render("news4coder"), filterName, len(m.articles)))
+	header := headerStyle.Width(m.width).Render(fmt.Sprintf(" %s %s — %s (%d)", titleStyle.Render("news4coder"), i18n.T("inbox.title"), filterName, len(m.articles)))
 
 	// Article list
 	listHeight := m.height - 10 // reserve space for header, preview, help, messages
@@ -258,7 +258,7 @@ func (m Model) View() string {
 	}
 
 	if len(m.articles) == 0 {
-		listLines = append(listLines, "  暂无文章")
+		listLines = append(listLines, i18n.T("article.empty"))
 	}
 
 	listBlock := strings.Join(listLines, "\n")
@@ -276,12 +276,12 @@ func (m Model) View() string {
 		snippet := stripHTML(truncate(summary, 300))
 		meta := ""
 		if a.LLMTags != "" {
-			meta += fmt.Sprintf("🏷 %s  ", a.LLMTags)
+			meta += fmt.Sprintf(i18n.T("preview.tags"), a.LLMTags)
 		} else if a.Tags != "" {
-			meta += fmt.Sprintf("🏷 %s  ", a.Tags)
+			meta += fmt.Sprintf(i18n.T("preview.tags"), a.Tags)
 		}
 		if a.Note != "" {
-			meta += fmt.Sprintf("📝 %s", a.Note)
+			meta += fmt.Sprintf(i18n.T("preview.note"), a.Note)
 		}
 		if meta != "" {
 			meta = lipgloss.NewStyle().Foreground(lipgloss.Color("#FFD700")).Render(meta)
@@ -297,7 +297,7 @@ func (m Model) View() string {
 	}
 
 	// Help / footer
-	help := helpStyle.Render("j/↓ k/↑  r=read  s=star  d=discard  a=archive  1=all  2=unread  3=starred  q=quit")
+	help := helpStyle.Render(i18n.T("help.hint"))
 
 	// Messages
 	var msgLine string

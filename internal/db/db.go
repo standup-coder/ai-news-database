@@ -52,6 +52,23 @@ func (d *DB) Close() error {
 	return d.conn.Close()
 }
 
+// Conn returns the underlying database connection (for testing)
+func (d *DB) Conn() *sql.DB {
+	return d.conn
+}
+
+// ArticleExists 检查指定 URL 的文章是否已存在
+func (d *DB) ArticleExists(url string) bool {
+	var id int64
+	err := d.conn.QueryRow("SELECT id FROM articles WHERE url = ?", url).Scan(&id)
+	return err == nil
+}
+
+// Migrate 执行数据库初始化
+func (d *DB) Migrate() error {
+	return d.migrate()
+}
+
 // migrate 执行数据库初始化
 func (d *DB) migrate() error {
 	schema := `
@@ -112,42 +129,57 @@ END;
 		"language TEXT",
 		"raw_content TEXT",
 		"enriched_at DATETIME",
+		"points INTEGER DEFAULT 0",
 	}
 	for _, col := range newColumns {
 		_, _ = d.conn.Exec(fmt.Sprintf("ALTER TABLE articles ADD COLUMN %s", col))
-		// 忽略错误（字段已存在时会报错）
 	}
 
-	// 将旧数据中 NULL 的 quality_score 设为 0
 	_, _ = d.conn.Exec("UPDATE articles SET quality_score = 0 WHERE quality_score IS NULL")
+	_, _ = d.conn.Exec("UPDATE articles SET points = 0 WHERE points IS NULL")
+
+	burstSchema := `
+CREATE TABLE IF NOT EXISTS burst_results (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    mode TEXT NOT NULL DEFAULT 'cross-domain',
+    focus TEXT DEFAULT '',
+    ideas TEXT NOT NULL,
+    based_on INTEGER DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_burst_created ON burst_results(created_at);
+`
+	if _, err := d.conn.Exec(burstSchema); err != nil {
+		return err
+	}
 
 	return nil
 }
 
 // SaveArticle 保存或更新文章（URL 唯一）
 func (d *DB) SaveArticle(a *article.Article) error {
-	// 如果已存在则更新基础字段
 	var existingID int64
 	err := d.conn.QueryRow("SELECT id FROM articles WHERE url = ?", a.URL).Scan(&existingID)
 	if err == nil {
 		_, err = d.conn.Exec(
-			`UPDATE articles SET title = ?, summary = ?, source = ?, source_alias = ?, raw_content = ?, published_at = ? WHERE id = ?`,
-			a.Title, a.Summary, a.Source, a.SourceAlias, a.RawContent, a.PublishedAt, existingID,
+			`UPDATE articles SET title = ?, summary = ?, source = ?, source_alias = ?, raw_content = ?, published_at = ?, points = ? WHERE id = ?`,
+			a.Title, a.Summary, a.Source, a.SourceAlias, a.RawContent, a.PublishedAt, a.Points, existingID,
 		)
 		return err
 	}
 
 	_, err = d.conn.Exec(
-		`INSERT INTO articles (title, url, source, source_alias, summary, raw_content, published_at, fetched_at, read_status, tags, note)
-		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-		a.Title, a.URL, a.Source, a.SourceAlias, a.Summary, a.RawContent, a.PublishedAt, a.FetchedAt, a.ReadStatus, a.Tags, a.Note,
+		`INSERT INTO articles (title, url, source, source_alias, summary, raw_content, published_at, fetched_at, read_status, tags, note, points)
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+		a.Title, a.URL, a.Source, a.SourceAlias, a.Summary, a.RawContent, a.PublishedAt, a.FetchedAt, a.ReadStatus, a.Tags, a.Note, a.Points,
 	)
 	return err
 }
 
 // GetArticles 按条件查询文章
 func (d *DB) GetArticles(status article.ReadStatus, sourceAlias string, limit int) ([]article.Article, error) {
-	query := "SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, published_at, fetched_at, enriched_at, read_status, tags, note FROM articles WHERE 1=1"
+	query := "SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, points, published_at, fetched_at, enriched_at, read_status, tags, note FROM articles WHERE 1=1"
 	args := []any{}
 
 	if status != "" {
@@ -175,7 +207,7 @@ func (d *DB) GetArticles(status article.ReadStatus, sourceAlias string, limit in
 // SearchArticles 全文搜索文章
 func (d *DB) SearchArticles(keyword string, limit int) ([]article.Article, error) {
 	query := `
-		SELECT a.id, a.title, a.url, a.source, a.source_alias, a.summary, a.llm_summary, a.llm_tags, a.quality_score, a.language, a.raw_content, a.published_at, a.fetched_at, a.enriched_at, a.read_status, a.tags, a.note
+		SELECT a.id, a.title, a.url, a.source, a.source_alias, a.summary, a.llm_summary, a.llm_tags, a.quality_score, a.language, a.raw_content, a.points, a.published_at, a.fetched_at, a.enriched_at, a.read_status, a.tags, a.note
 		FROM articles_fts fts
 		JOIN articles a ON a.id = fts.rowid
 		WHERE articles_fts MATCH ?
@@ -214,7 +246,7 @@ func (d *DB) AddTags(id int64, tags string) error {
 
 // GetUnenrichedArticles 获取尚未经过 LLM 增强的文章
 func (d *DB) GetUnenrichedArticles(limit int) ([]article.Article, error) {
-	query := `SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, published_at, fetched_at, enriched_at, read_status, tags, note
+	query := `SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, points, published_at, fetched_at, enriched_at, read_status, tags, note
 		FROM articles WHERE enriched_at IS NULL ORDER BY fetched_at DESC`
 	if limit > 0 {
 		query += fmt.Sprintf(" LIMIT %d", limit)
@@ -244,7 +276,7 @@ func (d *DB) UpdateRawContent(id int64, rawContent string) error {
 
 // SearchByKeyword 使用 LIKE 进行模糊搜索（FTS 的 fallback）
 func (d *DB) SearchByKeyword(keyword string, limit int) ([]article.Article, error) {
-	query := `SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, published_at, fetched_at, enriched_at, read_status, tags, note
+	query := `SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, points, published_at, fetched_at, enriched_at, read_status, tags, note
 		FROM articles
 		WHERE title LIKE ? OR summary LIKE ? OR llm_summary LIKE ? OR llm_tags LIKE ?
 		ORDER BY quality_score DESC, fetched_at DESC
@@ -293,14 +325,127 @@ func (d *DB) Stats() (map[string]map[string]any, error) {
 			continue
 		}
 		stats[alias] = map[string]any{
-			"total":    total,
-			"read":     readCount,
-			"starred":  starredCount,
-			"unread":   unreadCount,
+			"total":     total,
+			"read":      readCount,
+			"starred":   starredCount,
+			"unread":    unreadCount,
 			"read_rate": float64(readCount+starredCount) / float64(total),
 		}
 	}
 	return stats, nil
+}
+
+// GetArticlesSorted 按指定排序查询文章
+func (d *DB) GetArticlesSorted(status article.ReadStatus, sourceAlias string, limit int, orderBy string) ([]article.Article, error) {
+	query := "SELECT id, title, url, source, source_alias, summary, llm_summary, llm_tags, quality_score, language, raw_content, points, published_at, fetched_at, enriched_at, read_status, tags, note FROM articles WHERE 1=1"
+	args := []any{}
+
+	if status != "" {
+		query += " AND read_status = ?"
+		args = append(args, status)
+	}
+	if sourceAlias != "" {
+		query += " AND source_alias = ?"
+		args = append(args, sourceAlias)
+	}
+
+	switch orderBy {
+	case "points":
+		query += " ORDER BY points DESC, fetched_at DESC"
+	case "points_asc":
+		query += " ORDER BY points ASC, fetched_at DESC"
+	default:
+		query += " ORDER BY fetched_at DESC"
+	}
+	if limit > 0 {
+		query += fmt.Sprintf(" LIMIT %d", limit)
+	}
+
+	rows, err := d.conn.Query(query, args...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	return scanArticles(rows)
+}
+
+// MarkAllRead marks all articles matching criteria as read
+func (d *DB) MarkAllRead(sourceAlias string) (int64, error) {
+	var result sql.Result
+	if sourceAlias != "" {
+		result, err := d.conn.Exec("UPDATE articles SET read_status = ? WHERE source_alias = ? AND read_status = ?", article.StatusRead, sourceAlias, article.StatusUnread)
+		if err != nil {
+			return 0, err
+		}
+		return result.RowsAffected()
+	}
+	result, err := d.conn.Exec("UPDATE articles SET read_status = ? WHERE read_status = ?", article.StatusRead, article.StatusUnread)
+	if err != nil {
+		return 0, err
+	}
+	return result.RowsAffected()
+}
+
+// BurstResult represents a saved burst generation
+type BurstResult struct {
+	ID        int64  `json:"id"`
+	Mode      string `json:"mode"`
+	Focus     string `json:"focus"`
+	Ideas     string `json:"ideas"`
+	BasedOn   int    `json:"based_on"`
+	CreatedAt string `json:"created_at"`
+}
+
+// SaveBurstResult saves a burst generation to the DB
+func (d *DB) SaveBurstResult(mode, focus string, ideasJSON string, basedOn int) (int64, error) {
+	result, err := d.conn.Exec(
+		`INSERT INTO burst_results (mode, focus, ideas, based_on) VALUES (?, ?, ?, ?)`,
+		mode, focus, ideasJSON, basedOn,
+	)
+	if err != nil {
+		return 0, err
+	}
+	return result.LastInsertId()
+}
+
+// GetBurstResults returns recent burst results
+func (d *DB) GetBurstResults(limit int) ([]BurstResult, error) {
+	query := "SELECT id, mode, focus, ideas, based_on, created_at FROM burst_results ORDER BY created_at DESC"
+	if limit > 0 {
+		query += fmt.Sprintf(" LIMIT %d", limit)
+	}
+	rows, err := d.conn.Query(query)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var results []BurstResult
+	for rows.Next() {
+		var r BurstResult
+		if err := rows.Scan(&r.ID, &r.Mode, &r.Focus, &r.Ideas, &r.BasedOn, &r.CreatedAt); err != nil {
+			continue
+		}
+		results = append(results, r)
+	}
+	return results, rows.Err()
+}
+
+// GetBurstResult returns a single burst result by ID
+func (d *DB) GetBurstResult(id int64) (*BurstResult, error) {
+	var r BurstResult
+	err := d.conn.QueryRow("SELECT id, mode, focus, ideas, based_on, created_at FROM burst_results WHERE id = ?", id).
+		Scan(&r.ID, &r.Mode, &r.Focus, &r.Ideas, &r.BasedOn, &r.CreatedAt)
+	if err != nil {
+		return nil, err
+	}
+	return &r, nil
+}
+
+// DeleteBurstResult deletes a burst result
+func (d *DB) DeleteBurstResult(id int64) error {
+	_, err := d.conn.Exec("DELETE FROM burst_results WHERE id = ?", id)
+	return err
 }
 
 func scanArticles(rows *sql.Rows) ([]article.Article, error) {
@@ -310,9 +455,11 @@ func scanArticles(rows *sql.Rows) ([]article.Article, error) {
 		var publishedAt, enrichedAt sql.NullTime
 		var llmSummary, llmTags, language, rawContent sql.NullString
 		var qualityScore sql.NullFloat64
+		var points sql.NullInt64
 		err := rows.Scan(
 			&a.ID, &a.Title, &a.URL, &a.Source, &a.SourceAlias,
 			&a.Summary, &llmSummary, &llmTags, &qualityScore, &language, &rawContent,
+			&points,
 			&publishedAt, &a.FetchedAt, &enrichedAt, &a.ReadStatus, &a.Tags, &a.Note,
 		)
 		if err != nil {
@@ -338,6 +485,9 @@ func scanArticles(rows *sql.Rows) ([]article.Article, error) {
 		}
 		if qualityScore.Valid {
 			a.QualityScore = qualityScore.Float64
+		}
+		if points.Valid {
+			a.Points = int(points.Int64)
 		}
 		articles = append(articles, a)
 	}

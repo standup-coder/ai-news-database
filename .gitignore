@@ -1,31 +1,45 @@
-# 二进制文件
+# Binary files
 news4coder
 news4coder.exe
 
-# Go 构建缓存
+# Go build cache
 *.test
 *.out
 
-# 依赖目录
+# Dependency directories
 vendor/
 
-# IDE 配置
+# IDE configurations
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# 操作系统文件
+# OS files
 .DS_Store
 Thumbs.db
 
-# 日志文件
+# Log files
 *.log
 
-# 临时文件
+# Temporary files
 tmp/
 temp/
+dist/
 
-# 本地运行文件（不提交到仓库）
+# Local runtime files (not committed to repo)
 local/
+
+# AI assistant tool directories
+.agents/
+.claude/
+.codebuddy/
+.qoder/
+.qwen/
+.trae/
+.windsurf/
+
+# Other tool-specific files
+skills/
+skills-lock.json

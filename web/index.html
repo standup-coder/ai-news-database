@@ -3,590 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News4Coder - 程序员技术资讯中心 | 你的数据你做主</title>
-    <meta name="description" content="专为程序员设计的本地优先技术资讯终端。数据完全存储在本地，你的数据你做主。LLM 增强、智能策展、RAG 问答——让技术阅读回归纯粹与隐私">
+    <title>News4Coder — 本地优先的技术资讯终端</title>
+    <meta name="description" content="专为程序员设计的本地优先技术资讯终端。数据存储在本地 SQLite，无需云端。LLM 增强、智能策展、RAG 问答。">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="logo-hexagon" d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path class="logo-inner" d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" fill="currentColor"/>
-                </svg>
-                <span class="logo-text">News4Coder</span>
-            </a>
-            <div class="nav-links">
-                <a href="#data-sovereignty" class="nav-link highlight">数据主权</a>
+
+    <nav class="nav">
+        <div class="inner">
+            <a href="#" class="logo">News4Coder</a>
+            <div class="nav-links" id="nav-links">
                 <a href="#features" class="nav-link">特性</a>
                 <a href="#sources" class="nav-link">信息源</a>
                 <a href="#workflow" class="nav-link">工作流</a>
-                <a href="https://github.com" class="nav-link" target="_blank">GitHub</a>
-                <a href="#get-started" class="btn btn-primary">开始使用</a>
+                <a href="#start" class="nav-link nav-link-cta">开始使用</a>
             </div>
-            <button class="mobile-menu-btn" aria-label="菜单">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-btn" id="menu-btn" aria-label="菜单">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-grid"></div>
-            <div class="hero-gradient"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <div class="hero-badge primary">
-                        <span class="badge-dot"></span>
-                        本地优先架构
-                    </div>
-                    <div class="hero-badge secondary">
-                        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                        数据主权
-                    </div>
-                </div>
-                <h1 class="hero-title">
-                    你的技术资讯
-                    <span class="gradient-text">你做主</span>
-                </h1>
-                <p class="hero-description">
-                    专为程序员设计的<strong>本地优先</strong>智能资讯终端。所有数据存储在本地 SQLite 数据库，
-                    无需云端账号，没有数据泄露风险。LLM 增强、智能策展、RAG 问答——让技术阅读回归纯粹与隐私。
-                </p>
-                <div class="hero-actions">
-                    <a href="#get-started" class="btn btn-primary btn-lg">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                        立即下载
-                    </a>
-                    <a href="#data-sovereignty" class="btn btn-secondary btn-lg">
-                        了解数据主权
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">本地存储</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-value">0</div>
-                        <div class="stat-label">云端依赖</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <div class="stat-value">∞</div>
-                        <div class="stat-label">数据主权</div>
-                    </div>
-                </div>
+        <div class="inner">
+            <h1 class="hero-title">你的技术资讯，<br><em>你做主。</em></h1>
+            <p class="hero-sub">本地优先的智能资讯终端。所有数据存储在本地 SQLite，无需云端账号。</p>
+            <div class="hero-actions">
+                <a href="#start" class="btn">开始使用</a>
+                <a href="#features" class="btn btn-ghost">了解特性</a>
             </div>
-            <div class="hero-terminal">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="terminal-title">news4coder - 本地优先</div>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="terminal-prompt">$</span>
-                            <span class="terminal-command">news4coder sync</span>
-                        </div>
-                        <div class="terminal-output">
-                            <div class="output-line success">✓ 已同步 8 个订阅源到本地数据库</div>
-                            <div class="output-line info">  存储位置: ~/.news4coder/news4coder.db</div>
-                            <div class="output-line">  Hacker News: 30 篇文章</div>
-                            <div class="output-line">  GitHub Blog: 5 篇文章</div>
-                            <div class="output-line">  V2EX: 25 篇文章</div>
-                            <div class="output-line success">  所有数据本地保存，无需云端</div>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="terminal-prompt">$</span>
-                            <span class="terminal-command">news4coder curate --top 5</span>
-                            <span class="terminal-cursor"></span>
-                        </div>
-                    </div>
+            <div class="hero-demo" id="hero-demo">
+                <div><span class="prompt">$</span> <span class="cmd">news4coder sync</span></div>
+                <div><span class="ok">✓</span> 已同步 8 个源到 ~/.news4coder/news4coder.db</div>
+                <div><span class="prompt">$</span> <span class="cmd">news4coder inspire --days 7</span></div>
+                <div><span class="ok">✨</span> 已保存 12 条 Show HN 新产品到本地</div>
+                <div><span class="prompt">$</span> <span class="cmd">news4coder curate --top 5</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="inner">
+            <h2 class="section-title">核心特性</h2>
+            <p class="section-sub">从采集到知识沉淀，全部本地完成。</p>
+            <div class="features">
+                <div class="feat feat-highlight">
+                    <h3>✨ 灵感模式</h3>
+                    <p>自动捕获 Show HN 上的新产品/新项目，保存到本地知识库，随时激发创意。</p>
+                </div>
+                <div class="feat">
+                    <h3>TUI 收件箱</h3>
+                    <p>基于 Bubble Tea 的交互式终端，j/k 翻页，r/s/d/a 秒级处理文章。</p>
+                </div>
+                <div class="feat">
+                    <h3>多源采集</h3>
+                    <p>HN / Reddit / V2EX API + 网页提取，实时获取 8 个高质量源内容。</p>
+                </div>
+                <div class="feat">
+                    <h3>LLM 增强</h3>
+                    <p>自动生成中文摘要、技术标签、质量评分（0-10）和语言检测。</p>
+                </div>
+                <div class="feat">
+                    <h3>智能策展</h3>
+                    <p>基于质量评分和阅读偏好，自动生成「今日必读」清单。</p>
+                </div>
+                <div class="feat">
+                    <h3>本地知识库</h3>
+                    <p>SQLite + FTS5 全文检索，所有数据本地存储，构建属于你的技术资产。</p>
+                </div>
+                <div class="feat">
+                    <h3>RAG 问答</h3>
+                    <p>基于本地知识库回答技术问题，自动标注引用来源，无需上传数据。</p>
+                </div>
+                <div class="feat">
+                    <h3>断舍离</h3>
+                    <p>批量归档、自动清理、语义去重、订阅健康度——保持收件箱整洁。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Data Sovereignty Section -->
-    <section id="data-sovereignty" class="data-sovereignty">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">数据主权</span>
-                <h2 class="section-title">你的数据，永远属于你</h2>
-                <p class="section-description">
-                    在云端服务盛行的时代，我们选择了一条不同的路。News4Coder 坚持本地优先，
-                    让你的技术资讯数据完全掌握在自己手中。
-                </p>
-            </div>
-            <div class="sovereignty-grid">
-                <div class="sovereignty-card highlight">
-                    <div class="sovereignty-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M12 8v4"/>
-                            <path d="M12 16h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="sovereignty-title">完全本地存储</h3>
-                    <p class="sovereignty-description">
-                        所有数据存储在本地 SQLite 数据库（<code>~/.news4coder/</code>），不依赖任何云端服务。没有账号注册，没有数据上传，你的阅读记录只属于你。
-                    </p>
-                    <div class="sovereignty-meta">
-                        <span class="meta-tag">零云端依赖</span>
-                        <span class="meta-tag">SQLite</span>
-                    </div>
-                </div>
-                <div class="sovereignty-card">
-                    <div class="sovereignty-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0110 0v4"/>
-                        </svg>
-                    </div>
-                    <h3 class="sovereignty-title">隐私优先设计</h3>
-                    <p class="sovereignty-description">
-                        无需登录、无需授权、不收集任何遥测数据。你的阅读偏好、收藏文章、搜索历史，全部保存在本地，任何人都无法访问。
-                    </p>
-                    <div class="sovereignty-meta">
-                        <span class="meta-tag">无需登录</span>
-                        <span class="meta-tag">零追踪</span>
-                    </div>
-                </div>
-                <div class="sovereignty-card">
-                    <div class="sovereignty-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                            <path d="M7 10l5 5 5-5"/>
-                            <path d="M12 15V3"/>
-                        </svg>
-                    </div>
-                    <h3 class="sovereignty-title">数据可导出</h3>
-                    <p class="sovereignty-description">
-                        你的知识库随时可导出为 Markdown、JSON 或 CSV 格式。想备份？想迁移？想分享？一键搞定，数据自由流动。
-                    </p>
-                    <div class="sovereignty-meta">
-                        <span class="meta-tag">Markdown 导出</span>
-                        <span class="meta-tag">开放格式</span>
-                    </div>
-                </div>
-                <div class="sovereignty-card">
-                    <div class="sovereignty-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="sovereignty-title">永久可用</h3>
-                    <p class="sovereignty-description">
-                        不受服务商倒闭、账号被封、网络中断的影响。一次下载，终身使用。你的知识库可以陪伴你几十年。
-                    </p>
-                    <div class="sovereignty-meta">
-                        <span class="meta-tag">永久访问</span>
-                        <span class="meta-tag">离线可用</span>
-                    </div>
-                </div>
-            </div>
-            <div class="sovereignty-comparison">
-                <div class="comparison-header">
-                    <h3>News4Coder vs 云端阅读器</h3>
-                </div>
-                <div class="comparison-table">
-                    <div class="comparison-row header">
-                        <div class="comparison-cell feature">特性</div>
-                        <div class="comparison-cell news4coder">News4Coder</div>
-                        <div class="comparison-cell cloud">云端阅读器</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">数据存储位置</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 本地设备</div>
-                        <div class="comparison-cell cloud">云端服务器</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">需要账号注册</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 不需要</div>
-                        <div class="comparison-cell cloud">必需</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">数据可被服务商查看</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 不可能</div>
-                        <div class="comparison-cell cloud">可以</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">服务停止后数据访问</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 永久可用</div>
-                        <div class="comparison-cell cloud">无法访问</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">离线使用</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 完全支持</div>
-                        <div class="comparison-cell cloud">有限支持</div>
-                    </div>
-                    <div class="comparison-row">
-                        <div class="comparison-cell feature">数据导出自由度</div>
-                        <div class="comparison-cell news4coder"><span class="check">✓</span> 完全自由</div>
-                        <div class="comparison-cell cloud">受限</div>
-                    </div>
-                </div>
+    <section id="sources" class="section section-alt">
+        <div class="inner">
+            <h2 class="section-title">精选信息源</h2>
+            <p class="section-sub">内置高质量中英文技术源，一键同步到本地。</p>
+            <div class="sources">
+                <div class="source">Hacker News<span>API</span></div>
+                <div class="source">GitHub Blog<span>Reader</span></div>
+                <div class="source">Lobsters<span>HTML</span></div>
+                <div class="source">Reddit<span>JSON</span></div>
+                <div class="source">V2EX<span>API</span></div>
+                <div class="source">阮一峰<span>Reader</span></div>
+                <div class="source">InfoQ<span>爬虫</span></div>
+                <div class="source">Show HN<span>灵感</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">核心特性</span>
-                <h2 class="section-title">本地优先的智能工具链</h2>
-                <p class="section-description">
-                    从信息采集到知识沉淀，每个环节都在本地完成，既享受 AI 的便利，又拥有数据的掌控权
-                </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 12V7H5a2 2 0 01-2-2V5a2 2 0 012-2h14v4"/>
-                            <path d="M21 12v5H5a2 2 0 00-2 2v1a2 2 0 002 2h14v-4"/>
-                            <path d="M5 10h16"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">多源智能采集</h3>
-                    <p class="feature-description">
-                        直接调用 HN/Reddit/V2EX API + Jina AI Reader 网页提取，告别 RSS，实时获取高质量内容
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">LLM 内容增强</h3>
-                    <p class="feature-description">
-                        自动生成高质量中文摘要、技术标签、质量评分（0-10）和语言检测，快速筛选优质内容
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 3l1.5 4.5h4.5l-3.75 2.625 1.5 4.5L12 12.375 8.25 14.625l1.5-4.5L6 7.5h4.5L12 3z"/>
-                            <circle cx="12" cy="17" r="3"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">智能策展</h3>
-                    <p class="feature-description">
-                        基于 LLM 质量评分和你的阅读偏好，自动生成「今日必读」清单，节省筛选时间
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-                            <path d="M3 5v14a9 3 0 009 3 9 3 0 009-3V5"/>
-                            <path d="M3 12a9 3 0 009 3 9 3 0 009-3"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">本地知识库</h3>
-                    <p class="feature-description">
-                        SQLite 持久化存储，支持全文检索 (FTS5)，构建属于你的技术知识资产，数据永远本地保存
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="M21 21l-4.35-4.35"/>
-                            <path d="M11 8v6M8 11h6"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">RAG 问答</h3>
-                    <p class="feature-description">
-                        基于本地技术知识库回答你的问题，并标注引用来源。本地向量检索，无需上传数据到云端
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M8 12h8"/>
-                            <path d="M12 8v8"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">断舍离支持</h3>
-                    <p class="feature-description">
-                        批量归档、自动清理、语义去重、订阅健康度报告——保持收件箱整洁，掌控信息摄入
-                    </p>
-                </div>
+    <section id="workflow" class="section">
+        <div class="inner">
+            <h2 class="section-title">工作流</h2>
+            <div class="steps">
+                <div class="step"><code>sync</code><p>同步到本地</p></div>
+                <span class="arrow">&rarr;</span>
+                <div class="step"><code>enrich</code><p>LLM 增强</p></div>
+                <span class="arrow">&rarr;</span>
+                <div class="step"><code>curate</code><p>智能策展</p></div>
+                <span class="arrow">&rarr;</span>
+                <div class="step"><code>inbox</code><p>TUI 浏览</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Sources Section -->
-    <section id="sources" class="sources">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">官方信源</span>
-                <h2 class="section-title">精选高质量技术源</h2>
-                <p class="section-description">
-                    内置 8 个精选高质量技术源，覆盖中英文技术社区，所有内容同步到本地存储
-                </p>
-            </div>
-            <div class="sources-grid">
-                <div class="source-card">
-                    <div class="source-icon hn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0v24h24V0H0zm12.7 13.4h-2.4L9 9.9l-1.3 3.5H5.3l2.5-6.3H10l1.3 3.4 1.3-3.4h2.2l2.5 6.3h-2.4l-1.2-3.5-1.3 3.4z"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">Hacker News</h3>
-                        <p class="source-desc">YC 技术新闻聚合</p>
-                        <span class="source-tag">Algolia API</span>
-                    </div>
+    <section id="start" class="section section-alt">
+        <div class="inner start-inner">
+            <h2 class="section-title">开始使用</h2>
+            <p class="section-sub">单二进制文件，无需依赖。支持 OpenAI 兼容接口和 Ollama。</p>
+            <div class="install">
+                <div class="install-tabs">
+                    <button class="tab active" data-os="mac">macOS</button>
+                    <button class="tab" data-os="linux">Linux</button>
+                    <button class="tab" data-os="windows">Windows</button>
                 </div>
-                <div class="source-card">
-                    <div class="source-icon github">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">GitHub Blog</h3>
-                        <p class="source-desc">GitHub 官方博客</p>
-                        <span class="source-tag">Jina Reader</span>
-                    </div>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon lobsters">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">Lobsters</h3>
-                        <p class="source-desc">友好程序员社区</p>
-                        <span class="source-tag">HTML 解析</span>
-                    </div>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon reddit">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">Reddit</h3>
-                        <p class="source-desc">r/programming 热门</p>
-                        <span class="source-tag">JSON API</span>
-                    </div>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon v2ex">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.777 13.055c-.147-.447.082-.948.562-1.12L14.89 7.79c.48-.172 1.01.087 1.188.577l4.35 11.85c.178.49-.058 1.03-.528 1.208l-12.88 4.68c-.47.17-.99-.088-1.168-.578L1.777 13.055zm17.36-2.983c-.566-1.543-2.207-2.34-3.67-1.78l-9.78 3.55c-1.463.53-2.21 2.17-1.643 3.71l3.05 8.32c.566 1.54 2.207 2.34 3.67 1.78l9.78-3.55c1.463-.53 2.21-2.17 1.643-3.71l-3.05-8.32z"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">V2EX</h3>
-                        <p class="source-desc">中文技术社区</p>
-                        <span class="source-tag">API</span>
-                    </div>
-                </div>
-                <div class="source-card">
-                    <div class="source-icon ruanyf">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <div class="source-info">
-                        <h3 class="source-name">阮一峰博客</h3>
-                        <p class="source-desc">中文技术博客标杆</p>
-                        <span class="source-tag">Jina Reader</span>
-                    </div>
-                </div>
-                <div class="source-card">
-                    <div class="source-card-add">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 5v14M5 12h14"/>
-                        </svg>
-                        <span>添加自定义源</span>
-                    </div>
+                <div class="install-cmd">
+                    <code id="install-command">curl -sSL https://get.news4coder.dev | bash</code>
+                    <button class="copy-btn" aria-label="复制安装命令">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    </button>
                 </div>
             </div>
+            <p class="start-note">无需账号 · 本地存储 · 数据可导出</p>
         </div>
     </section>
 
-    <!-- Workflow Section -->
-    <section id="workflow" class="workflow">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">工作流</span>
-                <h2 class="section-title">极简工作流，从资讯到知识</h2>
-            </div>
-            <div class="workflow-steps">
-                <div class="workflow-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">sync</h3>
-                        <p class="step-desc">一键同步到本地</p>
-                        <code class="step-code">news4coder sync</code>
-                    </div>
-                </div>
-                <div class="workflow-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">enrich</h3>
-                        <p class="step-desc">LLM 本地增强</p>
-                        <code class="step-code">news4coder enrich</code>
-                    </div>
-                </div>
-                <div class="workflow-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">curate</h3>
-                        <p class="step-desc">智能策展必读</p>
-                        <code class="step-code">news4coder curate --top 10</code>
-                    </div>
-                </div>
-                <div class="workflow-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3 class="step-title">inbox</h3>
-                        <p class="step-desc">TUI 极速浏览</p>
-                        <code class="step-code">news4coder inbox</code>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="get-started" class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">开始构建你的本地知识库</h2>
-                <p class="cta-description">
-                    单二进制文件，无需额外依赖。支持任何 OpenAI 兼容接口，包括 Ollama 本地服务。
-                    <br><strong>你的数据，永远属于你。</strong>
-                </p>
-                <div class="cta-install">
-                    <div class="install-tabs">
-                        <button class="install-tab active" data-os="mac">macOS</button>
-                        <button class="install-tab" data-os="linux">Linux</button>
-                        <button class="install-tab" data-os="windows">Windows</button>
-                    </div>
-                    <div class="install-code">
-                        <code id="install-command">curl -sSL https://get.news4coder.dev | bash</code>
-                        <button class="copy-btn" aria-label="复制">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="cta-features">
-                    <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <path d="M22 4L12 14.01l-3-3"/>
-                        </svg>
-                        <span>无需账号</span>
-                    </div>
-                    <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                        <span>本地存储</span>
-                    </div>
-                    <div class="cta-feature">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                            <path d="M17 8l-5-5-5 5"/>
-                            <path d="M12 3v12"/>
-                        </svg>
-                        <span>数据可导出</span>
-                    </div>
-                </div>
-                <div class="cta-links">
-                    <a href="#" class="btn btn-outline">
-                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="#" class="btn btn-outline">查看文档</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="logo-hexagon" d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <path class="logo-inner" d="M16 8L22 11.5V18.5L16 22L10 18.5V11.5L16 8Z" fill="currentColor"/>
-                        </svg>
-                        <span class="logo-text">News4Coder</span>
-                    </a>
-                    <p class="footer-desc">程序员技术资讯终端<br><strong>本地优先 · 数据主权</strong></p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>产品</h4>
-                        <a href="#data-sovereignty">数据主权</a>
-                        <a href="#features">特性</a>
-                        <a href="#sources">信息源</a>
-                        <a href="#workflow">工作流</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>开发</h4>
-                        <a href="#">API 文档</a>
-                        <a href="#">CLI 参考</a>
-                        <a href="#">贡献指南</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>社区</h4>
-                        <a href="#">GitHub</a>
-                        <a href="#">Discord</a>
-                        <a href="#">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 News4Coder. MIT License.</p>
-                <p>Built with Go + SQLite + ❤️ for Data Sovereignty</p>
-            </div>
+        <div class="inner">
+            <span>&copy; 2025 News4Coder · MIT License</span>
+            <a href="#">GitHub</a>
         </div>
     </footer>
 
