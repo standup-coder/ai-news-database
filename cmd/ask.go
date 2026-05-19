@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"fmt"
 	"news4coder/internal/config"
 	"news4coder/internal/db"
@@ -46,7 +47,7 @@ var askCmd = &cobra.Command{
 
 		fmt.Printf("%s 正在检索知识库并生成回答...\n\n", cyan("⟳"))
 
-		answer, refs, err := r.Answer(question)
+		answer, refs, err := r.Answer(context.Background(), question)
 		if err != nil {
 			return fmt.Errorf("问答失败: %w", err)
 		}

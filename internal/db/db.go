@@ -3,9 +3,11 @@ package db
 import (
 	"database/sql"
 	"fmt"
+	"log/slog"
 	"news4coder/internal/article"
 	"os"
 	"path/filepath"
+	"time"
 
 	_ "modernc.org/sqlite"
 )
@@ -132,11 +134,18 @@ END;
 		"points INTEGER DEFAULT 0",
 	}
 	for _, col := range newColumns {
-		_, _ = d.conn.Exec(fmt.Sprintf("ALTER TABLE articles ADD COLUMN %s", col))
+		// ALTER TABLE ADD COLUMN 会因列已存在而失败，属于正常迁移行为
+		if _, err := d.conn.Exec(fmt.Sprintf("ALTER TABLE articles ADD COLUMN %s", col)); err != nil {
+			slog.Debug("迁移列已存在，跳过", "column", col, "error", err)
+		}
 	}
 
-	_, _ = d.conn.Exec("UPDATE articles SET quality_score = 0 WHERE quality_score IS NULL")
-	_, _ = d.conn.Exec("UPDATE articles SET points = 0 WHERE points IS NULL")
+	if _, err := d.conn.Exec("UPDATE articles SET quality_score = 0 WHERE quality_score IS NULL"); err != nil {
+		return fmt.Errorf("初始化 quality_score 失败: %w", err)
+	}
+	if _, err := d.conn.Exec("UPDATE articles SET points = 0 WHERE points IS NULL"); err != nil {
+		return fmt.Errorf("初始化 points 失败: %w", err)
+	}
 
 	burstSchema := `
 CREATE TABLE IF NOT EXISTS burst_results (
@@ -292,12 +301,12 @@ func (d *DB) SearchByKeyword(keyword string, limit int) ([]article.Article, erro
 
 // DeleteArticlesByStatus 按状态删除文章（清理用）
 func (d *DB) DeleteArticlesByStatus(status article.ReadStatus, beforeDays int) error {
-	// SQLite 参数绑定不能在字符串字面量中使用，需要拼接 SQL
-	query := fmt.Sprintf(
-		"DELETE FROM articles WHERE read_status = ? AND fetched_at < datetime('now', '-%d days')",
-		beforeDays,
+	// 先计算截止时间，避免 SQL 拼接注入风险
+	cutoff := time.Now().AddDate(0, 0, -beforeDays).UTC().Format("2006-01-02 15:04:05")
+	_, err := d.conn.Exec(
+		"DELETE FROM articles WHERE read_status = ? AND fetched_at < ?",
+		status, cutoff,
 	)
-	_, err := d.conn.Exec(query, status)
 	return err
 }
 

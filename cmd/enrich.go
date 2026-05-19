@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"fmt"
 	"news4coder/internal/config"
 	"news4coder/internal/db"
@@ -59,7 +60,7 @@ var enrichCmd = &cobra.Command{
 		successCount := 0
 		for i, a := range articles {
 			fmt.Printf("%s [%d/%d] 正在增强: %s\n", cyan("⟳"), i+1, len(articles), truncateString(a.Title, 50))
-			result, err := enr.EnrichArticle(&a)
+			result, err := enr.EnrichArticle(context.Background(), &a)
 			if err != nil {
 				fmt.Printf("  %s 失败: %v\n", yellow("⚠"), err)
 				continue

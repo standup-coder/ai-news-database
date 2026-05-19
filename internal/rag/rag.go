@@ -1,6 +1,7 @@
 package rag
 
 import (
+	"context"
 	"fmt"
 	"news4coder/internal/article"
 	"news4coder/internal/config"
@@ -31,7 +32,7 @@ func NewWithDeps(database *db.DB, cfg *config.LLMConfig, llmClient llm.LLMClient
 }
 
 // Answer 基于本地知识库回答问题
-func (r *RAG) Answer(question string) (string, []SourceRef, error) {
+func (r *RAG) Answer(ctx context.Context, question string) (string, []SourceRef, error) {
 	// 1. 召回相关文章（先用 FTS 搜索）
 	articles, err := r.db.SearchArticles(question, 10)
 	if err != nil {
@@ -64,7 +65,7 @@ func (r *RAG) Answer(question string) (string, []SourceRef, error) {
 		})
 	}
 
-	context := strings.Join(contextParts, "\n\n")
+	articleContext := strings.Join(contextParts, "\n\n")
 
 	prompt := fmt.Sprintf(`你是一个专业的技术顾问，请根据以下从本地知识库中检索到的文章摘要，回答用户的问题。
 如果知识库中的信息不足以回答问题，请明确说明。
@@ -76,9 +77,9 @@ func (r *RAG) Answer(question string) (string, []SourceRef, error) {
 === 用户问题 ===
 %s
 
-请用中文回答。`, context, question)
+请用中文回答。`, articleContext, question)
 
-	answer, err := r.llmClient.SimpleChat(prompt, r.cfg.AskMaxTokens)
+	answer, err := r.llmClient.SimpleChat(ctx, prompt, r.cfg.AskMaxTokens)
 	if err != nil {
 		return "", nil, fmt.Errorf("LLM 回答生成失败: %w", err)
 	}

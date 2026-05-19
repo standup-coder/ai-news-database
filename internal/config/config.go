@@ -66,6 +66,15 @@ func Load() (*AppConfig, error) {
 		return nil, fmt.Errorf("解析配置文件失败: %w", err)
 	}
 
+	// 解密 API Key（兼容明文旧配置）
+	if cfg.LLM.APIKey != "" {
+		decrypted, err := DecryptString(cfg.LLM.APIKey)
+		if err != nil {
+			return nil, fmt.Errorf("解密 API Key 失败: %w", err)
+		}
+		cfg.LLM.APIKey = decrypted
+	}
+
 	// 补全默认值
 	defaultCfg := DefaultConfig()
 	if cfg.LLM.BaseURL == "" {
@@ -87,7 +96,7 @@ func Load() (*AppConfig, error) {
 	return &cfg, nil
 }
 
-// Save 保存配置文件
+// Save 保存配置文件（API Key 会自动加密）
 func (c *AppConfig) Save() error {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
@@ -100,10 +109,21 @@ func (c *AppConfig) Save() error {
 	}
 
 	configPath := filepath.Join(configDir, configFile)
-	data, err := json.MarshalIndent(c, "", "  ")
+
+	// 深拷贝配置，加密 API Key 后再写入（不修改原始对象）
+	saveCopy := *c
+	if saveCopy.LLM.APIKey != "" {
+		encrypted, err := EncryptString(saveCopy.LLM.APIKey)
+		if err != nil {
+			return fmt.Errorf("加密 API Key 失败: %w", err)
+		}
+		saveCopy.LLM.APIKey = encrypted
+	}
+
+	data, err := json.MarshalIndent(saveCopy, "", "  ")
 	if err != nil {
 		return fmt.Errorf("序列化配置失败: %w", err)
 	}
 
-	return os.WriteFile(configPath, data, 0644)
+	return os.WriteFile(configPath, data, 0600)
 }

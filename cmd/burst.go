@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"news4coder/internal/article"
@@ -220,7 +221,7 @@ var burstCmd = &cobra.Command{
 		prompt := fmt.Sprintf(template.Prompt, burstCount, productsText, focusClause)
 
 		client := llm.NewClient(&cfg.LLM)
-		resp, err := client.Chat([]llm.Message{
+		resp, err := client.Chat(context.Background(), []llm.Message{
 			{Role: "system", Content: template.System},
 			{Role: "user", Content: prompt},
 		}, 4000)

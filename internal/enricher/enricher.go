@@ -1,6 +1,7 @@
 package enricher
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"news4coder/internal/article"
@@ -13,10 +14,10 @@ import (
 
 // Enricher 内容增强器
 type Enricher struct {
-	llmClient  llm.LLMClient
-	reader     crawler.ContentReader
-	db         *db.DB
-	cfg        *config.LLMConfig
+	llmClient llm.LLMClient
+	reader    crawler.ContentReader
+	db        *db.DB
+	cfg       *config.LLMConfig
 }
 
 // Result LLM 返回的增强结果
@@ -43,7 +44,7 @@ func NewWithDeps(database *db.DB, cfg *config.LLMConfig, llmClient llm.LLMClient
 }
 
 // EnrichArticle 对单篇文章进行增强
-func (e *Enricher) EnrichArticle(a *article.Article) (*Result, error) {
+func (e *Enricher) EnrichArticle(ctx context.Context, a *article.Article) (*Result, error) {
 	// 1. 获取原始内容
 	content := a.RawContent
 	if len(content) < 200 {
@@ -81,7 +82,7 @@ func (e *Enricher) EnrichArticle(a *article.Article) (*Result, error) {
 文章内容：
 %s`, a.Title, content)
 
-	resp, err := e.llmClient.SimpleChat(prompt, e.cfg.EnrichMaxTokens)
+	resp, err := e.llmClient.SimpleChat(ctx, prompt, e.cfg.EnrichMaxTokens)
 	if err != nil {
 		return nil, fmt.Errorf("LLM 请求失败: %w", err)
 	}

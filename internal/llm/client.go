@@ -2,6 +2,7 @@ package llm
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -13,9 +14,9 @@ import (
 
 // LLMClient defines the interface for LLM operations
 type LLMClient interface {
-	Chat(messages []Message, maxTokens int) (string, error)
-	SimpleChat(prompt string, maxTokens int) (string, error)
-	GetEmbedding(text string) ([]float64, error)
+	Chat(ctx context.Context, messages []Message, maxTokens int) (string, error)
+	SimpleChat(ctx context.Context, prompt string, maxTokens int) (string, error)
+	GetEmbedding(ctx context.Context, text string) ([]float64, error)
 }
 
 // Ensure Client implements LLMClient
@@ -37,8 +38,101 @@ func NewClient(cfg *config.LLMConfig) *Client {
 	}
 }
 
+// maxRetries 最大重试次数
+const maxRetries = 3
+
+// retryWithBackoff 指数退避重试
+func retryWithBackoff(ctx context.Context, fn func() error) error {
+	var lastErr error
+	for attempt := 0; attempt <= maxRetries; attempt++ {
+		if attempt > 0 {
+			delay := time.Duration(1<<uint(attempt-1)) * time.Second // 1s, 2s, 4s
+			select {
+			case <-ctx.Done():
+				return ctx.Err()
+			case <-time.After(delay):
+			}
+		}
+		lastErr = fn()
+		if lastErr == nil {
+			return nil
+		}
+		// 仅对网络错误重试，业务错误直接返回
+		if !isRetryable(lastErr) {
+			return lastErr
+		}
+	}
+	return fmt.Errorf("重试 %d 次后仍失败: %w", maxRetries, lastErr)
+}
+
+// isRetryable 判断错误是否可重试
+func isRetryable(err error) bool {
+	if err == nil {
+		return false
+	}
+	errStr := err.Error()
+	// 网络超时、连接拒绝等可重试
+	for _, pattern := range []string{"timeout", "connection refused", "EOF", "502", "503", "429"} {
+		if contains(errStr, pattern) {
+			return true
+		}
+	}
+	return false
+}
+
+func contains(s, substr string) bool {
+	return len(s) >= len(substr) && searchString(s, substr)
+}
+
+func searchString(s, sub string) bool {
+	for i := 0; i <= len(s)-len(sub); i++ {
+		if s[i:i+len(sub)] == sub {
+			return true
+		}
+	}
+	return false
+}
+
+// doRequest 执行 HTTP 请求（带重试）
+func (c *Client) doRequest(ctx context.Context, url string, reqBody any) ([]byte, error) {
+	data, err := json.Marshal(reqBody)
+	if err != nil {
+		return nil, fmt.Errorf("序列化请求失败: %w", err)
+	}
+
+	var body []byte
+	err = retryWithBackoff(ctx, func() error {
+		req, err := http.NewRequestWithContext(ctx, "POST", url, bytes.NewReader(data))
+		if err != nil {
+			return fmt.Errorf("创建请求失败: %w", err)
+		}
+
+		req.Header.Set("Content-Type", "application/json")
+		req.Header.Set("Authorization", "Bearer "+c.cfg.APIKey)
+
+		resp, err := c.client.Do(req)
+		if err != nil {
+			return fmt.Errorf("请求失败: %w", err)
+		}
+		defer resp.Body.Close()
+
+		body, err = io.ReadAll(resp.Body)
+		if err != nil {
+			return fmt.Errorf("读取响应失败: %w", err)
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("API 错误 (status %d): %s", resp.StatusCode, string(body))
+		}
+
+		return nil
+	})
+
+	return body, err
+}
+
 // Chat 发送对话请求
-func (c *Client) Chat(messages []Message, maxTokens int) (string, error) {
+func (c *Client) Chat(ctx context.Context, messages []Message, maxTokens int) (string, error) {
 	if c.cfg.APIKey == "" {
 		return "", fmt.Errorf("LLM API Key 未配置，请编辑 ~/.news4coder/config.json")
 	}
@@ -50,32 +144,9 @@ func (c *Client) Chat(messages []Message, maxTokens int) (string, error) {
 		Temperature: 0.3,
 	}
 
-	data, err := json.Marshal(reqBody)
+	body, err := c.doRequest(ctx, c.cfg.BaseURL+"/chat/completions", reqBody)
 	if err != nil {
-		return "", fmt.Errorf("序列化请求失败: %w", err)
-	}
-
-	req, err := http.NewRequest("POST", c.cfg.BaseURL+"/chat/completions", bytes.NewReader(data))
-	if err != nil {
-		return "", fmt.Errorf("创建请求失败: %w", err)
-	}
-
-	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Authorization", "Bearer "+c.cfg.APIKey)
-
-	resp, err := c.client.Do(req)
-	if err != nil {
-		return "", fmt.Errorf("请求 LLM 失败: %w", err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return "", fmt.Errorf("读取响应失败: %w", err)
-	}
-
-	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("LLM API 错误 (status %d): %s", resp.StatusCode, string(body))
+		return "", err
 	}
 
 	var chatResp ChatResponse
@@ -95,15 +166,15 @@ func (c *Client) Chat(messages []Message, maxTokens int) (string, error) {
 }
 
 // SimpleChat 快速单轮对话
-func (c *Client) SimpleChat(prompt string, maxTokens int) (string, error) {
-	return c.Chat([]Message{
+func (c *Client) SimpleChat(ctx context.Context, prompt string, maxTokens int) (string, error) {
+	return c.Chat(ctx, []Message{
 		{Role: "system", Content: "You are a helpful assistant for software engineers."},
 		{Role: "user", Content: prompt},
 	}, maxTokens)
 }
 
 // GetEmbedding 获取文本向量
-func (c *Client) GetEmbedding(text string) ([]float64, error) {
+func (c *Client) GetEmbedding(ctx context.Context, text string) ([]float64, error) {
 	if c.cfg.APIKey == "" {
 		return nil, fmt.Errorf("LLM API Key 未配置")
 	}
@@ -113,32 +184,9 @@ func (c *Client) GetEmbedding(text string) ([]float64, error) {
 		Input: text,
 	}
 
-	data, err := json.Marshal(reqBody)
+	body, err := c.doRequest(ctx, c.cfg.BaseURL+"/embeddings", reqBody)
 	if err != nil {
-		return nil, fmt.Errorf("序列化请求失败: %w", err)
-	}
-
-	req, err := http.NewRequest("POST", c.cfg.BaseURL+"/embeddings", bytes.NewReader(data))
-	if err != nil {
-		return nil, fmt.Errorf("创建请求失败: %w", err)
-	}
-
-	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("Authorization", "Bearer "+c.cfg.APIKey)
-
-	resp, err := c.client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("请求 embedding 失败: %w", err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("读取响应失败: %w", err)
-	}
-
-	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("Embedding API 错误 (status %d): %s", resp.StatusCode, string(body))
+		return nil, err
 	}
 
 	var embedResp EmbeddingResponse
@@ -176,5 +224,3 @@ func CosineSimilarity(a, b []float64) float64 {
 
 	return dot / (math.Sqrt(normA) * math.Sqrt(normB))
 }
-
-

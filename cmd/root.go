@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"log/slog"
 	"news4coder/internal/official"
 	"os"
 	"strings"
@@ -16,6 +17,8 @@ var (
 	buildTime = "unknown"
 	gitCommit = "unknown"
 )
+
+var debug bool
 
 var rootCmd = &cobra.Command{
 	Use:   "news4coder",
@@ -47,6 +50,18 @@ var rootCmd = &cobra.Command{
 	// 关闭默认的未知命令错误，允许自定义处理
 	SilenceErrors: true,
 	SilenceUsage:  true,
+	PersistentPreRun: func(cmd *cobra.Command, args []string) {
+		if debug {
+			slog.SetDefault(slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{
+				Level: slog.LevelDebug,
+			})))
+			slog.Debug("debug 模式已启用")
+		}
+	},
+}
+
+func init() {
+	rootCmd.PersistentFlags().BoolVar(&debug, "debug", false, "启用调试日志输出")
 }
 
 // Execute 执行根命令
