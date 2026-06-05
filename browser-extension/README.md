@@ -33,7 +33,9 @@ browser-extension/
 
 ### 方式 1：Chrome Web Store（推荐）
 
-未来将在 Chrome Web Store 上架，搜索 "News4Coder Clipper" 即可安装。
+搜索 "News4Coder Clipper" 即可安装。
+
+**自动化发布**：配置 GitHub Secrets 后，通过 GitHub Actions `Publish to Chrome Web Store` workflow 手动触发发布。
 
 ### 方式 2：开发者模式本地加载
 

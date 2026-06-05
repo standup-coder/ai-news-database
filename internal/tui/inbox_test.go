@@ -4,18 +4,21 @@ import (
 	"strings"
 	"testing"
 
-	"news4coder/internal/article"
 	tea "github.com/charmbracelet/bubbletea"
+	"news4coder/internal/article"
 )
 
 // mockDB is a test double for the DB interface.
 type mockDB struct {
-	articles      []article.Article
-	updateCalls   []struct{ id int64; status article.ReadStatus }
-	getErr        error
-	updateErr     error
-	getLimit      int
-	getStatus     article.ReadStatus
+	articles    []article.Article
+	updateCalls []struct {
+		id     int64
+		status article.ReadStatus
+	}
+	getErr         error
+	updateErr      error
+	getLimit       int
+	getStatus      article.ReadStatus
 	getSourceAlias string
 }
 
@@ -30,7 +33,10 @@ func (m *mockDB) GetArticles(status article.ReadStatus, sourceAlias string, limi
 }
 
 func (m *mockDB) UpdateStatus(id int64, status article.ReadStatus) error {
-	m.updateCalls = append(m.updateCalls, struct{ id int64; status article.ReadStatus }{id, status})
+	m.updateCalls = append(m.updateCalls, struct {
+		id     int64
+		status article.ReadStatus
+	}{id, status})
 	if m.updateErr != nil {
 		return m.updateErr
 	}
@@ -170,7 +176,7 @@ func TestFilterSwitch(t *testing.T) {
 	}
 
 	// Switch to starred
-	newM, cmd = mm.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("3")})
+	newM, _ = mm.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("3")})
 	mm = newM.(Model)
 	if mm.filter != article.StatusStarred {
 		t.Errorf("expected starred filter after 3, got %s", mm.filter)

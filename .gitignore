@@ -6,6 +6,11 @@ news4coder.exe
 *.test
 *.out
 
+# Coverage reports
+.coverage/
+coverage.out
+*.coverprofile
+
 # Dependency directories
 vendor/
 
@@ -35,6 +40,7 @@ local/
 .agents/
 .claude/
 .codebuddy/
+.kilo/
 .qoder/
 .qwen/
 .trae/
@@ -43,3 +49,10 @@ local/
 # Other tool-specific files
 skills/
 skills-lock.json
+
+# Benchmark results
+bench.out
+benchmark/
+
+# Static analysis results
+golangci-lint-report.*

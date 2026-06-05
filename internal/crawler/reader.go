@@ -31,22 +31,9 @@ func NewJinaReader() *JinaReader {
 
 // Fetch 读取指定 URL 的 Markdown 内容
 func (r *JinaReader) Fetch(url string) (string, error) {
-	jinaURL := "https://r.jina.ai/http://" + strings.TrimPrefix(url, "http://")
-	if strings.HasPrefix(url, "https://") {
-		jinaURL = "https://r.jina.ai/http://" + strings.TrimPrefix(url, "https://")
-		// Actually jina supports https like this:
-		jinaURL = "https://r.jina.ai/http://" + strings.TrimPrefix(url, "https://")
-		// Wait, the correct format for jina reader is:
-		// https://r.jina.ai/http://URL or https://r.jina.ai/http://URL
-		// For https sites, it's actually https://r.jina.ai/http://URL (replacing https:// with empty then prefixing)
-		// But more reliably: https://r.jina.ai/http://<url-without-scheme>
-		// Let's use a simpler approach:
-	}
-
-	// Correct Jina AI Reader URL construction
 	cleanURL := strings.TrimPrefix(url, "https://")
 	cleanURL = strings.TrimPrefix(cleanURL, "http://")
-	jinaURL = "https://r.jina.ai/http://" + cleanURL
+	jinaURL := "https://r.jina.ai/http://" + cleanURL
 
 	req, err := http.NewRequest("GET", jinaURL, nil)
 	if err != nil {

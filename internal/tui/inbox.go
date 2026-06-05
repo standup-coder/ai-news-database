@@ -194,15 +194,15 @@ func (m Model) View() string {
 
 	// Styles
 	var (
-		titleStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#7D56F4"))
-		headerStyle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFFFFF")).Background(lipgloss.Color("#5A3FD7")).Padding(0, 1)
-		selectedStyle= lipgloss.NewStyle().Background(lipgloss.Color("#3C3C3C")).Bold(true)
-		statusStyle  = lipgloss.NewStyle().Width(3).Align(lipgloss.Center)
-		sourceStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#888888")).Width(14)
-		helpStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("#888888"))
-		errStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555"))
-		infoStyle    = lipgloss.NewStyle().Foreground(lipgloss.Color("#55FF55"))
-		previewStyle = lipgloss.NewStyle().Foreground(lipgloss.Color("#BBBBBB")).PaddingLeft(2)
+		titleStyle    = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#7D56F4"))
+		headerStyle   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("#FFFFFF")).Background(lipgloss.Color("#5A3FD7")).Padding(0, 1)
+		selectedStyle = lipgloss.NewStyle().Background(lipgloss.Color("#3C3C3C")).Bold(true)
+		statusStyle   = lipgloss.NewStyle().Width(3).Align(lipgloss.Center)
+		sourceStyle   = lipgloss.NewStyle().Foreground(lipgloss.Color("#888888")).Width(14)
+		helpStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#888888"))
+		errStyle      = lipgloss.NewStyle().Foreground(lipgloss.Color("#FF5555"))
+		infoStyle     = lipgloss.NewStyle().Foreground(lipgloss.Color("#55FF55"))
+		previewStyle  = lipgloss.NewStyle().Foreground(lipgloss.Color("#BBBBBB")).PaddingLeft(2)
 	)
 
 	// Header
@@ -219,7 +219,7 @@ func (m Model) View() string {
 	listHeight := m.height - 10 // reserve space for header, preview, help, messages
 	var listLines []string
 	start := 0
-	end := len(m.articles)
+	var end int
 	if m.cursor >= listHeight {
 		start = m.cursor - listHeight + 1
 		end = min(len(m.articles), start+listHeight)

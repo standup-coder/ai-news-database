@@ -66,11 +66,11 @@ func TestCalculateScore(t *testing.T) {
 
 func TestGenerateReason(t *testing.T) {
 	tests := []struct {
-		name        string
-		a           article.Article
-		score       float64
-		prefs       map[string]int
-		wantReason  string
+		name       string
+		a          article.Article
+		score      float64
+		prefs      map[string]int
+		wantReason string
 	}{
 		{
 			name: "high quality",
@@ -86,7 +86,7 @@ func TestGenerateReason(t *testing.T) {
 			name: "matches preference",
 			a: article.Article{
 				QualityScore: 6.0,
-				SourceAlias: "generic",
+				SourceAlias:  "generic",
 			},
 			score:      8.0,
 			prefs:      map[string]int{"golang": 2},
@@ -96,7 +96,7 @@ func TestGenerateReason(t *testing.T) {
 			name: "hn source",
 			a: article.Article{
 				QualityScore: 6.0,
-				SourceAlias: "hn",
+				SourceAlias:  "hn",
 			},
 			score:      6.0,
 			prefs:      map[string]int{},
@@ -106,7 +106,7 @@ func TestGenerateReason(t *testing.T) {
 			name: "default reason",
 			a: article.Article{
 				QualityScore: 5.0,
-				SourceAlias: "reddit",
+				SourceAlias:  "reddit",
 			},
 			score:      5.0,
 			prefs:      map[string]int{},

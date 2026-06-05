@@ -14,9 +14,9 @@ import (
 var listArticles bool
 
 var listCmd = &cobra.Command{
-	Use:     "list",
-	Short:   "列出所有订阅或本地文章",
-	Long:    `显示所有已添加的订阅列表，或使用 --articles 查看本地数据库中的文章。`,
+	Use:   "list",
+	Short: "列出所有订阅或本地文章",
+	Long:  `显示所有已添加的订阅列表，或使用 --articles 查看本地数据库中的文章。`,
 	Example: `  news4coder list
   news4coder list --articles
   news4coder list --articles --status unread`,

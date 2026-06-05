@@ -9,9 +9,9 @@ import (
 )
 
 var statsCmd = &cobra.Command{
-	Use:   "stats",
-	Short: "查看订阅健康度统计",
-	Long:  `显示各官方源的文章数量、阅读率、收藏率等健康度指标。`,
+	Use:     "stats",
+	Short:   "查看订阅健康度统计",
+	Long:    `显示各官方源的文章数量、阅读率、收藏率等健康度指标。`,
 	Example: `  news4coder stats`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

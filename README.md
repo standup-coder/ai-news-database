@@ -74,7 +74,8 @@ news4coder 内置 8 个精选高质量技术源，覆盖中英文：
 | `ruanyf` | 阮一峰的网络日志 | Jina Reader | 中文技术博客标杆 |
 | `coolshell` | 酷壳 CoolShell | Jina Reader | 左耳朵耗子的技术博客 |
 | `v2ex` | V2EX | API | 中文技术社区 |
-| `infoq` | InfoQ 中文站热点清单 | 专用抓取器 | 热点文章列表 |
+| `infoq` | InfoQ 中文站热点清单 | 专用抓取器 | 抓取 [`hotlist`](https://www.infoq.cn/hotlist) 热点文章列表 |
+| `ai` | InfoQ AI Briefs | 专用抓取器 | 抓取 [`aibriefs`](https://www.infoq.cn/aibriefs) AI 大模型即时资讯 |
 
 使用 `news4coder sources` 查看完整列表，也可以直接用别名获取内容，如 `news4coder hn`。
 
@@ -287,6 +288,69 @@ alias n4c-ask='./news4coder ask'
 ```bash
 # 每天早上 8 点同步
 0 8 * * * cd /path/to/news4coder && ./news4coder sync >> ~/.news4coder/sync.log 2>&1
+```
+
+---
+
+## 快速命令速查
+
+> 以下速查基于 `nn`（`news4coder` 的常用别名），涵盖最常见的使用场景。
+
+### 📰 场景：看新闻
+
+```bash
+nn sources                    # 查看官方源列表
+nn v2ex                       # 直接抓取 V2EX 热帖
+nn hn                         # 直接抓取 Hacker News
+nn github                     # 直接抓取 GitHub Blog
+nn lobsters                   # 直接抓取 lobste.rs
+nn infoq                      # 直接抓取 InfoQ 热点清单（hotlist）
+nn ai                         # 直接抓取 InfoQ AI Briefs（aibriefs）
+nn reddit                     # 直接抓取 Reddit r/programming
+nn ruanyf                     # 直接抓取阮一峰博客
+nn coolshell                  # 直接抓取酷壳
+
+nn list --articles            # 查看已同步到本地的文章
+nn list --articles --status unread   # 只看未读
+nn curate                     # 生成今日必读智能精选（需 LLM）
+```
+
+### 🗂️ 场景：管理文章状态
+
+```bash
+nn read 123                   # 标记文章 123 为已读
+nn star 123                   # 收藏文章 123
+nn discard 123                # 丢弃文章 123
+nn archive                    # 批量归档所有已读文章
+nn note 123 "核心观点..."     # 添加笔记
+nn tag 123 "go,并发"          # 添加标签
+```
+
+### 🔍 场景：搜索与整理
+
+```bash
+nn search "kubernetes"        # 全文搜索本地文章
+nn stats                      # 查看各源订阅健康度
+nn export 123                 # 导出单篇为 Markdown
+nn cleanup --days 30          # 清理 30 天前的已丢弃/归档文章
+```
+
+### ⚙️ 场景：配置与同步
+
+```bash
+nn add --name "酷壳" --url "https://coolshell.cn/feed"   # 添加自定义 RSS
+nn sync                       # 同步所有官方源到本地数据库
+nn enrich                     # 调用 LLM 生成摘要、标签、评分
+```
+
+### 🎯 最常用的一天
+
+```bash
+nn v2ex                       # 快速刷 V2EX
+nn list --articles            # 看本地文章列表
+nn curate                     # 看今日精选
+nn sync                       # 同步最新内容
+nn search "xxx"               # 搜历史文章
 ```
 
 ---

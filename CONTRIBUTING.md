@@ -77,6 +77,15 @@ go build -o news4coder
 - 遵循 [Effective Go](https://go.dev/doc/effective_go) 规范
 - 为新功能添加单元测试（如适用）
 - 保持现有代码风格一致
+- 运行 `make quality` 确保所有质量检查通过后再提交
+
+### 测试要求
+
+| 测试类型 | 要求 | 运行命令 |
+|----------|------|----------|
+| 单元测试 | 必须 | `go test ./...` |
+| 覆盖率 | ≥60% | `make test-coverage` |
+| 基准测试 | 推荐 | `make benchmark` |
 
 ### 提交信息
 
@@ -107,6 +116,17 @@ feat: add support for Dev.to official source
 - Register source in official registry
 - Add unit tests for crawler
 ```
+
+### 质量检查清单
+
+提交 PR 前确保：
+
+- [ ] `make fmt` 通过
+- [ ] `go vet ./...` 无错误
+- [ ] `make lint` 无错误
+- [ ] `make test-coverage` 覆盖率 ≥60%
+- [ ] `make security` 无安全警告
+- [ ] 所有测试通过 `go test ./... -race`
 
 ---
 

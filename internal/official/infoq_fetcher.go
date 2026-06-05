@@ -1,6 +1,7 @@
 package official
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"news4coder/internal/search"
@@ -84,10 +85,13 @@ func (f *InfoQFetcher) parseResults(doc *goquery.Document) ([]search.SearchResul
 	// 检查页面是否为空（只有 <div id="app"></div>）
 	appDiv := doc.Find("#app")
 	if appDiv.Length() > 0 && strings.TrimSpace(appDiv.Text()) == "" {
-		// 页面是 SPA，需要其他方法
-		// 这里提供演示数据
-		if os.Getenv("DEMO_MODE") == "1" || true {
-			// 使用演示数据
+		// 页面是 SPA（如 aibriefs），尝试解析 Nuxt devalue 数据
+		results, err := f.parseNuxtDevalue(doc)
+		if err == nil && len(results) > 0 {
+			return results, nil
+		}
+		// 解析失败则回退到演示数据
+		if os.Getenv("DEMO_MODE") == "1" {
 			return f.generateDemoResults(), nil
 		}
 		return nil, fmt.Errorf("InfoQ 页面使用 JavaScript 动态渲染，无法直接抓取\n\n建议:\n1. 访问原页面: %s\n2. 等待工具更新支持", f.url)
@@ -122,6 +126,11 @@ func (f *InfoQFetcher) parseResults(doc *goquery.Document) ([]search.SearchResul
 	}
 
 	if selection == nil || selection.Length() == 0 {
+		// 传统选择器均失败，尝试 Nuxt devalue 解析（SPA 页面如 aibriefs）
+		results, err := f.parseNuxtDevalue(doc)
+		if err == nil && len(results) > 0 {
+			return results, nil
+		}
 		return nil, fmt.Errorf("页面结构可能已变更，无法定位文章列表")
 	}
 
@@ -199,6 +208,145 @@ func (f *InfoQFetcher) generateDemoResults() []search.SearchResult {
 	for i := range results {
 		results[i].URL = fmt.Sprintf("%s#demo-%d", baseURL, results[i].Index)
 	}
+	return results
+}
+
+// parseNuxtDevalue 从 SPA 页面的 <script> 标签中解析 Nuxt devalue 数据
+func (f *InfoQFetcher) parseNuxtDevalue(doc *goquery.Document) ([]search.SearchResult, error) {
+	var rawJSON string
+
+	doc.Find("script").Each(func(i int, s *goquery.Selection) {
+		text := strings.TrimSpace(s.Text())
+		// Nuxt devalue 数据以 JSON 数组开头
+		if strings.HasPrefix(text, "[") {
+			rawJSON = text
+		}
+	})
+
+	if rawJSON == "" {
+		return nil, fmt.Errorf("未找到 Nuxt devalue 数据")
+	}
+
+	var data []interface{}
+	if err := json.Unmarshal([]byte(rawJSON), &data); err != nil {
+		return nil, fmt.Errorf("解析 devalue JSON 失败: %w", err)
+	}
+
+	if len(data) < 2 {
+		return nil, fmt.Errorf("devalue 数据不完整")
+	}
+
+	// 解析引用，根对象在索引 1（ShallowReactive 包裹）
+	root := f.resolveDevalue(data, 1, make(map[int]bool))
+	if root == nil {
+		return nil, fmt.Errorf("无法解析 devalue 根对象")
+	}
+
+	return f.extractAIBriefs(root), nil
+}
+
+// resolveDevalue 递归解析 Nuxt devalue 序列化数据中的引用
+func (f *InfoQFetcher) resolveDevalue(data []interface{}, idx int, seen map[int]bool) interface{} {
+	if idx < 0 || idx >= len(data) {
+		return nil
+	}
+	if seen[idx] {
+		return "<circular>"
+	}
+	seen[idx] = true
+
+	val := data[idx]
+	switch v := val.(type) {
+	case string, bool, nil:
+		return v
+	case float64:
+		return v
+	case []interface{}:
+		// 检查是否是类型包装器（ShallowReactive / Reactive / RefImpl）
+		if len(v) >= 2 {
+			if first, ok := v[0].(string); ok && (first == "ShallowReactive" || first == "Reactive" || first == "RefImpl") {
+				if second, ok := v[1].(float64); ok {
+					return f.resolveDevalue(data, int(second), seen)
+				}
+			}
+		}
+		result := make([]interface{}, len(v))
+		for i, item := range v {
+			if fval, ok := item.(float64); ok && fval >= 0 {
+				result[i] = f.resolveDevalue(data, int(fval), seen)
+			} else {
+				result[i] = item
+			}
+		}
+		return result
+	case map[string]interface{}:
+		result := make(map[string]interface{})
+		for k, vval := range v {
+			if fval, ok := vval.(float64); ok && fval >= 0 {
+				result[k] = f.resolveDevalue(data, int(fval), seen)
+			} else {
+				result[k] = vval
+			}
+		}
+		return result
+	}
+	return val
+}
+
+// extractAIBriefs 从解析后的 Nuxt 数据中提取 AI Briefs 文章列表
+func (f *InfoQFetcher) extractAIBriefs(root interface{}) []search.SearchResult {
+	rootMap, ok := root.(map[string]interface{})
+	if !ok {
+		return nil
+	}
+
+	data, ok := rootMap["data"].(map[string]interface{})
+	if !ok {
+		return nil
+	}
+
+	aibriefsList, ok := data["aibriefsList"].(map[string]interface{})
+	if !ok {
+		return nil
+	}
+
+	list, ok := aibriefsList["list"].([]interface{})
+	if !ok {
+		return nil
+	}
+
+	var results []search.SearchResult
+	for i, item := range list {
+		itemMap, ok := item.(map[string]interface{})
+		if !ok {
+			continue
+		}
+
+		title, _ := itemMap["title"].(string)
+		desc, _ := itemMap["description"].(string)
+		link, _ := itemMap["original_link"].(string)
+
+		if title == "" || link == "" {
+			continue
+		}
+
+		// 清理并截断摘要
+		desc = strings.Join(strings.Fields(desc), " ")
+		if len(desc) > 200 {
+			desc = desc[:200] + "..."
+		}
+
+		// 清理标题
+		title = strings.Join(strings.Fields(title), " ")
+
+		results = append(results, search.SearchResult{
+			Index:   i + 1,
+			Title:   title,
+			URL:     link,
+			Snippet: desc,
+		})
+	}
+
 	return results
 }
 

@@ -22,11 +22,11 @@ func NewV2EXCrawler() *V2EXCrawler {
 }
 
 type v2exTopic struct {
-	Title       string `json:"title"`
-	URL         string `json:"url"`
-	Content     string `json:"content"`
-	Created     int64  `json:"created"`
-	Replies     int    `json:"replies"`
+	Title   string `json:"title"`
+	URL     string `json:"url"`
+	Content string `json:"content"`
+	Created int64  `json:"created"`
+	Replies int    `json:"replies"`
 }
 
 // Fetch 获取 V2EX 热门主题

@@ -1,0 +1,60 @@
+run:
+  timeout: 5m
+  go: "1.25"
+
+linters:
+  enable:
+    - errcheck
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - golint
+    - misspell
+    - nakedret
+    - prealloc
+    - exportloopref
+    - gofmt
+
+linters-settings:
+  errcheck:
+    exclude-functions:
+      - (*encoding/json.Encoder).Encode
+      - (*encoding/json.Decoder).Decode
+      - fmt.Sscanf
+      - (*database/sql.DB).Exec
+      - os.WriteFile
+      - (*os.File).Close
+      - (*github.com/spf13/cobra.Command).GenBashCompletion
+      - (*github.com/spf13/cobra.Command).GenZshCompletion
+      - (*github.com/spf13/cobra.Command).GenFishCompletion
+      - (*github.com/spf13/cobra.Command).GenPowerShellCompletionWithDesc
+      - (*github.com/spf13/cobra.Command).MarkFlagRequired
+  gosec:
+    excludes:
+      - G104 # ioutil.NopCloser
+  gofmt:
+    modules-download-mode: readonly
+  misspell:
+    locale: US
+  nakedret:
+    max-length: 40
+  prealloc:
+    prealloc-hint: 50
+  exportloopref:
+    max-depth: 3
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - errcheck
+        - gosec
+        - nakedret
+    - path: internal/integration/
+      linters:
+        - errcheck
+        - gosec

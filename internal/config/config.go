@@ -11,12 +11,12 @@ const configFile = "config.json"
 
 // LLMConfig LLM 相关配置
 type LLMConfig struct {
-	BaseURL          string `json:"base_url"`
-	APIKey           string `json:"api_key"`
-	Model            string `json:"model"`
-	EmbeddingModel   string `json:"embedding_model"`
-	EnrichMaxTokens  int    `json:"enrich_max_tokens"`
-	AskMaxTokens     int    `json:"ask_max_tokens"`
+	BaseURL         string `json:"base_url"`
+	APIKey          string `json:"api_key"`
+	Model           string `json:"model"`
+	EmbeddingModel  string `json:"embedding_model"`
+	EnrichMaxTokens int    `json:"enrich_max_tokens"`
+	AskMaxTokens    int    `json:"ask_max_tokens"`
 }
 
 // AppConfig 应用总配置

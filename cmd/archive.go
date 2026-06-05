@@ -10,9 +10,9 @@ import (
 )
 
 var archiveCmd = &cobra.Command{
-	Use:   "archive",
-	Short: "批量归档已读文章",
-	Long:  `将所有已读状态的文章批量归档，释放收件箱空间。`,
+	Use:     "archive",
+	Short:   "批量归档已读文章",
+	Long:    `将所有已读状态的文章批量归档，释放收件箱空间。`,
 	Example: `  news4coder archive`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

@@ -59,12 +59,6 @@ type inspireHNHit struct {
 	Author      string `json:"author"`
 }
 
-type inspireArticle struct {
-	inspireHNHit
-	DBID  int64
-	Saved bool
-}
-
 type InspireModel struct {
 	hits         []inspireHNHit
 	cursor       int
@@ -360,7 +354,7 @@ func (m InspireModel) View() string {
 	} else {
 		listHeight := m.height - 12
 		start := 0
-		end := len(m.hits)
+		var end int
 		if m.cursor >= listHeight {
 			start = m.cursor - listHeight + 1
 			end = minInt(len(m.hits), start+listHeight)

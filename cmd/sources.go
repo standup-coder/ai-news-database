@@ -9,9 +9,9 @@ import (
 )
 
 var sourcesCmd = &cobra.Command{
-	Use:   "sources",
-	Short: "列出所有官方新闻源",
-	Long:  `显示所有可用的官方新闻源及其别名。`,
+	Use:     "sources",
+	Short:   "列出所有官方新闻源",
+	Long:    `显示所有可用的官方新闻源及其别名。`,
 	Example: `  news4coder sources`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 获取官方源注册表

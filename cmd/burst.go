@@ -217,7 +217,7 @@ var burstCmd = &cobra.Command{
 			focusClause = fmt.Sprintf("\n\n用户希望聚焦的方向是：%s。请围绕这个方向展开联想。", burstFocus)
 		}
 
-		template, _ := burstModePrompts[mode]
+		template := burstModePrompts[mode]
 		prompt := fmt.Sprintf(template.Prompt, burstCount, productsText, focusClause)
 
 		client := llm.NewClient(&cfg.LLM)
@@ -296,7 +296,7 @@ var burstHistoryCmd = &cobra.Command{
 
 		for _, r := range results {
 			var ideas []burstIdea
-			json.Unmarshal([]byte(r.Ideas), &ideas)
+			_ = json.Unmarshal([]byte(r.Ideas), &ideas)
 
 			modeName := modeNames[r.Mode]
 			if modeName == "" {
@@ -359,7 +359,7 @@ var burstShowCmd = &cobra.Command{
 		}
 
 		var ideas []burstIdea
-		json.Unmarshal([]byte(result.Ideas), &ideas)
+		_ = json.Unmarshal([]byte(result.Ideas), &ideas)
 
 		modeNames := map[string]string{
 			"cross-domain": "跨界联想",

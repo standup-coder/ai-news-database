@@ -36,6 +36,16 @@ func (r *Registry) registerDefaultSources() {
 		Enabled:     true,
 	}
 
+	// InfoQ AI Briefs
+	r.sources["ai"] = &Source{
+		Alias:       "ai",
+		Name:        "InfoQ AI Briefs",
+		URL:         "https://www.infoq.cn/aibriefs",
+		FetcherType: "infoq",
+		Description: "InfoQ 中文站 AI 大模型领域全面即时资讯",
+		Enabled:     true,
+	}
+
 	// Hacker News
 	r.sources["hn"] = &Source{
 		Alias:       "hn",
