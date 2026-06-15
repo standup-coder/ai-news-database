@@ -32,6 +32,8 @@ var rootCmd = &cobra.Command{
   enrich      调用 LLM 生成摘要、标签和质量评分
   curate      智能策展：生成今日必读清单
   ask         基于本地知识库进行 RAG 问答
+  research    深度研究：基于行业资讯生成分析报告
+  ai tui      AI 阅读器：分栏显示文章列表和正文
   list        查看订阅列表或本地文章 (-a 查看文章)
   inbox       进入 TUI 收件箱快速浏览
   read        标记文章为已读

@@ -7,7 +7,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=flat&logo=go)](https://golang.org)
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite)](https://sqlite.org)
 
-一个优雅、简单、强大的 Go 语言命令行工具，专为程序员设计。采用 **LLM-Native** 架构和**本地优先**理念，支持多源 API 采集、智能网页抓取、LLM 内容增强（摘要/标签/评分）、智能策展和基于本地知识库的 RAG 问答。
+一个优雅、简单、强大的 Go 语言命令行工具，专为程序员设计。采用 **LLM-Native** 架构和**本地优先**理念，支持多源 API 采集、智能网页抓取、LLM 内容增强、深度研究分析和本地知识库 RAG 问答。
 
 ---
 
@@ -17,13 +17,13 @@
 - [功能特性](#功能特性)
 - [官方信息源](#官方信息源)
 - [快速开始](#快速开始)
+- [深度研究](#深度研究)
+- [AI TUI 阅读器](#ai-tui-阅读器)
 - [完整使用指南](#完整使用指南)
 - [命令参考](#命令参考)
-- [TUI 收件箱](#tui-收件箱)
 - [技术架构](#技术架构)
-- [数据库设计](#数据库设计)
-- [模块详解](#模块详解)
 - [开发指南](#开发指南)
+- [质量保证](#质量保证)
 - [故障排除](#故障排除)
 - [许可证](#许可证)
 
@@ -39,31 +39,53 @@
 | **服务可用性** | 永久可用 | 依赖服务商 |
 | **离线使用** | 完全支持 | 有限支持 |
 | **数据导出** | 完全自由 | 受限 |
+| **AI 能力** | 本地 RAG + 深度研究 | 依赖云端 |
 
 ---
 
 ## 功能特性
 
+### 核心功能
+
 - ✅ **本地优先**: 所有数据存储在本地 SQLite，无需云端账号
 - 🔒 **数据主权**: 你的阅读记录、收藏、笔记完全属于你
-- 🌐 **多源智能采集**: 直接调用 HN/Reddit/V2EX API + Jina AI Reader，告别 RSS
-- 🤖 **LLM 内容增强**: 自动生成高质量摘要、技术标签、质量评分（0-10）
+- 🌐 **多源智能采集**: 直接调用 HN/Reddit/V2EX API + Jina AI Reader
+- 🤖 **LLM 内容增强**: 自动生成摘要、技术标签、质量评分（0-10）
 - 🎯 **智能策展**: 基于质量评分和阅读偏好，自动生成「今日必读」
-- 💾 **本地知识库**: SQLite + FTS5 全文检索，构建你的技术资产
+- 💬 **RAG 问答**: 基于本地知识库回答，标注引用来源
+- 🔍 **极速搜索**: 本地 FTS5 全文检索，秒级响应
+
+### 深度研究（新增）
+
+- 🔬 **Deep Research**: 遵循专业研究方法论的深度分析
+  - 规划阶段：自动生成研究假设和搜索计划
+  - 多源采集：本地知识库 + 网络搜索并行
+  - 内容获取：Jina Reader 抓取完整页面内容
+  - 证据提取：关键声明、事实、引用自动提取
+  - 交叉验证：证据关联分析，计算可信度
+  - 信息缺口识别：发现研究中的薄弱环节
+
+### AI TUI（新增）
+
+- 📺 **AI 阅读器**: 分栏显示文章列表和正文预览
+  - 左侧：文章列表（上下键选择）
+  - 右侧：文章预览（标题、URL、摘要、标签）
+  - 支持快捷操作：标记已读、收藏、丢弃
+
+### 现有功能
+
 - 📖 **阅读状态流**: unread / read / starred / archived / discarded
 - 🧹 **断舍离支持**: 批量归档、自动清理、语义去重
-- 🔍 **极速搜索**: 本地全文搜索，秒级响应
-- 💬 **RAG 问答**: 基于本地知识库回答，标注引用来源
-- 📺 **TUI 收件箱**: 交互式极速浏览，秒级决策
 - 📝 **快速输入**: 笔记、标签、Markdown 导出
 - 🎨 **优雅输出**: 彩色终端输出，清晰易读
 - 🚀 **快速启动**: 单二进制文件，无需额外依赖
+- 🌐 **浏览器插件**: 一键保存网页到本地知识库
 
 ---
 
 ## 官方信息源
 
-news4coder 内置 8 个精选高质量技术源，覆盖中英文：
+news4coder 内置 9 个精选高质量技术源，覆盖中英文：
 
 | 别名 | 名称 | 采集方式 | 说明 |
 |------|------|----------|------|
@@ -74,8 +96,8 @@ news4coder 内置 8 个精选高质量技术源，覆盖中英文：
 | `ruanyf` | 阮一峰的网络日志 | Jina Reader | 中文技术博客标杆 |
 | `coolshell` | 酷壳 CoolShell | Jina Reader | 左耳朵耗子的技术博客 |
 | `v2ex` | V2EX | API | 中文技术社区 |
-| `infoq` | InfoQ 中文站热点清单 | 专用抓取器 | 抓取 [`hotlist`](https://www.infoq.cn/hotlist) 热点文章列表 |
-| `ai` | InfoQ AI Briefs | 专用抓取器 | 抓取 [`aibriefs`](https://www.infoq.cn/aibriefs) AI 大模型即时资讯 |
+| `infoq` | InfoQ 中文站热点清单 | 专用抓取器 | 抓取热点文章列表 |
+| `ai` | InfoQ AI Briefs | 专用抓取器 | AI 大模型即时资讯 |
 
 使用 `news4coder sources` 查看完整列表，也可以直接用别名获取内容，如 `news4coder hn`。
 
@@ -96,18 +118,9 @@ curl -sSL https://get.news4coder.dev | bash
 确保已安装 Go 1.25 或更高版本：
 
 ```bash
-# 克隆仓库
 git clone https://github.com/news4coder/news4coder.git
 cd news4coder
-
-# 编译项目
 make build
-
-# 或直接运行
-make run
-
-# 安装到 $GOPATH/bin
-make install
 ```
 
 #### 方式三：go install
@@ -116,10 +129,12 @@ make install
 go install github.com/news4coder/news4coder@latest
 ```
 
-#### 验证安装
+#### 创建快捷别名
 
 ```bash
-news4coder --version
+# 添加 shell 别名（推荐）
+echo "alias nn='news4coder'" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ### 配置 LLM（可选但推荐）
@@ -145,17 +160,129 @@ news4coder --version
 
 ```bash
 # 查看帮助
-./news4coder --help
+news4coder --help
 
 # 查看可用官方源
-./news4coder sources
+news4coder sources
 
 # 同步所有官方源
-./news4coder sync
+news4coder sync
 
 # 查看已同步文章
-./news4coder list --articles
+news4coder list --articles
 ```
+
+---
+
+## 深度研究
+
+news4coder 的深度研究功能遵循专业研究方法论，模拟 Qwen/DeepSeek Deep Research 的研究流程。
+
+### 研究流程
+
+```
+┌─────────────────────────────────────────────────────┐
+│  1. 规划阶段 - 分析主题，生成研究假设和搜索计划      │
+├─────────────────────────────────────────────────────┤
+│  2. 搜索阶段 - 并行搜索本地知识库 + 网络             │
+├─────────────────────────────────────────────────────┤
+│  3. 内容获取 - Jina Reader 抓取重要页面全文          │
+├─────────────────────────────────────────────────────┤
+│  4. 证据提取 - 提取关键声明、事实、引用               │
+├─────────────────────────────────────────────────────┤
+│  5. 分析阶段 - 交叉验证、识别模式、分析缺口           │
+├─────────────────────────────────────────────────────┤
+│  6. 综合阶段 - 生成结构化报告                        │
+└─────────────────────────────────────────────────────┘
+```
+
+### 使用示例
+
+```bash
+# 基本研究
+news4coder research "AI coding tools"
+
+# 指定参数
+news4coder research "Rust vs Go" --sub-queries 8 --limit 30
+
+# 仅本地知识库（不进行网络搜索）
+news4coder research "WebAssembly" --no-web
+
+# 详细报告（含研究追踪）
+news4coder research "Kubernetes trends" --detailed
+
+# JSON 输出
+news4coder research "微服务架构" --json
+```
+
+### 报告内容
+
+- **执行摘要**: 2-3 句话概括核心趋势和发现
+- **关键发现**: 带证据引用和置信度
+- **多角度分析**: 主流观点、争议焦点、新兴趋势
+- **信息缺口分析**: 未覆盖方面、弱证据
+- **参考来源**: 带可信度评分和来源类型
+
+### CLI 参数
+
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `--days` | 30 | 搜索时间范围 |
+| `--limit` | 20 | 最大来源数量 |
+| `--sub-queries` | 5 | 子查询数量 |
+| `--no-web` | false | 仅使用本地知识库 |
+| `--json` | false | JSON 格式输出 |
+| `--detailed` | false | 详细报告（含研究追踪） |
+
+---
+
+## AI TUI 阅读器
+
+分栏显示文章列表和正文预览，提供更高效的阅读体验。
+
+### 使用方式
+
+```bash
+news4coder ai tui
+
+# 或使用别名
+nn ai tui
+```
+
+### 界面布局
+
+```
+┌─────────────────────┬─────────────────────────────┐
+│  Articles (42) [Unread]  │  Content Preview           │
+├─────────────────────┼─────────────────────────────┤
+│ ○ [8.5] Article 1... │  Article Title              │
+│ ✓ [9.0] Article 2... │  https://example.com      │
+│ ★ [7.5] Article 3... │                           │
+│ ○ [6.5] Article 4... │  Source: Hacker News       │
+│                       │  Tags: golang, rust       │
+│                       │  Score: 8.5/10           │
+│                       │                           │
+│                       │  LLM Summary or content...│
+├─────────────────────┴─────────────────────────────┤
+│  j/k:↑↓ Navigate | Enter:Select | r:Read | q:Quit │
+└──────────────────────────────────────────────────┘
+```
+
+### 快捷键
+
+| 键 | 功能 |
+|-----|------|
+| `j` / `↓` | 下移 |
+| `k` / `↑` | 上移 |
+| `K` / `PgUp` | 向上翻页 |
+| `J` / `PgDn` | 向下翻页 |
+| `r` | 标记已读 |
+| `s` | 收藏 |
+| `d` | 丢弃 |
+| `1` | 显示全部 |
+| `2` | 仅显示未读 |
+| `3` | 仅显示收藏 |
+| `q` | 退出 |
 
 ---
 
@@ -165,192 +292,51 @@ news4coder --version
 
 ```bash
 # 1. 同步所有官方源
-./news4coder sync
+news4coder sync
 
-# 2. 对新文章进行 LLM 增强（生成摘要、标签、评分）
-./news4coder enrich --limit 20
+# 2. 对新文章进行 LLM 增强
+news4coder enrich --limit 20
 
 # 3. 查看智能策展的今日必读
-./news4coder curate --top 10
+news4coder curate --top 10
 ```
 
-### 场景 2: 深度阅读工作流
+### 场景 2: 深度研究
 
 ```bash
-# 1. 进入 TUI 收件箱浏览文章
-./news4coder inbox
+# 对某个技术主题进行深度研究
+news4coder research "AI coding tools evolution"
+
+# 生成详细报告（含研究过程追踪）
+news4coder research "Rust in 2025" --detailed
 ```
 
-在 TUI 中：
-- `j/k` 或 `↓/↑` - 浏览文章
-- `r` - 标记为已读
-- `s` - 收藏
-- `d` - 丢弃
-- `a` - 归档
-- `1/2/3` - 切换视图（全部/未读/收藏）
-- `q` - 退出
+### 场景 3: AI TUI 阅读
 
 ```bash
+# 启动 AI 阅读器
+news4coder ai tui
+
+# 在 TUI 中浏览、标记、收藏文章
+```
+
+### 场景 4: 知识库问答
+
+```bash
+news4coder ask "Go 和 Rust 在并发模型上有什么差异？"
+```
+
+### 场景 5: 深度阅读工作流
+
+```bash
+# 1. AI TUI 浏览文章
+news4coder ai tui
+
 # 2. 为重要文章添加笔记
-./news4coder note <article-id> "核心观点记录..."
+news4coder note <article-id> "核心观点记录..."
 
 # 3. 添加自定义标签
-./news4coder tag <article-id> "golang,concurrency"
-```
-
-### 场景 3: 知识库问答
-
-```bash
-# 基于本地知识库回答问题
-./news4coder ask "Go 和 Rust 在并发模型上有什么差异？"
-
-./news4coder ask "最近关于微服务架构有哪些最佳实践？"
-```
-
-输出示例：
-```
-⟳ 正在检索知识库并生成回答...
-
-回答：
-Go 和 Rust 在并发模型上有以下主要差异...
-
-━━━ 引用来源 ━━━
-[1] Go 并发模式详解 (Hacker News)
-    https://...
-[2] Rust 异步编程指南 (GitHub Blog)
-    https://...
-
-💡 提示: 知识库内容越丰富，回答质量越高。建议定期执行 sync + enrich。
-```
-
-### 场景 4: 全文搜索
-
-```bash
-# 搜索本地知识库
-./news4coder search "kubernetes"
-
-./news4coder search "微服务架构"
-```
-
-### 场景 5: 导出与备份
-
-```bash
-# 导出收藏的文章为 Markdown
-./news4coder export --status starred --output my-favorites.md
-
-# 导出已读文章
-./news4coder export --status read --output read-articles.md
-
-# 直接备份数据库文件
-cp ~/.news4coder/news4coder.db ~/backups/news4coder-$(date +%Y%m%d).db
-```
-
-### 场景 6: 定期维护
-
-```bash
-# 查看订阅健康度
-./news4coder stats
-
-# 归档所有已读文章
-./news4coder archive
-
-# 清理过期文章（丢弃超过7天、归档超过30天）
-./news4coder cleanup
-```
-
-### 高级技巧
-
-#### 组合命令
-
-```bash
-# 同步后立即增强
-./news4coder sync && ./news4coder enrich
-
-# 策展后进入收件箱
-./news4coder curate --top 10 && ./news4coder inbox
-```
-
-#### 使用别名
-
-在 `~/.bashrc` 或 `~/.zshrc` 中添加：
-
-```bash
-alias n4c='./news4coder'
-alias n4c-sync='./news4coder sync'
-alias n4c-inbox='./news4coder inbox'
-alias n4c-ask='./news4coder ask'
-```
-
-#### 定时自动同步
-
-使用 cron（Linux/macOS）：
-
-```bash
-# 每天早上 8 点同步
-0 8 * * * cd /path/to/news4coder && ./news4coder sync >> ~/.news4coder/sync.log 2>&1
-```
-
----
-
-## 快速命令速查
-
-> 以下速查基于 `nn`（`news4coder` 的常用别名），涵盖最常见的使用场景。
-
-### 📰 场景：看新闻
-
-```bash
-nn sources                    # 查看官方源列表
-nn v2ex                       # 直接抓取 V2EX 热帖
-nn hn                         # 直接抓取 Hacker News
-nn github                     # 直接抓取 GitHub Blog
-nn lobsters                   # 直接抓取 lobste.rs
-nn infoq                      # 直接抓取 InfoQ 热点清单（hotlist）
-nn ai                         # 直接抓取 InfoQ AI Briefs（aibriefs）
-nn reddit                     # 直接抓取 Reddit r/programming
-nn ruanyf                     # 直接抓取阮一峰博客
-nn coolshell                  # 直接抓取酷壳
-
-nn list --articles            # 查看已同步到本地的文章
-nn list --articles --status unread   # 只看未读
-nn curate                     # 生成今日必读智能精选（需 LLM）
-```
-
-### 🗂️ 场景：管理文章状态
-
-```bash
-nn read 123                   # 标记文章 123 为已读
-nn star 123                   # 收藏文章 123
-nn discard 123                # 丢弃文章 123
-nn archive                    # 批量归档所有已读文章
-nn note 123 "核心观点..."     # 添加笔记
-nn tag 123 "go,并发"          # 添加标签
-```
-
-### 🔍 场景：搜索与整理
-
-```bash
-nn search "kubernetes"        # 全文搜索本地文章
-nn stats                      # 查看各源订阅健康度
-nn export 123                 # 导出单篇为 Markdown
-nn cleanup --days 30          # 清理 30 天前的已丢弃/归档文章
-```
-
-### ⚙️ 场景：配置与同步
-
-```bash
-nn add --name "酷壳" --url "https://coolshell.cn/feed"   # 添加自定义 RSS
-nn sync                       # 同步所有官方源到本地数据库
-nn enrich                     # 调用 LLM 生成摘要、标签、评分
-```
-
-### 🎯 最常用的一天
-
-```bash
-nn v2ex                       # 快速刷 V2EX
-nn list --articles            # 看本地文章列表
-nn curate                     # 看今日精选
-nn sync                       # 同步最新内容
-nn search "xxx"               # 搜历史文章
+news4coder tag <article-id> "golang,concurrency"
 ```
 
 ---
@@ -363,8 +349,10 @@ nn search "xxx"               # 搜历史文章
 |------|------|------|
 | `sync` | 同步官方源到本地数据库 | `news4coder sync --source hn` |
 | `enrich` | LLM 内容增强 | `news4coder enrich --limit 10` |
-| `curate` | 智能策展 | `news4coder curate --top 10 --auto-discard` |
+| `curate` | 智能策展 | `news4coder curate --top 10` |
 | `ask` | RAG 问答 | `news4coder ask "问题"` |
+| `research` | 深度研究 | `news4coder research "主题"` |
+| `ai tui` | AI 阅读器 | `news4coder ai tui` |
 | `inbox` | TUI 收件箱 | `news4coder inbox` |
 
 ### 文章管理
@@ -388,63 +376,16 @@ nn search "xxx"               # 搜历史文章
 | `export` | 导出文章 | `news4coder export --status starred` |
 | `cleanup` | 清理旧文章 | `news4coder cleanup` |
 
-### 订阅管理
-
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `sources` | 查看官方源列表 | `news4coder sources` |
-| `add` | 添加自定义订阅 | `news4coder add -n "MyBlog" -u "https://..."` |
-| `remove` | 删除订阅 | `news4coder remove -n "MyBlog"` |
-| `fetch` | 获取订阅最新内容 | `news4coder fetch -n infoq` |
-
 ### 快捷别名命令
 
-| 命令 | 说明 | 示例 |
-|------|------|------|
-| `hn` | 直接获取 Hacker News | `news4coder hn` |
-| `infoq` | 直接获取 InfoQ 热点 | `news4coder infoq` |
-| `v2ex` | 直接获取 V2EX 热门 | `news4coder v2ex` |
-| `github` | 直接获取 GitHub Blog | `news4coder github` |
-| `reddit` | 直接获取 Reddit 热门 | `news4coder reddit` |
-| `lobsters` | 直接获取 Lobsters | `news4coder lobsters` |
-| `ruanyf` | 直接获取阮一峰博客 | `news4coder ruanyf` |
-| `coolshell` | 直接获取酷壳 | `news4coder coolshell` |
-| `inspire` | HN 新产品灵感（**自动保存到本地数据库**） | `news4coder inspire --days 7` |
-
----
-
-## TUI 收件箱
-
-启动命令：`news4coder inbox`
-
-### 快捷键
-
-```
-j / ↓    向下移动
-k / ↑    向上移动
-r        标记为已读
-s        收藏
-d        丢弃
-a        归档
-1        显示全部文章
-2        显示未读文章
-3        显示收藏文章
-q / Esc  退出
-```
-
-### 界面说明
-
-TUI 界面分为三个区域：
-1. **顶部标题栏** - 显示当前视图模式（全部/未读/收藏）和文章总数
-2. **文章列表** - 显示文章 ID、来源、标题、质量评分和阅读状态图标
-3. **底部预览区** - 显示当前选中文章的标题、链接、标签、笔记和摘要
-
-阅读状态图标：
-- `○` - 未读
-- `✓` - 已读
-- `★` - 收藏
-- `✗` - 丢弃
-- `▣` - 归档
+| 命令 | 说明 |
+|------|------|
+| `hn` | 直接获取 Hacker News |
+| `infoq` | 直接获取 InfoQ 热点 |
+| `v2ex` | 直接获取 V2EX 热门 |
+| `github` | 直接获取 GitHub Blog |
+| `reddit` | 直接获取 Reddit 热门 |
+| `inspire` | HN 新产品灵感 |
 
 ---
 
@@ -456,63 +397,44 @@ TUI 界面分为三个区域：
 news4coder/
 ├── cmd/                          # CLI 命令定义（Cobra）
 │   ├── root.go                   # 根命令 + 官方源别名处理
-│   ├── sync.go                   # 同步文章到本地数据库
+│   ├── sync.go                   # 同步文章
 │   ├── enrich.go                 # LLM 内容增强
 │   ├── curate.go                 # 智能策展
 │   ├── ask.go                    # RAG 问答
+│   ├── research.go                # 深度研究
+│   ├── ai.go                     # AI TUI 命令
 │   ├── inbox.go                  # TUI 收件箱
-│   ├── list.go                   # 列出订阅/文章
-│   ├── read.go                   # 标记已读
-│   ├── star.go                   # 收藏
-│   ├── discard.go                # 丢弃
-│   ├── archive.go                # 批量归档
-│   ├── search.go                 # 全文搜索
-│   ├── stats.go                  # 订阅健康度
-│   ├── note.go                   # 添加笔记
-│   ├── tag.go                    # 添加标签
-│   ├── export.go                 # 导出文章
-│   ├── cleanup.go                # 清理旧文章
-│   ├── sources.go                # 官方源列表
-│   ├── fetch.go                  # 获取订阅内容
-│   ├── add.go / remove.go        # 订阅增删
-│   ├── infoq.go                  # InfoQ 专注模式
-│   ├── inspire.go                # HN 灵感模式
-│   └── console_windows.go        # Windows UTF-8 支持
+│   └── ...
 ├── internal/                     # 内部模块
-│   ├── article/                  # 文章模型（状态、结构体）
-│   ├── config/                   # 应用配置管理（JSON）
+│   ├── article/                  # 文章模型
+│   ├── config/                   # 配置管理
 │   ├── crawler/                  # 多源内容采集器
-│   │   ├── factory.go            # 采集器工厂
-│   │   ├── hn.go                 # Hacker News API 采集
-│   │   ├── reddit.go             # Reddit API 采集
-│   │   ├── v2ex.go               # V2EX API 采集
-│   │   ├── generic.go            # 通用 HTML 列表采集
-│   │   ├── reader.go             # Jina AI Reader 网页提取
-│   │   └── model.go              # 采集器接口定义
-│   ├── curator/                  # 智能策展（评分 + 偏好匹配）
-│   ├── db/                       # SQLite 数据库 + FTS5
-│   ├── dedup/                    # 语义去重（Jaccard + 标签重叠）
-│   ├── enricher/                 # LLM 内容增强客户端
-│   ├── llm/                      # LLM 统一客户端 + Embedding
-│   ├── official/                 # 官方信息源注册表
-│   │   ├── registry.go           # 8 个内置源注册
-│   │   ├── model.go              # 源结构体
-│   │   ├── fetcher.go            # 抓取器工厂
-│   │   └── infoq_fetcher.go      # InfoQ 专用抓取器
-│   ├── rag/                      # 检索增强生成（FTS + LLM）
-│   ├── search/                   # DuckDuckGo 搜索引擎
-│   ├── storage/                  # 订阅配置持久化（JSON）
-│   ├── subscription/             # 订阅管理
-│   └── tui/                      # TUI 组件（Bubble Tea）
-├── web/                          # Web 宣传界面
-│   ├── index.html                # 主页面
-│   ├── css/style.css             # CNCF 设计系统样式
-│   ├── js/main.js                # 交互动画
-│   └── assets/                   # 图标资源
-├── local/                        # 本地运行文件（不提交）
+│   ├── curator/                  # 智能策展
+│   ├── db/                       # SQLite + FTS5
+│   ├── deep_research/             # 深度研究引擎
+│   ├── dedup/                    # 语义去重
+│   ├── enricher/                 # LLM 内容增强
+│   ├── llm/                      # LLM 统一客户端
+│   ├── official/                  # 官方信息源注册表
+│   ├── rag/                      # RAG 问答
+│   ├── search/                   # DuckDuckGo 搜索
+│   ├── tui/                     # TUI 组件
+│   │   ├── split_reader.go       # 分栏阅读器
+│   │   └── ...
+│   └── i18n/                    # 国际化
+├── browser-extension/             # 浏览器插件
+│   ├── manifest.json             # Chrome Extension Manifest V3
+│   ├── popup.html/js/css        # 弹窗界面
+│   ├── background.js             # Service Worker
+│   └── content.js               # 内容脚本
+├── web/                          # Web 宣传页面
 ├── main.go                       # 程序入口
 ├── go.mod                        # 依赖管理
-└── README.md                     # 项目说明
+├── Makefile                      # 构建脚本
+├── .golangci.yml               # Linter 配置
+├── .editorconfig                # 编辑器配置
+├── .pre-commit-config.yaml      # Pre-commit 钩子
+└── .github/workflows/           # CI/CD 配置
 ```
 
 ### 核心数据流
@@ -522,379 +444,29 @@ news4coder/
 │   官方源    │────▶│  Crawler/   │────▶│   SQLite    │
 │ (HN/V2EX等) │     │   Fetcher   │     │    (db)     │
 └─────────────┘     └─────────────┘     └──────┬──────┘
-                                                │
-                       ┌────────────────────────┘
-                       ▼
-              ┌─────────────────┐
-              │   Enricher      │
-              │ (LLM 摘要/标签)  │
-              └────────┬────────┘
-                       │
-         ┌─────────────┼─────────────┐
-         ▼             ▼             ▼
-    ┌─────────┐   ┌─────────┐   ┌─────────┐
-    │ Curator │   │  RAG    │   │ Search  │
-    │(智能推荐)│   │(知识问答)│   │(全文检索)│
-    └────┬────┘   └────┬────┘   └────┬────┘
-         │             │             │
-         └─────────────┴─────────────┘
-                       │
-                       ▼
-                ┌─────────────┐
-                │  TUI / CLI  │
-                │  (用户交互)  │
-                └─────────────┘
+                                                 │
+                        ┌────────────────────────┘
+                        ▼
+               ┌─────────────────┐
+               │   Enricher      │
+               │ (LLM 摘要/标签)  │
+               └────────┬────────┘
+                        │
+          ┌─────────────┼─────────────┐
+          ▼             ▼             ▼
+     ┌─────────┐   ┌─────────┐   ┌─────────┐
+     │ Curator │   │  RAG    │   │ Deep    │
+     │(智能推荐)│   │(知识问答)│   │ Research│
+     └────┬────┘   └────┬────┘   └────┬────┘
+          │             │             │
+          └─────────────┴─────────────┘
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │  TUI / CLI  │
+                 │  (用户交互)  │
+                 └─────────────┘
 ```
-
-### 各层职责
-
-1. **采集层** (`crawler/`): 通过 API 或 HTML 解析从各源获取文章元数据
-   - `HNCrawler`: 调用 HN Algolia API
-   - `RedditCrawler`: 调用 Reddit JSON API
-   - `V2EXCrawler`: 调用 V2EX Hot API
-   - `GenericCrawler`: 基于 goquery 的通用 HTML 列表解析
-   - `JinaReader`: 通过 Jina AI Reader 提取网页正文为 Markdown
-
-2. **存储层** (`db/`): SQLite 持久化，URL 去重，FTS5 全文索引
-   - 自动迁移机制支持旧数据库升级
-   - FTS5 虚拟表提供全文搜索能力
-   - 触发器自动同步 FTS 索引
-
-3. **增强层** (`enricher/`): 调用 LLM 生成摘要、标签、质量评分
-   - 自动回退到 Jina Reader 获取正文
-   - 内容截断控制 Token 消耗
-   - JSON 格式解析增强结果
-
-4. **策展层** (`curator/`): 基于评分和用户偏好（starred 标签）生成推荐
-   - 分析用户收藏文章的标签分布
-   - 质量评分 + 偏好匹配 = 策展得分
-   - 自动生成推荐理由
-
-5. **交互层** (`cmd/`, `tui/`): CLI 命令和 TUI 界面供用户操作
-   - Cobra 构建的命令行接口
-   - Bubble Tea + Lipgloss 构建的 TUI
-
-6. **问答层** (`rag/`): 基于 FTS 召回 + LLM 生成带引用的回答
-   - FTS5 全文检索召回相关文章
-   - 失败时回退到 LIKE 模糊搜索
-   - 组装上下文调用 LLM 生成答案
-
----
-
-## 数据库设计
-
-### 主表: `articles`
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `id` | INTEGER PRIMARY KEY | 自增主键 |
-| `title` | TEXT NOT NULL | 文章标题 |
-| `url` | TEXT NOT NULL UNIQUE | 文章链接（唯一索引） |
-| `source` | TEXT NOT NULL | 来源名称 |
-| `source_alias` | TEXT NOT NULL | 来源别名 |
-| `summary` | TEXT | 原始摘要 |
-| `llm_summary` | TEXT | LLM 生成摘要 |
-| `llm_tags` | TEXT | LLM 自动标签 |
-| `quality_score` | REAL DEFAULT 0 | 质量评分（0-10） |
-| `language` | TEXT | 文章语言 |
-| `raw_content` | TEXT | 原始抓取内容 |
-| `published_at` | DATETIME | 发布时间 |
-| `fetched_at` | DATETIME DEFAULT CURRENT_TIMESTAMP | 抓取时间 |
-| `enriched_at` | DATETIME | 增强时间 |
-| `read_status` | TEXT DEFAULT 'unread' | 阅读状态 |
-| `tags` | TEXT | 用户手动标签 |
-| `note` | TEXT | 用户笔记 |
-
-### 阅读状态
-
-- `unread` - 未读
-- `read` - 已读
-- `starred` - 收藏
-- `archived` - 归档
-- `discarded` - 丢弃
-
-### 全文搜索表: `articles_fts`
-
-使用 SQLite FTS5 虚拟表，索引字段：`title`, `summary`, `llm_summary`。
-
-通过触发器自动与 `articles` 表同步：
-- `articles_ai` - INSERT 触发器
-- `articles_ad` - DELETE 触发器
-- `articles_au` - UPDATE 触发器
-
-### 索引
-
-- `idx_articles_status` - 按阅读状态查询
-- `idx_articles_source` - 按来源查询
-- `idx_articles_fetched_at` - 按时间排序
-
----
-
-## 模块详解
-
-### 1. 文章模型 (`internal/article`)
-
-定义文章结构体和阅读状态常量：
-
-```go
-type Article struct {
-    ID            int64
-    Title         string
-    URL           string
-    Source        string
-    SourceAlias   string
-    Summary       string
-    LLMSummary    string
-    LLMTags       string
-    QualityScore  float64
-    Language      string
-    RawContent    string
-    PublishedAt   *time.Time
-    FetchedAt     time.Time
-    EnrichedAt    *time.Time
-    ReadStatus    ReadStatus
-    Tags          string
-    Note          string
-}
-```
-
-### 2. 配置管理 (`internal/config`)
-
-配置文件存储在 `~/.news4coder/config.json`：
-
-```go
-type LLMConfig struct {
-    BaseURL          string `json:"base_url"`
-    APIKey           string `json:"api_key"`
-    Model            string `json:"model"`
-    EmbeddingModel   string `json:"embedding_model"`
-    EnrichMaxTokens  int    `json:"enrich_max_tokens"`
-    AskMaxTokens     int    `json:"ask_max_tokens"`
-}
-```
-
-首次运行自动创建默认配置。支持补全缺失字段的默认值。
-
-### 3. 爬虫系统 (`internal/crawler`)
-
-#### 工厂模式
-
-`crawler.NewCrawler(source)` 根据别名返回对应采集器：
-
-| 别名 | 采集器 | 说明 |
-|------|--------|------|
-| `hn` | `HNCrawler` | Algolia API |
-| `reddit` | `RedditCrawler` | Reddit JSON API |
-| `v2ex` | `V2EXCrawler` | V2EX Hot API |
-| `lobsters` | `GenericCrawler` | HTML 解析 `.story_liner` |
-| `ruanyf` | `GenericCrawler` | HTML 解析 `article` |
-| `coolshell` | `GenericCrawler` | HTML 解析 `article` |
-| `github` | `GenericCrawler` | HTML 解析 `article` |
-| `infoq` | `GenericCrawler` | HTML 解析 `article` |
-
-#### Jina AI Reader
-
-用于提取网页正文：
-
-```go
-reader := crawler.NewJinaReader()
-content, err := reader.Fetch("https://example.com/article")
-```
-
-请求格式：`https://r.jina.ai/http://example.com/article`
-
-### 4. LLM 客户端 (`internal/llm`)
-
-OpenAI 兼容 API 的 HTTP 客户端：
-
-- `Chat(messages, maxTokens)` - 多轮对话
-- `SimpleChat(prompt, maxTokens)` - 单轮快速对话
-- `GetEmbedding(text)` - 获取文本向量
-- `CosineSimilarity(a, b)` - 计算余弦相似度
-
-超时设置：Chat 120 秒，Embedding 120 秒。
-
-### 5. 内容增强器 (`internal/enricher`)
-
-对单篇文章执行 LLM 增强：
-
-1. 检查 `raw_content` 长度，若不足 200 字符，尝试 Jina Reader 抓取正文
-2. 截断内容至 12000 字符控制 Token
-3. 调用 LLM 生成 JSON 格式结果：`summary`, `tags`, `score`, `language`
-4. 解析并保存到数据库
-
-Prompt 要求：
-- 摘要：2-3 句话中文摘要
-- 标签：3-5 个精准技术标签（如 golang, rust, ai, kubernetes）
-- 评分：0-10 分，基于技术深度、实用性、时效性、可读性
-- 语言：zh, en, ja 等
-
-### 6. 智能策展 (`internal/curator`)
-
-策展算法：
-
-```
-CuratorScore = QualityScore + PreferenceBonus - UnenrichedPenalty
-
-PreferenceBonus = sum(weight * 0.5) for each matching tag
-UnenrichedPenalty = 1.0 if EnrichedAt is nil
-```
-
-用户偏好标签从 `starred` 状态文章中提取，按出现频次计算权重。
-
-### 7. RAG 问答 (`internal/rag`)
-
-实现流程：
-
-1. **检索**：使用 FTS5 `MATCH` 搜索相关问题，召回 Top 10
-2. **回退**：FTS 失败时回退到 `LIKE` 模糊搜索
-3. **组装上下文**：将相关文章的标题、来源、摘要组装为上下文
-4. **生成答案**：调用 LLM，要求标注引用来源编号 `[1]`, `[2]`
-5. **返回**：答案 + 引用列表
-
-### 8. 灵感模式 (`cmd/inspire`)
-
-`inspire` 命令不仅展示 Hacker News 上的 `Show HN` 新产品/新项目，还会**自动将结果持久化到本地 SQLite**，使其成为知识库的一部分，可被搜索、策展和 RAG 问答检索。
-
-#### 数据源
-
-- **API**: HN Algolia API (`search_by_date?tags=show_hn`)
-- **筛选条件**: 最近 N 天（默认 7 天，可通过 `--days` 调整）
-- **数量限制**: 默认最多 30 条（可通过 `--limit` 调整）
-
-#### 数据处理流程
-
-```
-调用 HN API ──▶ 解析 JSON ──▶ 清洗标题/描述 ──▶ 组装 Article ──▶ 去重检查 ──▶ 写入 SQLite
-```
-
-#### 清洗规则
-
-1. **标题处理**: 去除 `Show HN:` / `Show HN` 前缀，去除首尾空格
-2. **描述处理**: 
-   - 去除 HTML 标签（如 `<p>`, `<br>`）
-   - HTML 实体解码（如 `&quot;` → `"`）
-   - 去除首尾空格
-   - 截断至 200 字符（超出部分以 `...` 结尾）
-3. **URL 构建**: 使用 HN 讨论页作为文章 URL
-   - 格式: `https://news.ycombinator.com/item?id=<objectID>`
-4. **发布时间**: 从 `created_at`（RFC3339）解析为 `PublishedAt`
-
-#### 本地存储字段映射
-
-| Article 字段 | 值 |
-|-------------|-----|
-| `Title` | 清洗后的产品/项目名称 |
-| `URL` | `https://news.ycombinator.com/item?id=<objectID>` |
-| `Source` | `Show HN` |
-| `SourceAlias` | `inspire` |
-| `Summary` | 清洗后的描述（≤200字符） |
-| `RawContent` | 同 `Summary` |
-| `ReadStatus` | `unread` |
-| `PublishedAt` | API 返回的创建时间 |
-
-#### 去重与保存
-
-1. **预检查去重**: 调用 `db.ArticleExists(url)` 检查该 HN 讨论页是否已存在于本地数据库
-2. **写入**: 通过 `db.SaveArticle()` 插入新记录
-3. **冲突处理**: 若 URL 已存在（或保存失败），自动跳过并计入 `dup` 统计
-4. **输出提示**: 命令最后会显示 `💾 已保存 X 条新内容，Y 条已存在跳过`
-
-#### 与其他功能的关联
-
-- **搜索**: 保存后的灵感内容可通过 `news4coder search "Show HN"` 检索
-- **阅读管理**: 可在 TUI 中标记为已读、收藏或丢弃
-- **导出**: 可随其他文章一起导出为 Markdown
-- **RAG 问答**: 参与本地知识库问答，作为新产品/项目灵感来源
-
-### 9. 语义去重 (`internal/dedup`)
-
-去重规则（按优先级）：
-
-1. URL 完全相同
-2. 标题 Jaccard 相似度 > 0.85（基于字符 bigram）
-3. LLM 标签重叠率 > 80%
-
-发现重复时，保留质量评分更高的一篇，另一篇标记为 `discarded`。
-
-### 10. 搜索引擎 (`internal/search`)
-
-基于 DuckDuckGo HTML 版本的站内搜索：
-
-```go
-engine := search.NewEngine()
-results, err := engine.Search("https://example.com")
-```
-
-搜索语法：`site:example.com`，返回最多 10 条结果。
-支持提取 DuckDuckGo 重定向链接中的真实 URL。
-
-### 11. 订阅管理 (`internal/subscription` + `internal/storage`)
-
-用户自定义订阅存储在 `~/.news4coder/subscriptions.json`：
-
-```json
-{
-  "subscriptions": [
-    {
-      "name": "InfoQ中文站",
-      "alias": "infoq",
-      "url": "https://www.infoq.cn",
-      "created_at": "2024-01-01T00:00:00Z"
-    }
-  ]
-}
-```
-
-提供添加、删除、列表、查询功能。
-
----
-
-## 路线图
-
-### 近期（v0.x）
-
-- [x] 8 个官方技术源采集（HN / V2EX / GitHub Blog / Reddit 等）
-- [x] LLM 内容增强（摘要 / 标签 / 评分）
-- [x] 智能策展（今日必读 Top N）
-- [x] TUI 收件箱（Bubble Tea）
-- [x] 本地 FTS5 全文搜索
-- [x] RAG 问答（带引用来源）
-- [x] Markdown 导出
-- [x] 灵感模式自动本地存储（Show HN）
-
-### 中期（v1.0）
-
-- [ ] Web Dashboard（图形化管理界面）
-- [ ] 自定义订阅源可视化配置
-- [ ] 阅读统计可视化（周报 / 月报）
-- [ ] 支持更多官方源（如 Dev.to、Medium、Twitter/X 列表）
-- [ ] 自动同步 Scheduler（内置定时任务）
-
-### 远期（v2.0+）
-
-- [ ] 跨设备同步（可选的端到端加密同步）
-- [ ] 浏览器扩展（一键保存文章到 News4Coder）
-- [ ] 插件系统（允许社区扩展采集源）
-- [ ] 移动端 App（基于本地 SQLite 的只读浏览）
-
----
-
-## 安全说明
-
-### API Key 存储
-
-News4Coder 的 LLM 配置（`~/.news4coder/config.json`）仅存储在本地设备，不会上传至任何服务器。请确保：
-
-- 不要将 `config.json` 提交到公共代码仓库
-- 定期更换 LLM API Key
-- 使用 `.gitignore` 排除本地配置文件
-
-### 数据安全
-
-- 所有文章数据存储在本地 SQLite 文件（`~/.news4coder/news4coder.db`）
-- 程序不收集任何遥测、使用统计或崩溃报告
-- 网络请求仅用于从公开技术源采集文章和调用用户配置的 LLM API
 
 ---
 
@@ -903,40 +475,39 @@ News4Coder 的 LLM 配置（`~/.news4coder/config.json`）仅存储在本地设�
 ### 构建
 
 ```bash
-# 编译为可执行文件
+# 编译
 make build
 
-# 跨平台编译（生成所有平台二进制到 dist/）
+# 跨平台编译
 make release
 
-# 手动单平台编译
-GOOS=linux GOARCH=amd64 go build -o news4coder
-```
-
-### 运行测试
-
-```bash
-# 运行全部测试（含覆盖率）
+# 运行测试
 make test
 
-# 快速测试
-make test-short
-
-# 代码格式化
-make fmt
-
-# 静态检查
-make vet
-
-# 查看所有可用命令
-make help
+# 代码质量检查
+make quality
 ```
 
-### Web 界面本地预览
+### 质量保证
+
+项目包含完整的质量检查流程：
+
+| 检查项 | 命令 | 说明 |
+|--------|------|------|
+| 格式化 | `make fmt` | gofmt 检查 |
+| 静态分析 | `make vet` | go vet 检查 |
+| Lint | `make lint` | golangci-lint 检查 |
+| 单元测试 | `make test` | go test -race |
+| 覆盖率 | `make test-coverage` | 覆盖率 ≥60% |
+| 安全扫描 | `make security` | gosec 检查 |
+
+### Pre-commit 钩子
+
+安装 pre-commit 后，每次提交会自动运行质量检查：
 
 ```bash
-cd web && python3 -m http.server 8080
-# 访问 http://localhost:8080
+pip install pre-commit
+pre-commit install
 ```
 
 ### 添加新命令
@@ -949,7 +520,33 @@ cd web && python3 -m http.server 8080
 
 1. 在 `internal/official/registry.go` 的 `registerDefaultSources()` 中注册
 2. 如需专用采集器，在 `internal/crawler/factory.go` 的 `NewCrawler()` 中实现分支
-3. 如需网页提取，可直接复用 `GenericCrawler`
+
+---
+
+## 质量保证
+
+### CI/CD 流程
+
+项目使用 GitHub Actions 进行持续集成：
+
+- **Format Check**: gofmt 格式化检查
+- **Build**: 多平台编译验证
+- **Test**: 跨平台测试（Ubuntu/macOS/Windows × Go 1.25/1.26）
+- **Lint**: golangci-lint 静态检查
+- **Security**: gosec 安全扫描
+- **Coverage**: 覆盖率门槛检查（≥60%）
+
+### 代码规范
+
+- 遵循 [Effective Go](https://go.dev/doc/effective_go) 规范
+- 使用 `gofmt` 格式化代码
+- 启用 golangci-lint 规则：errcheck, gosec, gosimple, govet, ineffassign, staticcheck, typecheck, unused, golint, misspell, nakedret, prealloc, exportloopref
+
+### 依赖管理
+
+- 使用 Go Modules 管理依赖
+- 通过 Dependabot 自动更新依赖
+- 工具依赖声明在 `go.mod` 的 `tool` 指令中
 
 ---
 
@@ -970,20 +567,13 @@ cd web && python3 -m http.server 8080
 - 同步和阅读文章
 - 管理阅读状态
 - 搜索本地文章
-- 导出文章
+- 使用 AI TUI 阅读器
 
 但无法使用：
 - `enrich` - 自动生成摘要和标签
 - `curate` - 智能策展
 - `ask` - RAG 问答
-
-### Q: 如何添加自定义订阅源？
-
-**A**: 使用 `add` 命令：
-
-```bash
-news4coder add --name "MyBlog" --alias myblog --url "https://myblog.com"
-```
+- `research` - 深度研究
 
 ### Q: 数据库会占用多大空间？
 
@@ -991,103 +581,53 @@ news4coder add --name "MyBlog" --alias myblog --url "https://myblog.com"
 - 1000 篇文章约 10-20 MB
 - 包含全文索引，支持快速搜索
 
-### Q: 如何清理空间？
-
-**A**: 定期执行：
-
-```bash
-# 清理旧文章
-news4coder cleanup
-
-# 手动查看丢弃的文章
-news4coder list --articles --status discarded
-```
-
 ### Q: `sync` 时某些源报错怎么办？
 
 **A**: 
 1. 检查网络连接
 2. 尝试单独同步该源：`news4coder sync --source <alias>`
 3. 对于 API 源，可能是 rate limit，稍后再试
-4. 对于 HTML 解析源，可能是页面结构变更
-
-### Q: Windows 终端中文显示乱码？
-
-**A**: 程序已内置 Windows UTF-8 控制台支持（`cmd/console_windows.go`）。如果仍有问题，请在 PowerShell 中执行：
-
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-```
 
 ---
 
-## Web 界面
+## 浏览器插件
 
-项目包含一个现代化的 Web 宣传页面（`web/` 目录），采用 CNCF 顶级开源项目设计美学：
+News4Coder 提供 Chrome 浏览器插件，支持一键保存网页到本地知识库。
 
-- **配色方案**: Kubernetes Blue (`#326CE5`) + Cloud Native Teal (`#00A3C4`)
-- **设计风格**: 卡片式布局、微妙阴影、现代圆角、响应式设计
-- **核心页面**:
-  - `index.html` — 产品官网（数据主权、特性、信息源、工作流、下载）
-  - `inspire.html` — 灵感模式展示页（Show HN 产品/项目）
-- **响应式断点**: Desktop (>1024px) / Tablet (768-1024px) / Mobile (<768px)
+### 安装方式
 
-### 本地运行 Web
+1. **Chrome Web Store**（即将上线）
+2. **开发者模式本地加载**：
+   - 打开 `chrome://extensions/`
+   - 开启右上角「开发者模式」
+   - 点击「加载已解压的扩展程序」
+   - 选择 `browser-extension/` 目录
 
-```bash
-# 方式 1：Python（最简单，已预装）
-cd web && python3 -m http.server 8080
+### 功能
 
-# 方式 2：Node.js（live-reload 开发体验）
-npx live-server web --port=8080
+- 一键保存当前网页到本地数据库
+- 右键菜单保存页面或链接
+- 快捷键 `Ctrl+Shift+N` 快速保存
+- 自定义本地 API 地址
 
-# 方式 3：Docker
-docker run -d -p 8080:80 -v $(pwd)/web:/usr/share/nginx/html nginx:alpine
-```
+### 发布到 Chrome Web Store
 
-访问地址：
-- 主站：http://localhost:8080
-- 灵感页：http://localhost:8080/inspire.html
-
-更多细节详见 [`web/README.md`](web/README.md)。
+项目包含自动化发布工作流（`.github/workflows/publish-extension.yml`）。配置 GitHub Secrets 后即可使用。
 
 ---
 
 ## 相关文档
 
-- [`EXAMPLES.md`](EXAMPLES.md) - 使用示例和常见问题
-- [`PROMOTION.md`](PROMOTION.md) - 自媒体推广方案（含文案、渠道、运营策略）
-- [`BUSINESS.md`](BUSINESS.md) - 商业战略规划（演进计划、产品策略、定价与商业模式）
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) - 贡献指南
 - [`CHANGELOG.md`](CHANGELOG.md) - 版本变更记录
-- [`local/README.md`](local/README.md) - 本地目录说明
-- [`web/README.md`](web/README.md) - Web 界面说明
-
----
-
-## 贡献
-
-欢迎提交 Issue 和 PR！
-
-详细贡献指南请查看 [`CONTRIBUTING.md`](CONTRIBUTING.md)。
-
-简要流程：
-
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
+- [`SECURITY.md`](SECURITY.md) - 安全政策
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) - 社区行为准则
 
 ---
 
 ## 许可证
 
 MIT License
-
-## 作者
-
-News4Coder 项目团队
 
 ---
 
