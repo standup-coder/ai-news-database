@@ -6,6 +6,7 @@
 - 提出新功能建议
 - 改进文档
 - 提交代码修复或新功能
+- **贡献 AI 新闻线索/时间线**（本仓库当前主体，详见下文「内容库贡献」）
 - 分享使用经验
 - 帮助回答其他用户的问题
 
@@ -22,6 +23,59 @@
 
 ---
 
+## 内容库贡献
+
+本仓库现在以 **AI 新闻内容库**为主体（根目录按主题组织的中文 md 文件夹）。欢迎你以「线索」「新闻条目」的方式参与贡献。
+
+> 完整主题清单见 [`_topics.md`](_topics.md)；格式规范详见 `docs/superpowers/specs/2026-07-21-content-restructure-design.md` §5。
+
+### A. 新建一条线索
+
+1. 从 [`docs/线索模板.md`](docs/线索模板.md) 复制到对应主题文件夹，重命名为线索名（中文简称为主，专有名词保留英文，如 `智能体平台/Claude代码助手.md`）。
+2. 填写 YAML frontmatter 字段：
+
+   | 字段 | 说明 |
+   |---|---|
+   | `线索` | 线索中文名 |
+   | `主题` | 所属主题文件夹名 |
+   | `别名` | 英文/别名列表 |
+   | `状态` | `活跃` \| `已完结` \| `观察中` |
+   | `创建` / `更新` | 日期，格式 `YYYY-MM-DD` |
+   | `关键角色` | 相关公司/机构/人名 |
+
+3. 在该主题的 `_index.md`「线索列表」下追加一行登记：
+
+   ```markdown
+   - [线索名](线索名.md) — 活跃
+   ```
+
+### B. 向已有线索追加一条新闻
+
+在「时间线」章节顶部最近的 `### YYYY-MM` 标题下插入（最新在上）：
+
+```markdown
+- **2026-07-15** · [标题](URL)
+  一句话摘要。关键数据/影响。
+```
+
+- 跨月则新建一个 `### YYYY-MM` 月份标题。
+- 同步更新 frontmatter 的 `更新:` 日期。
+
+### C. 内容原则
+
+- **概述 vs 分析分离**：frontmatter 之后的「概述」章节只写事实（是什么、为什么重要），「分析」章节才写观点判断（趋势、格局）。两者分开，避免事实与观点混淆。
+- **时间线倒序**：最新在上，按 `年-月` 分组，月内按日期倒序。
+- **双链**：用 `[[主题/线索名]]` 表达线索间关联（如 `[[基础模型/GPT]]`）。
+- **专有名词保留英文**：Claude、GPT、Sora、Agentic 等不翻译。
+
+### D. 引用参考
+
+- 线索模板：[`docs/线索模板.md`](docs/线索模板.md)
+- 完整主题清单：[`_topics.md`](_topics.md)
+- 完整格式规范：`docs/superpowers/specs/2026-07-21-content-restructure-design.md` §5
+
+---
+
 ## 开发环境
 
 ### 前置要求
@@ -31,19 +85,24 @@
 
 ### 本地运行
 
+> 注：Go CLI 代码已迁移至 `tools/cmd/`，仓库根是 AI 新闻内容库（仓库主体）。
+> 在仓库根运行 `make` 会自动转发到 `tools/cmd`。
+
 ```bash
 # 克隆仓库
 git clone https://github.com/YOUR_USERNAME/news4coder.git
 cd news4coder
 
-# 运行测试
-go test ./...
+# 运行测试（从仓库根用 make 转发到 tools/cmd）
+make test
+# 或直接进入 tools/cmd 操作
+cd tools/cmd && go test ./...
 
-# 编译
-go build -o news4coder
+# 编译（产物：tools/cmd/news4coder）
+make build
 
 # 运行
-./news4coder --help
+./tools/cmd/news4coder --help
 ```
 
 ---
@@ -132,12 +191,12 @@ feat: add support for Dev.to official source
 
 ## 添加新采集源
 
-如果你想为 News4Coder 添加一个新的官方技术源，通常需要修改以下文件：
+如果你想为 News4Coder 添加一个新的官方技术源，通常需要修改以下文件（注意路径在 `tools/cmd/` 下）：
 
-1. `internal/official/registry.go` - 在 `registerDefaultSources()` 中注册源信息
-2. `internal/crawler/factory.go` - 在 `NewCrawler()` 中返回对应的采集器
-3. `cmd/sources.go`（通常无需修改，会自动读取注册表）
-4. 如需专用采集器，在 `internal/crawler/` 下新建实现 `Crawler` 接口的文件
+1. `tools/cmd/internal/official/registry.go` - 在 `registerDefaultSources()` 中注册源信息
+2. `tools/cmd/internal/crawler/factory.go` - 在 `NewCrawler()` 中返回对应的采集器
+3. `tools/cmd/cmd/sources.go`（通常无需修改，会自动读取注册表）
+4. 如需专用采集器，在 `tools/cmd/internal/crawler/` 下新建实现 `Crawler` 接口的文件
 
 **采集源入选标准**：
 
