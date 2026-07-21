@@ -32,8 +32,8 @@ jobs:
 
       - name: Package extension
         run: |
-          cd browser-extension
-          zip -r ../news4coder-clipper.zip .
+          cd tools/cmd/browser-extension
+          zip -r ../../../news4coder-clipper.zip .
         shell: bash
 
       - name: Upload to Chrome Web Store

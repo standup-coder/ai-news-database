@@ -19,9 +19,11 @@ jobs:
           go-version: '1.26'
 
       - name: Build binaries
+        working-directory: tools/cmd
         run: make release
 
       - name: Create checksums
+        working-directory: tools/cmd
         run: |
           cd dist
           sha256sum * > checksums.txt
@@ -29,5 +31,5 @@ jobs:
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/*
+          files: tools/cmd/dist/*
           generate_release_notes: true

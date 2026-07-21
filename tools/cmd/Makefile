@@ -105,10 +105,9 @@ release:
 web:
 	cd web && python3 -m http.server 8080
 
-## docs: Check all markdown files are present
+## docs: List documentation in docs/
 docs:
-	@echo "Checking documentation..."
-	@ls -1 *.md
+	@echo "Documentation lives in ../../docs/ and topic folders in repo root."
 
 ## benchmark: Run benchmark tests
 benchmark:
