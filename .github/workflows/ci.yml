@@ -71,6 +71,7 @@ jobs:
         with:
           version: latest
           args: --timeout=5m
+          working-directory: tools/cmd
 
   security:
     runs-on: ubuntu-latest
