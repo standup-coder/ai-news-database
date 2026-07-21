@@ -1,13 +1,15 @@
 # Binary files
-news4coder
-news4coder.exe
+/news4coder
+/news4coder.exe
+/tools/cmd/news4coder
+/tools/cmd/news4coder.exe
 
 # Go build cache
 *.test
 *.out
 
 # Coverage reports
-.coverage/
+/tools/cmd/.coverage/
 coverage.out
 *.coverprofile
 
