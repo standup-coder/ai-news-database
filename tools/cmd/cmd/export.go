@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"os"
 	"path/filepath"
 	"time"
@@ -23,8 +23,8 @@ var exportCmd = &cobra.Command{
 	Short: "导出本地文章",
 	Long: `将本地文章导出为指定格式文件，便于备份或二次加工。
 默认导出收藏的文章为 Markdown 格式。`,
-	Example: `  news4coder export --status starred --format markdown --output ./stars.md
-  news4coder export --status read --output ./read.md`,
+	Example: `  ai-news-database export --status starred --format markdown --output ./stars.md
+  ai-news-database export --status read --output ./read.md`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {
@@ -59,7 +59,7 @@ var exportCmd = &cobra.Command{
 		// 默认输出到当前目录
 		outPath := exportOutput
 		if outPath == "" {
-			outPath = fmt.Sprintf("news4coder_export_%s.md", time.Now().Format("20060102_150405"))
+			outPath = fmt.Sprintf("ai-news-database_export_%s.md", time.Now().Format("20060102_150405"))
 		}
 		outPath, _ = filepath.Abs(outPath)
 
@@ -75,7 +75,7 @@ var exportCmd = &cobra.Command{
 
 func exportMarkdown(articles []article.Article) string {
 	var sb string
-	sb += "# News4Coder 文章导出\n\n"
+	sb += "# AI News Database 文章导出\n\n"
 	sb += fmt.Sprintf("> 导出时间: %s\n\n", time.Now().Format("2006-01-02 15:04:05"))
 
 	for _, a := range articles {

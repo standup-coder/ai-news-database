@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -15,7 +15,7 @@ var cleanupCmd = &cobra.Command{
 	Long: `根据阅读状态自动清理过期文章：
 - 丢弃(discarded) 超过 7 天的文章直接删除
 - 归档(archived) 超过 30 天的文章直接删除`,
-	Example: `  news4coder cleanup`,
+	Example: `  ai-news-database cleanup`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {

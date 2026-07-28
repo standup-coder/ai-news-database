@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/enricher"
 	"context"
 	"fmt"
-	"news4coder/internal/config"
-	"news4coder/internal/db"
-	"news4coder/internal/enricher"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -19,10 +19,10 @@ var enrichCmd = &cobra.Command{
 	Long: `读取本地尚未增强的文章，调用 LLM 生成高质量摘要、自动标签、
 质量评分和语言检测。此过程会消耗 LLM API Token。`,
 	Example: `  # 增强所有未处理的文章
-  news4coder enrich
+  ai-news-database enrich
 
   # 仅增强最近 10 篇
-  news4coder enrich --limit 10`,
+  ai-news-database enrich --limit 10`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		cfg, err := config.Load()
 		if err != nil {
@@ -30,7 +30,7 @@ var enrichCmd = &cobra.Command{
 		}
 
 		if cfg.LLM.APIKey == "" {
-			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.news4coder/config.json 设置 llm.api_key 和 llm.base_url")
+			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.ai-news-database/config.json 设置 llm.api_key 和 llm.base_url")
 		}
 
 		database, err := db.New()

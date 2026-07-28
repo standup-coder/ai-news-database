@@ -1,10 +1,10 @@
 package db
 
 import (
+	"ai-news-database/internal/article"
 	"database/sql"
 	"fmt"
 	"log/slog"
-	"news4coder/internal/article"
 	"os"
 	"path/filepath"
 	"time"
@@ -12,7 +12,7 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-const dbFile = "news4coder.db"
+const dbFile = "ai-news-database.db"
 
 // DB 封装数据库操作
 type DB struct {
@@ -26,7 +26,7 @@ func New() (*DB, error) {
 		return nil, fmt.Errorf("无法获取用户主目录: %w", err)
 	}
 
-	dbDir := filepath.Join(homeDir, ".news4coder")
+	dbDir := filepath.Join(homeDir, ".ai-news-database")
 	if err := os.MkdirAll(dbDir, 0755); err != nil {
 		return nil, fmt.Errorf("无法创建配置目录: %w", err)
 	}

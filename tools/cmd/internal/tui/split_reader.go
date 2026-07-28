@@ -1,8 +1,8 @@
 package tui
 
 import (
+	"ai-news-database/internal/article"
 	"fmt"
-	"news4coder/internal/article"
 	"strings"
 
 	"github.com/charmbracelet/bubbles/key"

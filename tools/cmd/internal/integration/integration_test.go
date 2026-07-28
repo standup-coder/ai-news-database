@@ -7,15 +7,15 @@ import (
 	"testing"
 	"time"
 
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/curator"
-	"news4coder/internal/db"
-	"news4coder/internal/dedup"
-	"news4coder/internal/enricher"
-	"news4coder/internal/mocks"
-	"news4coder/internal/rag"
-	"news4coder/internal/search"
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/curator"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/dedup"
+	"ai-news-database/internal/enricher"
+	"ai-news-database/internal/mocks"
+	"ai-news-database/internal/rag"
+	"ai-news-database/internal/search"
 )
 
 // setupTestDB 创建临时测试数据库
@@ -356,7 +356,7 @@ func TestIntegration_ConfigCrypto(t *testing.T) {
 	}
 
 	// 验证文件中 API Key 已加密
-	configPath := filepath.Join(tmpDir, ".news4coder", "config.json")
+	configPath := filepath.Join(tmpDir, ".ai-news-database", "config.json")
 	data, err := os.ReadFile(configPath)
 	if err != nil {
 		t.Fatalf("读取配置文件失败: %v", err)

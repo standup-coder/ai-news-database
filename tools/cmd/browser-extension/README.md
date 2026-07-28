@@ -1,11 +1,11 @@
-# News4Coder Browser Extension
+# AI News Database Browser Extension
 
-News4Coder 官方浏览器插件 —— 一键将任意网页保存到本地知识库。
+AI News Database 官方浏览器插件 —— 一键将任意网页保存到本地知识库。
 
 ## 功能
 
-- **一键保存**：点击扩展图标，将当前网页标题、链接、摘要发送到 News4Coder 本地 API
-- **右键菜单**：在页面或链接上右键选择「保存到 News4Coder」
+- **一键保存**：点击扩展图标，将当前网页标题、链接、摘要发送到 AI News Database 本地 API
+- **右键菜单**：在页面或链接上右键选择「保存到 AI News Database」
 - **快捷键**：`Ctrl+Shift+N`（macOS: `Cmd+Shift+N`）快速打开保存弹窗
 - **自定义配置**：设置本地 API 地址和可选的 API Key
 
@@ -33,7 +33,7 @@ browser-extension/
 
 ### 方式 1：Chrome Web Store（推荐）
 
-搜索 "News4Coder Clipper" 即可安装。
+搜索 "AI News Database Clipper" 即可安装。
 
 **自动化发布**：配置 GitHub Secrets 后，通过 GitHub Actions `Publish to Chrome Web Store` workflow 手动触发发布。
 
@@ -57,22 +57,22 @@ browser-extension/
 
 ## 配置说明
 
-插件默认连接 `http://localhost:8081`，这是 News4Coder Web Dashboard 的默认端口。
+插件默认连接 `http://localhost:8081`，这是 AI News Database Web Dashboard 的默认端口。
 
 如果你修改了本地服务端口号，请在插件设置中更新 API 地址。
 
 ## 依赖
 
-此插件需要 News4Coder 本地运行并开启 Web Dashboard（v1.0+）：
+此插件需要 AI News Database 本地运行并开启 Web Dashboard（v1.0+）：
 
 ```bash
-news4coder web --port 8081
+ai-news-database web --port 8081
 ```
 
 或：
 
 ```bash
-./news4coder web
+./ai-news-database web
 ```
 
 ## 隐私说明

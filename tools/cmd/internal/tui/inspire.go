@@ -1,12 +1,12 @@
 package tui
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"encoding/json"
 	"fmt"
 	"html"
 	"net/http"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"os/exec"
 	"runtime"
 	"sort"

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"news4coder/internal/article"
+	"ai-news-database/internal/article"
 )
 
 func TestCalculateScore(t *testing.T) {

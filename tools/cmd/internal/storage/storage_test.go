@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"news4coder/internal/subscription"
+	"ai-news-database/internal/subscription"
 )
 
 func TestStorageLoadAndSave(t *testing.T) {
@@ -39,7 +39,7 @@ func TestStorageLoadAndSave(t *testing.T) {
 	}
 
 	// Verify file exists
-	configPath := filepath.Join(tmpHome, ".news4coder", "subscriptions.json")
+	configPath := filepath.Join(tmpHome, ".ai-news-database", "subscriptions.json")
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		t.Fatal("subscriptions.json was not created")
 	}

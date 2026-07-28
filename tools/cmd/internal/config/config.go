@@ -45,7 +45,7 @@ func Load() (*AppConfig, error) {
 		return nil, fmt.Errorf("无法获取用户主目录: %w", err)
 	}
 
-	configDir := filepath.Join(homeDir, ".news4coder")
+	configDir := filepath.Join(homeDir, ".ai-news-database")
 	configPath := filepath.Join(configDir, configFile)
 
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
@@ -103,7 +103,7 @@ func (c *AppConfig) Save() error {
 		return fmt.Errorf("无法获取用户主目录: %w", err)
 	}
 
-	configDir := filepath.Join(homeDir, ".news4coder")
+	configDir := filepath.Join(homeDir, ".ai-news-database")
 	if err := os.MkdirAll(configDir, 0755); err != nil {
 		return fmt.Errorf("创建配置目录失败: %w", err)
 	}

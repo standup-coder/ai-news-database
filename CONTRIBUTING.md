@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你对 News4Coder 感兴趣！我们欢迎各种形式的贡献，包括但不限于：
+感谢你对 AI News Database 感兴趣！我们欢迎各种形式的贡献，包括但不限于：
 
 - 提交 Bug 报告
 - 提出新功能建议
@@ -90,19 +90,19 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/YOUR_USERNAME/news4coder.git
-cd news4coder
+git clone https://github.com/standup-coder/ai-news-database.git
+cd ai-news-database
 
 # 运行测试（从仓库根用 make 转发到 tools/cmd）
 make test
 # 或直接进入 tools/cmd 操作
 cd tools/cmd && go test ./...
 
-# 编译（产物：tools/cmd/news4coder）
+# 编译（产物：tools/cmd/ai-news-database）
 make build
 
 # 运行
-./tools/cmd/news4coder --help
+./tools/cmd/ai-news-database --help
 ```
 
 ---
@@ -191,7 +191,7 @@ feat: add support for Dev.to official source
 
 ## 添加新采集源
 
-如果你想为 News4Coder 添加一个新的官方技术源，通常需要修改以下文件（注意路径在 `tools/cmd/` 下）：
+如果你想为 AI News Database 添加一个新的官方技术源，通常需要修改以下文件（注意路径在 `tools/cmd/` 下）：
 
 1. `tools/cmd/internal/official/registry.go` - 在 `registerDefaultSources()` 中注册源信息
 2. `tools/cmd/internal/crawler/factory.go` - 在 `NewCrawler()` 中返回对应的采集器
@@ -231,7 +231,7 @@ feat: add support for Dev.to official source
 
 ## 获取帮助
 
-- 在 [GitHub Discussions](https://github.com/news4coder/news4coder/discussions) 发起讨论
-- 在 [GitHub Issues](https://github.com/news4coder/news4coder/issues) 搜索类似问题
+- 在 [GitHub Discussions](https://github.com/standup-coder/ai-news-database/discussions) 发起讨论
+- 在 [GitHub Issues](https://github.com/standup-coder/ai-news-database/issues) 搜索类似问题
 
 再次感谢你的贡献！🚀

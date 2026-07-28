@@ -1,4 +1,4 @@
-# News4Coder 项目审计报告
+# AI News Database 项目审计报告
 
 > 审计时间：2026-05-31  
 > 审计工具：Go 1.25.5, go vet, go test, go fmt, golangci-lint (planned)  
@@ -8,7 +8,7 @@
 
 ## 1. 项目概览
 
-**News4Coder** —— 一个为程序员设计的本地优先技术资讯聚合 CLI 工具。
+**AI News Database** —— 一个为程序员设计的本地优先技术资讯聚合 CLI 工具。
 
 | 属性 | 详情 |
 |------|------|
@@ -75,7 +75,7 @@ if os.Getenv("DEMO_MODE") == "1" {
 }
 ```
 
-**影响**：`news4coder infoq` / `news4coder sync --source infoq` 现在会尝试真实抓取，仅在显式设置 `DEMO_MODE=1` 时返回演示数据。
+**影响**：`ai-news-database infoq` / `ai-news-database sync --source infoq` 现在会尝试真实抓取，仅在显式设置 `DEMO_MODE=1` 时返回演示数据。
 
 ---
 

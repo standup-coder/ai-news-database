@@ -3,8 +3,8 @@ package dedup
 import (
 	"testing"
 
-	"news4coder/internal/article"
-	"news4coder/internal/config"
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
 )
 
 func TestSimilarity(t *testing.T) {

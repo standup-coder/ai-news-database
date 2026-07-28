@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"strconv"
 
 	"github.com/fatih/color"
@@ -14,8 +14,8 @@ var readCmd = &cobra.Command{
 	Use:   "read <id>",
 	Short: "将文章标记为已读",
 	Long:  `根据文章 ID 将文章标记为已读状态。`,
-	Example: `  news4coder read 42
-  news4coder read 1 2 3`,
+	Example: `  ai-news-database read 42
+  ai-news-database read 1 2 3`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

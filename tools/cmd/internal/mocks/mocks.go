@@ -1,8 +1,8 @@
 package mocks
 
 import (
+	"ai-news-database/internal/llm"
 	"context"
-	"news4coder/internal/llm"
 )
 
 // LLMClientMock is a mock implementation of llm.LLMClient for testing

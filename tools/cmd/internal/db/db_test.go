@@ -9,7 +9,7 @@ import (
 
 	_ "modernc.org/sqlite"
 
-	"news4coder/internal/article"
+	"ai-news-database/internal/article"
 )
 
 func TestDB_SaveAndGetArticle(t *testing.T) {

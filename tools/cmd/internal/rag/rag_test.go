@@ -3,8 +3,8 @@ package rag
 import (
 	"testing"
 
-	"news4coder/internal/config"
-	"news4coder/internal/mocks"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/mocks"
 )
 
 func TestRAG_NewWithDeps(t *testing.T) {

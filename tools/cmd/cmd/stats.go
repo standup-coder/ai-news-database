@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/db"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -12,7 +12,7 @@ var statsCmd = &cobra.Command{
 	Use:     "stats",
 	Short:   "查看订阅健康度统计",
 	Long:    `显示各官方源的文章数量、阅读率、收藏率等健康度指标。`,
-	Example: `  news4coder stats`,
+	Example: `  ai-news-database stats`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {
@@ -27,7 +27,7 @@ var statsCmd = &cobra.Command{
 
 		if len(stats) == 0 {
 			yellow := color.New(color.FgYellow).SprintFunc()
-			fmt.Printf("%s 暂无统计数据，先执行 'news4coder sync' 拉取文章\n", yellow("!"))
+			fmt.Printf("%s 暂无统计数据，先执行 'ai-news-database sync' 拉取文章\n", yellow("!"))
 			return nil
 		}
 
@@ -91,7 +91,7 @@ var statsCmd = &cobra.Command{
 			}
 		}
 		if totalUnread > 50 {
-			fmt.Printf("   %s 未读文章堆积 (%d 篇)，建议执行 'news4coder archive' 或 'news4coder list --articles --status unread' 清理\n", red("!"), totalUnread)
+			fmt.Printf("   %s 未读文章堆积 (%d 篇)，建议执行 'ai-news-database archive' 或 'ai-news-database list --articles --status unread' 清理\n", red("!"), totalUnread)
 		}
 		if totalUnread <= 10 {
 			fmt.Printf("   %s 收件箱很健康，继续保持！\n", green("✓"))

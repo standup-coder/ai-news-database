@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "News4Coder Clipper",
+  "name": "AI News Database Clipper",
   "version": "1.0.0",
-  "description": "一键将当前网页保存到 News4Coder 本地知识库",
+  "description": "一键将当前网页保存到 AI News Database 本地知识库",
   "permissions": [
     "activeTab",
     "storage",
@@ -37,7 +37,7 @@
         "default": "Ctrl+Shift+N",
         "mac": "Command+Shift+N"
       },
-      "description": "打开 News4Coder 保存弹窗"
+      "description": "打开 AI News Database 保存弹窗"
     }
   }
 }

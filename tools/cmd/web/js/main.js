@@ -24,9 +24,9 @@ function initTabs() {
     const tabs = document.querySelectorAll('.tab');
     const cmd = document.getElementById('install-command');
     const cmds = {
-        mac: 'curl -sSL https://get.news4coder.dev | bash',
-        linux: 'curl -sSL https://get.news4coder.dev | bash',
-        windows: 'irm https://get.news4coder.dev | iex'
+        mac: 'curl -sSL https://get.ai-news-database.dev | bash',
+        linux: 'curl -sSL https://get.ai-news-database.dev | bash',
+        windows: 'irm https://get.ai-news-database.dev | iex'
     };
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {

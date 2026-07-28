@@ -4,7 +4,7 @@
 
 **Goal:** 把 `ai-news-database` 仓库从「Go CLI 工具」转型为「按主题组织的中文 md 新闻内容库」，Go 代码作为自包含 module 收敛到 `tools/cmd/`。
 
-**Architecture:** 纯文件搬迁 + 配置路径更新 + 内容骨架创建。无新代码逻辑。Go module `news4coder` 名字不变移到 `tools/cmd/`，21 处 import 零改动。根目录新增 13 个主题文件夹、`_topics.md`、线索模板；旧文档归档 `docs/`。
+**Architecture:** 纯文件搬迁 + 配置路径更新 + 内容骨架创建。无新代码逻辑。Go module `ai-news-database` 名字不变移到 `tools/cmd/`，21 处 import 零改动。根目录新增 13 个主题文件夹、`_topics.md`、线索模板；旧文档归档 `docs/`。
 
 **Tech Stack:** Git（全程 `git mv` 保留历史）、Go 1.25（验证搬迁后 build/test）、Markdown（内容库）。
 
@@ -14,10 +14,10 @@
 
 ## 前置事实（已核实）
 
-- 二进制 `news4coder`（18MB）**未被 git 跟踪**（已在 .gitignore）→ 用 `rm` 删除，更新 .gitignore 路径。
+- 二进制 `ai-news-database`（18MB）**未被 git 跟踪**（已在 .gitignore）→ 用 `rm` 删除，更新 .gitignore 路径。
 - `skills/` `skills-lock.json` **未被 git 跟踪**（在 .gitignore）→ 用 `mv`（非 git mv）。
 - `.editorconfig` `.golangci.yml` `.pre-commit-config.yaml` `web/` `browser-extension/` `main.go` `cmd/` `internal/` `go.mod` `go.sum` `Makefile` `install.sh` **被 git 跟踪** → 用 `git mv`。
-- 全仓 91 个 .go 文件被跟踪，21 处唯一 `"news4coder/..."` import，module 名不变则零改动。
+- 全仓 91 个 .go 文件被跟踪，21 处唯一 `"ai-news-database/..."` import，module 名不变则零改动。
 - `docs/` 已存在（含 `superpowers/`）。`tools/` 不存在。
 
 ## 文件结构总览
@@ -86,7 +86,7 @@ git mv .pre-commit-config.yaml tools/cmd/.pre-commit-config.yaml
 - [ ] **Step 4: 删除未跟踪的 18MB 二进制**
 
 ```bash
-rm -f news4coder news4coder.exe
+rm -f ai-news-database ai-news-database.exe
 ```
 
 - [ ] **Step 5: 验证 module 名未变、import 零改动**
@@ -94,12 +94,12 @@ rm -f news4coder news4coder.exe
 ```bash
 head -1 tools/cmd/go.mod
 ```
-Expected: `module news4coder`
+Expected: `module ai-news-database`
 
 ```bash
-grep -c "\"news4coder/" tools/cmd/main.go
+grep -c "\"ai-news-database/" tools/cmd/main.go
 ```
-Expected: `1`（`import "news4coder/cmd"` 未变）
+Expected: `1`（`import "ai-news-database/cmd"` 未变）
 
 - [ ] **Step 6: 验证搬迁后可编译可测试**
 
@@ -114,7 +114,7 @@ Expected: build 成功，测试全绿（与搬迁前一致；若有预先存在�
 git add -A
 git commit -m "refactor: 搬迁 Go 代码到 tools/cmd/ 作为自包含 module
 
-module news4coder 名字不变，21 处 import 零改动。
+module ai-news-database 名字不变，21 处 import 零改动。
 cmd/internal/web/browser-extension/skills 等全部移入 tools/cmd/。"
 ```
 
@@ -179,9 +179,9 @@ docs:
 - [ ] **Step 6: 检查 tools/cmd/install.sh 的路径引用**
 
 ```bash
-grep -nE "cmd/|internal/|main\.go|\./news4coder|/usr/local" tools/cmd/install.sh
+grep -nE "cmd/|internal/|main\.go|\./ai-news-database|/usr/local" tools/cmd/install.sh
 ```
-若有引用相对仓库根的路径（如编译 `main.go`），确认现在相对 `tools/cmd` 是否仍正确。`install.sh` 若用 `go install .` 或 `go build -o news4coder`，在 `tools/cmd` 下仍正确，无需改。若有 `cp` 到固定路径等，按需调整。记录实际改动。
+若有引用相对仓库根的路径（如编译 `main.go`），确认现在相对 `tools/cmd` 是否仍正确。`install.sh` 若用 `go install .` 或 `go build -o ai-news-database`，在 `tools/cmd` 下仍正确，无需改。若有 `cp` 到固定路径等，按需调整。记录实际改动。
 
 - [ ] **Step 7: 创建根目录转发 Makefile**
 
@@ -203,12 +203,12 @@ build run test test-short test-coverage clean install fmt vet lint lint-fix secu
 ```bash
 make build 2>&1 | tail -5
 ```
-Expected: 显示 Building news4coder 并生成 `tools/cmd/news4coder`。
+Expected: 显示 Building ai-news-database 并生成 `tools/cmd/ai-news-database`。
 
 - [ ] **Step 9: 清理转发构建产生的二进制（避免误提交）**
 
 ```bash
-rm -f tools/cmd/news4coder tools/cmd/news4coder.exe
+rm -f tools/cmd/ai-news-database tools/cmd/ai-news-database.exe
 ```
 
 - [ ] **Step 10: Commit**
@@ -236,8 +236,8 @@ git commit -m "build: 更新 CI/Makefile 路径以适配 tools/cmd 结构
 
 ```
 # Binary files
-news4coder
-news4coder.exe
+ai-news-database
+ai-news-database.exe
 
 # Go build cache
 *.test
@@ -253,10 +253,10 @@ coverage.out
 
 ```
 # Binary files
-/news4coder
-/news4coder.exe
-/tools/cmd/news4coder
-/tools/cmd/news4coder.exe
+/ai-news-database
+/ai-news-database.exe
+/tools/cmd/ai-news-database
+/tools/cmd/ai-news-database.exe
 
 # Go build cache
 *.test

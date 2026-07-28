@@ -36,7 +36,7 @@ func TestLoadAndSave(t *testing.T) {
 	}
 
 	// Verify file was created
-	configPath := filepath.Join(tmpHome, ".news4coder", "config.json")
+	configPath := filepath.Join(tmpHome, ".ai-news-database", "config.json")
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		t.Fatal("config file was not created")
 	}

@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/tui"
 	"fmt"
-	"news4coder/internal/tui"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
@@ -24,13 +24,13 @@ var inspireCmd = &cobra.Command{
   r        刷新列表
   q / Esc  退出`,
 	Example: `  # 启动灵感模式（默认获取最近 7 天）
-  news4coder inspire
+  ai-news-database inspire
 
   # 获取最近 3 天的新产品
-  news4coder inspire --days 3
+  ai-news-database inspire --days 3
 
   # 获取最近 2 周的新产品，最多 50 条
-  news4coder inspire --days 14 --limit 50`,
+  ai-news-database inspire --days 14 --limit 50`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		model := tui.NewInspireModel(inspireDays, inspireLimit)
 		p := tea.NewProgram(model, tea.WithAltScreen())

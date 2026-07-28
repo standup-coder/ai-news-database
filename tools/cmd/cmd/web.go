@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
 	"fmt"
 	"net/http"
-	"news4coder/internal/db"
 	"os"
 	"path/filepath"
 
@@ -28,8 +28,8 @@ var webCmd = &cobra.Command{
 	Use:   "web",
 	Short: "启动本地 Web 服务",
 	Long:  `启动一个本地 Web 服务器，提供工作台和灵感页面浏览。`,
-	Example: `  news4coder web
-  news4coder web --port 3000`,
+	Example: `  ai-news-database web
+  ai-news-database web --port 3000`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		cyan := color.New(color.FgCyan).SprintFunc()
 		green := color.New(color.FgGreen).SprintFunc()
@@ -53,8 +53,8 @@ var webCmd = &cobra.Command{
 		registerStaticFiles(mux, webDir)
 
 		addr := fmt.Sprintf(":%d", webPort)
-		fmt.Printf("%s %s\n", cyan("✨"), bold("News4Coder Web 服务启动中..."))
-		fmt.Printf("%s 本地数据库: ~/.news4coder/news4coder.db\n", green("●"))
+		fmt.Printf("%s %s\n", cyan("✨"), bold("AI News Database Web 服务启动中..."))
+		fmt.Printf("%s 本地数据库: ~/.ai-news-database/ai-news-database.db\n", green("●"))
 		fmt.Printf("%s 访问地址: %s\n\n", green("●"), bold(fmt.Sprintf("http://localhost%s", addr)))
 		fmt.Printf("%s 工作台:    %s\n", green("●"), bold(fmt.Sprintf("http://localhost%s/dashboard", addr)))
 		fmt.Printf("%s 灵感页面:  %s\n\n", green("●"), bold(fmt.Sprintf("http://localhost%s/inspire", addr)))
@@ -105,10 +105,10 @@ func registerStaticFiles(mux *http.ServeMux, webDir string) {
 	} else {
 		mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 			w.Header().Set("Content-Type", "text/html; charset=utf-8")
-			fmt.Fprint(w, `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>News4Coder</title></head>
+			fmt.Fprint(w, `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>AI News Database</title></head>
 <body style="font-family:system-ui;padding:2rem;text-align:center;color:#666;">
-<h1>News4Coder Web</h1>
-<p>请从项目根目录运行 news4coder web 以启用完整 Web 界面。</p>
+<h1>AI News Database Web</h1>
+<p>请从项目根目录运行 ai-news-database web 以启用完整 Web 界面。</p>
 <p><a href="/inspire">灵感页面</a> | <a href="/dashboard">工作台</a></p>
 </body></html>`)
 		})

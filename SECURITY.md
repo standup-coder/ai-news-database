@@ -1,20 +1,20 @@
 # 安全政策
 
-News4Coder 团队非常重视用户的安全和隐私。由于本产品坚持「本地优先」原则，你的数据默认只存储在自己的设备上，这本身就大大降低了数据泄露的风险。
+AI News Database 团队非常重视用户的安全和隐私。由于本产品坚持「本地优先」原则，你的数据默认只存储在自己的设备上，这本身就大大降低了数据泄露的风险。
 
 ## 安全设计原则
 
 1. **本地优先**：所有文章、阅读状态、笔记和配置默认存储在本地 SQLite 数据库中
 2. **零遥测**：程序不会主动上传任何使用数据或崩溃报告到远程服务器
-3. **API 密钥本地存储**：LLM 配置（`~/.news4coder/config.json`）仅存在于本地
+3. **API 密钥本地存储**：LLM 配置（`~/.ai-news-database/config.json`）仅存在于本地
 4. **可选网络请求**：除文章采集和 LLM 调用外，程序不会进行其他网络通信
 
 ## 报告安全漏洞
 
 如果你发现了安全漏洞，请通过以下方式向我们报告：
 
-- **GitHub Security Advisories**: [创建私人安全建议](https://github.com/news4coder/news4coder/security/advisories/new)
-- **电子邮件**: security@news4coder.dev
+- **GitHub Security Advisories**: [创建私人安全建议](https://github.com/standup-coder/ai-news-database/security/advisories/new)
+- **电子邮件**: security@ai-news-database.dev
 
 请在报告中尽可能包含以下信息：
 
@@ -32,9 +32,9 @@ News4Coder 团队非常重视用户的安全和隐私。由于本产品坚持「
 
 ## 已知限制
 
-- **采集源安全性**：News4Coder 从第三方公开网站采集内容，无法保证这些网站 100% 安全。建议仅在可信网络环境下使用
+- **采集源安全性**：AI News Database 从第三方公开网站采集内容，无法保证这些网站 100% 安全。建议仅在可信网络环境下使用
 - **LLM 服务商**：如果你配置了外部 LLM API，数据将通过 HTTPS 传输到该服务商。使用 Ollama 本地服务可以完全避免数据外传
-- **本地文件权限**：`~/.news4coder/` 目录的权限取决于你的操作系统配置。建议确保该目录不对其他用户开放写入权限
+- **本地文件权限**：`~/.ai-news-database/` 目录的权限取决于你的操作系统配置。建议确保该目录不对其他用户开放写入权限
 
 ## 安全更新
 

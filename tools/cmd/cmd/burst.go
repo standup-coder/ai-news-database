@@ -1,13 +1,13 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/llm"
 	"context"
 	"encoding/json"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/db"
-	"news4coder/internal/llm"
 	"strconv"
 	"strings"
 	"time"
@@ -113,23 +113,23 @@ var burstCmd = &cobra.Command{
   problem       问题驱动 —— 从用户痛点出发设计解决方案
   techstack     技术栈组合 —— 基于新兴技术栈组合创新`,
 	Example: `  # 跨界联想模式（默认）
-  news4coder burst
-  news4coder burst --count 5
+  ai-news-database burst
+  ai-news-database burst --count 5
 
   # 问题驱动模式
-  news4coder burst --mode problem
+  ai-news-database burst --mode problem
 
   # 技术栈组合模式
-  news4coder burst --mode techstack
+  ai-news-database burst --mode techstack
 
   # 聚焦某个方向
-  news4coder burst --focus "AI + 开发者工具"
+  ai-news-database burst --focus "AI + 开发者工具"
 
   # 基于特定文章生成
-  news4coder burst --select 1,3,7
+  ai-news-database burst --select 1,3,7
 
   # 查看历史
-  news4coder burst history`,
+  ai-news-database burst history`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		cyan := color.New(color.FgCyan).SprintFunc()
 		bold := color.New(color.Bold).SprintFunc()
@@ -142,7 +142,7 @@ var burstCmd = &cobra.Command{
 			return fmt.Errorf("加载配置失败: %w", err)
 		}
 		if cfg.LLM.APIKey == "" {
-			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.news4coder/config.json")
+			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.ai-news-database/config.json")
 		}
 
 		database, err := db.New()
@@ -157,7 +157,7 @@ var burstCmd = &cobra.Command{
 		}
 
 		if len(articles) == 0 {
-			fmt.Printf("%s 暂无灵感数据。请先运行 news4coder inspire 获取。\n", yellow("!"))
+			fmt.Printf("%s 暂无灵感数据。请先运行 ai-news-database inspire 获取。\n", yellow("!"))
 			return nil
 		}
 
@@ -328,7 +328,7 @@ var burstHistoryCmd = &cobra.Command{
 			fmt.Println()
 		}
 
-		fmt.Printf("共 %d 条记录。使用 %s 查看详情。\n", len(results), bold("news4coder burst show <id>"))
+		fmt.Printf("共 %d 条记录。使用 %s 查看详情。\n", len(results), bold("ai-news-database burst show <id>"))
 		return nil
 	},
 }

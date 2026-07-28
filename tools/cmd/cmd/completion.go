@@ -14,16 +14,16 @@ var completionCmd = &cobra.Command{
 用法示例：
 
   # Bash
-  news4coder completion bash > /etc/bash_completion.d/news4coder
+  ai-news-database completion bash > /etc/bash_completion.d/ai-news-database
 
   # Zsh
-  news4coder completion zsh > "${fpath[1]}/_news4coder"
+  ai-news-database completion zsh > "${fpath[1]}/_ai-news-database"
 
   # Fish
-  news4coder completion fish > ~/.config/fish/completions/news4coder.fish
+  ai-news-database completion fish > ~/.config/fish/completions/ai-news-database.fish
 
   # PowerShell
-  news4coder completion powershell > news4coder.ps1
+  ai-news-database completion powershell > ai-news-database.ps1
 `,
 	DisableFlagsInUseLine: true,
 	ValidArgs:             []string{"bash", "zsh", "fish", "powershell"},

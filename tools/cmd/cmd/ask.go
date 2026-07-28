@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/rag"
 	"context"
 	"fmt"
-	"news4coder/internal/config"
-	"news4coder/internal/db"
-	"news4coder/internal/rag"
 	"strings"
 
 	"github.com/fatih/color"
@@ -17,8 +17,8 @@ var askCmd = &cobra.Command{
 	Short: "基于本地知识库进行 RAG 问答",
 	Long: `使用自然语言向你的本地技术知识库提问。
 系统会自动检索相关文章，并调用 LLM 生成带引用的回答。`,
-	Example: `  news4coder ask "最近一周关于 Rust 内存安全的主要观点有哪些？"
-  news4coder ask "Go 和 Rust 在并发模型上有什么差异？"`,
+	Example: `  ai-news-database ask "最近一周关于 Rust 内存安全的主要观点有哪些？"
+  ai-news-database ask "Go 和 Rust 在并发模型上有什么差异？"`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		question := strings.TrimSpace(strings.Join(args, " "))
@@ -31,7 +31,7 @@ var askCmd = &cobra.Command{
 			return fmt.Errorf("加载配置失败: %w", err)
 		}
 		if cfg.LLM.APIKey == "" {
-			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.news4coder/config.json")
+			return fmt.Errorf("LLM API Key 未配置。请编辑 ~/.ai-news-database/config.json")
 		}
 
 		database, err := db.New()

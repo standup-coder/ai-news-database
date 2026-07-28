@@ -1,6 +1,6 @@
 package crawler
 
-import "news4coder/internal/official"
+import "ai-news-database/internal/official"
 
 // NewCrawler 根据官方源配置创建对应的采集器
 func NewCrawler(source *official.Source) (Crawler, error) {

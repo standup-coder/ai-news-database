@@ -6,7 +6,7 @@
 
 ## 1. 背景与动机
 
-仓库 `ai-news-database` 当前是一个名为 `news4coder` 的 Go CLI 工具：抓取全球技术源 → 存入本地 SQLite（本机现有 179 篇文章）→ 提供 TUI 阅读、RAG 问答、策展、深度研究等命令。代码、构建产物、大量项目文档都堆在仓库根目录。
+仓库 `ai-news-database` 当前是一个名为 `ai-news-database` 的 Go CLI 工具：抓取全球技术源 → 存入本地 SQLite（本机现有 179 篇文章）→ 提供 TUI 阅读、RAG 问答、策展、深度研究等命令。代码、构建产物、大量项目文档都堆在仓库根目录。
 
 希望把仓库**转型为「AI 行业新闻内容库」**：持续沉淀每一条线索（story line）的相关新闻，最终能从时间线看到深度分析。为此：
 
@@ -24,7 +24,7 @@
 | 二层结构 | **主题 / 线索·时间线文件**（一个线索 = 一个时间线 md） |
 | 命名 | **中文简称为主，专有名词保留英文** |
 | 代码搬迁范围 | **全部代码收敛到 `tools/cmd/`** |
-| Go module 方式 | **方案 A：module 随代码移动到 `tools/cmd/go.mod`**（`module news4coder` 名字不变，21 处 import 零改动） |
+| Go module 方式 | **方案 A：module 随代码移动到 `tools/cmd/go.mod`**（`module ai-news-database` 名字不变，21 处 import 零改动） |
 | 主题数量 | **13 个一次性全建** |
 | 线索文件特性 | **保留 frontmatter、时间线倒序、启用 `[[ ]]` 双链、概述与分析分离** |
 | 旧文档处理 | **全移到 `docs/` 归档** |
@@ -44,7 +44,7 @@ ai-news-database/
 ├── … (其余 7 个主题)
 ├── _topics.md               # 中心分类索引（主题/简称/英文/定义）
 ├── tools/
-│   └── cmd/                 # 独立 Go module（module news4coder）
+│   └── cmd/                 # 独立 Go module（module ai-news-database）
 │       ├── go.mod go.sum main.go
 │       ├── cmd/ internal/ web/ browser-extension/
 │       ├── Makefile install.sh
@@ -75,7 +75,7 @@ ai-news-database/
 | `local/`（运行时产物） | 根目录，保持 gitignore |
 | 旧 `main.go` `cmd/` `internal/` `web/` `browser-extension/` `skills/` `skills-lock.json` | → `tools/cmd/` |
 | `go.mod` `go.sum` `Makefile` `install.sh` `.golangci.yml` `.pre-commit-config.yaml` `.editorconfig` | → `tools/cmd/` |
-| `news4coder`（18MB 二进制产物） | 删除，加入 `.gitignore` |
+| `ai-news-database`（18MB 二进制产物） | 删除，加入 `.gitignore` |
 | `BUSINESS.md` `PROMOTION.md` `EVALUATION_REPORT.md` `AUDIT_REPORT.md` `EXAMPLES.md` `CHANGELOG.md` | → `docs/` |
 | 旧 `README.md` | → `docs/legacy-readme.md` |
 
@@ -209,7 +209,7 @@ ai-news-database/
 
 ### 6.2 关键技术点
 
-1. **module 名不变**：`tools/cmd/go.mod` 仍是 `module news4coder`。经核实全仓 59 个 `.go` 文件、21 处唯一 `"news4coder/..."` import，**零改动**（路径相对 module 根）。`main.go` 的 `import "news4coder/cmd"` 也不变。
+1. **module 名不变**：`tools/cmd/go.mod` 仍是 `module ai-news-database`。经核实全仓 59 个 `.go` 文件、21 处唯一 `"ai-news-database/..."` import，**零改动**（路径相对 module 根）。`main.go` 的 `import "ai-news-database/cmd"` 也不变。
 2. **验证**：`cd tools/cmd && go build ./... && go test ./...` 应与搬迁前一致全绿（现有 24 个 `_test.go`）。
 3. **根目录构建转发**：新增根目录 `Makefile`（轻量，仅转发）或脚本，方便习惯在根目录 build 的用户。具体形式：根 `Makefile` target `build`/`test` 调用 `$(MAKE) -C tools/cmd $@`。
 
@@ -228,7 +228,7 @@ ai-news-database/
 ### 阶段 1：代码搬迁（不破坏功能）
 
 1. 用 `git mv` 把代码/构建文件移到 `tools/cmd/`（见 §6.1 映射）。
-2. 删除 18MB 二进制 `news4coder`，更新 `.gitignore`（加 `tools/cmd/news4coder` 及 `/news4coder`）。
+2. 删除 18MB 二进制 `ai-news-database`，更新 `.gitignore`（加 `tools/cmd/ai-news-database` 及 `/ai-news-database`）。
 3. 更新路径相关配置（§6.3）：`.github/workflows/*.yml`、根 `Makefile`（改转发）、`tools/cmd/Makefile` 的 `docs:` target、`install.sh`、`CONTRIBUTING.md`。
 4. 验证：`cd tools/cmd && go build ./... && go test ./...` 全绿。
 

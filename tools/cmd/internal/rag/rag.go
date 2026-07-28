@@ -1,12 +1,12 @@
 package rag
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/llm"
 	"context"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/db"
-	"news4coder/internal/llm"
 	"strings"
 )
 
@@ -44,7 +44,7 @@ func (r *RAG) Answer(ctx context.Context, question string) (string, []SourceRef,
 	}
 
 	if len(articles) == 0 {
-		return "本地知识库中没有找到与这个问题相关的文章。建议先执行 `news4coder sync` 和 `news4coder enrich` 拉取并增强内容。", nil, nil
+		return "本地知识库中没有找到与这个问题相关的文章。建议先执行 `ai-news-database sync` 和 `ai-news-database enrich` 拉取并增强内容。", nil, nil
 	}
 
 	// 2. 组装上下文

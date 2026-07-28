@@ -10,9 +10,9 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 
-	"news4coder/internal/config"
-	"news4coder/internal/db"
-	"news4coder/internal/deep_research"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/deep_research"
 )
 
 var (
@@ -45,10 +45,10 @@ var researchCmd = &cobra.Command{
   - 完整引用来源
 
 示例：
-  news4coder research "AI coding tools"
-  news4coder research "Rust vs Go" --sub-queries 8 --limit 30
-  news4coder research "WebAssembly" --no-web
-  news4coder research "Kubernetes trends" --detailed --json`,
+  ai-news-database research "AI coding tools"
+  ai-news-database research "Rust vs Go" --sub-queries 8 --limit 30
+  ai-news-database research "WebAssembly" --no-web
+  ai-news-database research "Kubernetes trends" --detailed --json`,
 	Args: cobra.ExactArgs(1),
 	RunE: runResearch,
 }
@@ -72,7 +72,7 @@ func runResearch(cmd *cobra.Command, args []string) error {
 	}
 
 	if cfg.LLM.APIKey == "" {
-		return fmt.Errorf("LLM API Key 未配置，请先运行 news4coder config set llm.api_key <YOUR_KEY>")
+		return fmt.Errorf("LLM API Key 未配置，请先运行 ai-news-database config set llm.api_key <YOUR_KEY>")
 	}
 
 	database, err := db.New()
@@ -144,7 +144,7 @@ var (
 func printResearchHeader(topic string) {
 	fmt.Println()
 	fmt.Println(headerStyle.Render("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
-	fmt.Println(headerStyle.Render("🔬 News4Coder Deep Research"))
+	fmt.Println(headerStyle.Render("🔬 AI News Database Deep Research"))
 	fmt.Println(headerStyle.Render("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"))
 	fmt.Printf("主题: %s\n\n", color.CyanString(topic))
 }

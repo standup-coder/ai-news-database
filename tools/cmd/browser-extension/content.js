@@ -1,4 +1,4 @@
-// News4Coder Content Script
+// AI News Database Content Script
 // Runs in the context of web pages to extract article metadata
 
 (function () {

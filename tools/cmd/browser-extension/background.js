@@ -1,8 +1,8 @@
-// News4Coder Browser Extension - Background Service Worker
+// AI News Database Browser Extension - Background Service Worker
 
 chrome.runtime.onInstalled.addListener(({ reason }) => {
   if (reason === 'install') {
-    console.log('[News4Coder] Extension installed');
+    console.log('[AI News Database] Extension installed');
     // Set default API URL
     chrome.storage.local.set({
       n4cApiUrl: 'http://localhost:8081',
@@ -21,14 +21,14 @@ chrome.commands.onCommand.addListener((command) => {
 // Optional: Context menu for quick save
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: 'save-to-news4coder',
-    title: '保存到 News4Coder',
+    id: 'save-to-ai-news-database',
+    title: '保存到 AI News Database',
     contexts: ['page', 'link']
   });
 });
 
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId === 'save-to-news4coder') {
+  if (info.menuItemId === 'save-to-ai-news-database') {
     const url = info.linkUrl || tab.url;
     const title = tab.title || url;
 
@@ -49,7 +49,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
         })
       });
     } catch (err) {
-      console.error('[News4Coder] Save failed', err);
+      console.error('[AI News Database] Save failed', err);
     }
   }
 });

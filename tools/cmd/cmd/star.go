@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"strconv"
 
 	"github.com/fatih/color"
@@ -14,8 +14,8 @@ var starCmd = &cobra.Command{
 	Use:   "star <id>",
 	Short: "收藏文章",
 	Long:  `根据文章 ID 将文章标记为收藏状态。`,
-	Example: `  news4coder star 42
-  news4coder star 1 2 3`,
+	Example: `  ai-news-database star 42
+  ai-news-database star 1 2 3`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/storage"
+	"ai-news-database/internal/subscription"
 	"fmt"
-	"news4coder/internal/storage"
-	"news4coder/internal/subscription"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -18,10 +18,10 @@ var removeCmd = &cobra.Command{
 	Use:   "remove",
 	Short: "删除订阅",
 	Long:  `根据名称、别名或序号删除一个订阅。`,
-	Example: `  news4coder remove --name "InfoQ中文站"
-  news4coder remove -n infoq
-  news4coder remove --index 1
-  news4coder remove -i 2`,
+	Example: `  ai-news-database remove --name "InfoQ中文站"
+  ai-news-database remove -n infoq
+  ai-news-database remove --index 1
+  ai-news-database remove -i 2`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 检查参数
 		if removeName == "" && removeIndex == 0 {

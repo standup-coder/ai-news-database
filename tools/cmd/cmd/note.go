@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/db"
 	"strconv"
 	"strings"
 
@@ -14,8 +14,8 @@ var noteCmd = &cobra.Command{
 	Use:   "note <id> <text>",
 	Short: "为文章添加笔记",
 	Long:  `根据文章 ID 添加一条短笔记，后续可在列表或 TUI 中查看。`,
-	Example: `  news4coder note 42 "核心观点：Go 的并发模型基于 CSP"
-  news4coder note 42 "" # 清空笔记`,
+	Example: `  ai-news-database note 42 "核心观点：Go 的并发模型基于 CSP"
+  ai-news-database note 42 "" # 清空笔记`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

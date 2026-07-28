@@ -1,14 +1,14 @@
 package enricher
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/crawler"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/llm"
 	"context"
 	"encoding/json"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/crawler"
-	"news4coder/internal/db"
-	"news4coder/internal/llm"
 	"strings"
 )
 

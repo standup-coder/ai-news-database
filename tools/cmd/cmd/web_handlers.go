@@ -1,17 +1,17 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/crawler"
+	"ai-news-database/internal/curator"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/enricher"
+	"ai-news-database/internal/official"
+	"ai-news-database/internal/rag"
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/crawler"
-	"news4coder/internal/curator"
-	"news4coder/internal/db"
-	"news4coder/internal/enricher"
-	"news4coder/internal/official"
-	"news4coder/internal/rag"
 	"regexp"
 )
 

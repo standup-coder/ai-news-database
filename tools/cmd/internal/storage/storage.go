@@ -1,15 +1,15 @@
 package storage
 
 import (
+	"ai-news-database/internal/subscription"
 	"encoding/json"
 	"fmt"
-	"news4coder/internal/subscription"
 	"os"
 	"path/filepath"
 )
 
 const (
-	configDir  = ".news4coder"
+	configDir  = ".ai-news-database"
 	configFile = "subscriptions.json"
 )
 

@@ -1,6 +1,7 @@
 package llm
 
 import (
+	"ai-news-database/internal/config"
 	"bytes"
 	"context"
 	"encoding/json"
@@ -8,7 +9,6 @@ import (
 	"io"
 	"math"
 	"net/http"
-	"news4coder/internal/config"
 	"time"
 )
 
@@ -134,7 +134,7 @@ func (c *Client) doRequest(ctx context.Context, url string, reqBody any) ([]byte
 // Chat 发送对话请求
 func (c *Client) Chat(ctx context.Context, messages []Message, maxTokens int) (string, error) {
 	if c.cfg.APIKey == "" {
-		return "", fmt.Errorf("LLM API Key 未配置，请编辑 ~/.news4coder/config.json")
+		return "", fmt.Errorf("LLM API Key 未配置，请编辑 ~/.ai-news-database/config.json")
 	}
 
 	reqBody := ChatRequest{

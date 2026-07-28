@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/db"
 	"strconv"
 	"strings"
 
@@ -14,8 +14,8 @@ var tagCmd = &cobra.Command{
 	Use:   "tag <id> <tag1,tag2,...>",
 	Short: "为文章添加标签",
 	Long:  `根据文章 ID 添加标签，多个标签用逗号分隔。`,
-	Example: `  news4coder tag 42 "golang,concurrency"
-  news4coder tag 42 "" # 清空标签`,
+	Example: `  ai-news-database tag 42 "golang,concurrency"
+  ai-news-database tag 42 "" # 清空标签`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

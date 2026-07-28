@@ -1,10 +1,10 @@
 package official
 
 import (
+	"ai-news-database/internal/search"
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"news4coder/internal/search"
 	"os"
 	"strings"
 	"time"

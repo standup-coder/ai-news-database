@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	"ai-news-database/internal/article"
 	_ "modernc.org/sqlite"
-	"news4coder/internal/article"
 )
 
 func newTestDBExtended(t *testing.T) *DB {

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error(text || `HTTP ${res.status}`);
       }
 
-      showStatus('✓ 已保存到 News4Coder 本地库', 'success');
+      showStatus('✓ 已保存到 AI News Database 本地库', 'success');
       setTimeout(() => window.close(), 800);
     } catch (err) {
       showStatus(`保存失败: ${err.message}`, 'error');

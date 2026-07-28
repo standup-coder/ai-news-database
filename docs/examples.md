@@ -1,8 +1,8 @@
-# News4Coder 使用示例
+# AI News Database 使用示例
 
-本文档展示了 news4coder 的常用使用场景和工作流。
+本文档展示了 ai-news-database 的常用使用场景和工作流。
 
-> **核心理念**: News4Coder 坚持**本地优先**和**数据主权**。所有数据存储在本地 SQLite 数据库（`~/.news4coder/`），无需云端账号，你的数据永远属于你。
+> **核心理念**: AI News Database 坚持**本地优先**和**数据主权**。所有数据存储在本地 SQLite 数据库（`~/.ai-news-database/`），无需云端账号，你的数据永远属于你。
 
 ---
 
@@ -23,18 +23,18 @@
 ```bash
 # 克隆仓库
 git clone <repository-url>
-cd news4coder
+cd ai-news-database
 
 # 编译项目
-go build -o news4coder
+go build -o ai-news-database
 
-# 首次运行会自动创建配置目录 ~/.news4coder/
-./news4coder --help
+# 首次运行会自动创建配置目录 ~/.ai-news-database/
+./ai-news-database --help
 ```
 
 ### 2. 配置 LLM（可选但推荐）
 
-编辑 `~/.news4coder/config.json`：
+编辑 `~/.ai-news-database/config.json`：
 
 ```json
 {
@@ -55,10 +55,10 @@ go build -o news4coder
 
 ```bash
 # 查看可用的官方源
-./news4coder sources
+./ai-news-database sources
 
 # 同步所有官方源到本地数据库
-./news4coder sync
+./ai-news-database sync
 ```
 
 输出示例：
@@ -69,20 +69,20 @@ go build -o news4coder
   ✓ 新增 5 条，更新 0 条重复
 ...
 ✓ 同步完成：新增 60 条，更新 10 条
-💡 下一步建议: news4coder enrich  生成 LLM 摘要和标签
+💡 下一步建议: ai-news-database enrich  生成 LLM 摘要和标签
 ```
 
 ### 4. 查看已同步的文章
 
 ```bash
 # 列出最近的文章
-./news4coder list --articles
+./ai-news-database list --articles
 
 # 仅查看未读文章
-./news4coder list --articles --status unread
+./ai-news-database list --articles --status unread
 
 # 查看收藏的文章
-./news4coder list --articles --status starred
+./ai-news-database list --articles --status starred
 ```
 
 ---
@@ -93,20 +93,20 @@ go build -o news4coder
 
 ```bash
 # 1. 同步所有官方源
-./news4coder sync
+./ai-news-database sync
 
 # 2. 对新文章进行 LLM 增强（生成摘要、标签、评分）
-./news4coder enrich --limit 20
+./ai-news-database enrich --limit 20
 
 # 3. 查看智能策展的今日必读
-./news4coder curate --top 10
+./ai-news-database curate --top 10
 ```
 
 ### 场景 2: 深度阅读工作流
 
 ```bash
 # 1. 进入 TUI 收件箱浏览文章
-./news4coder inbox
+./ai-news-database inbox
 ```
 
 在 TUI 中：
@@ -120,19 +120,19 @@ go build -o news4coder
 
 ```bash
 # 2. 为重要文章添加笔记
-./news4coder note <article-id> "核心观点记录..."
+./ai-news-database note <article-id> "核心观点记录..."
 
 # 3. 添加自定义标签
-./news4coder tag <article-id> "golang,concurrency"
+./ai-news-database tag <article-id> "golang,concurrency"
 ```
 
 ### 场景 3: 知识库问答
 
 ```bash
 # 基于本地知识库回答问题
-./news4coder ask "Go 和 Rust 在并发模型上有什么差异？"
+./ai-news-database ask "Go 和 Rust 在并发模型上有什么差异？"
 
-./news4coder ask "最近关于微服务架构有哪些最佳实践？"
+./ai-news-database ask "最近关于微服务架构有哪些最佳实践？"
 ```
 
 输出示例：
@@ -155,32 +155,32 @@ Go 和 Rust 在并发模型上有以下主要差异...
 
 ```bash
 # 搜索本地知识库
-./news4coder search "kubernetes"
+./ai-news-database search "kubernetes"
 
-./news4coder search "微服务架构"
+./ai-news-database search "微服务架构"
 ```
 
 ### 场景 5: 导出与备份
 
 ```bash
 # 导出收藏的文章为 Markdown
-./news4coder export --status starred --output my-favorites.md
+./ai-news-database export --status starred --output my-favorites.md
 
 # 导出已读文章
-./news4coder export --status read --output read-articles.md
+./ai-news-database export --status read --output read-articles.md
 ```
 
 ### 场景 6: 定期维护
 
 ```bash
 # 查看订阅健康度
-./news4coder stats
+./ai-news-database stats
 
 # 归档所有已读文章
-./news4coder archive
+./ai-news-database archive
 
 # 清理过期文章（丢弃超过7天、归档超过30天）
-./news4coder cleanup
+./ai-news-database cleanup
 ```
 
 ---
@@ -245,16 +245,16 @@ Go 和 Rust 在并发模型上有以下主要差异...
 
 | 平台 | 路径 |
 |------|------|
-| macOS | `~/.news4coder/` |
-| Linux | `~/.news4coder/` |
-| Windows | `C:\Users\<用户名>\.news4coder\` |
+| macOS | `~/.ai-news-database/` |
+| Linux | `~/.ai-news-database/` |
+| Windows | `C:\Users\<用户名>\.ai-news-database\` |
 
 ### 文件说明
 
 ```
-~/.news4coder/
+~/.ai-news-database/
 ├── config.json          # LLM 配置
-├── news4coder.db        # SQLite 数据库（文章、阅读状态、全文索引）
+├── ai-news-database.db        # SQLite 数据库（文章、阅读状态、全文索引）
 └── subscriptions.json   # 旧订阅配置（已弃用）
 ```
 
@@ -262,10 +262,10 @@ Go 和 Rust 在并发模型上有以下主要差异...
 
 ```bash
 # 直接备份数据库文件
-cp ~/.news4coder/news4coder.db ~/backups/news4coder-$(date +%Y%m%d).db
+cp ~/.ai-news-database/ai-news-database.db ~/backups/ai-news-database-$(date +%Y%m%d).db
 
 # 或使用 export 导出 Markdown
-./news4coder export --output backup.md
+./ai-news-database export --output backup.md
 ```
 
 ### 数据可移植性
@@ -281,7 +281,7 @@ SQLite 数据库是标准的单文件格式，可以：
 
 ### Q: 为什么数据要存储在本地？
 
-**A**: News4Coder 坚持「本地优先」和「数据主权」理念：
+**A**: AI News Database 坚持「本地优先」和「数据主权」理念：
 
 - ✅ **隐私**: 无需账号，数据不上传云端
 - ✅ **永久可用**: 不受服务商倒闭影响
@@ -317,10 +317,10 @@ SQLite 数据库是标准的单文件格式，可以：
 
 ```bash
 # 清理旧文章
-./news4coder cleanup
+./ai-news-database cleanup
 
 # 手动删除丢弃的文章
-./news4coder list --articles --status discarded
+./ai-news-database list --articles --status discarded
 # 然后使用 remove 命令（如支持）或手动删除数据库
 ```
 
@@ -329,9 +329,9 @@ SQLite 数据库是标准的单文件格式，可以：
 **A**: 使用 `--help` 参数：
 
 ```bash
-./news4coder --help
-./news4coder sync --help
-./news4coder enrich --help
+./ai-news-database --help
+./ai-news-database sync --help
+./ai-news-database enrich --help
 ```
 
 ---
@@ -342,10 +342,10 @@ SQLite 数据库是标准的单文件格式，可以：
 
 ```bash
 # 同步后立即增强
-./news4coder sync && ./news4coder enrich
+./ai-news-database sync && ./ai-news-database enrich
 
 # 策展后进入收件箱
-./news4coder curate --top 10 && ./news4coder inbox
+./ai-news-database curate --top 10 && ./ai-news-database inbox
 ```
 
 ### 使用别名
@@ -353,10 +353,10 @@ SQLite 数据库是标准的单文件格式，可以：
 在 `~/.bashrc` 或 `~/.zshrc` 中添加：
 
 ```bash
-alias n4c='./news4coder'
-alias n4c-sync='./news4coder sync'
-alias n4c-inbox='./news4coder inbox'
-alias n4c-ask='./news4coder ask'
+alias n4c='./ai-news-database'
+alias n4c-sync='./ai-news-database sync'
+alias n4c-inbox='./ai-news-database inbox'
+alias n4c-ask='./ai-news-database ask'
 ```
 
 ### 定时自动同步
@@ -365,7 +365,7 @@ alias n4c-ask='./news4coder ask'
 
 ```bash
 # 每天早上 8 点同步
-0 8 * * * cd /path/to/news4coder && ./news4coder sync >> ~/.news4coder/sync.log 2>&1
+0 8 * * * cd /path/to/ai-news-database && ./ai-news-database sync >> ~/.ai-news-database/sync.log 2>&1
 ```
 
 ---
@@ -374,23 +374,23 @@ alias n4c-ask='./news4coder ask'
 
 | 命令 | 说明 | 示例 |
 |------|------|------|
-| `sync` | 同步官方源 | `news4coder sync --source hn` |
-| `enrich` | LLM 增强 | `news4coder enrich --limit 10` |
-| `curate` | 智能策展 | `news4coder curate --top 10` |
-| `ask` | RAG 问答 | `news4coder ask "问题"` |
-| `inbox` | TUI 收件箱 | `news4coder inbox` |
-| `list` | 列出文章 | `news4coder list -a --status unread` |
-| `read` | 标记已读 | `news4coder read 1 2 3` |
-| `star` | 收藏 | `news4coder star 42` |
-| `discard` | 丢弃 | `news4coder discard 5 6` |
-| `archive` | 批量归档 | `news4coder archive` |
-| `search` | 全文搜索 | `news4coder search "golang"` |
-| `stats` | 订阅健康度 | `news4coder stats` |
-| `note` | 添加笔记 | `news4coder note 42 "笔记"` |
-| `tag` | 添加标签 | `news4coder tag 42 "tag1,tag2"` |
-| `export` | 导出文章 | `news4coder export --status starred` |
-| `cleanup` | 清理旧文章 | `news4coder cleanup` |
-| `sources` | 查看官方源 | `news4coder sources` |
+| `sync` | 同步官方源 | `ai-news-database sync --source hn` |
+| `enrich` | LLM 增强 | `ai-news-database enrich --limit 10` |
+| `curate` | 智能策展 | `ai-news-database curate --top 10` |
+| `ask` | RAG 问答 | `ai-news-database ask "问题"` |
+| `inbox` | TUI 收件箱 | `ai-news-database inbox` |
+| `list` | 列出文章 | `ai-news-database list -a --status unread` |
+| `read` | 标记已读 | `ai-news-database read 1 2 3` |
+| `star` | 收藏 | `ai-news-database star 42` |
+| `discard` | 丢弃 | `ai-news-database discard 5 6` |
+| `archive` | 批量归档 | `ai-news-database archive` |
+| `search` | 全文搜索 | `ai-news-database search "golang"` |
+| `stats` | 订阅健康度 | `ai-news-database stats` |
+| `note` | 添加笔记 | `ai-news-database note 42 "笔记"` |
+| `tag` | 添加标签 | `ai-news-database tag 42 "tag1,tag2"` |
+| `export` | 导出文章 | `ai-news-database export --status starred` |
+| `cleanup` | 清理旧文章 | `ai-news-database cleanup` |
+| `sources` | 查看官方源 | `ai-news-database sources` |
 
 ---
 

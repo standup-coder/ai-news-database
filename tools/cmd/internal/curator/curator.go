@@ -1,9 +1,9 @@
 package curator
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"sort"
 	"strings"
 )

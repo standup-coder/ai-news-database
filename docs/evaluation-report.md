@@ -1,8 +1,8 @@
-# News4Coder 项目全面评估与改进报告
+# AI News Database 项目全面评估与改进报告
 
 > 评估日期: 2026-05-18
 > 评估人: Hermes Agent
-> 项目路径: /Users/allengaller/Documents/GitHub/standup-coder/news4coder
+> 项目路径: /Users/allengaller/Documents/GitHub/standup-coder/ai-news-database
 
 ---
 
@@ -10,7 +10,7 @@
 
 | 项目 | 详情 |
 |------|------|
-| 项目名称 | News4Coder — 程序员个人信息终端 |
+| 项目名称 | AI News Database — 程序员个人信息终端 |
 | 定位 | 本地优先 (Local-First) 的技术资讯 CLI 工具 |
 | 语言 | Go 1.25+ |
 | 代码规模 | 8,120 行 Go 代码 (59 源文件 + 16 测试文件) |

@@ -13,13 +13,13 @@ import (
 	"sync"
 	"time"
 
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/crawler"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/llm"
+	"ai-news-database/internal/search"
 	"github.com/PuerkitoBio/goquery"
-	"news4coder/internal/article"
-	"news4coder/internal/config"
-	"news4coder/internal/crawler"
-	"news4coder/internal/db"
-	"news4coder/internal/llm"
-	"news4coder/internal/search"
 )
 
 type Researcher struct {
@@ -1056,7 +1056,7 @@ func (r *Researcher) toMarkdown(result *ResearchResult) string {
 	}
 
 	sb.WriteString("\n---\n\n")
-	sb.WriteString(fmt.Sprintf("*由 News4Coder Deep Research 生成 | 研究用时: %v*\n", result.Trace.TotalTime))
+	sb.WriteString(fmt.Sprintf("*由 AI News Database Deep Research 生成 | 研究用时: %v*\n", result.Trace.TotalTime))
 
 	return sb.String()
 }
@@ -1184,7 +1184,7 @@ func (r *Researcher) toDetailedMarkdown(result *ResearchResult) string {
 	}
 
 	sb.WriteString("\n---\n\n")
-	sb.WriteString(fmt.Sprintf("*由 News4Coder Deep Research 生成 | 总用时: %v*\n", result.Trace.TotalTime))
+	sb.WriteString(fmt.Sprintf("*由 AI News Database Deep Research 生成 | 总用时: %v*\n", result.Trace.TotalTime))
 
 	return sb.String()
 }

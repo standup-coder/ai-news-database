@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/crawler"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/official"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/crawler"
-	"news4coder/internal/db"
-	"news4coder/internal/official"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -19,10 +19,10 @@ var syncCmd = &cobra.Command{
 	Long: `一键拉取所有启用的官方源的最新文章，
 存储到本地 SQLite 数据库中。已存在的文章（按 URL 去重）会自动更新元数据。`,
 	Example: `  # 同步所有官方源
-  news4coder sync
+  ai-news-database sync
 
   # 仅同步指定源
-  news4coder sync --source hn`,
+  ai-news-database sync --source hn`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 初始化数据库
 		database, err := db.New()
@@ -102,7 +102,7 @@ var syncCmd = &cobra.Command{
 
 		fmt.Println()
 		fmt.Printf("%s 同步完成：新增 %d 条，更新 %d 条\n", green("✓"), totalSaved, totalSkipped)
-		fmt.Println("💡 下一步建议: news4coder enrich  生成 LLM 摘要和标签")
+		fmt.Println("💡 下一步建议: ai-news-database enrich  生成 LLM 摘要和标签")
 		return nil
 	},
 }

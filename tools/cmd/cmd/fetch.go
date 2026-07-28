@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/official"
+	"ai-news-database/internal/search"
+	"ai-news-database/internal/storage"
+	"ai-news-database/internal/subscription"
 	"fmt"
-	"news4coder/internal/official"
-	"news4coder/internal/search"
-	"news4coder/internal/storage"
-	"news4coder/internal/subscription"
 	"strings"
 
 	"github.com/fatih/color"
@@ -25,14 +25,14 @@ var fetchCmd = &cobra.Command{
 专注模式：官方信息源（如 infoq）使用专用抓取器，直接获取原站热点内容。
 普通模式：其他订阅源使用 DuckDuckGo 站内搜索获取内容。`,
 	Example: `  # 专注模式 - 官方信息源
-  news4coder fetch -n infoq
+  ai-news-database fetch -n infoq
   
   # 普通模式 - 站内搜索
-  news4coder fetch -n hn
-  news4coder fetch --name "Hacker News"
+  ai-news-database fetch -n hn
+  ai-news-database fetch --name "Hacker News"
   
   # 演示模式
-  news4coder fetch -n infoq --demo`,
+  ai-news-database fetch -n infoq --demo`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if fetchName == "" {
 			return fmt.Errorf("请指定订阅名称（--name）")

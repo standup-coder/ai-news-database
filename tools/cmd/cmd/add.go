@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/storage"
+	"ai-news-database/internal/subscription"
 	"fmt"
-	"news4coder/internal/storage"
-	"news4coder/internal/subscription"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -19,8 +19,8 @@ var addCmd = &cobra.Command{
 	Use:   "add",
 	Short: "添加新的订阅",
 	Long:  `添加一个新的网站订阅，指定订阅名称、别名和URL。`,
-	Example: `  news4coder add --name "InfoQ中文站" --alias infoq --url "https://www.infoq.cn"
-  news4coder add -n "Hacker News" -a hn -u "https://news.ycombinator.com"`,
+	Example: `  ai-news-database add --name "InfoQ中文站" --alias infoq --url "https://www.infoq.cn"
+  ai-news-database add -n "Hacker News" -a hn -u "https://news.ycombinator.com"`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 创建存储实例
 		store, err := storage.New()

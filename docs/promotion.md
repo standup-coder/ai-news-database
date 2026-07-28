@@ -1,4 +1,4 @@
-# News4Coder 自媒体推广方案
+# AI News Database 自媒体推广方案
 
 > 为程序员打造的 LLM-Native 个人信息终端 —— 让技术阅读回归本地与纯粹。
 
@@ -8,7 +8,7 @@
 
 ### 一句话定位
 
-**News4Coder 是专为程序员设计的本地优先技术资讯终端，把 HN、V2EX、GitHub Blog 等高质量信源一键同步到本地 SQLite，并通过 LLM 自动摘要、智能策展、RAG 问答，帮你实现信息断舍离。**
+**AI News Database 是专为程序员设计的本地优先技术资讯终端，把 HN、V2EX、GitHub Blog 等高质量信源一键同步到本地 SQLite，并通过 LLM 自动摘要、智能策展、RAG 问答，帮你实现信息断舍离。**
 
 ### 核心卖点矩阵
 
@@ -68,7 +68,7 @@
 **文案 A（产品发布）**：
 
 ```
-Introducing News4Coder 🚀
+Introducing AI News Database 🚀
 
 A local-first, LLM-native news terminal for programmers.
 
@@ -97,7 +97,7 @@ What if you could:
 - Read only the top 10 in a TUI inbox
 - Search everything locally with FTS5
 
-That's exactly what News4Coder does.
+That's exactly what AI News Database does.
 ```
 
 **文案 C（数据主权）**：
@@ -105,7 +105,7 @@ That's exactly what News4Coder does.
 ```
 "I don't want my reading history to train someone else's AI."
 
-News4Coder stores everything in a local SQLite file:
+AI News Database stores everything in a local SQLite file:
 - Articles & metadata
 - Reading status & stars
 - Notes & tags
@@ -199,7 +199,7 @@ j/k 上下翻，r 标记已读，s 收藏，d 丢弃，
    - 搜索困难
    - 隐私隐忧
 
-二、什么是 News4Coder？一个程序员的本地阅读终端
+二、什么是 AI News Database？一个程序员的本地阅读终端
    - 产品介绍 + 核心功能
    - 8 个内置官方源
    - 阅读状态五态流
@@ -236,7 +236,7 @@ j/k 上下翻，r 标记已读，s 收藏，d 丢弃，
 
 直到有一天我意识到：问题不是我不够勤奋，而是我没有一套「筛选 + 沉淀 + 检索」的系统。
 
-今天分享一个我自己在用的开源工具 News4Coder，以及它背后的「本地优先」阅读哲学。
+今天分享一个我自己在用的开源工具 AI News Database，以及它背后的「本地优先」阅读哲学。
 ```
 
 ---
@@ -264,29 +264,29 @@ j/k 上下翻，r 标记已读，s 收藏，d 丢弃，
 
 我现在的做法是：打开终端，输入三个命令，5 分钟后带着 10 篇精选文章开始一天的工作。
 
-这三个命令来自一个开源工具：News4Coder。
+这三个命令来自一个开源工具：AI News Database。
 ```
 
 **中段（产品功能介绍）**：
 
 ```
 【一键同步】
-news4coder sync
+ai-news-database sync
 
 自动拉取 Hacker News、V2EX、GitHub Blog、Reddit、阮一峰博客等 8 个高质量源的更新，存在本地 SQLite。
 
 【AI 增强】
-news4coder enrich
+ai-news-database enrich
 
 调用 LLM 给每篇文章生成中文摘要、技术标签、质量评分（0-10）。
 
 【智能策展】
-news4coder curate --top 10
+ai-news-database curate --top 10
 
 基于质量分和你的阅读偏好，自动推荐今日必读。
 
 【TUI 极速浏览】
-news4coder inbox
+ai-news-database inbox
 
 像处理邮件一样处理文章：j/k 移动，r 已读，s 收藏，d 丢弃，a 归档。
 ```
@@ -294,12 +294,12 @@ news4coder inbox
 **结尾 CTA**：
 
 ```
-News4Coder 是完全开源的，基于 Go + SQLite，单二进制文件即可运行。
+AI News Database 是完全开源的，基于 Go + SQLite，单二进制文件即可运行。
 
 如果你也厌倦了被信息淹没，不妨试试「本地优先」的阅读方式。
 
 GitHub: <链接>
-安装: go build -o news4coder
+安装: go build -o ai-news-database
 
 你的数据，永远属于你。
 ```
@@ -320,7 +320,7 @@ GitHub: <链接>
             直到我用了一个命令行工具，把信息焦虑变成了信息掌控。"
 
 0:15-0:30  产品亮相
-           展示 News4Coder 名称和标语，快速切终端界面
+           展示 AI News Database 名称和标语，快速切终端界面
 
 0:30-1:30  核心演示（快节奏剪辑）
            - sync: 一键同步 8 个源
@@ -335,7 +335,7 @@ GitHub: <链接>
 
 2:30-3:30  理念阐述
            讲解「本地优先」和「数据主权」
-           展示 ~/.news4coder/ 目录和 SQLite 数据库文件
+           展示 ~/.ai-news-database/ 目录和 SQLite 数据库文件
 
 3:30-4:00  安装引导
            展示 go build 和 config.json 配置
@@ -359,7 +359,7 @@ GitHub: <链接>
 **文案 A**：
 
 ```
-发现了一个很酷的开源工具 News4Coder：
+发现了一个很酷的开源工具 AI News Database：
 
 把 HN、V2EX、GitHub Blog 等高质量技术源一键同步到本地 SQLite，然后让 LLM 自动写摘要、打标签、评质量分，每天自动出「今日必读 Top 10」。
 
@@ -377,7 +377,7 @@ GitHub: <链接>
 
 我的阅读记录、收藏列表、搜索历史，为什么要存在别人的服务器上？
 
-News4Coder 把所有东西都存在 ~/.news4coder/news4coder.db 里。
+AI News Database 把所有东西都存在 ~/.ai-news-database/ai-news-database.db 里。
 
 一个文件，随时可以备份、导出、迁移。
 没有账号，没有遥测，没有云。
@@ -393,12 +393,12 @@ News4Coder 把所有东西都存在 ~/.news4coder/news4coder.db 里。
 
 **帖子标题**：
 
-`[开源] News4Coder - 一个本地优先的 LLM-Native 技术资讯终端`
+`[开源] AI News Database - 一个本地优先的 LLM-Native 技术资讯终端`
 
 **帖子正文**：
 
 ```
-大家好，分享一个最近做的开源项目 News4Coder。
+大家好，分享一个最近做的开源项目 AI News Database。
 
 它是一个为程序员设计的命令行工具，核心思路是「本地优先 + LLM 增强」：
 
@@ -419,7 +419,7 @@ News4Coder 把所有东西都存在 ~/.news4coder/news4coder.db 里。
 - OpenAI 兼容 API
 
 **本地优先**
-- 所有数据存在 ~/.news4coder/
+- 所有数据存在 ~/.ai-news-database/
 - 无需注册账号
 - 零遥测
 
@@ -434,13 +434,13 @@ GitHub: <链接>
 
 **平台特性**：海外产品发布核心渠道，需要精美的产品截图/视频、清晰的 value proposition、Maker 故事。
 
-**产品名称**：News4Coder
+**产品名称**：AI News Database
 **标语**：Your local-first, AI-powered news terminal for developers.
 
 **Product Description**：
 
 ```
-News4Coder is a local-first, LLM-native CLI tool that turns scattered tech news into a curated, searchable personal knowledge base.
+AI News Database is a local-first, LLM-native CLI tool that turns scattered tech news into a curated, searchable personal knowledge base.
 
 **What it does:**
 - Syncs top tech sources (Hacker News, GitHub Blog, V2EX, Reddit, etc.) directly to your local SQLite database
@@ -460,12 +460,12 @@ Because your reading history shouldn't live on someone else's server. No account
 ```
 Hi Product Hunt! 👋
 
-I'm the maker of News4Coder. As a developer, I was drowning in unread newsletters and RSS feeds. I wanted a tool that could:
+I'm the maker of AI News Database. As a developer, I was drowning in unread newsletters and RSS feeds. I wanted a tool that could:
 1. Pull the best sources automatically
 2. Use AI to surface what actually matters
 3. Keep ALL my data local
 
-News4Coder is the answer. It's a single binary that runs on macOS, Linux, and Windows. Everything lives in a SQLite file on your machine.
+AI News Database is the answer. It's a single binary that runs on macOS, Linux, and Windows. Everything lives in a SQLite file on your machine.
 
 Would love to hear your thoughts, especially on the local-first approach and what sources you'd like to see next!
 ```
@@ -510,8 +510,8 @@ Would love to hear your thoughts, especially on the local-first approach and wha
 1. **功能更新**：v0.x 版本新功能发布
 2. **使用技巧**：如何用 `enrich + curate` 构建晨间阅读流
 3. **理念输出**：《为什么我不用 Notion 做阅读管理了》
-4. **对比评测**：News4Coder vs RSS 阅读器 vs 稍后读 App
-5. **用户故事**：展示用户如何用 News4Coder 准备技术分享/面试
+4. **对比评测**：AI News Database vs RSS 阅读器 vs 稍后读 App
+5. **用户故事**：展示用户如何用 AI News Database 准备技术分享/面试
 6. **幕后技术**：讲解 SQLite FTS5、Bubble Tea TUI、RAG 实现
 
 ### Phase 3：事件营销（Month 3+）
@@ -521,13 +521,13 @@ Would love to hear your thoughts, especially on the local-first approach and wha
 **事件 Ideas**：
 
 1. **「7 天信息断舍离挑战」**
-   - 邀请用户连续 7 天使用 News4Coder 处理技术资讯
+   - 邀请用户连续 7 天使用 AI News Database 处理技术资讯
    - 每天打卡分享收件箱截图
    - 最佳分享者获得周边（贴纸/T恤）
 
 2. **「我的今日必读 Top 10」晒单活动**
-   - 用户分享 `news4coder curate --top 10` 的结果
-   - 在 Twitter/X 上使用 hashtag #MyNews4CoderTop10
+   - 用户分享 `ai-news-database curate --top 10` 的结果
+   - 在 Twitter/X 上使用 hashtag #MyAI News DatabaseTop10
 
 3. **播客/ newsletter 合作**
    - 邀请技术播客（如捕蛇者说、代码时间）做一期「本地优先工具」专题
@@ -722,7 +722,7 @@ GitHub 是开源项目最重要的流量入口和用户信任背书，必须重�
 
 ### 3. 竞品深度分析
 
-| 竞品 | 类型 | 优势 | 劣势 | News4Coder 差异化 |
+| 竞品 | 类型 | 优势 | 劣势 | AI News Database 差异化 |
 |------|------|------|------|-------------------|
 | **Feedly** | RSS 云端阅读器 | 生态成熟、多端同步 | 付费、数据在云端、无 LLM | 本地优先 + LLM 增强 |
 | **Inoreader** | RSS 云端阅读器 | 功能强大、规则过滤 | 价格贵、隐私风险 | 零成本 + 数据主权 |
@@ -752,7 +752,7 @@ GitHub 是开源项目最重要的流量入口和用户信任背书，必须重�
   ├─ 执行 go build / go install
   ▼
 激活（Activation）
-  ├─ 成功运行 news4coder sync 并看到文章
+  ├─ 成功运行 ai-news-database sync 并看到文章
   ▼
 留存（Retention）
   ├─ 3 天内再次使用 enrich / curate / inbox
@@ -827,15 +827,15 @@ GitHub 是开源项目最重要的流量入口和用户信任背书，必须重�
 **应对话术**：
 
 ```
-News4Coder 不是 RSS 阅读器，而是面向程序员的信息处理终端。
+AI News Database 不是 RSS 阅读器，而是面向程序员的信息处理终端。
 
-传统 RSS 解决的是「订阅」问题，News4Coder 解决的是「筛选 + 沉淀 + 检索」问题：
+传统 RSS 解决的是「订阅」问题，AI News Database 解决的是「筛选 + 沉淀 + 检索」问题：
 - 内置 8 个精选源，省去你筛选 RSS 源的时间
 - LLM 自动摘要评分，帮你从 200 条里挑出 10 条必读
 - 所有内容存在本地 SQLite，支持 FTS5 全文搜索和 RAG 问答
 - 一个二进制文件即可运行，无需部署 RSS 服务端
 
-如果你只是偶尔看看新闻，RSS 足够；但如果你想建立个人的技术知识库，News4Coder 会更合适。
+如果你只是偶尔看看新闻，RSS 足够；但如果你想建立个人的技术知识库，AI News Database 会更合适。
 ```
 
 #### 场景 B："CLI 门槛太高，普通人用不了。"
@@ -843,9 +843,9 @@ News4Coder 不是 RSS 阅读器，而是面向程序员的信息处理终端。
 **应对话术**：
 
 ```
-News4Coder 的目标用户确实是习惯命令行的开发者，CLI 反而是我们的优势——它足够轻量、快速、可脚本化。
+AI News Database 的目标用户确实是习惯命令行的开发者，CLI 反而是我们的优势——它足够轻量、快速、可脚本化。
 
-不过对于非技术用户，我们已经在规划 Web Dashboard（见 Roadmap），届时会有更友好的图形界面。现在你也可以先试试 TUI 的 `news4coder inbox`，它的交互非常直觉（j/k 移动，r/s/d/a 处理）。
+不过对于非技术用户，我们已经在规划 Web Dashboard（见 Roadmap），届时会有更友好的图形界面。现在你也可以先试试 TUI 的 `ai-news-database inbox`，它的交互非常直觉（j/k 移动，r/s/d/a 处理）。
 ```
 
 #### 场景 C："采集别人的内容，版权问题怎么算？"
@@ -853,7 +853,7 @@ News4Coder 的目标用户确实是习惯命令行的开发者，CLI 反而是�
 **应对话术**：
 
 ```
-News4Coder 只采集公开可访问的标题、摘要和元数据，用于个人本地阅读管理，不涉及内容再分发或商业用途。这和使用浏览器访问这些网站或 RSS 阅读器订阅它们的逻辑是一致的。
+AI News Database 只采集公开可访问的标题、摘要和元数据，用于个人本地阅读管理，不涉及内容再分发或商业用途。这和使用浏览器访问这些网站或 RSS 阅读器订阅它们的逻辑是一致的。
 
 同时我们内置了 Jina AI Reader 等工具，用户可以直接访问原文，尊重原创作者的流量。
 ```
@@ -903,7 +903,7 @@ LLM 增强是可选功能，不配 LLM 也能完整使用 sync / inbox / search 
 
 **冷启动策略**：
 - 先在 V2EX / 即刻 / 公众号文章底部放群二维码
-- 前 100 名入群用户赠送电子版「本地优先工具包」（Obsidian 模板 + News4Coder 配置模板）
+- 前 100 名入群用户赠送电子版「本地优先工具包」（Obsidian 模板 + AI News Database 配置模板）
 
 ---
 
@@ -954,7 +954,7 @@ LLM 增强是可选功能，不配 LLM 也能完整使用 sync / inbox / search 
 ```
 Hi [Name],
 
-I'm the maker of News4Coder, a local-first, LLM-native news terminal for programmers built with Go and SQLite.
+I'm the maker of AI News Database, a local-first, LLM-native news terminal for programmers built with Go and SQLite.
 
 It syncs top tech sources (HN, GitHub Blog, V2EX, etc.) to a local SQLite database, auto-summarizes articles with LLM, and supports RAG Q&A over your personal archive.
 
@@ -1023,6 +1023,6 @@ Best,
 
 **结语**
 
-News4Coder 不仅仅是一个工具，它代表了一种「本地优先」的技术生活态度。推广的终极目标不是让用户下载一个二进制文件，而是让他们意识到：自己的数据和注意力，值得被更好地对待。
+AI News Database 不仅仅是一个工具，它代表了一种「本地优先」的技术生活态度。推广的终极目标不是让用户下载一个二进制文件，而是让他们意识到：自己的数据和注意力，值得被更好地对待。
 
 *你的数据，永远属于你。*

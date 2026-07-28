@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>灵感 — News4Coder</title>
+    <title>灵感 — AI News Database</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
@@ -313,7 +313,7 @@
     <header>
         <div class="header-inner">
             <a href="/" class="brand">
-                <span class="brand-name">News4Coder</span>
+                <span class="brand-name">AI News Database</span>
                 <span class="brand-sep">/</span>
                 <span class="brand-page">灵感</span>
             </a>
@@ -324,7 +324,7 @@
     <main class="page">
         <div class="page-head">
             <h1 class="page-title">Show HN <em>灵感</em></h1>
-            <p class="page-sub">Hacker News 上的新产品与项目。运行 <code>news4coder inspire</code> 获取。</p>
+            <p class="page-sub">Hacker News 上的新产品与项目。运行 <code>ai-news-database inspire</code> 获取。</p>
         </div>
 
         <div class="toolbar">
@@ -396,7 +396,7 @@
         </div>
     </main>
 
-    <footer>数据存储在本地 · <a href="/">News4Coder</a></footer>
+    <footer>数据存储在本地 · <a href="/">AI News Database</a></footer>
     <div class="toast" id="toast"></div>
 
     <script>
@@ -412,7 +412,7 @@
                 updateMeta();
             } catch (e) {
                 document.getElementById('list').innerHTML =
-                    '<div class="empty"><p class="empty-title">连接失败</p><p class="empty-desc">请通过 news4coder web 启动服务。</p></div>';
+                    '<div class="empty"><p class="empty-title">连接失败</p><p class="empty-desc">请通过 ai-news-database web 启动服务。</p></div>';
             }
         }
 
@@ -435,7 +435,7 @@
             const items = filtered();
 
             if (items.length === 0 && state.items.length === 0) {
-                list.innerHTML = '<div class="empty"><p class="empty-title">还没有收藏</p><p class="empty-desc">运行以下命令发现灵感：</p><code class="empty-cmd">news4coder inspire</code></div>';
+                list.innerHTML = '<div class="empty"><p class="empty-title">还没有收藏</p><p class="empty-desc">运行以下命令发现灵感：</p><code class="empty-cmd">ai-news-database inspire</code></div>';
                 return;
             }
             if (items.length === 0) {

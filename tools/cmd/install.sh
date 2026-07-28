@@ -1,10 +1,10 @@
 #!/bin/bash
-# news4coder 一键安装脚本（macOS / Linux）
+# ai-news-database 一键安装脚本（macOS / Linux）
 # 用法: ./install.sh
 
 set -e
 
-APP_NAME="news4coder"
+APP_NAME="ai-news-database"
 ALIAS_NAME="nn"
 INSTALL_DIR=""
 SHELL_RC=""
@@ -87,11 +87,11 @@ if ! echo "$PATH" | grep -q "$INSTALL_DIR"; then
     echo "✅ 已追加 PATH 到 $SHELL_RC"
 fi
 
-# 可选：设置 nn 为 news4coder 的 alias（更友好的提示）
+# 可选：设置 nn 为 ai-news-database 的 alias（更友好的提示）
 if ! grep -q "alias nn=" "$SHELL_RC" 2>/dev/null; then
-    echo "# news4coder 快捷别名" >> "$SHELL_RC"
-    echo "alias nn='news4coder'" >> "$SHELL_RC"
-    echo "✅ 已添加 alias nn='news4coder' 到 $SHELL_RC"
+    echo "# ai-news-database 快捷别名" >> "$SHELL_RC"
+    echo "alias nn='ai-news-database'" >> "$SHELL_RC"
+    echo "✅ 已添加 alias nn='ai-news-database' 到 $SHELL_RC"
 fi
 
 echo ""

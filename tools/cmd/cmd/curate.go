@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/config"
+	"ai-news-database/internal/curator"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/dedup"
 	"fmt"
-	"news4coder/internal/config"
-	"news4coder/internal/curator"
-	"news4coder/internal/db"
-	"news4coder/internal/dedup"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -20,10 +20,10 @@ var curateCmd = &cobra.Command{
 	Long: `基于 LLM 质量评分和你的阅读偏好，自动筛选最值得阅读的文章，
 并可选自动丢弃低质量和重复内容。`,
 	Example: `  # 生成今日 Top 10 必读
-  news4coder curate --top 10
+  ai-news-database curate --top 10
 
   # 同时自动清理低质量和重复文章
-  news4coder curate --top 10 --auto-discard`,
+  ai-news-database curate --top 10 --auto-discard`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {
@@ -62,7 +62,7 @@ var curateCmd = &cobra.Command{
 
 		if len(picks) == 0 {
 			yellow := color.New(color.FgYellow).SprintFunc()
-			fmt.Printf("%s 暂无可推荐文章，先执行 'news4coder sync' 和 'news4coder enrich'\n", yellow("!"))
+			fmt.Printf("%s 暂无可推荐文章，先执行 'ai-news-database sync' 和 'ai-news-database enrich'\n", yellow("!"))
 			return nil
 		}
 
@@ -86,7 +86,7 @@ var curateCmd = &cobra.Command{
 		}
 
 		fmt.Printf("共推荐 %d 篇文章，祝你阅读愉快！\n", len(picks))
-		fmt.Println(gray("💡 在 TUI 中使用 'news4coder inbox' 快速浏览和处理"))
+		fmt.Println(gray("💡 在 TUI 中使用 'ai-news-database inbox' 快速浏览和处理"))
 		return nil
 	},
 }

@@ -6,8 +6,8 @@ import (
 	"github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
 
-	"news4coder/internal/db"
-	"news4coder/internal/tui"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/tui"
 )
 
 var aiCmd = &cobra.Command{

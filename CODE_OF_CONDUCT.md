@@ -1,6 +1,6 @@
 # 社区行为准则
 
-News4Coder 致力于成为一个开放、友好、包容的技术社区。我们希望每一位参与者都能在这里获得尊重和帮助。
+AI News Database 致力于成为一个开放、友好、包容的技术社区。我们希望每一位参与者都能在这里获得尊重和帮助。
 
 ## 我们的承诺
 
@@ -27,7 +27,7 @@ News4Coder 致力于成为一个开放、友好、包容的技术社区。我们
 
 ## 适用范围
 
-本行为准则适用于所有 News4Coder 社区空间，包括但不限于：
+本行为准则适用于所有 AI News Database 社区空间，包括但不限于：
 
 - GitHub 仓库（Issues、Pull Requests、Discussions）
 - 社区聊天群组（Discord、Telegram、微信群等）
@@ -38,7 +38,7 @@ News4Coder 致力于成为一个开放、友好、包容的技术社区。我们
 
 如果你目击或经历了不可接受的行为，请联系社区维护者：
 
-- 发送邮件至：conduct@news4coder.dev
+- 发送邮件至：conduct@ai-news-database.dev
 - 或在 GitHub 上私信任意 Maintainer
 
 所有举报将被保密处理。

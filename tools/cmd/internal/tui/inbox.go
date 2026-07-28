@@ -1,9 +1,9 @@
 package tui
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/i18n"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/i18n"
 	"strings"
 
 	"github.com/charmbracelet/bubbles/key"
@@ -213,7 +213,7 @@ func (m Model) View() string {
 	case article.StatusStarred:
 		filterName = i18n.T("filter.starred")
 	}
-	header := headerStyle.Width(m.width).Render(fmt.Sprintf(" %s %s — %s (%d)", titleStyle.Render("news4coder"), i18n.T("inbox.title"), filterName, len(m.articles)))
+	header := headerStyle.Width(m.width).Render(fmt.Sprintf(" %s %s — %s (%d)", titleStyle.Render("ai-news-database"), i18n.T("inbox.title"), filterName, len(m.articles)))
 
 	// Article list
 	listHeight := m.height - 10 // reserve space for header, preview, help, messages

@@ -1,6 +1,6 @@
 package tui
 
-import "news4coder/internal/article"
+import "ai-news-database/internal/article"
 
 // DB defines the minimal database interface required by the TUI.
 type DB interface {

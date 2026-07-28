@@ -1,7 +1,7 @@
-# Makefile for News4Coder
+# Makefile for AI News Database
 # Quality assurance and development tasks
 
-BINARY_NAME=news4coder
+BINARY_NAME=ai-news-database
 MAIN_PATH=main.go
 BUILD_DIR=.
 COVERAGE_FILE=coverage.out

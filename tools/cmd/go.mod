@@ -1,4 +1,4 @@
-module news4coder
+module ai-news-database
 
 go 1.25.5
 

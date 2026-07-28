@@ -1,8 +1,8 @@
 # Binary files
-/news4coder
-/news4coder.exe
-/tools/cmd/news4coder
-/tools/cmd/news4coder.exe
+/ai-news-database
+/ai-news-database.exe
+/tools/cmd/ai-news-database
+/tools/cmd/ai-news-database.exe
 
 # Go build cache
 *.test

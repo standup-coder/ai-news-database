@@ -1,8 +1,8 @@
 package official
 
 import (
+	"ai-news-database/internal/search"
 	"fmt"
-	"news4coder/internal/search"
 )
 
 // Fetcher 定义抓取器接口

@@ -1,11 +1,11 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/storage"
+	"ai-news-database/internal/subscription"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
-	"news4coder/internal/storage"
-	"news4coder/internal/subscription"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -17,9 +17,9 @@ var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "列出所有订阅或本地文章",
 	Long:  `显示所有已添加的订阅列表，或使用 --articles 查看本地数据库中的文章。`,
-	Example: `  news4coder list
-  news4coder list --articles
-  news4coder list --articles --status unread`,
+	Example: `  ai-news-database list
+  ai-news-database list --articles
+  ai-news-database list --articles --status unread`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if listArticles {
 			return listLocalArticles()
@@ -49,7 +49,7 @@ func listSubscriptions() error {
 	if len(subs) == 0 {
 		yellow := color.New(color.FgYellow).SprintFunc()
 		fmt.Printf("%s 暂无订阅\n", yellow("!"))
-		fmt.Println("使用 'news4coder add --name <名称> --url <URL>' 添加订阅")
+		fmt.Println("使用 'ai-news-database add --name <名称> --url <URL>' 添加订阅")
 		return nil
 	}
 
@@ -102,7 +102,7 @@ func listLocalArticles() error {
 	if len(articles) == 0 {
 		yellow := color.New(color.FgYellow).SprintFunc()
 		fmt.Printf("%s 暂无文章\n", yellow("!"))
-		fmt.Println("使用 'news4coder sync' 拉取最新文章")
+		fmt.Println("使用 'ai-news-database sync' 拉取最新文章")
 		return nil
 	}
 

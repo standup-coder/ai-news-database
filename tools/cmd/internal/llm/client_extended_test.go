@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"news4coder/internal/config"
+	"ai-news-database/internal/config"
 )
 
 func TestIsRetryable(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
+	"ai-news-database/internal/article"
 	tea "github.com/charmbracelet/bubbletea"
-	"news4coder/internal/article"
 )
 
 // mockDB is a test double for the DB interface.

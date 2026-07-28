@@ -1,4 +1,4 @@
-# News4Coder - 程序员个人信息终端
+# AI News Database - 程序员个人信息终端
 
 > 你的高质量技术资讯大本营，兼顾断舍离与极速查询。  
 > **本地优先 · 数据主权** —— 你的数据永远属于你。
@@ -13,7 +13,7 @@
 
 ## 目录
 
-- [为什么选择 News4Coder？](#为什么选择-news4coder)
+- [为什么选择 AI News Database？](#为什么选择-ai-news-database)
 - [功能特性](#功能特性)
 - [官方信息源](#官方信息源)
 - [快速开始](#快速开始)
@@ -29,9 +29,9 @@
 
 ---
 
-## 为什么选择 News4Coder？
+## 为什么选择 AI News Database？
 
-| 特性 | News4Coder | 云端阅读器 |
+| 特性 | AI News Database | 云端阅读器 |
 |------|------------|-----------|
 | **数据存储** | 本地 SQLite | 云端服务器 |
 | **账号注册** | 不需要 | 必需 |
@@ -85,7 +85,7 @@
 
 ## 官方信息源
 
-news4coder 内置 9 个精选高质量技术源，覆盖中英文：
+ai-news-database 内置 9 个精选高质量技术源，覆盖中英文：
 
 | 别名 | 名称 | 采集方式 | 说明 |
 |------|------|----------|------|
@@ -99,7 +99,7 @@ news4coder 内置 9 个精选高质量技术源，覆盖中英文：
 | `infoq` | InfoQ 中文站热点清单 | 专用抓取器 | 抓取热点文章列表 |
 | `ai` | InfoQ AI Briefs | 专用抓取器 | AI 大模型即时资讯 |
 
-使用 `news4coder sources` 查看完整列表，也可以直接用别名获取内容，如 `news4coder hn`。
+使用 `ai-news-database sources` 查看完整列表，也可以直接用别名获取内容，如 `ai-news-database hn`。
 
 ---
 
@@ -110,7 +110,7 @@ news4coder 内置 9 个精选高质量技术源，覆盖中英文：
 #### 方式一：一键安装脚本（推荐）
 
 ```bash
-curl -sSL https://get.news4coder.dev | bash
+curl -sSL https://get.ai-news-database.dev | bash
 ```
 
 #### 方式二：从源码构建
@@ -118,28 +118,28 @@ curl -sSL https://get.news4coder.dev | bash
 确保已安装 Go 1.25 或更高版本：
 
 ```bash
-git clone https://github.com/news4coder/news4coder.git
-cd news4coder
+git clone https://github.com/standup-coder/ai-news-database.git
+cd ai-news-database
 make build
 ```
 
 #### 方式三：go install
 
 ```bash
-go install github.com/news4coder/news4coder@latest
+go install github.com/standup-coder/ai-news-database@latest
 ```
 
 #### 创建快捷别名
 
 ```bash
 # 添加 shell 别名（推荐）
-echo "alias nn='news4coder'" >> ~/.zshrc
+echo "alias nn='ai-news-database'" >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ### 配置 LLM（可选但推荐）
 
-编辑 `~/.news4coder/config.json`，填入你的 LLM API 信息：
+编辑 `~/.ai-news-database/config.json`，填入你的 LLM API 信息：
 
 ```json
 {
@@ -160,23 +160,23 @@ source ~/.zshrc
 
 ```bash
 # 查看帮助
-news4coder --help
+ai-news-database --help
 
 # 查看可用官方源
-news4coder sources
+ai-news-database sources
 
 # 同步所有官方源
-news4coder sync
+ai-news-database sync
 
 # 查看已同步文章
-news4coder list --articles
+ai-news-database list --articles
 ```
 
 ---
 
 ## 深度研究
 
-news4coder 的深度研究功能遵循专业研究方法论，模拟 Qwen/DeepSeek Deep Research 的研究流程。
+ai-news-database 的深度研究功能遵循专业研究方法论，模拟 Qwen/DeepSeek Deep Research 的研究流程。
 
 ### 研究流程
 
@@ -200,19 +200,19 @@ news4coder 的深度研究功能遵循专业研究方法论，模拟 Qwen/DeepSe
 
 ```bash
 # 基本研究
-news4coder research "AI coding tools"
+ai-news-database research "AI coding tools"
 
 # 指定参数
-news4coder research "Rust vs Go" --sub-queries 8 --limit 30
+ai-news-database research "Rust vs Go" --sub-queries 8 --limit 30
 
 # 仅本地知识库（不进行网络搜索）
-news4coder research "WebAssembly" --no-web
+ai-news-database research "WebAssembly" --no-web
 
 # 详细报告（含研究追踪）
-news4coder research "Kubernetes trends" --detailed
+ai-news-database research "Kubernetes trends" --detailed
 
 # JSON 输出
-news4coder research "微服务架构" --json
+ai-news-database research "微服务架构" --json
 ```
 
 ### 报告内容
@@ -243,7 +243,7 @@ news4coder research "微服务架构" --json
 ### 使用方式
 
 ```bash
-news4coder ai tui
+ai-news-database ai tui
 
 # 或使用别名
 nn ai tui
@@ -292,30 +292,30 @@ nn ai tui
 
 ```bash
 # 1. 同步所有官方源
-news4coder sync
+ai-news-database sync
 
 # 2. 对新文章进行 LLM 增强
-news4coder enrich --limit 20
+ai-news-database enrich --limit 20
 
 # 3. 查看智能策展的今日必读
-news4coder curate --top 10
+ai-news-database curate --top 10
 ```
 
 ### 场景 2: 深度研究
 
 ```bash
 # 对某个技术主题进行深度研究
-news4coder research "AI coding tools evolution"
+ai-news-database research "AI coding tools evolution"
 
 # 生成详细报告（含研究过程追踪）
-news4coder research "Rust in 2025" --detailed
+ai-news-database research "Rust in 2025" --detailed
 ```
 
 ### 场景 3: AI TUI 阅读
 
 ```bash
 # 启动 AI 阅读器
-news4coder ai tui
+ai-news-database ai tui
 
 # 在 TUI 中浏览、标记、收藏文章
 ```
@@ -323,20 +323,20 @@ news4coder ai tui
 ### 场景 4: 知识库问答
 
 ```bash
-news4coder ask "Go 和 Rust 在并发模型上有什么差异？"
+ai-news-database ask "Go 和 Rust 在并发模型上有什么差异？"
 ```
 
 ### 场景 5: 深度阅读工作流
 
 ```bash
 # 1. AI TUI 浏览文章
-news4coder ai tui
+ai-news-database ai tui
 
 # 2. 为重要文章添加笔记
-news4coder note <article-id> "核心观点记录..."
+ai-news-database note <article-id> "核心观点记录..."
 
 # 3. 添加自定义标签
-news4coder tag <article-id> "golang,concurrency"
+ai-news-database tag <article-id> "golang,concurrency"
 ```
 
 ---
@@ -347,34 +347,34 @@ news4coder tag <article-id> "golang,concurrency"
 
 | 命令 | 说明 | 示例 |
 |------|------|------|
-| `sync` | 同步官方源到本地数据库 | `news4coder sync --source hn` |
-| `enrich` | LLM 内容增强 | `news4coder enrich --limit 10` |
-| `curate` | 智能策展 | `news4coder curate --top 10` |
-| `ask` | RAG 问答 | `news4coder ask "问题"` |
-| `research` | 深度研究 | `news4coder research "主题"` |
-| `ai tui` | AI 阅读器 | `news4coder ai tui` |
-| `inbox` | TUI 收件箱 | `news4coder inbox` |
+| `sync` | 同步官方源到本地数据库 | `ai-news-database sync --source hn` |
+| `enrich` | LLM 内容增强 | `ai-news-database enrich --limit 10` |
+| `curate` | 智能策展 | `ai-news-database curate --top 10` |
+| `ask` | RAG 问答 | `ai-news-database ask "问题"` |
+| `research` | 深度研究 | `ai-news-database research "主题"` |
+| `ai tui` | AI 阅读器 | `ai-news-database ai tui` |
+| `inbox` | TUI 收件箱 | `ai-news-database inbox` |
 
 ### 文章管理
 
 | 命令 | 说明 | 示例 |
 |------|------|------|
-| `list` | 列出订阅/文章 | `news4coder list -a --status unread` |
-| `read` | 标记已读 | `news4coder read 1 2 3` |
-| `star` | 收藏 | `news4coder star 42` |
-| `discard` | 丢弃 | `news4coder discard 5 6` |
-| `archive` | 批量归档 | `news4coder archive` |
-| `note` | 添加笔记 | `news4coder note 42 "笔记"` |
-| `tag` | 添加标签 | `news4coder tag 42 "tag1,tag2"` |
+| `list` | 列出订阅/文章 | `ai-news-database list -a --status unread` |
+| `read` | 标记已读 | `ai-news-database read 1 2 3` |
+| `star` | 收藏 | `ai-news-database star 42` |
+| `discard` | 丢弃 | `ai-news-database discard 5 6` |
+| `archive` | 批量归档 | `ai-news-database archive` |
+| `note` | 添加笔记 | `ai-news-database note 42 "笔记"` |
+| `tag` | 添加标签 | `ai-news-database tag 42 "tag1,tag2"` |
 
 ### 搜索与导出
 
 | 命令 | 说明 | 示例 |
 |------|------|------|
-| `search` | 全文搜索 | `news4coder search "golang"` |
-| `stats` | 订阅健康度 | `news4coder stats` |
-| `export` | 导出文章 | `news4coder export --status starred` |
-| `cleanup` | 清理旧文章 | `news4coder cleanup` |
+| `search` | 全文搜索 | `ai-news-database search "golang"` |
+| `stats` | 订阅健康度 | `ai-news-database stats` |
+| `export` | 导出文章 | `ai-news-database export --status starred` |
+| `cleanup` | 清理旧文章 | `ai-news-database cleanup` |
 
 ### 快捷别名命令
 
@@ -394,7 +394,7 @@ news4coder tag <article-id> "golang,concurrency"
 ### 项目目录结构
 
 ```
-news4coder/
+ai-news-database/
 ├── cmd/                          # CLI 命令定义（Cobra）
 │   ├── root.go                   # 根命令 + 官方源别名处理
 │   ├── sync.go                   # 同步文章
@@ -554,7 +554,7 @@ pre-commit install
 
 ### Q: 为什么数据要存储在本地？
 
-**A**: News4Coder 坚持「本地优先」和「数据主权」理念：
+**A**: AI News Database 坚持「本地优先」和「数据主权」理念：
 
 - ✅ **隐私**: 无需账号，数据不上传云端
 - ✅ **永久可用**: 不受服务商倒闭影响
@@ -585,14 +585,14 @@ pre-commit install
 
 **A**: 
 1. 检查网络连接
-2. 尝试单独同步该源：`news4coder sync --source <alias>`
+2. 尝试单独同步该源：`ai-news-database sync --source <alias>`
 3. 对于 API 源，可能是 rate limit，稍后再试
 
 ---
 
 ## 浏览器插件
 
-News4Coder 提供 Chrome 浏览器插件，支持一键保存网页到本地知识库。
+AI News Database 提供 Chrome 浏览器插件，支持一键保存网页到本地知识库。
 
 ### 安装方式
 

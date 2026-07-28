@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -13,7 +13,7 @@ var archiveCmd = &cobra.Command{
 	Use:     "archive",
 	Short:   "批量归档已读文章",
 	Long:    `将所有已读状态的文章批量归档，释放收件箱空间。`,
-	Example: `  news4coder archive`,
+	Example: `  ai-news-database archive`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {

@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/db"
 	"strings"
 
 	"github.com/fatih/color"
@@ -13,8 +13,8 @@ var searchCmd = &cobra.Command{
 	Use:   "search <keyword>",
 	Short: "搜索本地文章",
 	Long:  `在本地 SQLite 数据库中全文搜索文章标题和摘要。`,
-	Example: `  news4coder search golang
-  news4coder search "machine learning"`,
+	Example: `  ai-news-database search golang
+  ai-news-database search "machine learning"`,
 	Args: cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

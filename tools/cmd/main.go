@@ -1,6 +1,6 @@
 package main
 
-import "news4coder/cmd"
+import "ai-news-database/cmd"
 
 func main() {
 	cmd.Execute()

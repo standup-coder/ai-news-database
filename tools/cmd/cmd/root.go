@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/official"
 	"fmt"
 	"log/slog"
-	"news4coder/internal/official"
 	"os"
 	"strings"
 
@@ -21,11 +21,11 @@ var (
 var debug bool
 
 var rootCmd = &cobra.Command{
-	Use:   "news4coder",
-	Short: "程序员个人信息终端 - 高质量技术资讯大本营",
-	Long: `news4coder 是专为程序员设计的 LLM-Native 个人信息终端。
-汇聚全球高质量技术源，支持智能网页抓取、LLM 内容增强、
-智能策展和本地知识库 RAG 问答，帮助你实现技术信息的断舍离。
+	Use:   "ai-news-database",
+	Short: "AI News Database 辅助工具 - AI 高质量新闻沉淀库",
+	Long: `ai-news-database 是 AI News Database（AI 新闻数据库）的辅助命令行工具。
+仓库主体是按主题组织的 Markdown 新闻内容库（手动整理为主）；
+本工具提供本地阅读、筛选、LLM 增强、策展与 RAG 问答等可选辅助能力。
 
 核心命令:
   sync        同步所有官方源文章到本地数据库（API + 智能抓取）
@@ -47,7 +47,7 @@ var rootCmd = &cobra.Command{
   export      导出文章为 Markdown
   cleanup     清理过期文章
 
-使用 "news4coder sources" 查看所有官方新闻源`,
+使用 "ai-news-database sources" 查看所有官方新闻源`,
 	Version: fmt.Sprintf("%s (commit: %s, built: %s)", version, gitCommit, buildTime),
 	// 关闭默认的未知命令错误，允许自定义处理
 	SilenceErrors: true,
@@ -97,7 +97,7 @@ func handleOfficialSource(alias string) error {
 	registry := official.GetRegistry()
 	source, exists := registry.Get(alias)
 	if !exists {
-		return fmt.Errorf("未知命令: %s\n\n运行 'news4coder --help' 查看可用命令", alias)
+		return fmt.Errorf("未知命令: %s\n\n运行 'ai-news-database --help' 查看可用命令", alias)
 	}
 
 	// 显示提示信息

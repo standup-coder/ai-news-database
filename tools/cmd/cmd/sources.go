@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"ai-news-database/internal/official"
 	"fmt"
-	"news4coder/internal/official"
 
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
@@ -12,7 +12,7 @@ var sourcesCmd = &cobra.Command{
 	Use:     "sources",
 	Short:   "列出所有官方新闻源",
 	Long:    `显示所有可用的官方新闻源及其别名。`,
-	Example: `  news4coder sources`,
+	Example: `  ai-news-database sources`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// 获取官方源注册表
 		registry := official.GetRegistry()
@@ -49,8 +49,8 @@ var sourcesCmd = &cobra.Command{
 
 		// 使用提示
 		gray := color.New(color.FgHiBlack).SprintFunc()
-		fmt.Println(gray("💡 使用方法: news4coder <别名>"))
-		fmt.Println(gray("💡 示例: news4coder infoq"))
+		fmt.Println(gray("💡 使用方法: ai-news-database <别名>"))
+		fmt.Println(gray("💡 示例: ai-news-database infoq"))
 		fmt.Println()
 
 		return nil

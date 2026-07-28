@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/article"
+	"ai-news-database/internal/db"
 	"fmt"
-	"news4coder/internal/article"
-	"news4coder/internal/db"
 	"strconv"
 
 	"github.com/fatih/color"
@@ -14,8 +14,8 @@ var discardCmd = &cobra.Command{
 	Use:   "discard <id>",
 	Short: "丢弃文章",
 	Long:  `根据文章 ID 将文章标记为丢弃状态，后续可被清理。`,
-	Example: `  news4coder discard 42
-  news4coder discard 1 2 3`,
+	Example: `  ai-news-database discard 42
+  ai-news-database discard 1 2 3`,
 	Args: cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()

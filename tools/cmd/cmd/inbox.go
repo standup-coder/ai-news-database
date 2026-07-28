@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"ai-news-database/internal/db"
+	"ai-news-database/internal/tui"
 	"fmt"
-	"news4coder/internal/db"
-	"news4coder/internal/tui"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/spf13/cobra"
@@ -25,7 +25,7 @@ var inboxCmd = &cobra.Command{
   2        显示未读文章
   3        显示收藏文章
   q / Esc  退出`,
-	Example: `  news4coder inbox`,
+	Example: `  ai-news-database inbox`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		database, err := db.New()
 		if err != nil {
