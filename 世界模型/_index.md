@@ -10,4 +10,7 @@
 
 ## 线索列表
 
+- [Genie](Genie.md) — 活跃
+- [WorldLabs](WorldLabs.md) — 活跃
+
 <!-- 新建线索后在此追加：- [线索名](线索名.md) — 状态 -->

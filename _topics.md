@@ -25,6 +25,10 @@
 | `行业应用` | Industry Applications | 医疗/金融/法律/教育/科研等垂直落地 |
 | `AI安全与对齐` | AI Safety & Alignment | 安全、对齐、红队、监管政策 |
 | `开发者工具` | Dev Tools | 面向开发者的 AI 工具链、SDK、平台 |
+| `语音与音频` | Speech & Audio | 语音合成/识别、音乐生成、实时语音交互 |
+| `AI搜索与信息获取` | AI Search & Information | AI 搜索引擎、答案引擎、AI 浏览器、信息聚合 |
+| `商业与投融资` | Business & Funding | 融资、并购、人才流动、商业模式、市场格局 |
+| `消费级AI应用` | Consumer AI | 面向大众的 AI 产品：助手 App、陪伴、创作工具 |
 
 ## 如何新增主题
 

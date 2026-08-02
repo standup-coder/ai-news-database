@@ -97,29 +97,13 @@ CREATE TABLE IF NOT EXISTS articles (
 CREATE INDEX IF NOT EXISTS idx_articles_status ON articles(read_status);
 CREATE INDEX IF NOT EXISTS idx_articles_source ON articles(source_alias);
 CREATE INDEX IF NOT EXISTS idx_articles_fetched_at ON articles(fetched_at);
-
-CREATE VIRTUAL TABLE IF NOT EXISTS articles_fts USING fts5(
-    title, summary, llm_summary, content='articles', content_rowid='id'
-);
-
-CREATE TRIGGER IF NOT EXISTS articles_ai AFTER INSERT ON articles BEGIN
-    INSERT INTO articles_fts(rowid, title, summary, llm_summary)
-    VALUES (new.id, new.title, new.summary, new.llm_summary);
-END;
-
-CREATE TRIGGER IF NOT EXISTS articles_ad AFTER DELETE ON articles BEGIN
-    INSERT INTO articles_fts(articles_fts, rowid, title, summary, llm_summary)
-    VALUES ('delete', old.id, old.title, old.summary, old.llm_summary);
-END;
-
-CREATE TRIGGER IF NOT EXISTS articles_au AFTER UPDATE ON articles BEGIN
-    INSERT INTO articles_fts(articles_fts, rowid, title, summary, llm_summary)
-    VALUES ('delete', old.id, old.title, old.summary, old.llm_summary);
-    INSERT INTO articles_fts(rowid, title, summary, llm_summary)
-    VALUES (new.id, new.title, new.summary, new.llm_summary);
-END;
 `
 	if _, err := d.conn.Exec(schema); err != nil {
+		return err
+	}
+
+	// FTS 索引独立迁移（含中文分词与旧版结构升级）
+	if err := d.migrateFTS(); err != nil {
 		return err
 	}
 
@@ -166,7 +150,7 @@ CREATE INDEX IF NOT EXISTS idx_burst_created ON burst_results(created_at);
 	return nil
 }
 
-// SaveArticle 保存或更新文章（URL 唯一）
+// SaveArticle 保存或更新文章（URL 唯一），并同步 FTS 索引
 func (d *DB) SaveArticle(a *article.Article) error {
 	var existingID int64
 	err := d.conn.QueryRow("SELECT id FROM articles WHERE url = ?", a.URL).Scan(&existingID)
@@ -175,15 +159,25 @@ func (d *DB) SaveArticle(a *article.Article) error {
 			`UPDATE articles SET title = ?, summary = ?, source = ?, source_alias = ?, raw_content = ?, published_at = ?, points = ? WHERE id = ?`,
 			a.Title, a.Summary, a.Source, a.SourceAlias, a.RawContent, a.PublishedAt, a.Points, existingID,
 		)
-		return err
+		if err != nil {
+			return err
+		}
+		return d.reindexArticle(existingID)
 	}
 
-	_, err = d.conn.Exec(
+	result, err := d.conn.Exec(
 		`INSERT INTO articles (title, url, source, source_alias, summary, raw_content, published_at, fetched_at, read_status, tags, note, points)
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 		a.Title, a.URL, a.Source, a.SourceAlias, a.Summary, a.RawContent, a.PublishedAt, a.FetchedAt, a.ReadStatus, a.Tags, a.Note, a.Points,
 	)
-	return err
+	if err != nil {
+		return err
+	}
+	newID, err := result.LastInsertId()
+	if err != nil {
+		return err
+	}
+	return d.reindexArticle(newID)
 }
 
 // GetArticles 按条件查询文章
@@ -226,7 +220,7 @@ func (d *DB) SearchArticles(keyword string, limit int) ([]article.Article, error
 		query += fmt.Sprintf(" LIMIT %d", limit)
 	}
 
-	rows, err := d.conn.Query(query, keyword)
+	rows, err := d.conn.Query(query, buildFTSQuery(keyword))
 	if err != nil {
 		return nil, err
 	}
@@ -268,13 +262,16 @@ func (d *DB) GetUnenrichedArticles(limit int) ([]article.Article, error) {
 	return scanArticles(rows)
 }
 
-// UpdateEnrichment 更新 LLM 增强结果
+// UpdateEnrichment 更新 LLM 增强结果，并同步 FTS 索引
 func (d *DB) UpdateEnrichment(id int64, llmSummary, llmTags, language string, score float64) error {
 	_, err := d.conn.Exec(
 		`UPDATE articles SET llm_summary = ?, llm_tags = ?, quality_score = ?, language = ?, enriched_at = CURRENT_TIMESTAMP WHERE id = ?`,
 		llmSummary, llmTags, score, language, id,
 	)
-	return err
+	if err != nil {
+		return err
+	}
+	return d.reindexArticle(id)
 }
 
 // UpdateRawContent 更新原始内容
@@ -299,10 +296,16 @@ func (d *DB) SearchByKeyword(keyword string, limit int) ([]article.Article, erro
 	return scanArticles(rows)
 }
 
-// DeleteArticlesByStatus 按状态删除文章（清理用）
+// DeleteArticlesByStatus 按状态删除文章（清理用），并同步清理 FTS 索引
 func (d *DB) DeleteArticlesByStatus(status article.ReadStatus, beforeDays int) error {
 	// 先计算截止时间，避免 SQL 拼接注入风险
 	cutoff := time.Now().AddDate(0, 0, -beforeDays).UTC().Format("2006-01-02 15:04:05")
+	if _, err := d.conn.Exec(
+		"DELETE FROM articles_fts WHERE rowid IN (SELECT id FROM articles WHERE read_status = ? AND fetched_at < ?)",
+		status, cutoff,
+	); err != nil {
+		return err
+	}
 	_, err := d.conn.Exec(
 		"DELETE FROM articles WHERE read_status = ? AND fetched_at < ?",
 		status, cutoff,

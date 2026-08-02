@@ -10,4 +10,7 @@
 
 ## 线索列表
 
+- [GitHubCopilot](GitHubCopilot.md) — 活跃
+- [Ollama](Ollama.md) — 活跃
+
 <!-- 新建线索后在此追加：- [线索名](线索名.md) — 状态 -->

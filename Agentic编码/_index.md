@@ -11,5 +11,6 @@
 ## 线索列表
 
 - [ClaudeCode](ClaudeCode.md) — 活跃
+- [Cursor](Cursor.md) — 活跃
 
 <!-- 新建线索后在此追加：- [线索名](线索名.md) — 状态 -->
