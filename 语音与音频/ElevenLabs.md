@@ -4,7 +4,7 @@
 别名: [Eleven Labs, 11Labs]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [ElevenLabs]
 ---
 
@@ -19,6 +19,23 @@ ElevenLabs 成立于 2022 年，由前 Palantir 工程师 Piotr Dąbkowski 与�
 在语音合成赛道，ElevenLabs 以「音质逼真 + 开发者友好 API」快速占领市场，客户涵盖出版、游戏、影视与客服行业，是评估语音生成技术演进的核心观察对象。
 
 ## 时间线
+
+### 2026-06
+
+- **2026-06-12** · [Avatars（ElevenCreative）发布](https://futurumgroup.com/insights/will-elevenlabs-avatars-redefine-video-creation-for-enterprise-content-teams/)
+  在 ElevenCreative 中推出 Avatars，面向企业内容团队的数字人视频生成。
+- **2026-06-08** · 英国政府合作
+  与英国政府合作将语音 AI 引入公共服务；并扩展伦敦总部。
+
+### 2026-03
+
+- **2026-03-11** · ElevenLabs for Government 发布
+  推出面向政府的语音 AI 产品。
+
+### 2026-01
+
+- **2026-01-14** · 欧洲最大电信商部署
+  AI 语音代理部署于欧洲最大电信商客户服务。
 
 ### 2025-01
 

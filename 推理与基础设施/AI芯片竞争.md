@@ -4,8 +4,8 @@
 别名: [NVIDIA, GPU, TPU, AI 算力]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
-关键角色: [NVIDIA, Google, AMD, Broadcom, OpenAI]
+更新: 2026-08-03
+关键角色: [NVIDIA, Google, AMD, Broadcom, OpenAI, 华为, Meta, 微软, 亚马逊]
 ---
 
 # AI芯片竞争
@@ -19,6 +19,50 @@ AI 芯片是这轮 AI 浪潮的物理底座。NVIDIA 凭 CUDA 生态与 H100/Bla
 该线索追踪芯片产品迭代、供需格局与算力地缘政治。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-09** · [Meta MTIA 芯片 9 月开始生产](https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/)
+  Meta 用于训练的 MTIA 芯片将于 2026 年 9 月开始生产。
+
+### 2026-05
+
+- **2026-05-20** · [NVIDIA FY2027 Q1 财报](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027)
+  季度总收入 816 亿美元，数据中心收入 752 亿美元，净利约 455 亿。Vera Rubin 初步出货 Q3、量产出货 Q4。
+
+### 2026-04
+
+- **2026-04-22** · [Google Ironwood TPU（第七代）正式可用](https://cloud.google.com/blog/products/compute/ironwood-tpus-and-new-axion-based-vms-for-your-ai-workloads)
+  面向「推理时代」设计，较 TPU v5 峰值性能提升约 10×；Cloud Next 2026 发布，同时预览第八代 TPU。
+
+### 2026-03
+
+- **2026-03-22** · [AWS 向 OpenAI 供应 2GW Trainium 算力](https://techcrunch.com/2026/03/22/an-exclusive-tour-of-amazons-trainium-lab-/)
+  AWS 同意向 OpenAI 供应 2 千兆瓦 Trainium 算力；Trainium 已赢得 Anthropic、OpenAI 甚至 Apple。
+- **2026-03-16** · [NVIDIA GTC 2026：Vera Rubin 平台正式发布](https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform)
+  圣何塞约 3 万人参会。Vera CPU + Rubin GPU 组合，系统含约 130 万组件，性能 10×；NVLink 6 每卡 3.6 TB/s，Spectrum-6 以太网。Rubin GPU：3360 亿晶体管、3nm、288GB HBM4、22 TB/s 显存带宽、FP4 约 50 PFLOPS/卡。
+- **2026-03-11** · [Meta 公布四款 MTIA 芯片计划](https://ai.meta.com/blog/meta-mtia-scale-ai-chips-for-billions/)
+  MTIA 300/400/450/500 两年内推出；MTIA 400 完成实验室测试即将部署，用于推理；MTIA 450 面向生成式解码，500 定于 2027。同日 Meta-Broadcom 扩大合作（多千兆瓦部署，含业内首款 2nm AI 计算加速器）。
+
+### 2026-01
+
+- **2026-01-29** · [阿里平头哥「镇宇 810E」AI 芯片发布](https://trendforce.com/news/2026/01/29/)
+  高端 AI 芯片，性能据称优于 A800、可比肩 H20。
+- **2026-01-26** · [微软 Maia 200 发布](https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/)
+  推理加速器，超 1400 亿晶体管，4-bit 精度下超 10 PFLOPS，旨在大幅降低 token 推理成本。
+- **2026-01-14** · [NVIDIA CES 2026：Vera Rubin 首秀](https://blogs.nvidia.com/blog/2026-ces-special-presentation/)
+  Jensen Huang 发布下一代 Rubin 平台，包含 Vera Rubin 超级芯片。
+
+### 2026（持续）
+
+- **2026（持续）** · 华为昇腾 910C 量产 + 国家级大单
+  中国移动广东约 1.55 亿元中标深圳光明大装置，全栈采用 910C；CloudMatrix 384（384 颗 910C，约 300 PFLOPS）对标 NVIDIA GB200 NVL72。Atlas 950 超节点（8192 颗 950DT）预计 2026 Q4 上市。
+- **2026（持续）** · Stargate 与 Oracle 4.5GW / 约 3000 亿美元交易
+  OpenAI 与 Oracle 协议新增 4.5 GW Stargate 数据中心容量；但 3 月因融资谈判破裂取消得州一处旗舰扩建，Stargate 进展上半年遭遇执行阻力。
+
+### 2026 资本开支
+
+- **2026（全年指引）** · 四大云厂商资本开支合计约 6300-7250 亿美元，同比 +36% 至 +77%：Amazon 约 2000 亿、Alphabet 约 1750-2050 亿、Microsoft 约 1100-1200 亿、Meta 约 1150-1350 亿。
 
 ### 2025-01
 

@@ -4,7 +4,7 @@
 别名: [Model Context Protocol, MCP]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Anthropic, OpenAI, Google, Microsoft]
 ---
 
@@ -19,6 +19,11 @@ Model Context Protocol（MCP）是 Anthropic 于 2024 年 11 月开源的开放�
 2025 年 OpenAI、Google、Microsoft 相继宣布支持，MCP 事实上赢得了 Agent 工具层的标准之争，社区服务器数量以千计。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-28** · [MCP 2026-07-28 规范发布](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+  MCP 转向 stateless、可缓存、可路由、可全球扩展的 Web 式架构；与旧版本 wire-incompatible；Anthropic 在全 Claude 产品线推进支持。这是 MCP 自开源以来最大的架构升级，目标是支撑企业级、可全球扩展的 Agent 工具调用。
 
 ### 2025-12
 

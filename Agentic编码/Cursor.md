@@ -4,7 +4,7 @@
 别名: [Cursor IDE, Anysphere]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Anysphere]
 ---
 
@@ -19,6 +19,30 @@ Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉�
 该线索追踪 Cursor 的产品演进、融资与 AI IDE 赛道竞争（对 GitHub Copilot、Windsurf、Claude Code 等）。
 
 ## 时间线
+
+### 2026-06
+
+- **2026-06-16** · [Compile 2026 大会（首届）+ Composer 2.5 上线](https://cursor.com/cn/compile)
+  旧金山 Fort Mason 首届旗舰大会，CEO Michael Truell 主题演讲；Composer 2.5 发布。
+- **2026-06（大会）** · Composer 3 预告
+  支持递归子 agent（agent 可生成 agent）；计划 2026 秋季 GA，已开放候补名单。（参数量等细节见待核实清单。）
+
+### 2026-04
+
+- **2026-04-17** · [新一轮洽谈，估值 500 亿美元](https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/)
+  TechCrunch：洽谈 20 亿美元+，预测 2026 年底 ARR 超 60 亿。
+
+### 2026-03
+
+- **2026-03-19/20** · [Composer 2 发布](https://venturebeat.com/technology/cursors-new-coding-model-composer-2-is-here-it-beats-claude-opus-4-6-but)
+  Cursor 首个基于持续预训练的自研编码模型，定价 $0.50/百万输入 token；当时 Anysphere 估值约 293 亿美元。
+- **2026-04-02** · [Cursor 3.0 发布](https://www.datacamp.com/blog/cursor-3)
+  自 2023 年以来最大界面重构，转向「agent-first」架构，新增 Agents Window（并行多 agent）、内置浏览器、cloud handoff、worktrees。
+
+### 2025-11
+
+- **2025-11-13** · [Series D：23 亿美元，投后估值 293 亿美元](https://cursor.com/blog/series-d)
+  Thrive 领投，a16z、Accel 跟投；ARR 跨过 10 亿美元。
 
 ### 2025-06
 

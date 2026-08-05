@@ -4,8 +4,8 @@
 别名: [反向收购, acqui-hire, AI 人才战争]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
-关键角色: [Microsoft, Google, Amazon, Meta, Inflection, Character.AI, Adept]
+更新: 2026-08-03
+关键角色: [Microsoft, Google, Amazon, Meta, 智谱, MiniMax, Cognition, Google(Wiz)]
 ---
 
 # AI人才与并购潮
@@ -19,6 +19,25 @@
 该线索追踪 AI 行业的人才流动、准并购交易与监管反应。
 
 ## 时间线
+
+### 2026-06
+
+- **2026-06** · 诺奖得主 John Jumper 从 Google 跳槽 Anthropic
+  2024 诺贝尔化学奖得主（AlphaFold）、DeepMind VP 转投 Anthropic。
+- **2026-06** · Noam Shazeer 从 Google 跳槽 OpenAI
+  Transformer 论文联合作者、Gemini 联合负责人；Google 2024 年花 27 亿美元将其从 Character.AI 拉回，现再次离职。
+
+### 2026-03
+
+- **2026-03-11** · [Google 完成 320 亿美元收购 Wiz](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/)
+  Google 史上最大并购（原 2025-03 宣布，2026-03 完成）；Wiz 并入 Google Cloud 但保留品牌。
+
+### 2026-01
+
+- **2026-01-08** · 智谱、MiniMax 港股上市
+  智谱（「全球大模型第一股」，市值约 555 亿港元）、MiniMax（募资 6.19 亿美元）同日挂牌，中国大模型公司进入资本市场。→ [[开源模型与生态/智谱GLM]] [[开源模型与生态/MiniMax]]
+- **2026-01** · Thinking Machines Lab 联创回流 OpenAI
+  CTO Barret Zoph 等多名联创/员工离开 Murati 创业公司返回 OpenAI。
 
 ### 2025-06
 

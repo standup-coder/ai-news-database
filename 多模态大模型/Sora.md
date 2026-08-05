@@ -4,7 +4,7 @@
 别名: [OpenAI Sora, Sora 2]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [OpenAI]
 ---
 
@@ -19,6 +19,18 @@ Sora 是 OpenAI 的文生视频模型，2024 年 2 月首次亮相即以一分�
 该线索追踪 Sora 的技术演进、产品化路径与其引发的创意产业震荡。
 
 ## 时间线
+
+### 2026-04
+
+- **2026-04-26** · [Sora 网页/App 版停服](https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation)
+  Sora 网页与应用体验正式停止服务（API 仍开放至 9 月）。
+
+### 2026-03
+
+- **2026-03-24** · [OpenAI 宣布关停 Sora 视频生成应用](https://www.forbes.com/sites/ronschmelzenr/2026/03/24/openai-discontinues-ai-video-gen-app-sora/)
+  距公开发布约 15 个月，并取消原计划与 Disney 的 10 亿美元合作。Sora API（含 Sora 2）定于 2026-09-24 终止。
+- **2026-03-13** · Sora 1 对美国用户下线
+  Sora 2 成为唯一可用视频生成工具。
 
 ### 2025-09
 

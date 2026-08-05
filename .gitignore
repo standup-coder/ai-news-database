@@ -58,3 +58,10 @@ benchmark/
 
 # Static analysis results
 golangci-lint-report.*
+
+# AI HOT mirror — 提交可读产物（README / by-date / state.json / tools）
+# 忽略大数据缓存（可由 snapshot 重生）和原始抓取
+aihot-mirror/state/items.jsonl
+aihot-mirror/raw/
+aihot-mirror/logs/
+

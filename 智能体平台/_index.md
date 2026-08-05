@@ -12,5 +12,6 @@
 
 - [ClaudeAgentSDK](ClaudeAgentSDK.md) — 活跃
 - [MCP协议](MCP协议.md) — 活跃
+- [Agent框架](Agent框架.md) — 活跃
 
 <!-- 新建线索后在此追加：- [线索名](线索名.md) — 状态 -->

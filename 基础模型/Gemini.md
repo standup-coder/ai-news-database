@@ -4,7 +4,7 @@
 别名: [Google Gemini, Gemini 1.5, Gemini 2.0, Gemini 2.5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Google, Google DeepMind]
 ---
 
@@ -19,6 +19,39 @@ Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定�
 在经历 Bard 时期的仓促追赶后，Gemini 2.0/2.5 世代已稳定处于第一梯队，该线索追踪 Google 在基础模型上的技术路线与产品整合。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-21** · [Gemini 3.6 Flash + 3.5 Flash-Lite + 3.5 Flash Cyber 发布](https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/)
+  三型号同日发布：3.6 Flash（工作马，$1.5/M 输入、$7.5/M 输出，DeepSWE 49% vs 3.5 的 37%）、3.5 Flash-Lite（最低成本）、3.5 Flash Cyber（仅政府专用的网络安全模型）。3.5 Pro 仍未发布。
+- **2026-07-17** · Gemini 3.5 Pro 推迟
+  DeepMind 放弃原基础、采用更长预训练周期，3.5 Pro 推迟（具体日为半证实单源，Google 官方仅称「仍在测试」）。
+
+### 2026-05
+
+- **2026-05-19** · [Google I/O 2026：Gemini 3.5 系列启动 + Gemini Omni 取代 Veo](https://blog.google/innovation-and-ai/sundar-pichai-io-2026/)
+  I/O 2026 发布 Gemini 3.5 Flash（已上线）并预告 3.5 Pro；同日发布 Gemini Omni（取代 Gemini App 中的 Veo），首版 Omni Flash 当日可用，可将任意参考（图像/文本/视频/音频）转为统一输出。2026 年 5 月起 Gemini App 后端默认调用 Omni 而非 Veo。→ [[多模态大模型/视频生成竞赛]]
+- **2026-05–06** · Gemini 3 Deep Think 升级
+  面向科学/研究/工程的推理升级，面向 AI Ultra 订阅者。
+
+### 2026-04
+
+- **2026-04-02** · [Gemma 4 发布](https://en.wikipedia.org/wiki/Gemini_(language_model))
+  开源轻量模型系列迭代。
+
+### 2026-03
+
+- **2026-03-03** · Gemini 3.1 Flash Lite 开发者发布
+  通过 Google API 向开发者发布。
+
+### 2026-01
+
+- **2026-01-29** · [Project Genie（Genie 3 世界模型）向公众开放](https://mashable.com/article/google-launches-project-genie-3-how-to-try)
+  Genie 3 世界模型通过 Project Genie 网页界面向 Google AI Ultra 美国订阅用户推出，可从文本生成可探索的交互式 3D 环境。→ [[世界模型/Genie]]
+- **2026-01** · [AlphaGenome 论文发表于 Nature](https://cen.acs.org/biological-chemistry/genomics/Googles-AlphaGenome-predicts-function-DNA/104/web/2026/01)
+  DNA 功能预测模型正式发表于 Nature（模型本身自 2025-06 起非商用可用），解码人类「暗基因组」。→ [[行业应用/AlphaFold与AI科研]]
+- **2026-01-05** · Gemini 3 Grounding 计费开始
+  Gemini 3 的 Google Search Grounding 开始计费。
 
 ### 2025-03
 

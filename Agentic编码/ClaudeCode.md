@@ -4,7 +4,7 @@
 别名: [Claude Code, Anthropic 编码助手]
 状态: 活跃
 创建: 2026-07-21
-更新: 2026-07-21
+更新: 2026-08-03
 关键角色: [Anthropic]
 ---
 
@@ -19,6 +19,26 @@ Claude Code 是 Anthropic 于 2025 年 2 月推出的 agentic 编码工具，定
 它是 Agentic Coding 这一细分赛道最具代表性的产品之一，其演进（研究预览 → GA → SDK → Subagents/Skills/Hooks/Plugins 生态）清晰折射出「AI 编码从助手走向自主工程师」的产业趋势。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-28** · [MCP 2026-07-28 规范发布](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+  MCP 转向 stateless、可缓存、可路由、可全球扩展的 Web 式架构；与旧版本 wire-incompatible；Anthropic 在全 Claude 产品线推进支持。→ [[智能体平台/MCP协议]]
+
+### 2026-06
+
+- **2026-06-29 至 07-03** · Claude Code Week 27 更新
+  内置 Explore agent 改为继承主会话模型（上限 Opus）而非 Haiku；background agents 持续更新。
+
+### 2026-05
+
+- **2026-05** · Code with Claude 2026 大会
+  旧金山举办，发布 managed offerings 与 Claude API 平台相关公告。
+
+### 2026-03
+
+- **2026-03** · Claude Code 月度更新
+  新增 computer use、auto mode、remote control、scheduled tasks、visuals 等。
 
 ### 2025-11
 

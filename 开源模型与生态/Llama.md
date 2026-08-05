@@ -4,7 +4,7 @@
 别名: [LLaMA, Llama 2, Llama 3, Llama 4]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Meta]
 ---
 
@@ -19,6 +19,16 @@ Llama 是 Meta 的开放权重大模型系列。2023 年 2 月首代以研究许
 该线索追踪 Llama 的版本演进、许可策略与其在开源生态中地位的起落。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-09** · [Muse Spark 1.1 发布](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)
+  面向 agentic 任务，100 万 token 上下文窗口；首个 Meta 要求付费的模型。Llama 在智能眼镜等产品上的位置持续被 Muse Spark 取代。
+
+### 2026-04
+
+- **2026-04** · [Meta 战略大转向：发布 Muse Spark，首个闭源专有模型](https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/)
+  Meta Superintelligence Labs 发布首个**闭源专有**模型 Muse Spark，实质取代 Llama 系列成为 Meta 的旗舰路线；约 9 个月构建，号称以 1/10 算力达到 Llama 4 Maverick 同等性能；开始在智能眼镜上取代 Llama。**Llama 4 Behemoth 至此仍未正式发布**（整个 2026 年 1-8 月持续推迟），社区开源底座已转向 Qwen / DeepSeek。
 
 ### 2025-04
 

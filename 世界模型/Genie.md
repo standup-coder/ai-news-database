@@ -4,7 +4,7 @@
 别名: [Genie 2, Genie 3, 交互式世界模型]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Google DeepMind]
 ---
 
@@ -19,6 +19,11 @@ Genie 是 Google DeepMind 的「生成式交互环境（Generative Interactive E
 该线索追踪 Genie 系列的迭代与世界模型赛道（含 World Labs、NVIDIA Cosmos 等）的路线竞争。
 
 ## 时间线
+
+### 2026-01
+
+- **2026-01-29** · [Project Genie（Genie 3）向公众开放](https://mashable.com/article/google-launches-project-genie-3-how-to-try)
+  Genie 3 世界模型通过 Project Genie 网页界面向 Google AI Ultra（$249.99）美国订阅用户（18 岁+）推出，可从文本生成可探索的交互式 3D 环境。这是 Genie 系列首次面向消费者开放。
 
 ### 2025-08
 

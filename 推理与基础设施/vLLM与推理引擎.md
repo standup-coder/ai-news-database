@@ -4,8 +4,8 @@
 别名: [vLLM, SGLang, TensorRT-LLM, 推理优化]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
-关键角色: [vLLM 社区, UC Berkeley, NVIDIA, LMSYS]
+更新: 2026-08-03
+关键角色: [vLLM 社区, UC Berkeley, NVIDIA, LMSYS, DeepSeek]
 ---
 
 # vLLM与推理引擎
@@ -19,6 +19,18 @@ vLLM 起源于 UC Berkeley 的 PagedAttention 论文（2023），以类操作系
 该线索追踪推理引擎的技术演进（连续批处理、投机解码、前缀缓存、分布式推理）与生态格局。
 
 ## 时间线
+
+### 2026-04
+
+- **2026-04-24** · [vLLM 整合 DeepSeek V4 优化](https://vllm.ai/blog/2026-04-24-deepseek-v4)
+  vLLM 整合 FlashMLA + FlashInfer，为 DeepSeek V4 提供长上下文推理优化（DeepSeek Sparse Attention 有界注意力 + MoE 内核）。
+
+### 2026（持续）
+
+- **2026（全年）** · vLLM / SGLang / TensorRT-LLM 三足鼎立
+  TensorRT-LLM 在 NVIDIA 硬件上原始吞吐最高；SGLang 在结构化输出/受限解码占优；vLLM 易用、模型覆盖广，均已生产成熟。
+- **2026（持续）** · DeepSeek FlashMLA / DSA
+  FlashMLA CUDA 内核：预填充 640 TFlops、解码 410 TFlops；DeepSeek Sparse Attention 约降低 50% 推理成本。
 
 ### 2025-05
 

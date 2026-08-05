@@ -4,7 +4,7 @@
 别名: [GitHub Copilot, Copilot]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [GitHub, Microsoft, OpenAI]
 ---
 
@@ -19,6 +19,21 @@ GitHub Copilot 2021 年基于 OpenAI Codex 推出，是 AI 编程助手品类的
 该线索追踪 Copilot 的产品演进、商业化数据，及其在 Cursor/Claude Code 等新势力冲击下的战略调整。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-14** · [Visual Studio 2026 Update 18.8.0](https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes)
+  Copilot 改进：workspace awareness、code understanding、tools（VS 2026 18.3+）。
+
+### 2026-03
+
+- **2026-03（04-02 更新日志）** · Copilot in Visual Studio 3 月更新
+  新增 custom agents、agent skills、新工具，扩展性大幅提升。
+
+### 2026-01
+
+- **2026-01-14** · [GPT-5.2-Codex 在 Copilot for Enterprise GA](https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot/)
+  GPT-5.2 的 agentic 编程版本在企业版全面可用。
 
 ### 2025-05
 

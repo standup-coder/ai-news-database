@@ -4,7 +4,7 @@
 别名: [深度求索, DeepSeek-V3, DeepSeek-R1]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [DeepSeek, 幻方量化]
 ---
 
@@ -19,6 +19,25 @@ DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实�
 该线索追踪 DeepSeek 的模型发布、技术创新（MLA、MoE、GRPO、蒸馏）与其对全球 AI 格局的冲击。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-24** · 旧 API 名称停用
+  `deepseek-chat`、`deepseek-reasoner` 两个旧模型名停用，进入三个月迁移窗口。
+- **2026-07 月底** · DeepSeek-V4-Flash 正式版发布
+  Agent 模型正式版发布；社区自测显示 Flash-0731 变体在 9 项基准上反超 V4-Pro preview（社区测试，非官方基准）。
+
+### 2026-04
+
+- **2026-04-24** · [DeepSeek V4 Preview 发布并开源](https://api-docs.deepseek.com/news/news260424/)
+  发布并开源 V4-Pro（1.6T 总参/49B 激活）和 V4-Flash（284B 总参/13B 激活）；1M 上下文成默认；采用 Token-wise 压缩 + DSA（DeepSeek Sparse Attention）；Agentic Coding/Math/STEM 领先开源；兼容 Claude Code/OpenCode。同日 OpenAI 发布 GPT-5.5，中美旗舰模型正面对撞。
+- **2026-04** · 首次外部融资启动
+  报道融前估值约 440 亿美元，启动首次外部融资。
+
+### 2026-05
+
+- **2026-05 底** · A 轮约 70 亿美元（约 500 亿人民币）
+  投后估值 520-590 亿美元；腾讯、宁德时代入局，梁文锋自参与。
 
 ### 2025-05
 

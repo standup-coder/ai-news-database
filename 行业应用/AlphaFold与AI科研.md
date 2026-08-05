@@ -4,7 +4,7 @@
 别名: [AlphaFold, AI for Science, 蛋白质结构预测]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Google DeepMind, Isomorphic Labs]
 ---
 
@@ -19,6 +19,11 @@ AlphaFold 是 DeepMind 的蛋白质结构预测系统：2020 年 AlphaFold2 在 
 该线索以 AlphaFold 为主轴，追踪 AI 在科学研究（生物、材料、气象等）中的落地进展。
 
 ## 时间线
+
+### 2026-01
+
+- **2026-01** · [AlphaGenome 论文发表于 Nature](https://cen.acs.org/biological-chemistry/genomics/Googles-AlphaGenome-predicts-function-DNA/104/web/2026/01)
+  DNA 功能预测模型正式发表于 Nature（模型本身自 2025-06 起非商用可用），解码人类「暗基因组」（占基因组 98% 的非编码区）——AI for Science 年度开门红。AlphaFold 解决蛋白质「结构」，AlphaGenome 进攻 DNA「功能」，AI 科研从单个分子扩展到整条基因组。
 
 ### 2025-06
 

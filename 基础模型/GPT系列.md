@@ -4,7 +4,7 @@
 别名: [GPT-4, GPT-4o, o1, o3, GPT-5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [OpenAI]
 ---
 
@@ -19,6 +19,41 @@ GPT（Generative Pre-trained Transformer）系列是 OpenAI 的核心模型资�
 该线索追踪 GPT/o 系列的模型发布、能力跃迁与技术范式转变，是基础模型竞赛的第一参照系。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-30** · [GPT-5.6 降价](https://openai.com/index/gpt-5-6/)
+  发布三周后下调 GPT-5.6 系列价格，前沿旗舰降价窗口进一步压缩。
+- **2026-07-09** · [GPT-5.6 Sol / Terra / Luna 公开发布](https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release-ending-government-limits.html)
+  结束此前对约 20 家「政府批准公司」的限量预览（6-26 起），正式公开发布三型号：Sol（旗舰工作马）、Terra（中间档）、Luna（轻量经济档），主打「智能与效率新标准」。同期推出 Live 实时语音 AI。
+- **2026-06-26** · [GPT-5.6 "Sol" 限量预览](https://openai.com/index/previewing-gpt-5-6-sol/)
+  GPT-5.6 旗舰 Sol 向约 20 家政府审批的大公司预览，前沿模型访问首次被纳入政府管制框架。
+
+### 2026-06
+
+- **2026-06-27** · [GPT-4.5 从 ChatGPT 退役](https://aiweekly.co/alerts/openai-retires-gpt-45-ending-the-entire-gpt-4-era-in-chatgpt)
+  标志整个 GPT-4 家族在消费端终结。
+- **2026-06-11** · API 弃用旧 GPT-5 与 o3 快照
+  通知开发者旧 GPT-5 与 o3 快照将于 2026-12-11 从 API 移除（API 时间线与 ChatGPT 不同）。
+- **2026-06-03** · [公布 o3 与 GPT-4.5 退役计划](https://www.krasa.ai/news/openai-o3-gpt-4-5-retirement-chatgpt-sunset-dates-may-2026)
+  o3 计划于 2026-08-26 从 ChatGPT 退役（90 天日落），GPT-4.5 于 2026-06-27 退役。
+
+### 2026-04
+
+- **2026-04-23** · [GPT-5.5 / GPT-5.5 Pro 发布](https://openai.com/index/introducing-gpt-5-5/)
+  面向编程/研究/数据分析；Pro 面向最高强度工作。次日（4-24）API 可用，系统卡更新。
+
+### 2026-03
+
+- **2026-03-05** · [GPT-5.4 / GPT-5.4 Thinking 发布](https://openai.com/index/introducing-gpt-5-4/)
+  新旗舰前沿模型，统一推理/编程/agentic 能力，进入 ChatGPT、API、Codex。3 月 17 日 GPT-5.4 mini 进入 Codex 全端。
+
+### 2026-02
+
+- **2026-02-13** · [退役 GPT-4o 及更旧模型](https://openai.com/index/retiring-gpt-4o-and-older-models/)
+  清理 GPT-4o、GPT-4.1、GPT-4.1 mini 等老模型，模型谱系全面转向 GPT-5 家族。
+- **2026-02-05** · [GPT-5.3-Codex 发布](https://openai.com/index/gpt-5-3-codex-system-card/)
+  OpenAI 称其最强 agentic 编码模型，对付费 ChatGPT 用户与 Responses API 开发者开放；官方称该模型「参与了自身的构建与部署」。与 Anthropic Claude Opus 4.6 同日（相隔约 10 分钟）先后发布。
 
 ### 2025-04
 

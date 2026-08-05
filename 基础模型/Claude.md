@@ -4,7 +4,7 @@
 别名: [Claude 3, Claude 3.5, Claude 4, Anthropic 模型]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-03
 关键角色: [Anthropic]
 ---
 
@@ -19,6 +19,37 @@ Claude 是 Anthropic（由前 OpenAI 研究副总裁 Dario Amodei 等人于 2021
 Anthropic 以「宪法 AI（Constitutional AI）」等对齐方法著称，其模型发布节奏与安全策略（RSP 负责任扩展政策）是行业安全实践的参照系。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-24** · [Claude Opus 5 发布](https://www.anthropic.com/news/claude-opus-5)
+  相对 Opus 4.8 的阶跃式提升，成为 Max 计划默认；定价 $5/M 输入、$25/M 输出。Axios 报道其性能接近 Anthropic 最强的 Fable 层级。
+
+### 2026-06
+
+- **2026-06-30** · [Claude Sonnet 5 发布；Fable 5 全球重新部署启动](https://www.anthropic.com/news/claude-sonnet-5)
+  Sonnet 5 以低价带来「接近 Opus 的编程智能」（$2/M 输入、$10/M 输出）；同日宣布 Fable 5 全球重新部署启动（出口管制已解除）。
+- **2026-06-12** · Fable 5 / Mythos 5 访问暂停
+  因美国政府突然对该批新模型施加出口管制，Anthropic 暂停访问（Fable 5 实际仅上线约 72 小时）。→ [[AI安全与对齐/AI监管政策]]
+- **2026-06-09** · [Claude Fable 5 与 Mythos 5 发布](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+  新增「Mythos 级」能力层（高于 Opus 级）；Fable 5 面向长程任务。这是 Claude 产品线首次引入 Opus 之上的新档位。
+
+### 2026-05
+
+- **2026-05-28** · [Claude Opus 4.8 发布](https://www.anthropic.com/news/claude-opus-4-8)
+  主打「诚实与可靠性」，配套动态工作流编排器；同价（$5/$25）、知识截止 2026-01，成为未指定模型时的默认。
+
+### 2026-04
+
+- **2026-04-16** · [Claude Opus 4.7 发布](https://www.anthropic.com/news/claude-opus-4-7)
+  引入「xhigh」努力等级与更高分辨率视觉处理；$5/M 输入、$25/M 输出；知识截止 2026-01。
+
+### 2026-02
+
+- **2026-02-17** · [Claude Sonnet 4.6 发布](https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html)
+  编程与计算机交互大幅改进，面向免费/Pro 用户默认提供。
+- **2026-02-05** · [Claude Opus 4.6 发布](https://www.anthropic.com/news/claude-opus-4-6)
+  引入 100 万 token（beta）上下文窗口与「并行自主工作」能力。与 OpenAI GPT-5.3-Codex 同日（相隔约 10 分钟）先后发布。
 
 ### 2025-11
 

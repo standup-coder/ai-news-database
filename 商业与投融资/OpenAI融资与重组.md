@@ -4,8 +4,8 @@
 别名: [OpenAI 估值, OpenAI 营利化重组]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
-关键角色: [OpenAI, Microsoft, SoftBank, Thrive Capital]
+更新: 2026-08-03
+关键角色: [OpenAI, Microsoft, SoftBank, Thrive Capital, Amazon, NVIDIA, Anthropic]
 ---
 
 # OpenAI融资与重组
@@ -19,6 +19,47 @@ OpenAI 2015 年以非营利组织创立，2019 年引入「利润上限（capped
 该线索追踪 OpenAI 的融资、估值、治理与重组进程——它是理解整个 AI 行业资本逻辑的第一线索。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-29** · [CFO 披露 7 月单月 ARR 超整个 Q2](https://www.cnbc.com/2026/07/29/openai-cfo-sarah-friar-tells-employees-arr-in-july-topped-all-of-q2.html)
+  Sarah Friar 内部全员会称增长由 GPT-5.6、ChatGPT Work、Codex 驱动。
+
+### 2026-06
+
+- **2026-06-08** · [OpenAI 秘密提交 S-1](https://openai.com/index/openai-submits-confidential-s-1/)
+  官方公告已向 SEC 机密递交 S-1，启动 IPO 进程；时间未定。
+
+### 2026-05
+
+- **2026-05-28** · [Anthropic Series H 关闭，650 亿美元 / 9650 亿估值](https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/)
+  领投 Altimeter、Dragoneer、Greenoaks、Sequoia；估值超越 OpenAI 当时水平。（注：Anthropic ARR 增速数据存疑，见待核实清单。）
+
+### 2026-04
+
+- **2026-04-29** · [Anthropic 考虑 9000 亿美元以上估值新融资（Bloomberg）](https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value)
+
+### 2026-03
+
+- **2026-03-31** · [OpenAI 融资轮关闭 1220 亿美元，投后估值 8520 亿](https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html)
+  CNBC/Forbes 报道，史上最大私募轮之一（从 1100 亿上调）；Amazon 出 500 亿、Nvidia/SoftBank 出 300 亿。
+
+### 2026-02
+
+- **2026-02-12** · [Anthropic Series G 关闭，300 亿美元 / 3800 亿估值](https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation)
+  领投 GIC、Coatue，共同领投 D.E. Shaw、Dragoneer、Founders Fund、ICONIQ、MGX。
+
+### 2026-01
+
+- **2026-01-29** · [OpenAI 大额融资谈判曝光](https://www.reuters.com/business/retail-consumer/nvidia-microsoft-amazon-talks-invest-up-60-billion-openai-information-reports-2026-01-29/)
+  The Information 报道 Nvidia、Microsoft、Amazon 洽谈合计最高 600 亿美元投资。
+- **2026-01-07** · [Anthropic 签订 Term Sheet](https://www.cnbc.com/2026/01/07/anthropic-funding-term-sheet-valuation.html)
+  CNBC 报道 100 亿美元轮，估值 3500 亿。
+
+### 2025-10（背景）
+
+- **2025-10-28** · [OpenAI 完成转 PBC 重组](https://openai.com/index/built-to-benefit-everyone/)
+  OpenAI Group PBC 落地，非营利基金会保留控制权并持约 26%（约 1300 亿美元）股权；与 Microsoft 重签 AGI 权利协议。
 
 ### 2025-03
 
