@@ -2,7 +2,7 @@
 
 > 镜像自 [AI HOT](https://aihot.virxact.com) 当前全部精选。
 > 首次 snapshot：2026-08-05T07:35:13+00:00 UTC · asOf：2026-08-05T05:56:17.827Z
-> 当前条目数：**3154**（fields=minimal）
+> 当前条目数：**3181**（fields=minimal）
 
 ## 数据布局
 
@@ -24,58 +24,10 @@ aihot-mirror/
 
 每日运行建议：先 `pull_changes`，再 `build_index`（均幂等）。
 
-### 一键同步
-
-```bash
-tools/daily_sync.sh           # 增量同步（每日）
-tools/daily_sync.sh --full    # 重新全量 snapshot（覆盖 state）
-```
-
-### 挂每日定时（macOS launchd 示例）
-
-```bash
-# 写入 ~/Library/LaunchAgents/com.allengaller.aihot-mirror.plist
-cat > ~/Library/LaunchAgents/com.allengaller.aihot-mirror.plist <<'EOF'
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0"><dict>
-  <key>Label</key><string>com.allengaller.aihot-mirror</string>
-  <key>ProgramArguments</key>
-  <array>
-    <string>/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror/tools/daily_sync.sh</string>
-  </array>
-  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
-  <key>StandardOutPath</key><string>/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror/logs/launchd.out</string>
-  <key>StandardErrorPath</key><string>/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror/logs/launchd.err</string>
-</dict></plist>
-EOF
-launchctl load ~/Library/LaunchAgents/com.allengaller.aihot-mirror.plist
-```
-
-crontab 等价：
-
-```cron
-0 9 * * * /Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror/tools/daily_sync.sh >> /Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror/logs/cron.out 2>&1
-```
-
-### 恢复（snapshot cursor 失效时）
-
-`pull_changes.py` 拿到 `409 snapshot_required` 时，停止增量，改为：
-
-```bash
-tools/daily_sync.sh --full
-```
-
-`pull_snapshot.py` 会拒绝覆盖已有 `state/state.json`，要先删（脚本里有保护）：
-```bash
-rm aihot-mirror/state/state.json aihot-mirror/state/items.jsonl
-tools/daily_sync.sh --full
-```
-
 ## 范围
 
-- 2026-01-01 至今：**2894** 条（占 91.8%）
-- 全部时间范围：2017-12-07 → 2026-08-05
+- 2026-01-01 至今：**2921** 条（占 91.8%）
+- 全部时间范围：2017-12-07 → 2026-08-06
 
 ## 按月分布（2026 起）
 
@@ -88,50 +40,51 @@ tools/daily_sync.sh --full
 | 2026-05 | 825 |
 | 2026-06 | 875 |
 | 2026-07 | 607 |
-| 2026-08 | 61 |
+| 2026-08 | 88 |
 
 ## 按分类
 
 | 分类 | 条数 |
 |---|---:|
-| AI 模型 | 460 |
-| AI 产品 | 821 |
-| 行业 | 476 |
-| 论文 | 339 |
-| 技巧 | 659 |
+| AI 模型 | 461 |
+| AI 产品 | 825 |
+| 行业 | 487 |
+| 论文 | 342 |
+| 技巧 | 667 |
 | 未分类 | 399 |
 
 ## Top 20 来源
 
 | 来源 | 条数 |
 |---|---:|
-| IT之家（RSS） | 208 |
-| Hacker News 热门（buzzing.cc 中文翻译） | 195 |
-| HuggingFace Daily Papers（社区热门论文） | 161 |
+| IT之家（RSS） | 210 |
+| Hacker News 热门（buzzing.cc 中文翻译） | 200 |
+| HuggingFace Daily Papers（社区热门论文） | 162 |
 | Hugging Face：Blog（RSS） | 122 |
 | OpenAI：官网动态（RSS · 排除企业/客户案例） | 103 |
 | OpenRouter：Announcements（RSS） | 81 |
 | Claude：Blog（网页） | 70 |
-| The Decoder：AI News（RSS） | 58 |
+| The Decoder：AI News（RSS） | 59 |
 | TechCrunch：AI（RSS） | 52 |
 | X：OpenRouter (@OpenRouter) | 48 |
 | X：Greg Brockman (@gdb) | 46 |
 | xAI：News（网页） | 46 |
 | X：Rohan Paul (@rohanpaul_ai) | 46 |
-| X：阿易 AI Notes (@AYi_AInotes) | 44 |
+| X：阿易 AI Notes (@AYi_AInotes) | 45 |
 | Anthropic：Newsroom（网页） | 42 |
 | Google Developers Blog（RSS） | 42 |
-| Tomer Tunguz 博客（VC 分析） | 37 |
+| Tomer Tunguz 博客（VC 分析） | 38 |
+| MarkTechPost（RSS） | 37 |
 | X：Kim (@kimmonismus) | 35 |
 | Google DeepMind：Blog（RSS） | 34 |
-| MarkTechPost（RSS） | 34 |
 
 ## 每日索引
 
 | 日期 | 条数 | 链接 |
 |---|---:|---|
-| 2026-08-05 | 7 | [打开](by-date/2026-08-05.md) |
-| 2026-08-04 | 31 | [打开](by-date/2026-08-04.md) |
+| 2026-08-06 | 4 | [打开](by-date/2026-08-06.md) |
+| 2026-08-05 | 29 | [打开](by-date/2026-08-05.md) |
+| 2026-08-04 | 32 | [打开](by-date/2026-08-04.md) |
 | 2026-08-03 | 16 | [打开](by-date/2026-08-03.md) |
 | 2026-08-02 | 4 | [打开](by-date/2026-08-02.md) |
 | 2026-08-01 | 3 | [打开](by-date/2026-08-01.md) |
