@@ -4,7 +4,7 @@
 别名: [深度求索, DeepSeek-V3, DeepSeek-R1]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [DeepSeek, 幻方量化]
 ---
 
@@ -19,6 +19,13 @@ DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实�
 该线索追踪 DeepSeek 的模型发布、技术创新（MLA、MoE、GRPO、蒸馏）与其对全球 AI 格局的冲击。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-21** · [DeepSeek-V4-Flash-Vision-Exp 上线](https://api-docs.deepseek.com/news/news260821/)
+  V4 系首个多模态实验版，视觉理解 API 开放（官方公告）；NVIDIA 开发者论坛实测与社区量化权重随即跟进。
+- **2026-08-13** · [DeepSeek V4-Pro 正式版发布并开源](https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/)
+  1.6T 总参旗舰正式版（4 月 preview 转正），延续 MIT 许可；Reuters 报道其同步推进扩张。
 
 ### 2026-07
 

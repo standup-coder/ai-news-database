@@ -4,7 +4,7 @@
 别名: [GPT-4, GPT-4o, o1, o3, GPT-5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [OpenAI]
 ---
 
@@ -19,6 +19,11 @@ GPT（Generative Pre-trained Transformer）系列是 OpenAI 的核心模型资�
 该线索追踪 GPT/o 系列的模型发布、能力跃迁与技术范式转变，是基础模型竞赛的第一参照系。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-10** · [GPT-5.6 Cyber 面向网络防御者开放](https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/)
+  经 Daybreak 计划向经审查的防御者优先提供前沿网络安全模型，上线 Deployment Safety Hub；CNBC、Axios 报道。前沿模型按安全用途分级开放的新模式。
 
 ### 2026-07
 

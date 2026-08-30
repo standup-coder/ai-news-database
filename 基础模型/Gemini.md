@@ -4,7 +4,7 @@
 别名: [Google Gemini, Gemini 1.5, Gemini 2.0, Gemini 2.5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [Google, Google DeepMind]
 ---
 
@@ -19,6 +19,11 @@ Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定�
 在经历 Bard 时期的仓促追赶后，Gemini 2.0/2.5 世代已稳定处于第一梯队，该线索追踪 Google 在基础模型上的技术路线与产品整合。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-13** · [Gemini 3.7 Flash 发布](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)
+  定位「最智能的工作马模型」，主打编码与 Agent 工作流能力的大幅跃升（约三周内的点版本迭代）；Reuters 报道其面向编码与 Agent 场景，官方同步放出模型卡。
 
 ### 2026-07
 

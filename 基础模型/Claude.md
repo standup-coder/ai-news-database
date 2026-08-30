@@ -4,7 +4,7 @@
 别名: [Claude 3, Claude 3.5, Claude 4, Anthropic 模型]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [Anthropic]
 ---
 
@@ -19,6 +19,11 @@ Claude 是 Anthropic（由前 OpenAI 研究副总裁 Dario Amodei 等人于 2021
 Anthropic 以「宪法 AI（Constitutional AI）」等对齐方法著称，其模型发布节奏与安全策略（RSP 负责任扩展政策）是行业安全实践的参照系。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-11** · [Claude 文本水印机制公布](https://www.anthropic.com/news/claude-text-watermark)
+  Anthropic 官宣在 Claude 生成的文本中加入不可见水印，用于标识 AI 生成内容来源；TechCrunch、Business Insider、CNN 跟进报道。
 
 ### 2026-07
 

@@ -4,7 +4,7 @@
 别名: [反向收购, acqui-hire, AI 人才战争]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [Microsoft, Google, Amazon, Meta, 智谱, MiniMax, Cognition, Google(Wiz)]
 ---
 
@@ -19,6 +19,11 @@
 该线索追踪 AI 行业的人才流动、准并购交易与监管反应。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-05** · [Jeff Dean 离开谷歌，联合创办 Discovery Loop](https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/)
+  在谷歌 27 年的 AI 负责人（Google Brain 创始人、Google Research 与 DeepMind 掌舵者）与多名顶尖研究员离职创业；NYT、Wired 跟进。谷歌研究院体系迄今最高级别的流失。
 
 ### 2026-06
 

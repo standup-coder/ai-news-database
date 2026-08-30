@@ -4,7 +4,7 @@
 别名: [通义千问, Qwen, Qwen3, Qwen-Coder]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [阿里巴巴, 通义实验室]
 ---
 
@@ -19,6 +19,13 @@ Qwen（通义千问）是阿里巴巴的大模型系列，覆盖通用、Coder�
 2026 年 Qwen 进入「Agentic AI era」定位，迭代速度进一步加快（Qwen3.5 → 3.7-Max → Qwen4 Coder → 3.8 预览），旗舰闭源 Max 系列与开源系列双线并进。该线索追踪 Qwen 的版本演进与开源生态影响。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-26** · [Qwen3.8-Flash-Next 发布](https://qwen.ai/blog?id=qwen3.8-flash-next)
+  125B 总参/6B 激活的多模态 MoE 快速档，主打极致成本；官方称其架构为 Qwen4 的预演（The Decoder、MarkTechPost 报道）。
+- **2026-08-03** · [Qwen3.8-Max 发布](https://qwen.ai/blog?id=qwen3.8)
+  阿里官方博客确认：2.4T 参数、1M 上下文；Bloomberg、CNBC 交叉报道；27B 版以 Apache 2.0 开源权重先行（HuggingFace Qwen/Qwen3.8-27B）。7 月预览版条目的存疑随官方发布解除。
 
 ### 2026-07
 

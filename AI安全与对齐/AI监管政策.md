@@ -4,7 +4,7 @@
 别名: [EU AI Act, AI 行政令, AI 治理]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-28
 关键角色: [欧盟, 美国白宫, 英国 AISI, 中国网信办, 加州, 韩国]
 ---
 
@@ -19,6 +19,11 @@
 该线索追踪主要法域的 AI 立法与执行进展。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-02** · [欧盟 AI Act 透明度规则正式生效，AI Office 启动执法](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august)
+  AI 交互告知、深伪标注、机器可读标记等透明度义务开始适用并进入执法（欧委会 7-31 公告，180+ 组织签署行为准则）；对应 2024-08-01 生效条目中「高风险系统要求（2026-08 起）」阶段的落地。
 
 ### 2026-06
 
