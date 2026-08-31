@@ -6,9 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"html"
+	neturl "net/url"
 	"net/http"
-	"os/exec"
-	"runtime"
 	"sort"
 	"strings"
 	"time"
@@ -16,6 +15,7 @@ import (
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	"github.com/pkg/browser"
 )
 
 type InspireKeyMap struct {
@@ -554,16 +554,10 @@ func minInt(a, b int) int {
 }
 
 func openBrowser(url string) {
-	var err error
-	switch runtime.GOOS {
-	case "darwin":
-		err = exec.Command("open", url).Start()
-	case "linux":
-		err = exec.Command("xdg-open", url).Start()
-	case "windows":
-		err = exec.Command("cmd", "/c", "start", url).Start()
-	default:
+	// 仅放行 http/https 链接后交给 browser 库按平台打开，避免任意 scheme 被移交给系统 opener
+	u, err := neturl.ParseRequestURI(url)
+	if err != nil || (u.Scheme != "http" && u.Scheme != "https") {
 		return
 	}
-	_ = err
+	_ = browser.OpenURL(u.String())
 }

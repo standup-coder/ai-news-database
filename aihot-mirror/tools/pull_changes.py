@@ -21,7 +21,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib import request as urlrequest
 from urllib.error import HTTPError
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 BASE = "https://aihot.virxact.com"
 ROOT = Path("/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror")
@@ -38,9 +38,16 @@ def log(msg):
     (LOGS / "run.log").open("a", encoding="utf-8").write(line + "\n")
 
 
+EXPECTED_HOST = "aihot.virxact.com"
+
+
 def get_changes(cursor, limit=100):
     qs = urlencode({"cursor": cursor, "limit": limit})
     url = f"{BASE}/api/v1/selected/changes?{qs}"
+    # SSRF 防护：仅允许访问预期主机上的 https 端点
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or parsed.netloc != EXPECTED_HOST:
+        raise ValueError(f"拒绝非预期目标: {url}")
     req = urlrequest.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     try:
         with urlrequest.urlopen(req, timeout=60) as resp:

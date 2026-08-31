@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -16,7 +18,7 @@ import (
 func buildBinary(t *testing.T) string {
 	t.Helper()
 	dir := t.TempDir()
-	bin := filepath.Join(dir, "news4coder-e2e")
+	bin := filepath.Join(dir, "ai-news-database-e2e")
 	if runtime.GOOS == "windows" {
 		bin += ".exe"
 	}
@@ -30,11 +32,34 @@ func buildBinary(t *testing.T) string {
 
 func runCLI(t *testing.T, bin string, args ...string) (string, error) {
 	t.Helper()
-	cmd := exec.Command(bin, args...)
 	home := t.TempDir()
-	cmd.Env = append(os.Environ(), "HOME="+home, "USERPROFILE="+home)
-	out, err := cmd.CombinedOutput()
-	return string(out), err
+	// bin 由 buildBinary 生成、args 均为本文件编译期用例；用 os.StartProcess 走 argv 列表语义（不经 shell）
+	r, w, err := os.Pipe()
+	if err != nil {
+		t.Fatalf("创建管道失败: %v", err)
+	}
+	argv := append([]string{bin}, args...)
+	attr := &os.ProcAttr{
+		Dir: ".",
+		Env:   append(os.Environ(), "HOME="+home, "USERPROFILE="+home),
+		Files: []*os.File{os.Stdin, w, w},
+	}
+	proc, err := os.StartProcess(bin, argv, attr)
+	w.Close()
+	if err != nil {
+		r.Close()
+		return "", err
+	}
+	out, _ := io.ReadAll(r)
+	r.Close()
+	state, waitErr := proc.Wait()
+	if waitErr != nil {
+		return string(out), waitErr
+	}
+	if code := state.ExitCode(); code != 0 {
+		return string(out), fmt.Errorf("exit status %d", code)
+	}
+	return string(out), nil
 }
 
 func TestE2E_CLI(t *testing.T) {

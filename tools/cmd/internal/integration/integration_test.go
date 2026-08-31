@@ -2,6 +2,7 @@ package integration
 
 import (
 	"context"
+	"fmt"
 	"os"
 	"path/filepath"
 	"testing"
@@ -348,9 +349,10 @@ func TestIntegration_ConfigCrypto(t *testing.T) {
 	t.Setenv("HOME", tmpDir)
 	t.Cleanup(func() { os.Setenv("HOME", origHome) })
 
-	// 保存带 API Key 的配置
+	// 保存带 API Key 的配置（动态生成占位值，避免硬编码凭据形态的字符串）
 	cfg := config.DefaultConfig()
-	cfg.LLM.APIKey = "sk-test-secret-key-12345"
+	apiKey := fmt.Sprintf("unit-test-key-%d", time.Now().UnixNano())
+	cfg.LLM.APIKey = apiKey
 	if err := cfg.Save(); err != nil {
 		t.Fatalf("保存配置失败: %v", err)
 	}
@@ -361,7 +363,7 @@ func TestIntegration_ConfigCrypto(t *testing.T) {
 	if err != nil {
 		t.Fatalf("读取配置文件失败: %v", err)
 	}
-	if contains(string(data), "sk-test-secret-key-12345") {
+	if contains(string(data), apiKey) {
 		t.Error("配置文件中不应包含明文 API Key")
 	}
 
@@ -370,7 +372,7 @@ func TestIntegration_ConfigCrypto(t *testing.T) {
 	if err != nil {
 		t.Fatalf("加载配置失败: %v", err)
 	}
-	if loaded.LLM.APIKey != "sk-test-secret-key-12345" {
+	if loaded.LLM.APIKey != apiKey {
 		t.Errorf("解密后 API Key 不匹配: got %q", loaded.LLM.APIKey)
 	}
 }

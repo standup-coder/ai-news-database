@@ -57,11 +57,11 @@
 ### 6. 使用 CLI 辅助内容生产的工作流
 
 ```bash
-news4coder sync            # 1. 同步官方源到本地库
-news4coder enrich          # 2. LLM 生成摘要与质量评分
-news4coder curate          # 3. 查看今日必读推荐
-news4coder search "Agent"  # 4. 按关键词回溯（已支持中文检索）
-news4coder export --starred # 5. 导出收藏为 Markdown，人工整理进线索
+ai-news-database sync            # 1. 同步官方源到本地库
+ai-news-database enrich          # 2. LLM 生成摘要与质量评分
+ai-news-database curate          # 3. 查看今日必读推荐
+ai-news-database search "Agent"  # 4. 按关键词回溯（已支持中文检索）
+ai-news-database export --starred # 5. 导出收藏为 Markdown，人工整理进线索
 ```
 
 关键点：**工具产出的是素材，不是成品**。`export` 出的内容必须经过人工核实 URL、改写摘要、判断归属线索后才能进入内容库。

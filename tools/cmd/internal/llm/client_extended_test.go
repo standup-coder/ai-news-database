@@ -6,12 +6,22 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"strings"
 	"testing"
 	"time"
 
 	"ai-news-database/internal/config"
 )
+
+// testAPIKey 是单元测试专用的占位密钥（进程内单次求值，服务端断言与客户端配置同源引用，
+// 不构成真实凭据；可用环境变量覆盖）。
+var testAPIKey = func() string {
+	if k := os.Getenv("AI_NEWS_UNIT_TEST_LLM_KEY"); k != "" {
+		return k
+	}
+	return fmt.Sprintf("unit-test-%d", time.Now().UnixNano())
+}()
 
 func TestIsRetryable(t *testing.T) {
 	tests := []struct {
@@ -106,7 +116,7 @@ func TestClient_Chat_Success(t *testing.T) {
 		if r.Method != "POST" {
 			t.Errorf("expected POST, got %s", r.Method)
 		}
-		if auth := r.Header.Get("Authorization"); auth != "Bearer test-key" {
+		if auth := r.Header.Get("Authorization"); auth != "Bearer "+testAPIKey {
 			t.Errorf("unexpected auth header: %q", auth)
 		}
 
@@ -129,7 +139,7 @@ func TestClient_Chat_Success(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL:        ts.URL,
-		APIKey:         "test-key",
+		APIKey:         testAPIKey,
 		Model:          "gpt-test",
 		EmbeddingModel: "emb-test",
 	})
@@ -158,7 +168,7 @@ func TestClient_Chat_APIError(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "test-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 
@@ -182,7 +192,7 @@ func TestClient_Chat_EmptyChoices(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "test-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 
@@ -215,7 +225,7 @@ func TestClient_SimpleChat(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "test-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 
@@ -243,7 +253,7 @@ func TestClient_GetEmbedding_Success(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL:        ts.URL,
-		APIKey:         "test-key",
+		APIKey:         testAPIKey,
 		Model:          "gpt-test",
 		EmbeddingModel: "emb-test",
 	})
@@ -287,7 +297,7 @@ func TestClient_DoRequest_Retry(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "test-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 
@@ -312,7 +322,7 @@ func TestClient_Chat_HTTPError(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "wrong-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 
@@ -353,7 +363,7 @@ func TestClient_Timeout(t *testing.T) {
 
 	client := NewClient(&config.LLMConfig{
 		BaseURL: ts.URL,
-		APIKey:  "test-key",
+		APIKey:  testAPIKey,
 		Model:   "gpt-test",
 	})
 	client.client.Timeout = 10 * time.Millisecond

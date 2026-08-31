@@ -13,7 +13,7 @@
 
 ```
 ai-news-database/
-├── <主题文件夹>/          # 13 个 AI 全景主题，见 _topics.md
+├── <主题文件夹>/          # 17 个 AI 全景主题，见 _topics.md
 │   ├── _index.md          # 主题说明 + 线索列表
 │   └── <线索>.md          # 线索·时间线文件
 ├── _topics.md             # 中心主题索引

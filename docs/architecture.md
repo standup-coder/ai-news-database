@@ -1,6 +1,6 @@
 # 架构设计文档
 
-> 本文档描述 AI News Database（News4Coder）的整体架构：内容库的组织模型、Go CLI 工具的分层设计、关键技术决策及其权衡。面向希望深入理解或参与开发的贡献者。
+> 本文档描述 AI News Database的整体架构：内容库的组织模型、Go CLI 工具的分层设计、关键技术决策及其权衡。面向希望深入理解或参与开发的贡献者。
 
 ## 1. 系统总览
 
@@ -89,7 +89,7 @@ ai-news-database/
 #### crawler / official：采集器工厂
 
 - `crawler.Factory` 按源类型（HN / Reddit / V2EX / Generic / JinaReader）返回采集器实现，新增源只需实现 `Crawler` 接口并注册
-- `official.Registry` 维护 8 个内置官方源的元信息与别名；root 命令的未知子命令会尝试解析为官方源别名（`news4coder hn` ≈ `news4coder sync hn`）
+- `official.Registry` 维护 8 个内置官方源的元信息与别名；root 命令的未知子命令会尝试解析为官方源别名（`ai-news-database hn` ≈ `ai-news-database sync hn`）
 - `DEMO_MODE` 环境变量提供无网络演示数据，用于 CI 与录屏
 
 #### llm：统一 LLM 客户端
