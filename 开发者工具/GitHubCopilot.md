@@ -4,7 +4,7 @@
 别名: [GitHub Copilot, Copilot]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [GitHub, Microsoft, OpenAI]
 ---
 
@@ -14,7 +14,7 @@
 
 ## 概述
 
-GitHub Copilot 2021 年基于 OpenAI Codex 推出，是 AI 编程助手品类的开创者与最大存量玩家，付费用户与企业客户规模长期领先。产品形态从行内补全（ghost text）逐步扩展到 Chat、Workspace、代码评审与自主编码 Agent，底层模型也从 Codex 独家演进为多模型可选（GPT/Claude/Gemini）。
+GitHub Copilot 2021 年基于 OpenAI Codex 推出，是 AI 编程助手品类的开创者与最大存量玩家，付费用户与企业客户规模长期领先。产品形态从行内补全（ghost text）逐步扩展到 Chat、Workspace、代码评审与自主编码 Agent，底层模型也从 Codex 独家演进为多模型可选（GPT/Claude/Gemini），2026 年 4 月起进一步转向按使用量计费并推出智能体原生的独立桌面应用。
 
 该线索追踪 Copilot 的产品演进、商业化数据，及其在 Cursor/Claude Code 等新势力冲击下的战略调整。
 
@@ -22,8 +22,31 @@ GitHub Copilot 2021 年基于 OpenAI Codex 推出，是 AI 编程助手品类的
 
 ### 2026-07
 
+- **2026-07-27** · [Copilot 发布「Harness」工作流](https://aihot.virxact.com/items/cms3n5wpl001sro82iax01xu3)
+  官方博客发布 Harness：在单一工具内完成原型、规划、实现与代码审查的端到端智能体工作流。
+- **2026-07-21** · [Copilot 推出 canvases 扩展](https://aihot.virxact.com/items/cmruw1pl7005hbiymh0y085cv)
+  官方博客推出 canvases 扩展，开发者可与 AI 智能体在共享画布上实时协作。
 - **2026-07-14** · [Visual Studio 2026 Update 18.8.0](https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes)
   Copilot 改进：workspace awareness、code understanding、tools（VS 2026 18.3+）。
+- **2026-07-02** · [Kimi K2.7 Code 上线 GitHub Copilot](https://aihot.virxact.com/items/cmr397vx001s3sly0t7mkh3fh)
+  专注编码的 Kimi K2.7 Code 登陆 GitHub Copilot（Hacker News 报道），Copilot 可选模型阵营继续扩大。
+
+### 2026-06
+
+- **2026-06-02** · [GitHub Copilot 应用：智能体原生的桌面体验](https://aihot.virxact.com/items/cmpwxvkik01qzsl79wf8zf34a)
+  官方博客发布智能体原生桌面应用 GitHub Copilot app，Copilot 从 IDE 内嵌助手升级为独立桌面产品，正面迎战 Cursor 与 Claude Code。
+
+### 2026-05
+
+- **2026-05-12** · [个人计划引入弹性配额与新的 Max 计划](https://aihot.virxact.com/items/cmp2xiymg01fwsl1qwncq1fep)
+  官方博客宣布 Pro/Pro+ 引入弹性配额并新增 Max 计划，「订阅保底 + 用量弹性」的混合计费成型。
+
+### 2026-04
+
+- **2026-04-27** · [Copilot 转向基于使用量的计费模式](https://aihot.virxact.com/items/cmoi4sccg00a4sle9uj6cwds1)
+  官方博客宣布整体转向按使用量计费，动摇 2022 年以来 10 美元/月的订阅价格锚点，Hacker News 广泛讨论；个人计划变更已于 04-21 走漏风声。
+- **2026-04-24** · [GPT-5.5 正式登陆 GitHub Copilot](https://aihot.virxact.com/items/cmodaepgp007esl8izvohbnax)
+  OpenAI 总裁 Greg Brockman 宣布 GPT-5.5 上线 GitHub Copilot，Copilot 继续第一时间接入 OpenAI 最新旗舰模型。
 
 ### 2026-03
 

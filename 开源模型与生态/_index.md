@@ -18,5 +18,6 @@
 - [MiniMax](MiniMax.md) — 活跃
 - [字节豆包](字节豆包.md) — 活跃
 - [国产大模型群像](国产大模型群像.md) — 活跃
+- [ThinkingMachines](ThinkingMachines.md) — 活跃
 
 <!-- 新建线索后在此追加：- [线索名](线索名.md) — 状态 -->

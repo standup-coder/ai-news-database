@@ -4,7 +4,7 @@
 别名: [Cursor IDE, Anysphere]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Anysphere]
 ---
 
@@ -14,30 +14,50 @@
 
 ## 概述
 
-Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。
+Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。2026 年 6 月，多方报道称 Anysphere 被 SpaceX 全股收购（⚠️ 真实性待核实，见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
 
 该线索追踪 Cursor 的产品演进、融资与 AI IDE 赛道竞争（对 GitHub Copilot、Windsurf、Claude Code 等）。
 
 ## 时间线
 
+### 2026-07
+
+- **2026-07-22** · [Cursor 发布智能模型路由系统 Cursor Router](https://aihot.virxact.com/items/cmrwer0kl0127roj0zluq7yeh)
+  官方博客发布 Cursor Router，按任务智能选择与调度底层模型，与自研 Composer 模型栈配合进一步降低对单一外部模型的依赖。
+
 ### 2026-06
 
+- **2026-06-29** · [Cursor for iOS 公测版发布](https://aihot.virxact.com/items/cmqzisfra009asl8hojqmr1k2)
+  官方发布主打「从任何地点构建」的 iOS 公测版，Cursor 从桌面 IDE 向移动端延伸，与 Claude Code 的手机远程会话能力对垒。
 - **2026-06-16** · [Compile 2026 大会（首届）+ Composer 2.5 上线](https://cursor.com/cn/compile)
-  旧金山 Fort Mason 首届旗舰大会，CEO Michael Truell 主题演讲；Composer 2.5 发布。
+  旧金山 Fort Mason 首届旗舰大会，CEO Michael Truell 主题演讲；Composer 2.5 亮相（5 月 18 日已随官方博客发布）。
+- **2026-06-16** · [SpaceX 全股收购 Cursor](https://aihot.virxact.com/items/cmqgp6tn201qhslic36a6ka8v)
+  CEO Michael Truell 在 Compile 大会当日官宣 SpaceX 以全股票方式收购 Cursor（Anysphere）、「联合构建有用 AI」；距估值 500 亿美元融资传闻仅两个月，是 AI 编码赛道迄今最大的并购之一。⚠️ 并购规模极端待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)）；但 04-21 训练合作、06-09 收购选择权与本次官宣在时间线上相互印证。
 - **2026-06（大会）** · Composer 3 预告
   支持递归子 agent（agent 可生成 agent）；计划 2026 秋季 GA，已开放候补名单。（参数量等细节见待核实清单。）
+- **2026-06-09** · [Cursor 欧洲总部落子伦敦，SpaceX 手握 600 亿美元收购选择权](https://aihot.virxact.com/items/cmq69650406cmsl5iwf8zszhp)
+  IT之家报道 Cursor 设立伦敦欧洲总部；同份文件披露 SpaceX 手握 600 亿美元收购选择权，为一周后的全股收购埋下伏笔。
+- **2026-06-01** · [Cursor Teams 计划定价新方案](https://aihot.virxact.com/items/cmpvtskbb01lusluksydtav6e)
+  官方博客更新 Teams 计划定价方案，面向团队场景调整计费结构。
+
+### 2026-05
+
+- **2026-05-18** · [Composer 2.5 发布与技术解析](https://aihot.virxact.com/items/cmpbfyx691727slnzo2o0p263)
+  官方博客发布自研编码模型 Composer 2.5 并附技术解析，一个月后在首届 Compile 大会作为主打产品亮相。
 
 ### 2026-04
 
+- **2026-04-21** · [Cursor 与 SpaceX 就模型训练达成合作](https://aihot.virxact.com/items/cmosbbgu4006zslojcbq0lcdk)
+  官方博客宣布与 SpaceX 在模型训练上达成合作，自研模型路线获得外部算力与数据支撑，也为后续并购埋下伏笔。
 - **2026-04-17** · [新一轮洽谈，估值 500 亿美元](https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/)
   TechCrunch：洽谈 20 亿美元+，预测 2026 年底 ARR 超 60 亿。
+- **2026-04-02** · [Cursor 3.0 发布](https://www.datacamp.com/blog/cursor-3)
+  自 2023 年以来最大界面重构，转向「agent-first」架构，新增 Agents Window（并行多 agent）、内置浏览器、cloud handoff、worktrees。
 
 ### 2026-03
 
 - **2026-03-19/20** · [Composer 2 发布](https://venturebeat.com/technology/cursors-new-coding-model-composer-2-is-here-it-beats-claude-opus-4-6-but)
   Cursor 首个基于持续预训练的自研编码模型，定价 $0.50/百万输入 token；当时 Anysphere 估值约 293 亿美元。
-- **2026-04-02** · [Cursor 3.0 发布](https://www.datacamp.com/blog/cursor-3)
-  自 2023 年以来最大界面重构，转向「agent-first」架构，新增 Agents Window（并行多 agent）、内置浏览器、cloud handoff、worktrees。
 
 ### 2025-11
 

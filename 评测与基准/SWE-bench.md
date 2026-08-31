@@ -4,7 +4,7 @@
 别名: [SWE-bench Verified, SWE-agent]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Princeton, OpenAI, Anthropic]
 ---
 
@@ -19,6 +19,18 @@ SWE-bench 由普林斯顿团队于 2023 年 10 月提出，从 12 个流行 Pyth
 该线索追踪 SWE-bench 及其变体（Verified/Lite/Multimodal/Pro）的演进与「基准饱和→升级」的循环。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-08** · [OpenAI 审计发现 SWE-Bench Pro 约 30% 任务存在缺陷](https://aihot.virxact.com/items/cmrcigf5k01bqihx54i8oph9u)
+  OpenAI 官方审计披露 SWE-Bench Pro 约三成评测任务有缺陷——继 Verified 之后，「基准本身需要对齐」再次被官方验证。
+- **2026-07-02** · [Senior SWE-Bench 发布](https://aihot.virxact.com/items/cmr3epwmy008bsllx0y68akps)
+  社区推出评估 AI 智能体胜任高级工程师角色的更高阶基准，原版饱和后「更难版本」继续接棒。
+
+### 2026-04
+
+- **2026-04-26** · [SWE-bench Verified 不再衡量前沿编码能力](https://aihot.virxact.com/items/cmog2im0800vbslr37vxebh5g)
+  社区热文论证 Verified 已无法区分前沿模型编码能力，饱和基准的区分度崩塌进入公共讨论。
 
 ### 2025-05
 

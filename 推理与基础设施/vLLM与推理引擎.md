@@ -4,7 +4,7 @@
 别名: [vLLM, SGLang, TensorRT-LLM, 推理优化]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [vLLM 社区, UC Berkeley, NVIDIA, LMSYS, DeepSeek]
 ---
 
@@ -20,10 +20,42 @@ vLLM 起源于 UC Berkeley 的 PagedAttention 论文（2023），以类操作系
 
 ## 时间线
 
+### 2026-07
+
+- **2026-07-30** · [RadixArk 与 Google Cloud 将完整 SGLang 功能引入 TPU](https://aihot.virxact.com/items/cms7oxay30o4nro2e4t3r6ud2)
+  LMSYS 官方博客宣布 SGLang 全功能登陆 TPU，开源推理栈对非 NVIDIA 硬件的覆盖进一步补齐。
+- **2026-07-29** · [腾讯混元开源 AngelSpec 投机解码框架](https://aihot.virxact.com/items/cms639jt416x6robksy69dzel)
+  腾讯混元官方宣布，AngelSpec 最高带来 2.4 倍推理加速，投机解码成为大厂竞相开源的标准组件。
+- **2026-07-08** · [vLLM 发布原生速度的 transformers 建模后端](https://aihot.virxact.com/items/cmrcabmvj00ymihqce96ilbfi)
+  Hugging Face 官方博客介绍 vLLM 新后端：直接以原生性能运行 transformers 模型定义，新模型接入无需等待专用 kernel 适配。
+
+### 2026-06
+
+- **2026-06-29** · [小红书开源 RedKnot 推理引擎](https://aihot.virxact.com/items/cmqz49v7400e4sldyr126zupc)
+  将 KV Cache 按注意力头拆解存放实现长文本加速，国内大厂加入自研开源推理引擎行列。
+- **2026-06-27** · [DeepSeek 开源 DSpark 投机解码框架](https://aihot.virxact.com/items/cmqwm45f901n6sly0gpl6b6l5)
+  官方开源，可将 DeepSeek-V4 生成速度提升 60–85%，与 SGLang 后续集成形成置信度驱动的可变长度验证。
+- **2026-06-15** · [LMSYS 发布下一代投机解码：DFlash 与 Spec V2](https://aihot.virxact.com/items/cmqfhhoq001hksl2aw53w2wz8)
+  DFlash 块扩散草稿模型最高带来 15 倍吞吐提升，投机解码从「小草稿模型」演进为扩散式草稿生成。
+- **2026-06-08** · [小米 MiMo 实现 1T MoE 模型 1000 tokens/s 输出](https://aihot.virxact.com/items/cmq5bjjga06d1slt2lstyzq8i)
+  官方宣布 MiMo-V2.5-Pro-UltraSpeed 携手 TileRT 在单台 8-GPU 节点运行 1T 参数模型并突破 1000 tokens/s，解码速度里程碑。
+
+### 2026-05
+
+- **2026-05-28** · [SGLang 与 AMD 合作优化 MI355X 大规模推理](https://aihot.virxact.com/items/cmppprn04028nslvyqxgosjyn)
+  LMSYS 官方博客披露，SGLang 团队让 AMD Instinct MI355X 上 DeepSeek-R1 分离式推理在总拥有成本上具备竞争力，非 NVIDIA 硬件的推理经济学改善。
+- **2026-05-16** · [vLLM 支持万亿级参数模型](https://aihot.virxact.com/items/cmp8l2fu40jh2slnzqm9018vn)
+  社区协作实现 vLLM 对万亿参数 MoE 的服务能力（蚂蚁 Ling-2.6-1T 发布当日即获 vLLM 支持），开源引擎跟上超大模型世代。
+
 ### 2026-04
 
 - **2026-04-24** · [vLLM 整合 DeepSeek V4 优化](https://vllm.ai/blog/2026-04-24-deepseek-v4)
   vLLM 整合 FlashMLA + FlashInfer，为 DeepSeek V4 提供长上下文推理优化（DeepSeek Sparse Attention 有界注意力 + MoE 内核）。
+
+### 2026-02
+
+- **2026-02-20** · [GGML 与 llama.cpp 加入 Hugging Face](https://aihot.virxact.com/items/cmoegbhaj009bslxxx04qbbsb)
+  Hugging Face 官方宣布接纳 GGML/llama.cpp 以保障本地 AI 的长期维护——端侧推理的事实标准获得机构化托管。
 
 ### 2026（持续）
 

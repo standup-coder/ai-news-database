@@ -4,7 +4,7 @@
 别名: [RLHF, DPO, GRPO, 后训练, Post-training]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [OpenAI, Anthropic, DeepSeek, Stanford]
 ---
 
@@ -19,6 +19,18 @@
 该线索追踪后训练方法论的范式演进，是理解模型能力来源的核心线索。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-21** · [Google 开源 Tunix 智能体后训练库](https://aihot.virxact.com/items/cmruuc0d80006bii0tzwael16)
+  Google 官方推出基于 JAX 的高吞吐智能体后训练库，开源 RL 基础设施向「多轮智能体任务」这一新奖励来源聚焦。
+
+### 2026-06
+
+- **2026-06-18** · [OpenAI：强化学习带来广泛且持久的能力提升](https://aihot.virxact.com/items/cmqk1gfya0283slhilhufijtu)
+  OpenAI 研究博客发文，称跨任务 RL 产生的收益广泛且持久、不局限于训练分布——直接回应「RL 只是选择已有能力而非创造新能力」的争论。
+- **2026-06-08** · [开源社区推出 OpenEnv 智能体强化学习环境](https://aihot.virxact.com/items/cmq59qphf05vuslt2zgw6ndy6)
+  Hugging Face 官方博客宣布社区支持 OpenEnv：为智能体 RL 提供标准化真实任务环境，「可验证环境」成为后训练新稀缺资产。
 
 ### 2025-01
 

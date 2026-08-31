@@ -4,7 +4,7 @@
 别名: [Perplexity AI, 答案引擎]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Perplexity AI]
 ---
 
@@ -16,9 +16,24 @@
 
 Perplexity AI 成立于 2022 年 8 月，由 Aravind Srinivas（前 OpenAI 研究员）等人创办。产品核心是「答案引擎（Answer Engine）」：用户提问后，系统实时检索网页并由 LLM 生成带引用来源的直接答案，而非返回链接列表。
 
-Perplexity 是 AI 搜索赛道估值增长最快的公司之一，其与内容出版商的抓取争议、与 Google/OpenAI 的正面竞争，使其成为观察「搜索范式迁移」的核心线索。
+Perplexity 是 AI 搜索赛道估值增长最快的公司之一，其与内容出版商的抓取争议、与 Google/OpenAI 的正面竞争，使其成为观察「搜索范式迁移」的核心线索。2026 年其主线是把「答案引擎」推向操作系统层级的智能体（Perplexity Computer），与 Amazon 的诉讼则成为 AI 智能体能否代表用户访问平台的标志性案件。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-05** · [美国上诉法院推翻禁令，Perplexity 购物智能体重返 Amazon](https://aihot.virxact.com/items/cmsfyb5yy0js6roch27nbq7s2)
+  The Decoder 报道：第九巡回上诉法院推翻 2026 年 3 月的初步禁令，认定通过智能体访问 Amazon 的行为归属于用户本人而非 Perplexity，Amazon 的计算机欺诈指控大概率不成立——美国联邦上诉法院首次就 AI 智能体代表用户合法访问在线平台作出裁决；Amazon 于 2025 年 11 月起诉，案件本身尚未审结。
+
+### 2026-07
+
+- **2026-07-28** · [Perplexity 推出 Windows 版个人电脑智能体](https://aihot.virxact.com/items/cms4r3c3j012aroa17m492n76)
+  官方宣布「个人电脑智能体」扩展到 Windows，Perplexity Computer 的桌面智能体自此覆盖两大平台，与微软 Copilot 直接争夺操作系统层入口。
+
+### 2026-05
+
+- **2026-05-07** · [Perplexity 推出 Mac 版「个人计算机」应用](https://aihot.virxact.com/items/cmovsz1eo008vsle07nfvdqe1)
+  官方将 computer use 能力整合进 Mac 原生应用（Perplexity Computer 的进阶版 Personal Computer）：智能体可跨本地文件、原生 Mac 应用与网络执行任务，AI 搜索公司从「回答问题」转向「操作系统层级的智能体」。
 
 ### 2025-07
 

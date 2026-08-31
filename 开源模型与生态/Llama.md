@@ -4,7 +4,7 @@
 别名: [LLaMA, Llama 2, Llama 3, Llama 4]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Meta]
 ---
 
@@ -22,8 +22,12 @@ Llama 是 Meta 的开放权重大模型系列。2023 年 2 月首代以研究许
 
 ### 2026-07
 
+- **2026-07-24** · [英伟达、微软和 Meta 联合警告：避免对开放权重模型过度监管](https://aihot.virxact.com/items/cmrzbx19q0032roqz8nwff6am)
+  已转向闭源 Muse Spark 的 Meta 仍与英伟达、微软联手捍卫 Llama 所代表的开放权重生态，联合警告监管机构勿过度监管开放权重模型。
 - **2026-07-09** · [Muse Spark 1.1 发布](https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/)
   面向 agentic 任务，100 万 token 上下文窗口；首个 Meta 要求付费的模型。Llama 在智能眼镜等产品上的位置持续被 Muse Spark 取代。
+- **2026-07-07** · [Meta 推出 Muse Image 与 Muse Video](https://aihot.virxact.com/items/cmrb2mxmc0072ihl1mx0aw1bz)
+  Meta Superintelligence Labs 官方 X 宣布 Muse 家族从语言扩展至图像与视频生成，闭源专有路线全面铺开，进一步压缩 Llama 在 Meta 产品矩阵中的位置。
 
 ### 2026-04
 

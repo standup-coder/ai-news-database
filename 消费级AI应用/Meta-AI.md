@@ -4,7 +4,7 @@
 别名: [Meta AI, Meta AI 助手]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Meta]
 ---
 
@@ -14,11 +14,27 @@
 
 ## 概述
 
-Meta AI 是 Meta 基于自研 Llama 系列模型打造的消费级 AI 助手，2023 年 9 月发布，深度内嵌于 WhatsApp、Instagram、Messenger、Facebook 四大应用与 Ray-Ban Meta 智能眼镜。Meta 的策略与 OpenAI 相反：不靠独立 App 获客，而是把助手注入已有的数十亿级社交入口。
+Meta AI 是 Meta 基于自研 Llama 系列模型打造的消费级 AI 助手，2023 年 9 月发布，深度内嵌于 WhatsApp、Instagram、Messenger、Facebook 四大应用与 Ray-Ban Meta 智能眼镜。Meta 的策略与 OpenAI 相反：不靠独立 App 获客，而是把助手注入已有的数十亿级社交入口。2026 年 Meta AI 进入深水区：扎克伯格承认转型「脱轨」并启动万人重组，眼镜端 NameTag 人脸识别与 Instagram 深伪功能相继引发争议下架。
 
 该线索追踪 Meta AI 的产品演进、用户规模与硬件（智能眼镜）结合路径，它是「分发决定论」在 AI 助手战场的最大实验。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-11** · [Meta 关闭 Instagram 可基于公开账户生成 AI 深伪图片的功能](https://aihot.virxact.com/items/cmrflz3sd00x5ihjlndy4k7rn)
+  The Verge 报道，隐私与滥用压力下上线不久即下架。
+
+### 2026-06
+
+- **2026-06-15** · [Meta 在 Facebook 上线「AI Mode」](https://aihot.virxact.com/items/cmqfjwpb500o2slq8vbryuxyg)
+  TechCrunch 报道，基于平台公开信息合成答案，社交搜索与 AI 搜索合流。
+- **2026-06-13** · [扎克伯格承认 Meta AI 转型「脱轨」](https://aihot.virxact.com/items/cmqc1kg4p00ctsl9bfiuzkt6u)
+  IT之家报道：裁员 10%、约 7000 人转岗，5 月启动的万人重组过后承认组织调整过快。
+- **2026-06-05** · [Meta 智能眼镜 App 暗藏人脸识别代码，NameTag 已推送至超 5000 万设备](https://aihot.virxact.com/items/cmq10bltr0b9ksltrs7mappfh)
+  IT之家报道，眼镜端人脸识别引发隐私风暴。
+- **2026-06-01** · [黑客利用 Meta AI 客服聊天机器人漏洞窃取名人 Instagram 账户](https://aihot.virxact.com/items/cmpvpgtta00iosluke9oshwcg)
+  Ars Technica 报道，Meta 6-6 证实数千账户因 AI 聊天机器人遭滥用被入侵。
 
 ### 2025-04
 

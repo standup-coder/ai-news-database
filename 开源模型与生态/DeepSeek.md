@@ -4,7 +4,7 @@
 别名: [深度求索, DeepSeek-V3, DeepSeek-R1]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-28
+更新: 2026-08-31
 关键角色: [DeepSeek, 幻方量化]
 ---
 
@@ -14,7 +14,7 @@
 
 ## 概述
 
-DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实验室，以「极致工程效率 + MIT 许可彻底开源」著称。V2 掀起中国 API 价格战，V3 以约 558 万美元 GPU 成本（官方口径）训练出 GPT-4o 级模型，R1 则以开源推理模型比肩 o1，直接引发 2025 年 1 月末美股 AI 板块巨震。
+DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实验室，以「极致工程效率 + MIT 许可彻底开源」著称。V2 掀起中国 API 价格战，V3 以约 558 万美元 GPU 成本（官方口径）训练出 GPT-4o 级模型，R1 则以开源推理模型比肩 o1，直接引发 2025 年 1 月末美股 AI 板块巨震。2026 年 V4 系（4 月 preview、8 月正式版）以激进定价放大影响力，并于 6 月完成首轮外部融资、投后估值超 500 亿美元。
 
 该线索追踪 DeepSeek 的模型发布、技术创新（MLA、MoE、GRPO、蒸馏）与其对全球 AI 格局的冲击。
 
@@ -32,19 +32,30 @@ DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实�
 - **2026-07-24** · 旧 API 名称停用
   `deepseek-chat`、`deepseek-reasoner` 两个旧模型名停用，进入三个月迁移窗口。
 - **2026-07 月底** · DeepSeek-V4-Flash 正式版发布
-  Agent 模型正式版发布；社区自测显示 Flash-0731 变体在 9 项基准上反超 V4-Pro preview（社区测试，非官方基准）。
+  Agent 模型正式版发布；社区自测显示 Flash-0731 变体在 9 项基准上反超 V4-Pro preview（社区测试，非官方基准）；Artificial Analysis 显示其开源后跻身开源模型前三。
 
-### 2026-04
+### 2026-06
 
-- **2026-04-24** · [DeepSeek V4 Preview 发布并开源](https://api-docs.deepseek.com/news/news260424/)
-  发布并开源 V4-Pro（1.6T 总参/49B 激活）和 V4-Flash（284B 总参/13B 激活）；1M 上下文成默认；采用 Token-wise 压缩 + DSA（DeepSeek Sparse Attention）；Agentic Coding/Math/STEM 领先开源；兼容 Claude Code/OpenCode。同日 OpenAI 发布 GPT-5.5，中美旗舰模型正面对撞。
-- **2026-04** · 首次外部融资启动
-  报道融前估值约 440 亿美元，启动首次外部融资。
+- **2026-06-16** · [DeepSeek 完成首轮外部融资，估值超 500 亿美元](https://aihot.virxact.com/items/cmqggy29t00gaslevgnwfv3sl)
+  The Decoder 报道：募资超 500 亿元人民币（约 74 亿美元）；投资结构特殊，多数资金以无投票权、五年锁定期形式进入梁文锋管理的有限合伙企业。
+- **2026-06-04** · [连续四周登顶 OpenRouter Token 份额榜](https://aihot.virxact.com/items/cmpzljcev04oyslkpirsh5gdy)
+  OpenRouter 官方数据显示，V4 系带动 DeepSeek 连续四周登顶其 token 份额榜。
 
 ### 2026-05
 
 - **2026-05 底** · A 轮约 70 亿美元（约 500 亿人民币）
   投后估值 520-590 亿美元；腾讯、宁德时代入局，梁文锋自参与。
+- **2026-05-24** · [旗舰模型 V4-Pro 75 折转为永久](https://aihot.virxact.com/items/cmpk417ey03vssl01z5zsemms)
+  Bloomberg 报道：原定月底到期的 V4-Pro 大幅折扣永久化，开发者价格保持在原价四分之一，延续激进定价策略。
+
+### 2026-04
+
+- **2026-04-26** · [输入缓存价格降至原价 1/10](https://aihot.virxact.com/items/cmog0c5bj00czslr37t1k5kqd)
+  官方 X 宣布 API 输入缓存全系列降至原价十分之一，配合 V4 预览版放量进一步压低使用成本。
+- **2026-04-24** · [DeepSeek V4 Preview 发布并开源](https://api-docs.deepseek.com/news/news260424/)
+  发布并开源 V4-Pro（1.6T 总参/49B 激活）和 V4-Flash（284B 总参/13B 激活）；1M 上下文成默认；采用 Token-wise 压缩 + DSA（DeepSeek Sparse Attention）；Agentic Coding/Math/STEM 领先开源；兼容 Claude Code/OpenCode。同日 OpenAI 发布 GPT-5.5，中美旗舰模型正面对撞。
+- **2026-04** · 首次外部融资启动
+  报道融前估值约 440 亿美元，启动首次外部融资。
 
 ### 2025-05
 

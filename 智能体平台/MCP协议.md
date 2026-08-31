@@ -4,7 +4,7 @@
 别名: [Model Context Protocol, MCP]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Anthropic, OpenAI, Google, Microsoft]
 ---
 
@@ -16,7 +16,7 @@
 
 Model Context Protocol（MCP）是 Anthropic 于 2024 年 11 月开源的开放协议，标准化 LLM 应用连接外部数据源与工具的方式：服务端暴露 tools/resources/prompts，客户端（Claude Desktop、IDE、Agent 框架）统一接入。它解决了「每个模型 × 每个工具都要写一遍集成」的 M×N 问题。
 
-2025 年 OpenAI、Google、Microsoft 相继宣布支持，MCP 事实上赢得了 Agent 工具层的标准之争，社区服务器数量以千计。
+2025 年 OpenAI、Google、Microsoft 相继宣布支持，MCP 事实上赢得了 Agent 工具层的标准之争，社区服务器数量以千计。2026 年 7 月的规范修订将协议重构为 stateless、可缓存的 Web 式架构，目标是支撑全球可扩展的企业级 Agent 工具调用。
 
 ## 时间线
 
@@ -24,6 +24,11 @@ Model Context Protocol（MCP）是 Anthropic 于 2024 年 11 月开源的开放�
 
 - **2026-07-28** · [MCP 2026-07-28 规范发布](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
   MCP 转向 stateless、可缓存、可路由、可全球扩展的 Web 式架构；与旧版本 wire-incompatible；Anthropic 在全 Claude 产品线推进支持。这是 MCP 自开源以来最大的架构升级，目标是支撑企业级、可全球扩展的 Agent 工具调用。
+
+### 2026-05
+
+- **2026-05-27** · [OpenAI 产品支持私有 MCP 服务器安全连接](https://aihot.virxact.com/items/cmpoevkk105k2slv4iklwg0qm)
+  OpenAI 开发者账号宣布 ChatGPT、Codex 与 Responses API 可通过仅出站 HTTPS 隧道接入企业内网 MCP 服务器，无需暴露公网——MCP 从开发者生态走向企业生产环境的关键补全。
 
 ### 2025-12
 

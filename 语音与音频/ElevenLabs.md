@@ -4,7 +4,7 @@
 别名: [Eleven Labs, 11Labs]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [ElevenLabs]
 ---
 
@@ -20,12 +20,29 @@ ElevenLabs 成立于 2022 年，由前 Palantir 工程师 Piotr Dąbkowski 与�
 
 ## 时间线
 
+### 2026-07
+
+- **2026-07-20** · [通义实验室发布 Qwen-Audio-3.0-TTS 实时语音合成模型](https://aihot.virxact.com/items/cmrt0856a09v9bitl62e4r17b)
+  通义实验室官方发布，官方 X（7 月 23 日）称其登顶 TTS 排行榜，开源语音模型持续挤压商业 TTS 空间。
+- **2026-07-01** · [xAI 发布 Voice Agent Builder 测试版](https://aihot.virxact.com/items/cmr2a81sq066ssl8z8vo7so2x)
+  xAI 官方发布实时语音 Agent 构建工具，直接对标 ElevenLabs Conversational AI 平台。
+
 ### 2026-06
 
 - **2026-06-12** · [Avatars（ElevenCreative）发布](https://futurumgroup.com/insights/will-elevenlabs-avatars-redefine-video-creation-for-enterprise-content-teams/)
   在 ElevenCreative 中推出 Avatars，面向企业内容团队的数字人视频生成。
 - **2026-06-08** · 英国政府合作
   与英国政府合作将语音 AI 引入公共服务；并扩展伦敦总部。
+
+### 2026-05
+
+- **2026-05-01** · [xAI 语音克隆 API 正式上线](https://aihot.virxact.com/items/cmonke8650gtwsll9tccsqfhm)
+  xAI 官方宣布，大模型厂商亲自下场声音克隆赛道，与 ElevenLabs 核心业务正面竞争。
+
+### 2026-04
+
+- **2026-04-15** · [Gemini 3.1 Flash TTS 发布](https://aihot.virxact.com/items/cmo08uf1000ausli2z1kht3w4)
+  Google 官方博客发布，主打下一代表现力 AI 语音，大模型厂商原生 TTS 能力持续逼近专用语音合成产品。
 
 ### 2026-03
 

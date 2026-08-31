@@ -4,7 +4,7 @@
 别名: [OpenAI 估值, OpenAI 营利化重组]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [OpenAI, Microsoft, SoftBank, Thrive Capital, Amazon, NVIDIA, Anthropic]
 ---
 
@@ -24,9 +24,17 @@ OpenAI 2015 年以非营利组织创立，2019 年引入「利润上限（capped
 
 - **2026-07-29** · [CFO 披露 7 月单月 ARR 超整个 Q2](https://www.cnbc.com/2026/07/29/openai-cfo-sarah-friar-tells-employees-arr-in-july-topped-all-of-q2.html)
   Sarah Friar 内部全员会称增长由 GPT-5.6、ChatGPT Work、Codex 驱动。
+- **2026-07-22** · [OpenAI 拟投资 200 亿美元在美新建数据中心](https://aihot.virxact.com/items/cmrw780wk00niro8gyqsp8hr0)
+  IT之家报道，同时将 2030 年算力支出预期上调至近 7500 亿美元——资本开支曲线继续陡峭化。
 
 ### 2026-06
 
+- **2026-06-17** · [消息称 OpenAI 一季度现金消耗达 37 亿美元](https://aihot.virxact.com/items/cmqhly7hf0068slf0ujjfjo0x)
+  IT之家报道，超同期收入一半；同日泄露文件显示年营收约 130 亿美元、亏损远超收入。
+- **2026-06-16** · [OpenAI 去年支出 340 亿美元，净亏损约 390 亿](https://aihot.virxact.com/items/cmqgfun44006nslevr8xd4ujx)
+  The Decoder 报道（净亏含一次性费用），IPO 前财务底牌首次系统性曝光。
+- **2026-06-10** · [IPO 推迟，Altman 告诉员工预计上市「在一年内」](https://aihot.virxact.com/items/cmq8fedje01zcslld099ykjl4)
+  The Decoder 报道，S-1 提交仅两天后上市时间表即后移。
 - **2026-06-08** · [OpenAI 秘密提交 S-1](https://openai.com/index/openai-submits-confidential-s-1/)
   官方公告已向 SEC 机密递交 S-1，启动 IPO 进程；时间未定。
 
@@ -34,10 +42,18 @@ OpenAI 2015 年以非营利组织创立，2019 年引入「利润上限（capped
 
 - **2026-05-28** · [Anthropic Series H 关闭，650 亿美元 / 9650 亿估值](https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/)
   领投 Altimeter、Dragoneer、Greenoaks、Sequoia；估值超越 OpenAI 当时水平。（注：Anthropic ARR 增速数据存疑，见待核实清单。）
+- **2026-05-16** · [OpenAI 大规模重组，总裁 Brockman 挂帅](https://aihot.virxact.com/items/cmp81gwxx0ezsslnze6fa6wif)
+  IT之家报道，总裁 Greg Brockman 在新一轮组织重组中统帅挂帅，架构向 IPO 对齐。
+- **2026-05-15** · [纳德拉：微软对 OpenAI 累计投入已超 1000 亿美元](https://aihot.virxact.com/items/cmp6ba93100fbslnzmec29858)
+  IT之家报道，纳德拉回顾「当年没人愿意下注」——微软仍是 OpenAI 最大金主。
 
 ### 2026-04
 
 - **2026-04-29** · [Anthropic 考虑 9000 亿美元以上估值新融资（Bloomberg）](https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value)
+- **2026-04-28** · [OpenAI 未能实现 2025 年 ChatGPT 营收与周活目标](https://aihot.virxact.com/items/cmoi4saog007bsle997xjg9zk)
+  IT之家报道，ChatGPT 营收目标与 10 亿周活目标双双落空，为 IPO 叙事蒙上阴影。
+- **2026-04-27** · [微软将停止与 OpenAI 分享收入](https://aihot.virxact.com/items/cmohdrgr7008gsle9efddzw22)
+  双方重组协议落地的标志（HN 热议）；The Decoder 报道 OpenAI 次日登陆 AWS，Azure 独家绑定进一步松动。
 
 ### 2026-03
 

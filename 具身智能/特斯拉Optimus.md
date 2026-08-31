@@ -4,7 +4,7 @@
 别名: [Tesla Optimus, Tesla Bot, 擎天柱]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Tesla, Elon Musk]
 ---
 
@@ -19,6 +19,16 @@ Optimus（擎天柱）是特斯拉 2021 年 AI Day 上宣布的人形机器人�
 该线索追踪 Optimus 的迭代、量产承诺兑现度与其对具身赛道的鲇鱼效应。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-09** · [三代 Optimus 初步定型，马斯克对供应链下最后通牒](https://aihot.virxact.com/items/cmrdpmgpg05zcih4bmwttzqaq)
+  供应链消息称第三代 Optimus 设计已初步定型；马斯克内部放话若达不成产能目标将开除整个采购团队（IT之家报道）——量产爬坡进入「军令状」阶段，供应链兑现度成为最大悬念。
+
+### 2026-04
+
+- **2026-04-23** · [Model S/X 产线为 Optimus 让路，最早 7 月投产](https://aihot.virxact.com/items/cmoas9bgz03uvsl1yi1c1vapk)
+  特斯拉计划将 Model S/X 产线改造为 Optimus 产线、最早 7 月投产（IT之家报道）——首次让整车产能为人形机器人让路，「车厂制造能力」真正押上桌面。
 
 ### 2025-01
 

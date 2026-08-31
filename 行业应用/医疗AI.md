@@ -4,7 +4,7 @@
 别名: [Med-PaLM, 医学大模型, AI 诊断]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Google, OpenAI, Microsoft/Nuance, Epic]
 ---
 
@@ -14,11 +14,37 @@
 
 ## 概述
 
-医疗是大模型垂直落地价值最高也最难的领域。进展沿三条线展开：医学知识能力（Med-PaLM 系列通过 USMLE 级考试）、临床文书自动化（Nuance DAX、Abridge 等环境智能听写）、诊断辅助（多模态读片、罕见病问诊）。监管（FDA）、责任界定与幻觉风险构成落地的三重门槛。
+医疗是大模型垂直落地价值最高也最难的领域。进展沿三条线展开：医学知识能力（Med-PaLM 系列通过 USMLE 级考试）、临床文书自动化（Nuance DAX、Abridge 等环境智能听写）、诊断辅助（多模态读片、罕见病问诊）。监管（FDA）、责任界定与幻觉风险构成落地的三重门槛。2026 年的标志性变化是「对话式 AI 医生」拿到 Nature 级临床证据（AMIE/MIRA），巨头则推出药物发现专用模型（GPT-Rosalind）。
 
 该线索追踪医疗大模型的能力里程碑与临床工作流的真实渗透。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-11** · [OpenAI 发布 GPT-5.6 系列医疗评估结果](https://aihot.virxact.com/items/cmrglvcki024uih2edvsk7pef)
+  官方评估显示：最小变体 GPT-5.6 Luna 以最低推理强度即超越满血 GPT-5.5、成本低 25 倍，最大变体 Sol 树立新标杆（Sam Altman 官宣）——医学能力竞赛进入「全系覆盖、成本骤降」阶段。
+
+### 2026-06
+
+- **2026-06-18** · [Nature 双论文：MIRA 与 AMIE 诊断与治疗计划媲美甚至超越医生](https://aihot.virxact.com/items/cmqjmc80604sqslmhz4738b0k)
+  Google 的 AMIE 与 MIRA 两项研究同日登上 Nature，诊断与治疗计划质量达到与专科医生相当或更优的水平，AMIE 并从单次问诊延伸至长期疾病管理（The Decoder 报道、Google 官方博客同步）——「对话式 AI 医生」首次拿到顶刊级临床证据。
+
+- **2026-06-18** · [o3 Deep Research 辅助诊断儿童罕见病，额外诊断率 4.8%](https://aihot.virxact.com/items/cmqjmtwvi04vqslmh55vbp7oh)
+  OpenAI 与哈佛等机构合作研究：深度研究智能体为罕见病患儿给出医生团队未覆盖的额外诊断，额外诊断率 4.8%（OpenAI 官方发布）——AI 罕见病问诊从个案演示走向系统性证据。
+
+- **2026-06-03** · [GPT-Rosalind 重大升级，强化药物发现智能](https://aihot.virxact.com/items/cmpylx2gi015dsli32ftugpk7)
+  OpenAI 官宣生命科学模型 GPT-Rosalind 重大升级，药物发现能力显著提升（Greg Brockman 官宣）——「AI 制药」专用模型进入快速迭代节奏。
+
+### 2026-02
+
+- **2026-02-24** · [微软 Dragon Copilot 铺向英国 NHS](https://aihot.virxact.com/items/cmo24zjge01ctslba72o0cm5r)
+  纳德拉宣布临床文书 AI Dragon Copilot 在英国国家医疗服务体系（NHS）铺开，帮助医生把时间还给患者（官方 X）——继美国 Epic 生态之后，临床文书 AI 拿下欧洲最大公立医疗系统。
+
+### 2026-01
+
+- **2026-01-16** · [百川智能开源医疗大模型 Baichuan-M3](https://aihot.virxact.com/items/cmry2we7700giroqaom1viptk)
+  官方宣布开源医疗大模型 Baichuan-M3——百川「全力押注医疗」路线下以开源卡位中文医疗场景，国内医疗基座模型竞争升温。
 
 ### 2025-06
 

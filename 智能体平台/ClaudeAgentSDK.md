@@ -4,7 +4,7 @@
 别名: [Claude Agent SDK, Claude Code SDK]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Anthropic]
 ---
 
@@ -16,9 +16,26 @@
 
 Claude Agent SDK 前身是 2025 年 6 月发布的 Claude Code SDK，同年 9 月更名，提供 Python 与 TypeScript 实现。它将 Claude Code 内部打磨的 Agent 循环（工具调用、文件操作、上下文管理、子代理编排）封装为可嵌入任意应用的开发框架，支持 subagents、hooks、MCP 工具接入。
 
-该线索追踪 Anthropic 的 Agent 平台化战略及其与 LangChain、OpenAI Agents SDK 等框架的竞争。
+该线索追踪 Anthropic 的 Agent 平台化战略及其与 LangChain、OpenAI Agents SDK 等框架的竞争。2026 年 Anthropic 将 SDK 进一步平台化为 Claude 托管智能体（Managed Agents），并通过收购 Vercept、Stainless 补强 computer use 与 SDK/MCP 工具链。
 
 ## 时间线
+
+### 2026-05
+
+- **2026-05-19** · [Claude 托管智能体平台新增自托管沙箱与 MCP 隧道](https://aihot.virxact.com/items/cmpcew7mp01s5slaemjh52y5b)
+  官方博客宣布 Managed Agents 平台支持自托管沙箱（工具执行留在企业基础设施内，支持 Cloudflare/Daytona/Modal/Vercel）与 MCP 隧道（仅出站连接即可让智能体访问内网 MCP 服务器），补齐金融、医疗等合规行业的部署拼图。
+- **2026-05-18** · [Anthropic 收购 SDK 与 MCP 服务器工具开发商 Stainless](https://aihot.virxact.com/items/cmpbgh7e51779slnz95461dox)
+  官方宣布收购为 OpenAI/Anthropic 等生成 API SDK 的工具商 Stainless，其能力覆盖 API SDK 与 MCP 服务器代码生成，强化 Anthropic 开发者平台与 Agent SDK 工具链。
+
+### 2026-04
+
+- **2026-04-02** · [Claude Cowork 与 Claude Code Desktop 的 Computer use 支持 Windows](https://aihot.virxact.com/items/cmnw1yoll00h4slc3xrj73xz7)
+  官方 X 宣布 computer use 能力扩展到 Windows 平台，Claude 的桌面智能体（Cowork、Claude Code Desktop）自此覆盖两大桌面系统。
+
+### 2026-02
+
+- **2026-02-24** · [Anthropic 收购 Vercept 推进 computer use](https://aihot.virxact.com/items/cmnw1xugc00eqslc37cpu40e9)
+  官方宣布收购机器人视觉-语言-动作初创 Vercept，为 Claude 的 computer use（操作 GUI）能力补齐感知与动作模型团队。
 
 ### 2025-09
 

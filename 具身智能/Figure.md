@@ -4,7 +4,7 @@
 别名: [Figure AI, Figure 01, Figure 02, Helix]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Figure AI, OpenAI, BMW]
 ---
 
@@ -19,6 +19,11 @@ Figure AI 成立于 2022 年，创始人 Brett Adcock（此前创办 Archer Avia
 该线索追踪 Figure 的产品迭代、模型自研与商业化进展。
 
 ## 时间线
+
+### 2026-06
+
+- **2026-06-19** · [Figure 机器人数量首次超过人类员工](https://aihot.virxact.com/items/cmqlgwh3f006nsljg3exh1nge)
+  公司称「已超越理论阶段：有史以来第一次，Figure 的机器人数量超过了人类员工」（Rohan Paul 转述官方声明）——机器人保有量超过员工规模，成为其从 Helix 演示走向规模化量产的标志性节点。
 
 ### 2025-02
 

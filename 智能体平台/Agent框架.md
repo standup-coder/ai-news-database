@@ -4,7 +4,7 @@
 别名: [LangGraph, AutoGen, Microsoft Agent Framework, CrewAI, MAF]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Microsoft, LangChain, CrewAI]
 ---
 
@@ -25,8 +25,15 @@ Agent 框架是连接大模型能力与实际应用的编排层：负责工具�
 - **2026-07-16** · LangGraph v1.3.14
   持续迭代（LangGraph 1.0 GA 于 2025-10-22），仍是社区主流 agent 编排框架。
 
+### 2026-06
+
+- **2026-06-16** · [LangChain 发布 Open SWE：开源异步编码智能体](https://aihot.virxact.com/items/cms3x0dh603bgro82yht298zp)
+  LangChain 官方开源异步编码智能体 Open SWE，把 LangGraph 编排能力下沉到编码场景，与 SWE-agent/Codex 类产品正面竞争，框架厂商向应用层延伸的标志。
+
 ### 2026-04
 
+- **2026-04-15** · [OpenAI Agents SDK 下一代版本发布](https://aihot.virxact.com/items/cmo0b6k3000jesli2q2loyouq)
+  OpenAI 官方推出 Agents SDK 新一代版本（openai-agents 0.14.0）：模型原生 agent 循环 + 原生沙盒执行环境，标准化集成 MCP 工具、skills、AGENTS.md 与 shell/补丁编辑，框架与计算分离、支持快照恢复，直接对标 Claude Agent SDK。
 - **2026-04-07** · [AutoGen 进入维护模式](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/)
   不再加新功能，仅 bug 修复与安全补丁；提供迁移指南至 MAF。
 - **2026-04-02/03** · [Microsoft Agent Framework (MAF) 1.0 GA](https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/)

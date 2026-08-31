@@ -4,7 +4,7 @@
 别名: [Cognition, Devin, Devin Desktop, Windsurf]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Cognition AI]
 ---
 
@@ -24,6 +24,8 @@ Devin 是 Cognition AI 推出的自主软件工程师 Agent，2024 年以「首�
 
 - **2026-07-31** · Devin 更新
   重新设计的 Changes Tab；Devin Outposts（在自有环境中运行 Devin 工作负载的新能力）。
+- **2026-07-09** · [Cognition 推出 SWE-1.7](https://aihot.virxact.com/items/cmre2mjao00nrihwkhnv9ahqj)
+  自研编码模型 SWE-1.7 发布，Hacker News 热议其智能水平接近 GPT-5.5 与 Opus，Devin 对外部闭源模型的依赖进一步降低。
 
 ### 2026-06
 
@@ -33,7 +35,7 @@ Devin 是 Cognition AI 推出的自主软件工程师 Agent，2024 年以「首�
 ### 2026-05
 
 - **2026-05-27** · [融资 10 亿美元，投后估值 260 亿美元](https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/)
-  8 个月估值翻倍；ARR 4.92 亿美元。→ [[商业与投融资/AI人才与并购潮]]
+  8 个月估值翻倍；ARR 4.92 亿美元。swyx 随之评价 Cognition 为「全球最大独立智能体实验室」。→ [[商业与投融资/AI人才与并购潮]]
 
 ### 2026-02
 

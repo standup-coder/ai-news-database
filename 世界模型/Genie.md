@@ -4,7 +4,7 @@
 别名: [Genie 2, Genie 3, 交互式世界模型]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Google DeepMind]
 ---
 
@@ -19,6 +19,18 @@ Genie 是 Google DeepMind 的「生成式交互环境（Generative Interactive E
 该线索追踪 Genie 系列的迭代与世界模型赛道（含 World Labs、NVIDIA Cosmos 等）的路线竞争。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-20** · [NVIDIA 发布 Cosmos 3 Edge：4B 参数开源世界模型](https://aihot.virxact.com/items/cmrtgmuyf3366bitl3gnpc8eo)
+  为机器人及边缘 AI 提供实时推理与动作生成，NVIDIA 物理 AI 世界模型平台向端侧下沉。
+- **2026-07-20** · [昆仑万维发布并开源可交互世界模型 Matrix-Game 3.5](https://aihot.virxact.com/items/cmrtal6bt1vmsbitl1mta8hxg)
+  官方同期宣布 2026 为「世界模型元年」（7 月 19 日官方公众号），中国厂商加速入场世界模型赛道。
+
+### 2026-05
+
+- **2026-05-22** · [Project Genie 与谷歌街景合作推出交互式世界](https://aihot.virxact.com/items/cmph294ju0ko5sljwmb0hxida)
+  Google DeepMind 官方宣布，Genie 世界模型接入谷歌街景，可交互探索真实地点生成的世界。
 
 ### 2026-01
 

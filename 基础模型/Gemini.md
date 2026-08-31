@@ -4,7 +4,7 @@
 别名: [Google Gemini, Gemini 1.5, Gemini 2.0, Gemini 2.5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-28
+更新: 2026-08-31
 关键角色: [Google, Google DeepMind]
 ---
 
@@ -16,7 +16,7 @@
 
 Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定位「原生多模态」（从头以文本/图像/音频/视频联合训练）。其标志性能力是百万级 token 超长上下文（Gemini 1.5）与深度整合 Google 生态（搜索、Workspace、Android）。
 
-在经历 Bard 时期的仓促追赶后，Gemini 2.0/2.5 世代已稳定处于第一梯队，该线索追踪 Google 在基础模型上的技术路线与产品整合。
+在经历 Bard 时期的仓促追赶后，Gemini 2.0/2.5 世代已稳定处于第一梯队；2026 年进入 Gemini 3/3.5 世代的高频点版本迭代（Pro/Flash/Live/Omni 多形态并行）。该线索追踪 Google 在基础模型上的技术路线与产品整合。
 
 ## 时间线
 
@@ -32,7 +32,23 @@ Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定�
 - **2026-07-17** · Gemini 3.5 Pro 推迟
   DeepMind 放弃原基础、采用更长预训练周期，3.5 Pro 推迟（具体日为半证实单源，Google 官方仅称「仍在测试」）。
 
+### 2026-06
+
+- **2026-06-30** · [Nano Banana 2 Lite 与 Gemini Omni Flash 发布](https://aihot.virxact.com/items/cmr0ucc880030slatw1gfkq2h)
+  DeepMind 官方博客发布轻量图像模型 Nano Banana 2 Lite，并正式放出 Omni Flash（I/O 预览后的全量版本）。
+- **2026-06-10** · [DiffusionGemma：文本生成提速 4 倍的开源扩散模型](https://aihot.virxact.com/items/cmq8aoxud00ngslldd191n34b)
+  官方开源的离散扩散语言模型，文本生成较自回归快 4 倍；技术报告 7 月底公布。
+- **2026-06-09** · [Gemini 3.5 Live Translate 发布](https://aihot.virxact.com/items/cmq6sxx1u0bizsl5ib9ja78pe)
+  官方发布 70+ 语言近实时语音到语音翻译模型，进一步铺开 3.5 家族的语音形态。
+- **2026-06-03** · [Gemma 4 12B 发布](https://aihot.virxact.com/items/cmpyerfzl04g6slaxbcd0ly8n)
+  Hassabis 与 Pichai 官宣：统一无编码器多模态架构，16GB VRAM 即可本地多步推理；Gemma 4 系列累计下载量破 1.5 亿。
+
 ### 2026-05
+
+- **2026-05-28** · [Nano Banana Pro 与 Nano Banana 2 正式发布](https://aihot.virxact.com/items/cmpps64fo00p9slm6g6j53psu)
+  官方开发者渠道宣布旗舰图像模型 Nano Banana Pro 与 Nano Banana 2 正式开放。
+- **2026-05-25** · [AlphaProof Nexus 以几百美元成本解决数十年未解数学问题](https://aihot.virxact.com/items/cmpl3eupd0chwsl01o9tkqehz)
+  The Decoder 报道 DeepMind 的 AlphaProof Nexus 以数百美元算力成本攻克悬置数十年的数学难题。
 
 - **2026-05-19** · [Google I/O 2026：Gemini 3.5 系列启动 + Gemini Omni 取代 Veo](https://blog.google/innovation-and-ai/sundar-pichai-io-2026/)
   I/O 2026 发布 Gemini 3.5 Flash（已上线）并预告 3.5 Pro；同日发布 Gemini Omni（取代 Gemini App 中的 Veo），首版 Omni Flash 当日可用，可将任意参考（图像/文本/视频/音频）转为统一输出。2026 年 5 月起 Gemini App 后端默认调用 Omni 而非 Veo。→ [[多模态大模型/视频生成竞赛]]
@@ -41,13 +57,24 @@ Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定�
 
 ### 2026-04
 
+- **2026-04-30** · [Gemini Embedding 2 发布](https://aihot.virxact.com/items/cmolryh3501wosll966mttaas)
+  官方 X 发布谷歌首个原生多模态嵌入模型，面向多模态 RAG 检索场景。
 - **2026-04-02** · [Gemma 4 发布](https://en.wikipedia.org/wiki/Gemini_(language_model))
-  开源轻量模型系列迭代。
+  开源多模态模型系列迭代；官方称「各尺寸最强开源模型」、性能超体量 10 倍以上的模型（Hassabis），Hugging Face 同步上架。
 
 ### 2026-03
 
+- **2026-03-26** · [Gemini 3.1 Flash Live 发布](https://aihot.virxact.com/items/cmnw1yr5o00vwslc33gg9tne6)
+  官方称「迄今最高质量的音频与语音模型」，更低延迟、更高精度，驱动 Gemini Live 迄今最大升级。
 - **2026-03-03** · Gemini 3.1 Flash Lite 开发者发布
   通过 Google API 向开发者发布。
+
+### 2026-02
+
+- **2026-02-26** · [Nano Banana 2 发布](https://aihot.virxact.com/items/cmo22udgi012qslbag8z2fl3l)
+  DeepMind 官宣基于最新 Gemini Flash 的图像生成模型，宣称达到 SOTA。
+- **2026-02-19** · [Gemini 3.1 Pro 发布](https://aihot.virxact.com/items/cmnwsdqak003dslagneje0uhp)
+  官方博客发布，定位「专为最复杂任务打造的更智能模型」，核心智能全面升级。
 
 ### 2026-01
 

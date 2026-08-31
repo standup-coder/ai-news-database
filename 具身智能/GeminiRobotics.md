@@ -4,7 +4,7 @@
 别名: [Gemini Robotics, Gemini Robotics ER]
 状态: 活跃
 创建: 2026-08-28
-更新: 2026-08-28
+更新: 2026-08-31
 关键角色: [Google DeepMind]
 ---
 
@@ -24,6 +24,16 @@ Gemini Robotics 是 DeepMind 将 Gemini 多模态模型能力迁移到机器人�
 
 - **2026-07-30** · [Gemini Robotics 2 / ER 2 发布](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/)
   第二代平台：全身智能控制（高灵巧操作 + 安全性提升）；ER 2 新增视频理解、任务编排与多机器人协作（The Verge、Engadget、Ars Technica、Axios 多源报道）。
+
+### 2026-06
+
+- **2026-06-12** · [DeepMind 机器人加速器启动，首批 15 家初创公司](https://aihot.virxact.com/items/cmqatz4nc0otgslld30imx725)
+  DeepMind 官方宣布机器人方向加速器开跑，首批 15 家初创公司接入其机器人模型栈——「平台 + 扶植生态」的 Android 式路线从模型发布延伸到应用层。
+
+### 2026-04
+
+- **2026-04-14** · [Gemini Robotics-ER 1.6 发布](https://aihot.virxact.com/items/cmnys6sen00iwsl0foeekwbol)
+  官方博客发布 ER 线迭代：通过增强具身推理让真实世界机器人任务更可靠——ER 线沿 1.5 → 1.6 → ER 2 小步快跑，为下游厂商持续升级「大脑外挂」。
 
 ### 2025-03
 

@@ -4,7 +4,7 @@
 别名: [反向收购, acqui-hire, AI 人才战争]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-28
+更新: 2026-08-31
 关键角色: [Microsoft, Google, Amazon, Meta, 智谱, MiniMax, Cognition, Google(Wiz)]
 ---
 
@@ -24,18 +24,56 @@
 
 - **2026-08-05** · [Jeff Dean 离开谷歌，联合创办 Discovery Loop](https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/)
   在谷歌 27 年的 AI 负责人（Google Brain 创始人、Google Research 与 DeepMind 掌舵者）与多名顶尖研究员离职创业；NYT、Wired 跟进。谷歌研究院体系迄今最高级别的流失。
+- **2026-08-05** · [Demis Hassabis 卸任 Google DeepMind CEO，转任主席与 Alphabet 首席科学家](https://aihot.virxact.com/items/cmsga8g7n01dxro3psolcouz4)
+  Hassabis 本人宣布卸任 CEO、改任 Google DeepMind 主席并出任 Alphabet 首席科学家；与 Jeff Dean 离职同日，谷歌 AI 研究领导层一日内双重变动。
+
+### 2026-07
+
+- **2026-07-12** · [苹果起诉 OpenAI 挖角窃密](https://aihot.virxact.com/items/cmrh8o88501e4bir7wzxmfpfm)
+  IT之家报道苹果起诉 OpenAI 借挖角前员工窃取硬件商业机密；TechCrunch 称指控涉及 400 多名前员工，7-17 升级为约 40 名前员工收到律师函——人才战争进入诉讼化阶段。
+- **2026-07-10** · [OpenAI 高管 Fidji Simo 因慢性疾病加重辞去全职职务](https://aihot.virxact.com/items/cmrf2luxz06pxih8e4ag32u0y)
+  应用条线负责人 Fidji Simo 转为兼职顾问（Brockman 官宣），OpenAI 消费应用高层变动。
 
 ### 2026-06
 
-- **2026-06** · 诺奖得主 John Jumper 从 Google 跳槽 Anthropic
-  2024 诺贝尔化学奖得主（AlphaFold）、DeepMind VP 转投 Anthropic。
-- **2026-06** · Noam Shazeer 从 Google 跳槽 OpenAI
-  Transformer 论文联合作者、Gemini 联合负责人；Google 2024 年花 27 亿美元将其从 Character.AI 拉回，现再次离职。
+- **2026-06-19** · [AlphaFold 负责人 John Jumper 离职 Google DeepMind，加入 Anthropic](https://aihot.virxact.com/items/cmql4yj5e014zsllucl69g3l6)
+  2024 诺贝尔化学奖得主（AlphaFold）、DeepMind VP 转投 Anthropic，Hassabis 发文送别。
+- **2026-06-18** · [Transformer 共同作者 Noam Shazeer 加入 OpenAI](https://aihot.virxact.com/items/cms3g97yf01kurondgk2tzruf)
+  Transformer 论文联合作者、Gemini 联合负责人；Google 2024 年花 27 亿美元将其从 Character.AI 拉回，现再次离职（OpenAI 首席研究官 Mark Chen 官宣）。
+- **2026-06-16** · [SpaceX 全股收购 Cursor](https://aihot.virxact.com/items/cmqgp6tn201qhslic36a6ka8v)
+  Cursor CEO Michael Truell 官宣被 SpaceX 全股收购「联合构建有用 AI」；IT之家 6-9 已报道 SpaceX 手握 600 亿美元收购选择权——继 2 月吞并 xAI 后 SpaceX 再收 AI 编程独角兽。⚠️ 两笔 SpaceX 并购规模极端，真实性均待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
+- **2026-06-15** · [Salesforce 以 36 亿美元收购 AI 客服平台 Fin](https://aihot.virxact.com/items/cmqfc38a1005fsl2a21dido83)
+  TechCrunch 报道，AI 客服赛道迄今最大并购之一。
+- **2026-06-11** · [OpenAI 收购 Ona](https://aihot.virxact.com/items/cmq9q3mrj0e8jslld20gniuzv)
+  官方公告收购 Ona 以增强 Codex 云端执行能力；同期安全研究者 Clint Gibler 等加入 OpenAI 领导网络安全团队。
+
+### 2026-05
+
+- **2026-05-19** · [OpenAI 联合创始人 Karpathy 官宣加盟 Anthropic](https://aihot.virxact.com/items/cmpdajrl2029rslk1p5isukcd)
+  IT之家报道，卡帕西重返大模型研发一线，加盟前 OpenAI 竞争对手。
+- **2026-05-18** · [Anthropic 收购 Stainless](https://aihot.virxact.com/items/cmpbgh7e51779slnz95461dox)
+  官方 Newsroom 公告收购 SDK 与 MCP 服务器工具开发商 Stainless，补强开发者生态。
+
+### 2026-04
+
+- **2026-04-27** · [国家发改委禁止外资收购 Manus，Meta 20 亿美元并购流产](https://aihot.virxact.com/items/cmogzjowl01luslwpctabak64)
+  发改委依法对外资收购 Manus 项目作出禁止投资决定（IT之家），央视解读为封堵「洗澡式出海」；Meta 随即准备撤销 20 亿美元收购（TechCrunch 6-14 确认启动撤销）。
 
 ### 2026-03
 
+- **2026-03-19** · [OpenAI 将收购 Astral](https://aihot.virxact.com/items/cmnw1xr500070slc3lh9c3hpi)
+  官方公告将收购开发者工具公司 Astral，OpenAI 首次将开发者基础设施团队整体并入。
 - **2026-03-11** · [Google 完成 320 亿美元收购 Wiz](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/)
   Google 史上最大并购（原 2025-03 宣布，2026-03 完成）；Wiz 并入 Google Cloud 但保留品牌。
+- **2026-03-10** · [Yann LeCun 等联合创办的 AMI Labs 正式亮相](https://aihot.virxact.com/items/cmnw1yxbf01mmslc36t4q17dw)
+  LeCun 官宣 Advanced Machine Intelligence（AMI） Labs，谢赛宁（Saining Xie）等联合加入——顶级研究员「下山创业」浪潮又一标志。
+
+### 2026-02
+
+- **2026-02-24** · [Anthropic 收购 Vercept](https://aihot.virxact.com/items/cmnw1xugc00eqslc37cpu40e9)
+  官方 Newsroom 公告收购 Vercept，以推进 Claude 的 computer use 能力。
+- **2026-02-02** · [SpaceX 收购 xAI](https://aihot.virxact.com/items/cmnwsvjeh005aslteqk9i56ip)
+  xAI 官方宣布被 SpaceX 收购，Musk 将 xAI 并入航天体系（合并后以「SpaceXAI」名义活动）——AI 军备竞赛出现「行星尺度」玩家。⚠️ 合并体估值 1.25 万亿美元规模极端，真实性待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)；旁证：x.ai 官网署名已变更 SpaceXAI、06-27 注册商标）。
 
 ### 2026-01
 

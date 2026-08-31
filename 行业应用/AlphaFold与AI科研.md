@@ -4,7 +4,7 @@
 别名: [AlphaFold, AI for Science, 蛋白质结构预测]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Google DeepMind, Isomorphic Labs]
 ---
 
@@ -14,11 +14,37 @@
 
 ## 概述
 
-AlphaFold 是 DeepMind 的蛋白质结构预测系统：2020 年 AlphaFold2 在 CASP14 上「解决」了困扰生物学界 50 年的蛋白质折叠问题；2022 年公开 2.14 亿个蛋白质结构预测数据库；2024 年 AlphaFold3 扩展至蛋白质与 DNA/RNA/小分子的相互作用预测。同年 Hassabis 与 Jumper 获诺贝尔化学奖。
+AlphaFold 是 DeepMind 的蛋白质结构预测系统：2020 年 AlphaFold2 在 CASP14 上「解决」了困扰生物学界 50 年的蛋白质折叠问题；2022 年公开 2.14 亿个蛋白质结构预测数据库；2024 年 AlphaFold3 扩展至蛋白质与 DNA/RNA/小分子的相互作用预测。同年 Hassabis 与 Jumper 获诺贝尔化学奖。2026 年赛道进入巨头混战：OpenAI 发布生命科学模型 GPT-Rosalind、Anthropic 上线 Claude Science，AI 数学系统接连攻克悬置数十年的难题；核心人物 John Jumper 同年离开 DeepMind 加入 Anthropic。
 
 该线索以 AlphaFold 为主轴，追踪 AI 在科学研究（生物、材料、气象等）中的落地进展。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-03** · [阿里达摩院发布超导材料发现智能体 Elements Claw](https://aihot.virxact.com/items/cmr4ewvnu016msll54kwma7sx)
+  面向超导材料发现的 AI 智能体（IT之家报道）——中国团队在「AI 材料发现」赛道的最新落子，AI for Science 从生物与数学向凝聚态材料扩展。
+
+### 2026-06
+
+- **2026-06-30** · [Claude Science 科研工作台正式上线](https://aihot.virxact.com/items/cmr0xc7sg0040slb3yenz5k02)
+  Anthropic 官方发布科研工作台，把科学文献、数据与实验工作流接入 Claude 生态——继 OpenAI（GPT-Rosalind）与 Google（AlphaFold 系）之后，AI for Science 成为第三条巨头产品线。
+
+- **2026-06-19** · [AlphaFold 负责人 John Jumper 离职 DeepMind，加入 Anthropic](https://aihot.virxact.com/items/cmql4yj5e014zsllucl69g3l6)
+  诺贝尔化学奖得主、AlphaFold 核心创始人转投 Anthropic（Demis Hassabis 在 X 确认）——AI for Science 头牌科学家的流向成为前沿实验室人才争夺的标志性事件。
+
+### 2026-05
+
+- **2026-05-25** · [AlphaProof Nexus 攻克两道悬置 56 年的数学难题](https://aihot.virxact.com/items/cmpl3eupd0chwsl01o9tkqehz)
+  DeepMind 形式化证明系统以仅几百美元的计算成本解决数十年未解的数学问题（The Decoder 报道、IT之家跟进）——「AI 数学家」从竞赛级题目进阶到真实悬置难题。
+
+- **2026-05-20** · [OpenAI 宣布解决一道悬置 80 年的数学问题](https://aihot.virxact.com/items/cmpernh3q009mslbge6t5nqvg)
+  OpenAI 称用 AI 解决了一道存在 80 年的数学难题（TechCrunch 报道，The Decoder 称其为「AI 数学里程碑」）——AI 驱动的科学发现首次在数学最前沿打出标志性案例。
+
+### 2026-04
+
+- **2026-04-16** · [OpenAI 发布 GPT-Rosalind，面向生命科学研究](https://aihot.virxact.com/items/cmo1ver7v003yslbagj12d7u8)
+  OpenAI 官方发布生命科学专用推理模型，覆盖药物发现、基因组学分析与蛋白质推理等科研工作流——正面进入 AlphaFold/Isomorphic 的腹地，科研专用模型成为巨头新战场。
 
 ### 2026-01
 

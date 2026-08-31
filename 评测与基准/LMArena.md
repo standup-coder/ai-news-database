@@ -4,7 +4,7 @@
 别名: [Chatbot Arena, LMSYS, 竞技场]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [LMSYS, UC Berkeley, LMArena 公司]
 ---
 
@@ -19,6 +19,11 @@ LMArena（原 Chatbot Arena）由 UC Berkeley/LMSYS 于 2023 年 5 月推出：�
 该线索追踪 Arena 的机制演进、商业化与围绕榜单公信力的争议。
 
 ## 时间线
+
+### 2026-06
+
+- **2026-06-05** · [Arena 发布真实世界智能体排行榜 Agent Arena](https://aihot.virxact.com/items/cmq1hy4wt0fyrsltrxx64boz8)
+  LMArena 将盲测对战机制从聊天回复扩展到真实世界 AI 智能体任务，评测权力从「谁的回答更好」延伸到「谁的智能体能干活」。
 
 ### 2025-05
 

@@ -16,17 +16,17 @@ AI HOT selected snapshot 首次全量拉取
 """
 import argparse
 import gzip
+import http.client
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib import request as urlrequest
-from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import urlencode
 
-BASE = "https://aihot.virxact.com"
+EXPECTED_HOST = "aihot.virxact.com"
 ROOT = Path("/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror")
 STATE = ROOT / "state"
 RAW = ROOT / "raw"
@@ -44,22 +44,30 @@ def log(msg: str) -> None:
     (LOGS / "run.log").open("a", encoding="utf-8").write(line + "\n")
 
 
-EXPECTED_HOST = "aihot.virxact.com"
+API_PATH = "/api/v1/selected/snapshot"
 
 
 def get(params: dict) -> dict:
-    qs = urlencode(params)
-    url = f"{BASE}/api/v1/selected/snapshot?{qs}"
-    # SSRF 防护：仅允许访问预期主机上的 https 端点
-    parsed = urlparse(url)
-    if parsed.scheme != "https" or parsed.netloc != EXPECTED_HOST:
-        raise ValueError(f"拒绝非预期目标: {url}")
-    req = urlrequest.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
-    with urlrequest.urlopen(req, timeout=60) as resp:
+    # 请求参数白名单校验：仅接受整数/受限字符集，阻断任何注入进请求的可能
+    for k, v in params.items():
+        if not re.fullmatch(r"[A-Za-z0-9_]{1,32}", str(k)):
+            raise ValueError(f"非法参数名: {k!r}")
+        if isinstance(v, bool) or not isinstance(v, (int, float)):
+            if not (isinstance(v, str) and re.fullmatch(r"[A-Za-z0-9_\-]{1,128}", v)):
+                raise ValueError(f"非法参数值: {k}={v!r}")
+    # SSRF 防护：主机名固定为常量、由 HTTPSConnection 在连接层锁定，请求路径仅含已校验参数
+    path = API_PATH + "?" + urlencode(params)
+    conn = http.client.HTTPSConnection(EXPECTED_HOST, timeout=60)
+    try:
+        conn.request("GET", path, headers={"User-Agent": UA, "Accept": "application/json"})
+        resp = conn.getresponse()
         body = resp.read()
+        if resp.status != 200:
+            raise RuntimeError(f"HTTP {resp.status}: {body[:200]!r}")
         # 保存 etag 用于诊断
-        etag = resp.headers.get("ETag")
-        return json.loads(body), etag
+        return json.loads(body), resp.getheader("ETag")
+    finally:
+        conn.close()
 
 
 def save_raw_page(page_idx: int, data: dict) -> Path:

@@ -4,7 +4,7 @@
 别名: [ChatGPT, ChatGPT App]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [OpenAI]
 ---
 
@@ -14,11 +14,45 @@
 
 ## 概述
 
-ChatGPT 于 2022 年 11 月 30 日发布，两个月破亿月活，创下当时消费级应用增长纪录。此后它持续从「文本聊天框」向多模态助手演进：语音对话（Advanced Voice）、视觉理解、Canvas 协作画布、记忆、任务调度（Tasks）、Agent 执行（Operator/Agent Mode）等。
+ChatGPT 于 2022 年 11 月 30 日发布，两个月破亿月活，创下当时消费级应用增长纪录。此后它持续从「文本聊天框」向多模态助手演进：语音对话（Advanced Voice）、视觉理解、Canvas 协作画布、记忆、任务调度（Tasks）、Agent 执行（Operator/Agent Mode）等。2026 年它跨过 10 亿月活（Sensor Tower），产品重心转向广告、Office 插件与自主工作的智能体（ChatGPT Work）。
 
 该线索关注 ChatGPT 作为消费级产品的功能演进、用户增长与生态位变化——它是「AI 助手」这一新品类的事实标准。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-21** · [OpenAI 在 ChatGPT 中正式推出广告](https://aihot.virxact.com/items/cmrv2m1gu01w8binv2kiup4x2)
+  在 5 月官方灰度测试「购买 ChatGPT 广告」后全量上线——免费 AI 助手的广告变现路线落地。
+- **2026-07-09** · [ChatGPT Work 发布：可跨应用自主工作的 AI 智能体](https://aihot.virxact.com/items/cmrdrlair06hpih4bxerobguv)
+  官方发布，同日上线 ChatGPT Sites（把创意直接变成可发布网站）；CFO 7-29 称 ChatGPT Work 已成为 ARR 增长主力之一。
+
+### 2026-06
+
+- **2026-06-24** · [ChatGPT 语音最大规模升级：双向 AI 语音模型 Bidi 1 上线测试](https://aihot.virxact.com/items/cmqrl73460l9gslp5w33pryqi)
+  IT之家报道，语音交互从「能说」迈向双向全双工。
+- **2026-06-18** · [皮尤民调：63% 美国人认为 AI 发展太快，ChatGPT 使用率翻番](https://aihot.virxact.com/items/cmqjgpxud036hslmhb8vvzvs7)
+  IT之家报道，采用规模与公众忧虑同步攀升。
+- **2026-06-08** · [「Chat is dead」：OpenAI 准备全面改造 ChatGPT](https://aihot.virxact.com/items/cmq5akpwb062vslt2xnaqb2y6)
+  Ars Technica 报道产品哲学转向：从对话流转向任务/智能体界面；Brockman 7-30 承认当前桌面端「有点乱」，目标年底「零标签」。
+- **2026-06-04** · [ChatGPT 推出 Dreaming 记忆系统](https://aihot.virxact.com/items/cmpzosigs05knslkpwrpnvf65)
+  官方发布更强的记忆能力，更可靠地记住用户偏好——个性化底座升级。
+- **2026-06-03** · [Sensor Tower：ChatGPT 月活破 10 亿，史上最快](https://aihot.virxact.com/items/cmpxfhah803htslckwpwwf6sf)
+  IT之家援引第三方数据；4 月底 OpenAI 刚被曝未能实现 10 亿周活目标，月活口径率先达标。
+
+### 2026-05
+
+- **2026-05-19** · [ChatGPT 图像生成周使用量突破 15 亿次](https://aihot.virxact.com/items/cmpd5un01016gslk14jmz9h5z)
+  OpenAI 官方披露，图像成为第一大模态增长引擎。
+- **2026-05-15** · [ChatGPT 推出全新个人理财体验](https://aihot.virxact.com/items/cmp73t6dx078eslnzi1mmbcym)
+  官方发布，消费金融场景正式产品化。
+
+### 2026-03
+
+- **2026-03-24** · [ChatGPT 推出产品发现功能](https://aihot.virxact.com/items/cmnw1xr50006xslc3xva5h1ha)
+  官方发布购物/商品发现场景，向电商入口迈步。
+- **2026-03-05** · [ChatGPT for Excel 及全新金融数据集成发布](https://aihot.virxact.com/items/cmnw1xr50007lslc30j3neuwr)
+  官方发布，ChatGPT 以集成形态进入 Office 办公场景（5 月扩展至 Google Sheets 插件）。
 
 ### 2025-04
 

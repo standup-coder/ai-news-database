@@ -13,17 +13,16 @@ AI HOT 每日增量 changes 同步
 """
 import argparse
 import gzip
+import http.client
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib import request as urlrequest
-from urllib.error import HTTPError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import urlencode
 
-BASE = "https://aihot.virxact.com"
 ROOT = Path("/Users/allengaller/Documents/GitHub/standup-coder/ai-news-database/aihot-mirror")
 STATE = ROOT / "state"
 LOGS = ROOT / "logs"
@@ -39,27 +38,32 @@ def log(msg):
 
 
 EXPECTED_HOST = "aihot.virxact.com"
+API_PATH = "/api/v1/selected/changes"
 
 
 def get_changes(cursor, limit=100):
-    qs = urlencode({"cursor": cursor, "limit": limit})
-    url = f"{BASE}/api/v1/selected/changes?{qs}"
-    # SSRF 防护：仅允许访问预期主机上的 https 端点
-    parsed = urlparse(url)
-    if parsed.scheme != "https" or parsed.netloc != EXPECTED_HOST:
-        raise ValueError(f"拒绝非预期目标: {url}")
-    req = urlrequest.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+    # cursor 来自本地 state/CLI 参数：先做严格白名单校验，阻断任何注入进请求的可能
+    if not isinstance(cursor, str) or not re.fullmatch(r"[A-Za-z0-9_\-]{1,128}", cursor):
+        raise ValueError(f"非法 cursor: {cursor!r}")
+    limit = int(limit)
+    # SSRF 防护：主机名固定为常量、由 HTTPSConnection 在连接层锁定，请求路径仅含已校验参数
+    path = API_PATH + "?" + urlencode({"cursor": cursor, "limit": limit})
+    conn = http.client.HTTPSConnection(EXPECTED_HOST, timeout=60)
     try:
-        with urlrequest.urlopen(req, timeout=60) as resp:
-            return json.loads(resp.read()), None
-    except HTTPError as e:
-        if e.code == 409:
+        conn.request("GET", path, headers={"User-Agent": UA, "Accept": "application/json"})
+        resp = conn.getresponse()
+        body = resp.read()
+        if resp.status == 409:
             try:
-                problem = json.loads(e.read())
+                problem = json.loads(body)
             except Exception:
                 problem = {"code": "snapshot_required"}
             return None, problem
-        raise
+        if resp.status != 200:
+            raise RuntimeError(f"HTTP {resp.status}: {body[:200]!r}")
+        return json.loads(body), None
+    finally:
+        conn.close()
 
 
 def save_raw_changes(page_idx, data):

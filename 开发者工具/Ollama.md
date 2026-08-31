@@ -4,7 +4,7 @@
 别名: [ollama]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-07-30
+更新: 2026-08-31
 关键角色: [Ollama, Meta, llama.cpp 社区]
 ---
 
@@ -14,11 +14,21 @@
 
 ## 概述
 
-Ollama 2023 年由前 Docker 员工创立，以「Docker 式体验跑本地大模型」为定位：`ollama run llama3` 一条命令完成模型下载、量化加载与服务暴露，底层基于 llama.cpp 推理。它把开源模型的使用门槛从「会编译、懂量化」降到「会敲命令」，配合 OpenAI 兼容 API 成为本地开发、隐私敏感场景与边缘部署的默认选择。
+Ollama 2023 年由前 Docker 员工创立，以「Docker 式体验跑本地大模型」为定位：`ollama run llama3` 一条命令完成模型下载、量化加载与服务暴露，底层基于 llama.cpp 推理。它把开源模型的使用门槛从「会编译、懂量化」降到「会敲命令」，配合 OpenAI 兼容 API 成为本地开发、隐私敏感场景与边缘部署的默认选择。2026 年 7 月，Ollama 完成 8800 万美元融资。
 
 该线索追踪 Ollama 的产品演进与本地推理生态（llama.cpp、量化格式、桌面端应用）的发展。
 
 ## 时间线
+
+### 2026-07
+
+- **2026-07-20** · [Ollama 获 8800 万美元融资](https://aihot.virxact.com/items/cmrsl3weh0a3pbiwmdqtrjycc)
+  Hacker News 报道 Ollama 获 8800 万美元融资以加速开放模型生态；此前 Tomer Tunguz 的 VC 分析披露本轮为 Theory 领投的 B 轮，开发者数已达 890 万。
+
+### 2026-02
+
+- **2026-02-20** · [GGML 与 llama.cpp 加入 Hugging Face](https://aihot.virxact.com/items/cmoegbhaj009bslxxx04qbbsb)
+  Hugging Face 官方博客宣布 GGML/llama.cpp 项目加入 HF「以确保 Local AI 的长期进展」，Ollama 赖以构建的底层推理引擎获得长期组织与资金保障。
 
 ### 2025-07
 

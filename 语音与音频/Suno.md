@@ -4,7 +4,7 @@
 别名: [Suno AI, Suno Music]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-28
+更新: 2026-08-31
 关键角色: [Suno]
 ---
 
@@ -22,10 +22,20 @@ Suno 与竞品 Udio 一起定义了「文生音乐」赛道，同时也成为唱
 
 ### 2026-07
 
-- **2026-07-31** · 慕尼黑地区法院裁定 Suno 侵犯版权，驳回合理使用抗辩
+- **2026-07-31** · [慕尼黑地区法院裁定 Suno 侵犯版权，驳回合理使用抗辩](https://aihot.virxact.com/items/cmsa9czys01chrojdrdvterw0)
   GEMA 诉 Suno 案败诉（Reuters、DW、Variety、Forbes、Music Business Worldwide 多源一致报道）——生成式 AI 音乐训练数据的版权抗辩在欧盟司法辖区首次受挫。
 - **2026-07** · Suno Lyrics 等更新
   持续改进 v5.5，包括 7 月的 Lyrics 更新。
+
+### 2026-06
+
+- **2026-06-03** · [Suno 完成 4 亿美元 D 轮融资](https://aihot.virxact.com/items/cmpy7c7v402flslaxwaf0jfr1)
+  官方 X 宣布；IT之家报道其「深陷版权诉讼仍受资本热捧」，版权战未决下资本继续加注 AI 音乐赛道。
+
+### 2026-05
+
+- **2026-05-20** · [Stability AI 推出 Stability Audio 3.0](https://aihot.virxact.com/items/cmpe8vto10ah2slk1zwrd61c2)
+  IT之家报道，可生成最长 6 分钟专业级歌曲，文生音乐赛道竞品加速追击 Suno。
 
 ### 2026-03
 

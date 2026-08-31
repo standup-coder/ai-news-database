@@ -4,7 +4,7 @@
 别名: [Claude Code, Anthropic 编码助手]
 状态: 活跃
 创建: 2026-07-21
-更新: 2026-08-03
+更新: 2026-08-31
 关键角色: [Anthropic]
 ---
 
@@ -29,14 +29,22 @@ Claude Code 是 Anthropic 于 2025 年 2 月推出的 agentic 编码工具，定
 
 - **2026-06-29 至 07-03** · Claude Code Week 27 更新
   内置 Explore agent 改为继承主会话模型（上限 Opus）而非 Haiku；background agents 持续更新。
+- **2026-06-09** · [Claude Code 支持嵌套子智能体](https://aihot.virxact.com/items/cmq6ndeig09zysl5ic7g7i7ts)
+  Claude Code 负责人 Boris Cherny 官宣支持嵌套子智能体，agent 可自主生成并调用 subagent 处理子任务，多 agent 编排能力升级，与 Cursor 预告的「递归子 agent」方向看齐。
 
 ### 2026-05
 
+- **2026-05-28** · [在 Claude Code 中引入动态工作流](https://aihot.virxact.com/items/cmpprfa7400hmslm6nclfncqk)
+  官方工程博客介绍「动态工作流」机制，任务执行路径可按上下文动态生成与调整；同期 v2.1.154 版本更新加入对 Opus 4.8 的支持。
+- **2026-05-13** · [Claude 付费计划将提供月度编程使用额度](https://aihot.virxact.com/items/cmp4c7tem04o0sljxh2fqtht1)
+  官方 X 账号 Claude Devs 宣布付费计划提供月度编程使用额度，Claude Code 的计费向「订阅内含额度」模式调整。
 - **2026-05** · Code with Claude 2026 大会
   旧金山举办，发布 managed offerings 与 Claude API 平台相关公告。
 
 ### 2026-03
 
+- **2026-03-13** · [Opus 4.6 1M 成为 Claude Code 默认模型](https://aihot.virxact.com/items/cmnw1yon300j6slc3vjbweaeh)
+  Boris Cherny 宣布 100 万 token 上下文的 Opus 4.6 成为 Max、Team 及企业版 Claude Code 用户的默认模型，百万级长上下文在终端编码场景成为标配。
 - **2026-03** · Claude Code 月度更新
   新增 computer use、auto mode、remote control、scheduled tasks、visuals 等。
 
