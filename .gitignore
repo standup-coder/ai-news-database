@@ -65,3 +65,6 @@ aihot-mirror/state/items.jsonl
 aihot-mirror/raw/
 aihot-mirror/logs/
 
+
+# Mimosa 扫描器本地状态
+.mimosa/
