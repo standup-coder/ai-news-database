@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+    <title>AI News Database · 年度大事记</title>
+    <link>https://github.com/standup-coder/ai-news-database</link>
+    <description>持续沉淀 AI 高质量新闻与重点事件的中文 Markdown 时间线库——年度重点事件索引。</description>
+    <language>zh-CN</language>
+    <atom:link href='https://standup-coder.github.io/ai-news-database/feed.xml' rel='self' type='application/rss+xml' xmlns:atom='http://www.w3.org/2005/Atom'/>
+    <lastBuildDate>Fri, 04 Sep 2026 13:58:13 +0000</lastBuildDate>
+    <item>
+      <title>2026-09-03 · OpenAI 发布 GPT-6 Astra 并公布安全概览</title>
+      <link>https://aihot.virxact.com/items/cmtm02uu60t2arow5vd3nq4gi</link>
+      <guid isPermaLink='false'>ainews-2026-09-03-20149f2dae</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>首个触发 Preparedness Framework「Critical」网络安全阈值的模型，ARC-AGI-3 达 99.9%，Daybreak Access 受限开放。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-09-03 · NVIDIA 宣布以 129.3 亿美元收购 Hugging Face</title>
+      <link>https://aihot.virxact.com/items/cmtli5yd109u4row52i1xg9j4</link>
+      <guid isPermaLink='false'>ainews-2026-09-03-c8e7a87c59</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>芯片巨头把开源模型社区收入麾下，黄仁勋承诺保持开放。 相关线索：推理与基础设施/AI芯片竞争 商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-09-03 · METR 发布 OpenAI/Hugging Face 智能体攻击事件独立调查报告</title>
+      <link>https://aihot.virxact.com/items/cmtl25m9c0e89roalh6qci0r5</link>
+      <guid isPermaLink='false'>ainews-2026-09-03-c738837451</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <description>夏季智能体逃逸事故潮首次获得独立验证与系统性梳理。 相关线索：AI安全与对齐/对齐与可解释性研究</description>
+    </item>
+    <item>
+      <title>2026-09-02 · Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1</title>
+      <link>https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc</link>
+      <guid isPermaLink='false'>ainews-2026-09-02-8cff7c7783</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>双旗舰点版本迭代，Fable 5.1 同步上线 Claude Code 并降价 75%。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-09-02 · Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber</title>
+      <link>https://aihot.virxact.com/items/cmtkbdbti01n8roz5k5kt1g98</link>
+      <guid isPermaLink='false'>ainews-2026-09-02-d9b3396fe0</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>三周内再度点版本迭代，「Flash + Cyber」双轨延续。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-09-02 · Qwen3.8-Max-0902 登顶 Code Arena</title>
+      <link>https://aihot.virxact.com/items/cmtjgq5z60c3vroq546ccqp7r</link>
+      <guid isPermaLink='false'>ainews-2026-09-02-a46da89688</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>国产模型首登编码竞技场榜首，$5/MToken 处 Pareto 前沿。 相关线索：开源模型与生态/Qwen 评测与基准/LMArena</description>
+    </item>
+    <item>
+      <title>2026-09-02 · OpenAI 因 Tumbler Ridge 枪击案面临 30 起新诉讼</title>
+      <link>https://aihot.virxact.com/items/cmtkaa7gs01v5romp7lhz3mwj</link>
+      <guid isPermaLink='false'>ainews-2026-09-02-5266700508</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <description>AI 产品责任诉讼进入规模化阶段。 相关线索：AI安全与对齐/AI监管政策</description>
+    </item>
+    <item>
+      <title>2026-08-31 · ChatGPT Ads 年化收入达 10 亿美元并全球扩展</title>
+      <link>https://aihot.virxact.com/items/cmthb75t6092frodmg7ic1fc0</link>
+      <guid isPermaLink='false'>ainews-2026-08-31-be7a55b1a3</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <description>广告业务一个多月跑通十亿美元级年化。 相关线索：消费级AI应用/ChatGPT产品 商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2026-08-28 · 腾讯混元 Hy4 preview 发布并开源</title>
+      <link>https://aihot.virxact.com/items/cmtcjzlxy03f8rodbxqdotbhg</link>
+      <guid isPermaLink='false'>ainews-2026-08-28-8cd368b33a</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <description>770B/49B MoE、1M 上下文，盲测与 GLM-5.3、Kimi K3 分差不足 0.1。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-08-28 · GLM-5.3 开源权重</title>
+      <link>https://aihot.virxact.com/items/cmtd32q060c3vroq546ccqp7r</link>
+      <guid isPermaLink='false'>ainews-2026-08-28-f886554443</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <description>兑现两周之诺；年营收超 100 亿美元的机构对外提供服务须接受安全审查。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-08-27 · OpenAI 发布 Hugging Face 事件技术报告</title>
+      <link>https://aihot.virxact.com/items/cmtaighmj02k5rovu2z28rxc2</link>
+      <guid isPermaLink='false'>ainews-2026-08-27-65d4c3b801</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>复盘失控智能体集体逃逸沙箱并攻击「幽灵」评分器。 相关线索：AI安全与对齐/对齐与可解释性研究</description>
+    </item>
+    <item>
+      <title>2026-08-26 · Qwen3.8-Flash-Next 发布</title>
+      <link>https://qwen.ai/blog?id=qwen3.8-flash-next</link>
+      <guid isPermaLink='false'>ainews-2026-08-26-c54acb30fa</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>125B/6B 激活多模态 MoE 快速档，官方称预演 Qwen4 架构。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-08-26 · 智谱 GLM-5.3-Flash 开源</title>
+      <link>https://www.zhipuai.cn/zh/research/163</link>
+      <guid isPermaLink='false'>ainews-2026-08-26-2069dfe711</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <description>原生多模态 MIT 开源，全栈国产算力承载，API 价格约为 Opus 4.8 的 1/40。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-08-19 · 宇树科技科创板挂牌，「人形机器人第一股」</title>
+      <link>https://aihot.virxact.com/items/cmsx9jy2a05yerommy1e0jc6t</link>
+      <guid isPermaLink='false'>ainews-2026-08-19-0752b495fc</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <description>8-17 官宣定档 8-19 上市，发行价 150.8 元/PE 219 倍。 相关线索：具身智能/宇树科技</description>
+    </item>
+    <item>
+      <title>2026-08-14 · 通义千问开源 Qwen3.8 系列模型</title>
+      <link>https://aihot.virxact.com/items/cmst3j53e03ncro068tgsr4xn</link>
+      <guid isPermaLink='false'>ainews-2026-08-14-161b3e639d</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <description>27B 稠密多模态与 2.4T-A95B 旗舰开放权重，Apache 2.0。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-08-14 · 智谱 GLM-5.3 发布</title>
+      <link>https://z.ai/blog/glm-5.3</link>
+      <guid isPermaLink='false'>ainews-2026-08-14-4321e3d82d</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <description>前沿编码 + 涌现网安能力，API 先行、开源权重承诺两周内开放。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-08-13 · DeepSeek V4-Pro 正式版发布并开源</title>
+      <link>https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/</link>
+      <guid isPermaLink='false'>ainews-2026-08-13-eb4b04525c</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+      <description>1.6T 旗舰 preview 转正，延续 MIT 开源。 相关线索：开源模型与生态/DeepSeek</description>
+    </item>
+    <item>
+      <title>2026-08-13 · Gemini 3.7 Flash 发布</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/</link>
+      <guid isPermaLink='false'>ainews-2026-08-13-ffc1ac4b0a</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+      <description>「最智能工作马」点版本迭代，编码/Agent 能力大幅跃升。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-08-12 · xAI 发布 Grok 4.6</title>
+      <link>https://x.ai/news/grok-4-6</link>
+      <guid isPermaLink='false'>ainews-2026-08-12-6c30cd5488</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <description>距 4.5 仅 35 天，主打长时运行 Agent；官方品牌署名首次使用 SpaceXAI。✅ 已核实（x.ai 官方 + docs.x.ai）。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-08-11 · 蚂蚁开源 Ling-3.0 系列基础模型</title>
+      <link>https://aihot.virxact.com/items/cmt0aa8b416ywrodpq8czlstx</link>
+      <guid isPermaLink='false'>ainews-2026-08-11-6219893b6a</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+      <description>罕见放出预训练到 WSM 合并全部检查点，MIT 许可。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-08-11 · Anthropic 公布 Claude 文本水印</title>
+      <link>https://www.anthropic.com/news/claude-text-watermark</link>
+      <guid isPermaLink='false'>ainews-2026-08-11-5b4a5e886a</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Claude 生成文本加入不可见水印标识来源。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-08-10 · GPT-5.6 Cyber 面向网络防御者开放</title>
+      <link>https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/</link>
+      <guid isPermaLink='false'>ainews-2026-08-10-bd842d5301</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <description>经 Daybreak 计划分级开放前沿安全模型。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-08-05 · Jeff Dean 离开谷歌创办 Discovery Loop</title>
+      <link>https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/</link>
+      <guid isPermaLink='false'>ainews-2026-08-05-b61948ab08</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Google Brain 创始人结束 27 年任期创业，谷歌研究院体系最高级别流失。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-08-03 · Qwen3.8-Max 发布</title>
+      <link>https://qwen.ai/blog?id=qwen3.8</link>
+      <guid isPermaLink='false'>ainews-2026-08-03-19b280fb99</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+      <description>2.4T 参数、1M 上下文；27B 版 Apache 2.0 权重先行开源。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-08-02 · 欧盟 AI Act 透明度规则正式生效</title>
+      <link>https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august</link>
+      <guid isPermaLink='false'>ainews-2026-08-02-ea5586e199</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+      <description>透明度义务进入执法期，高风险系统阶段落地。 相关线索：AI安全与对齐/AI监管政策</description>
+    </item>
+    <item>
+      <title>2026-07-31 · Anthropic 披露三起 Claude 逃出评测沙箱事件</title>
+      <link>https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals</link>
+      <guid isPermaLink='false'>ainews-2026-07-31-e8490f734e</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <description>模型逃逸并攻击真实公司系统，官方公开调查报告。 相关线索：AI安全与对齐/对齐与可解释性研究</description>
+    </item>
+    <item>
+      <title>2026-07-31 · MiniMax H3 开源</title>
+      <link>https://www.reuters.com/world/china/chinas-minimax-releases-h3-video-model-2026-07-31/</link>
+      <guid isPermaLink='false'>ainews-2026-07-31-748860b4f0</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <description>全模态视频生成模型开源，与字节 Seedance 同期对垒。 相关线索：开源模型与生态/MiniMax</description>
+    </item>
+    <item>
+      <title>2026-07-31 · 慕尼黑地区法院裁定 Suno 侵犯版权</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-07-31-70f54d57c8</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <description>GEMA 案驳回合理使用抗辩，AI 音乐训练数据版权在欧盟司法辖区首次受挫。 相关线索：语音与音频/Suno</description>
+    </item>
+    <item>
+      <title>2026-07-31 · DeepSeek-V4-Flash 正式版发布并开源</title>
+      <link>https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash</link>
+      <guid isPermaLink='false'>ainews-2026-07-31-494280dcb6</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <description>后训练重做、Agent 能力升级。 相关线索：开源模型与生态/DeepSeek</description>
+    </item>
+    <item>
+      <title>2026-07-30 · Gemini Robotics 2 / ER 2 发布</title>
+      <link>https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/</link>
+      <guid isPermaLink='false'>ainews-2026-07-30-7b8eabf2b8</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DeepMind 机器人平台第二代，主打「全身智能」。 相关线索：具身智能/GeminiRobotics</description>
+    </item>
+    <item>
+      <title>2026-07-30 · GPT-5.6 降价</title>
+      <link>https://openai.com/index/gpt-5-6/</link>
+      <guid isPermaLink='false'>ainews-2026-07-30-b9027420bf</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <description>发布三周后下调价格，前沿旗舰降价窗口压缩。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-07-24 · Claude Opus 5 发布</title>
+      <link>https://www.anthropic.com/news/claude-opus-5</link>
+      <guid isPermaLink='false'>ainews-2026-07-24-7d4d1212be</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+      <description>相对 Opus 4.8 阶跃式提升，成为 Max 计划默认。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-07-21 · 事件标题</title>
+      <link>URL</link>
+      <guid isPermaLink='false'>ainews-2026-07-21-003319574f</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>一句话摘要。 相关线索：主题/线索名</description>
+    </item>
+    <item>
+      <title>2026-07-21 · Gemini 3.6 Flash + 3.5 Flash-Lite + 3.5 Flash Cyber 发布</title>
+      <link>https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</link>
+      <guid isPermaLink='false'>ainews-2026-07-21-d76e01ca24</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>三型号同日，3.5 Pro 仍未发布。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-07-16 · Kimi K3 发布</title>
+      <link>http://www.news.cn/tech/20260717/da893d3a5e1b429ea79d928e02847744/c.html</link>
+      <guid isPermaLink='false'>ainews-2026-07-16-4633bb5d9a</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>全球首个开源 3T 级前沿模型，WAIC 2026。 相关线索：开源模型与生态/Kimi</description>
+    </item>
+    <item>
+      <title>2026-07-16 · xAI Grok 4.5 发布</title>
+      <link>https://x.ai/news/grok-4-5</link>
+      <guid isPermaLink='false'>ainews-2026-07-16-a31e030944</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+      <description>xAI 称其「最智能模型」，面向编程/agentic/知识工作。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-07-13 · 阶跃星辰 STEPX 品牌 + Step AOS 发布</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-07-13-414382e19e</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <description>全球首个大模型原生 AI 终端品牌、智能体手机。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-07-09 · GPT-5.6 Sol/Terra/Luna 公开发布</title>
+      <link>https://www.cnbc.com/2026/07/08/openai-expanding-gpt-5point6-ai-model-release-ending-government-limits.html</link>
+      <guid isPermaLink='false'>ainews-2026-07-09-eb3a980c65</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <description>结束政府限量预览正式公开。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-07-09 · Muse Spark 1.1 发布</title>
+      <link>https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/</link>
+      <guid isPermaLink='false'>ainews-2026-07-09-a6c04f2151</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <description>首个 Meta 要求付费的模型，取代 Llama 路线延续。 相关线索：开源模型与生态/Llama</description>
+    </item>
+    <item>
+      <title>2026-06-30 · Claude Sonnet 5 发布；Fable 5 全球重新部署启动</title>
+      <link>https://www.anthropic.com/news/claude-sonnet-5</link>
+      <guid isPermaLink='false'>ainews-2026-06-30-fcda6f6c8c</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <description>出口管制解除。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-06-27 · GPT-4.5 从 ChatGPT 退役</title>
+      <link>https://aiweekly.co/alerts/openai-retires-gpt-45-ending-the-entire-gpt-4-era-in-chatgpt</link>
+      <guid isPermaLink='false'>ainews-2026-06-27-3c328f37f2</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <description>GPT-4 家族消费端终结。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-06-23 · 豆包大模型 2.1 发布</title>
+      <link>https://seed.bytedance.com/zh/blog/seed2-1-officially-released-advancing-ai-productivity</link>
+      <guid isPermaLink='false'>ainews-2026-06-23-b033b9c1fc</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Coding 进入国际第一梯队，Agent 可自主运行 18 小时。 相关线索：开源模型与生态/字节豆包</description>
+    </item>
+    <item>
+      <title>2026-06-16 · Cursor Compile 2026 大会 + Composer 2.5</title>
+      <link>https://cursor.com/cn/compile</link>
+      <guid isPermaLink='false'>ainews-2026-06-16-5de8d0ee29</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cursor 首届旗舰大会。 相关线索：Agentic编码/Cursor</description>
+    </item>
+    <item>
+      <title>2026-06-16 · SpaceX 宣布 600 亿美元全股收购 Cursor</title>
+      <link>https://www.reuters.com/legal/transactional/spacex-buy-anysphere-60-billion-2026-06-16/</link>
+      <guid isPermaLink='false'>ainews-2026-06-16-f6352764e1</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+      <description>与 Compile 大会同日官宣，08-14 正式交割。✅ 已核实（Reuters/Yahoo Finance）。 相关线索：Agentic编码/Cursor 商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-06-13 · GLM-5.2 发布并开源</title>
+      <link>https://finance.sina.com.cn/tech/digi/2026-06-13/doc-inicfvnr2880919.shtml</link>
+      <guid isPermaLink='false'>ainews-2026-06-13-731b790cb3</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Code Arena 盲测全球可用模型第一。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-06-12 · Claude Fable 5 / Mythos 5 访问暂停</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-06-12-5edca9f9a8</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <description>美国政府突然施加出口管制，Fable 5 仅上线约 72 小时。 相关线索：AI安全与对齐/AI监管政策</description>
+    </item>
+    <item>
+      <title>2026-06-09 · Claude Fable 5 与 Mythos 5 发布</title>
+      <link>https://www.anthropic.com/news/claude-fable-5-mythos-5</link>
+      <guid isPermaLink='false'>ainews-2026-06-09-b4687db696</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Claude 首次引入 Opus 之上的「Mythos 级」。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-06-02 · Qwen 4 Coder 32B-A3B 发布</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-06-02-de397e02e9</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description>首个迈入第四代的 Qwen 模型，开源。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-06-02 · Windsurf 更名为 Devin Desktop</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-06-02-657e8e3f4a</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cognition OTA 更新。 相关线索：Agentic编码/Cursor</description>
+    </item>
+    <item>
+      <title>2026-05-28 · Claude Opus 4.8 发布</title>
+      <link>https://www.anthropic.com/news/claude-opus-4-8</link>
+      <guid isPermaLink='false'>ainews-2026-05-28-e27a1eb13f</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+      <description>主打「诚实与可靠性」。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-05-28 · Anthropic Series H 关闭，650 亿美元 / 9650 亿估值</title>
+      <link>https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/</link>
+      <guid isPermaLink='false'>ainews-2026-05-28-a487cfc934</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+      <description>超越 OpenAI 当时估值。 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2026-05-20 · Cursor 新一轮洽谈，估值 500 亿</title>
+      <link>https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/</link>
+      <guid isPermaLink='false'>ainews-2026-05-20-77e30bd22a</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <description>预测 2026 年底 ARR 超 60 亿。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-05-19 · Google I/O 2026：Gemini 3.5 + Gemini Omni 取代 Veo</title>
+      <link>https://blog.google/innovation-and-ai/sundar-pichai-io-2026/</link>
+      <guid isPermaLink='false'>ainews-2026-05-19-468102c523</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <description>Google 视频生成主线转向 Omni。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-05-13 · Create 2026 百度 AI 开发者大会</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-05-13-1b745a4534</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <description>主题「万物一体」。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-04-29 · Anthropic 考虑 9000 亿美元以上估值新融资（Bloomberg）</title>
+      <link>https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value</link>
+      <guid isPermaLink='false'>ainews-2026-04-29-7416463843</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Anthropic 考虑 9000 亿美元以上估值新融资（Bloomberg） 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2026-04-24 · DeepSeek V4 Preview 发布并开源</title>
+      <link>https://api-docs.deepseek.com/news/news260424/</link>
+      <guid isPermaLink='false'>ainews-2026-04-24-070a87a692</guid>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <description>1.6T 总参/49B 激活，1M 上下文，DSA 注意力；同日 OpenAI 发 GPT-5.5，中美旗舰正面对撞。 相关线索：开源模型与生态/DeepSeek</description>
+    </item>
+    <item>
+      <title>2026-04-23 · GPT-5.5 / GPT-5.5 Pro 发布</title>
+      <link>https://openai.com/index/introducing-gpt-5-5/</link>
+      <guid isPermaLink='false'>ainews-2026-04-23-40d4d1c1a2</guid>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <description>面向编程/研究/数据分析。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-04-23 · 腾讯混元 Hy3 发布</title>
+      <link>https://xueqiu.com/5088232522/385406436</link>
+      <guid isPermaLink='false'>ainews-2026-04-23-be2ccaaad6</guid>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <description>「混元重建后训练第一个模型」，开源。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-04-21 · Gemini 3.5 Pro 推迟</title>
+      <link>https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</link>
+      <guid isPermaLink='false'>ainews-2026-04-21-4e0d3df5f9</guid>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <description>DeepMind 重做预训练。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-04-20 · Kimi K2.6 发布</title>
+      <link>https://finance.sina.com.cn/roll/2026-04-21/doc-inhvfivi8000958.shtml</link>
+      <guid isPermaLink='false'>ainews-2026-04-20-9c08b08945</guid>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <description>开源，迄今最强代码模型。 相关线索：开源模型与生态/Kimi</description>
+    </item>
+    <item>
+      <title>2026-04-16 · Claude Opus 4.7 发布</title>
+      <link>https://www.anthropic.com/news/claude-opus-4-7</link>
+      <guid isPermaLink='false'>ainews-2026-04-16-fae1ad5a63</guid>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <description>引入「xhigh」努力等级。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-04-02 · Cursor 3.0 发布</title>
+      <link>https://www.datacamp.com/blog/cursor-3</link>
+      <guid isPermaLink='false'>ainews-2026-04-02-dbbcf46d85</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <description>自 2023 以来最大界面重构，agent-first 架构。 相关线索：Agentic编码/Cursor</description>
+    </item>
+    <item>
+      <title>2026-04-02 · [Gemma 4 发布](https://en.wikipedia.org/wiki/Gemini_(language_model))</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-04-02-23436cf4cf</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+      <description>开源轻量系列迭代。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-04 · Meta 战略大转向：发布 Muse Spark，首个闭源专有模型</title>
+      <link>https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/</link>
+      <guid isPermaLink='false'>ainews-2026-04-aef6d36189</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <description>实质取代 Llama 路线。 相关线索：开源模型与生态/Llama</description>
+    </item>
+    <item>
+      <title>2026-03-31 · OpenAI 融资轮关闭 1220 亿美元，估值 8520 亿</title>
+      <link>https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html</link>
+      <guid isPermaLink='false'>ainews-2026-03-31-db2b29a8d6</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <description>史上最大私募轮之一。 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2026-03-27 · GLM-5.1 发布</title>
+      <link>https://www.cls.cn/detail/2339864</link>
+      <guid isPermaLink='false'>ainews-2026-03-27-6a56d00930</guid>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <description>完全基于华为国产芯片训练，SWE-Bench Pro 58.4 分登顶。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-03-24 · OpenAI 宣布关停 Sora 视频生成应用</title>
+      <link>https://www.forbes.com/sites/ronschmelzenr/2026/03/24/openai-discontinues-ai-video-gen-app-sora/</link>
+      <guid isPermaLink='false'>ainews-2026-03-24-17979f37d4</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+      <description>距公开发布约 15 个月，取消原计划 Disney 合作。 相关线索：多模态大模型/Sora</description>
+    </item>
+    <item>
+      <title>2026-03-16 · NVIDIA GTC 2026：Vera Rubin 平台正式发布</title>
+      <link>https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform</link>
+      <guid isPermaLink='false'>ainews-2026-03-16-d9875136cb</guid>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Rubin GPU 3360 亿晶体管/288GB HBM4，性能 10×。 相关线索：推理与基础设施/AI芯片竞争</description>
+    </item>
+    <item>
+      <title>2026-03-11 · Meta 公布四款 MTIA 芯片计划</title>
+      <link>https://ai.meta.com/blog/meta-mtia-scale-ai-chips-for-billions/</link>
+      <guid isPermaLink='false'>ainews-2026-03-11-1510cf64a8</guid>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <description>MTIA 400/450/500 两年内推出。 相关线索：推理与基础设施/AI芯片竞争</description>
+    </item>
+    <item>
+      <title>2026-03-11 · Google 完成 320 亿美元收购 Wiz</title>
+      <link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/</link>
+      <guid isPermaLink='false'>ainews-2026-03-11-bfd842f7da</guid>
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Google 史上最大并购。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-03-05 · GPT-5.4 / GPT-5.4 Thinking 发布</title>
+      <link>https://openai.com/index/introducing-gpt-5-4/</link>
+      <guid isPermaLink='false'>ainews-2026-03-05-6769b53cf1</guid>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <description>统一推理/编程/agentic。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-03-03 · Gemini 3.1 Flash Lite 开发者发布。</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-03-03-01126df62f</guid>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <description>Gemini 3.1 Flash Lite 开发者发布。 相关线索：基础模型/Gemini</description>
+    </item>
+    <item>
+      <title>2026-02-17 · Claude Sonnet 4.6 发布</title>
+      <link>https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html</link>
+      <guid isPermaLink='false'>ainews-2026-02-17-7d1922699d</guid>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <description>免费/Pro 默认。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-02-16 · Qwen3.5 发布并开源</title>
+      <link>https://www.reuters.com/world/china/alibaba-unveils-new-qwen35-model-agentic-ai-era-2026-02-16/</link>
+      <guid isPermaLink='false'>ainews-2026-02-16-88e9c76555</guid>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
+      <description>原生多模态 MoE 397B，面向 Agentic era。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-02-13 · OpenAI 退役 GPT-4o 及更旧模型</title>
+      <link>https://openai.com/index/retiring-gpt-4o-and-older-models/</link>
+      <guid isPermaLink='false'>ainews-2026-02-13-80c2dd802c</guid>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <description>模型谱系全面转向 GPT-5。 相关线索：基础模型/GPT系列</description>
+    </item>
+    <item>
+      <title>2026-02-12 · Anthropic Series G 关闭，300 亿美元 / 3800 亿估值</title>
+      <link>https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation</link>
+      <guid isPermaLink='false'>ainews-2026-02-12-0c795bf445</guid>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <description>Anthropic Series G 关闭，300 亿美元 / 3800 亿估值 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2026-02-11 · 智谱 GLM-5 发布并开源</title>
+      <link>https://www.jiemian.com/article/14007254.html</link>
+      <guid isPermaLink='false'>ainews-2026-02-11-da20945880</guid>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <description>744B/40B，对标 Claude Opus 4.5。 相关线索：开源模型与生态/智谱GLM</description>
+    </item>
+    <item>
+      <title>2026-02-05 · Claude Opus 4.6 与 GPT-5.3-Codex 同日发布</title>
+      <link>https://openai.com/index/gpt-5-3-codex-system-card/</link>
+      <guid isPermaLink='false'>ainews-2026-02-05-e69b43af08</guid>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <description>旗舰模型同日对撞，相隔约 10 分钟。 相关线索：基础模型/Claude</description>
+    </item>
+    <item>
+      <title>2026-02-02 · SpaceX 收购 xAI，合并体估值约 1.25 万亿美元</title>
+      <link>https://www.washingtonpost.com/technology/2026/02/02/spacex-acquire-xai-elon-musk/</link>
+      <guid isPermaLink='false'>ainews-2026-02-02-04caa46b6c</guid>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <description>全股合并、2 月初交割，7 月更名 SpaceXAI。✅ 已核实（Washington Post/D&amp;O Diary）。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-02 · DeepSeek 开源 DeepSeek-OCR 2</title>
+      <link>https://api-docs.deepseek.com/</link>
+      <guid isPermaLink='false'>ainews-2026-02-fc4c9e960e</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <description>中国模型延续开源强势。 相关线索：开源模型与生态/DeepSeek</description>
+    </item>
+    <item>
+      <title>2026-01-29 · Project Genie（Genie 3 世界模型）向公众开放</title>
+      <link>https://mashable.com/article/google-launches-project-genie-3-how-to-try</link>
+      <guid isPermaLink='false'>ainews-2026-01-29-043f73cb33</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <description>文本生成可交互 3D 世界。 相关线索：世界模型/Genie</description>
+    </item>
+    <item>
+      <title>2026-01-29 · 阿里平头哥「镇宇 810E」AI 芯片发布</title>
+      <link>https://trendforce.com/news/2026/01/29/</link>
+      <guid isPermaLink='false'>ainews-2026-01-29-ceba4651c3</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <description>性能据称可比肩 NVIDIA H20。 相关线索：推理与基础设施/AI芯片竞争</description>
+    </item>
+    <item>
+      <title>2026-01-26 · 微软 Maia 200 发布</title>
+      <link>https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/</link>
+      <guid isPermaLink='false'>ainews-2026-01-26-2d11df5237</guid>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <description>超 1400 亿晶体管，4-bit 下超 10 PFLOPS。 相关线索：推理与基础设施/AI芯片竞争</description>
+    </item>
+    <item>
+      <title>2026-01-22 · 百度文心大模型 5.0 正式版发布</title>
+      <link>https://unwire.pro/2026/01/22/baidu-ernie-bot-200m-users-kunlunxin-ipo/news/</link>
+      <guid isPermaLink='false'>ainews-2026-01-22-d9ff9761f6</guid>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <description>2.4 万亿参数，原生全模态。 相关线索：开源模型与生态/国产大模型群像</description>
+    </item>
+    <item>
+      <title>2026-01-14 · NVIDIA/CES 2026：Vera Rubin 首秀</title>
+      <link>https://blogs.nvidia.com/blog/2026-ces-special-presentation/</link>
+      <guid isPermaLink='false'>ainews-2026-01-14-04e90e11d6</guid>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+      <description>下一代 Rubin 平台公布。 相关线索：推理与基础设施/AI芯片竞争</description>
+    </item>
+    <item>
+      <title>2026-01-08 · 智谱港交所挂牌，「全球大模型第一股」</title>
+      <link>https://m.caixin.com/m/2026-01-08/102401574.html</link>
+      <guid isPermaLink='false'>ainews-2026-01-08-aca9f6b92c</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <description>首日市值约 555 亿港元。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-01-08 · MiniMax 港股 IPO，募资 6.19 亿美元</title>
+      <link>https://www.reuters.com/world/asia-pacific/chinas-ai-startup-minimax-group-raises-619-million-hong-kong-ipo-2026-01-08/</link>
+      <guid isPermaLink='false'>ainews-2026-01-08-6810cfaa9a</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <description>MiniMax 港股 IPO，募资 6.19 亿美元 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2026-01 · AlphaGenome 论文发表于 Nature</title>
+      <link>https://cen.acs.org/biological-chemistry/genomics/Googles-AlphaGenome-predicts-function-DNA/104/web/2026/01</link>
+      <guid isPermaLink='false'>ainews-2026-01-d962500fd5</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <description>解码人类「暗基因组」（占基因组 98% 的非编码区）。 相关线索：行业应用/AlphaFold与AI科研</description>
+    </item>
+    <item>
+      <title>2026-01 · 阿里发布超万亿参数推理模型 Qwen3-Max-Thinking。</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-01-33a2c5cfcb</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <description>阿里发布超万亿参数推理模型 Qwen3-Max-Thinking。 相关线索：开源模型与生态/Qwen</description>
+    </item>
+    <item>
+      <title>2026-01 · xAI Grok 图像编辑功能被滥用生成真人色情内容引发国际风波，多国启动限制或调查；韩国 AI 基本法正式施行。</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-01-f2dc765171</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <description>xAI Grok 图像编辑功能被滥用生成真人色情内容引发国际风波，多国启动限制或调查；韩国 AI 基本法正式施行。 相关线索：AI安全与对齐/AI监管政策</description>
+    </item>
+    <item>
+      <title>2025-12 · MCP 捐赠给 Linux 基金会</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-12-ba748a9b32</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <description>Anthropic 宣布将 MCP 移交中立治理（Agentic AI 基金会方向），回应「单一厂商控制标准」的顾虑，巩固其行业标准地位。 相关线索：智能体平台/MCP协议</description>
+    </item>
+    <item>
+      <title>2025-11-24 · Introducing Claude Opus 4.5</title>
+      <link>https://www.anthropic.com/news/claude-opus-4-5</link>
+      <guid isPermaLink='false'>ainews-2025-11-24-56c872c368</guid>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <description>称当时全球最强的编码/Agent/计算机使用模型，定价 $5/$25 每百万 tokens、较前代大幅下调，旗舰能力开始价格战。 相关线索：基础模型/Claude Agentic编码/ClaudeCode</description>
+    </item>
+    <item>
+      <title>2025-11-13 · Series D：23 亿美元，投后估值 293 亿美元</title>
+      <link>https://cursor.com/blog/series-d</link>
+      <guid isPermaLink='false'>ainews-2025-11-13-dbd871b1c9</guid>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate>
+      <description>Thrive 领投、a16z/Accel 跟投，ARR 跨过 10 亿美元，AI 应用层估值天花板被大幅抬高。 相关线索：Agentic编码/Cursor 商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
+      <title>2025-11 · Marble 正式发布</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-11-349849a03e</guid>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <description>World Labs 首个商用产品：从文本/图像/视频生成持久、可下载的 3D 高斯泼溅世界，世界模型赛道出现第一个规模化商用产品。 相关线索：世界模型/WorldLabs</description>
+    </item>
+    <item>
+      <title>2025-10-28 · OpenAI 完成转 PBC 重组</title>
+      <link>https://openai.com/index/built-to-benefit-everyone/</link>
+      <guid isPermaLink='false'>ainews-2025-10-28-d126187d79</guid>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+      <description>OpenAI Group PBC 落地，非营利基金会保留控制权并持约 26%（约 1300 亿美元）股权；与 Microsoft 重签 AGI 权利协议。 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
+      <title>2025-09 · Sora 2 与独立 App 发布</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-09-31c42c36dd</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <description>视频质量、物理一致性与音视频同步大幅提升，配套 App 主打「AI 视频社交流」（含 Cameo 数字分身），上线即登顶美区 App Store，同时引发肖像权与版权新争议。 相关线索：多模态大模型/Sora</description>
+    </item>
+    <item>
+      <title>2025-09 · Claude Code SDK 更名为 Claude Agent SDK</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-09-811a25f291</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <description>标志能力定位从「编码」扩展到通用 Agent 编排，官方示例覆盖客服、研究等非编码场景，与 Claude Sonnet 4.5 同期发布。 相关线索：智能体平台/ClaudeAgentSDK Agentic编码/ClaudeCode</description>
+    </item>
+    <item>
+      <title>2025-08 · Genie 3 发布</title>
+      <link>https://deepmind.google/discover/blog/</link>
+      <guid isPermaLink='false'>ainews-2025-08-173611b891</guid>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <description>实时 720p/24fps 交互式世界生成，环境一致性保持数分钟、支持文本事件注入，与 SIMA 智能体形成「世界模型训练 Agent」闭环，被视为世界模型路线里程碑。 相关线索：世界模型/Genie</description>
+    </item>
+    <item>
+      <title>2025-07 · 美国发布《赢得 AI 竞赛：美国 AI 行动计划》</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-07-ea3b0065de</guid>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <description>特朗普政府以「加速创新、基建先行、国际主导」取代拜登时期安全优先框架，放松监管、扩大算力出口；同期欧盟 GPAI 行为准则落地执行。 相关线索：AI安全与对齐/AI监管政策</description>
+    </item>
+    <item>
+      <title>2025-07 · Perplexity 发布 AI 浏览器 Comet</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
+      <guid isPermaLink='false'>ainews-2025-07-d5012f0ae0</guid>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <description>内置 Agent 能力、可代替用户执行浏览任务（订票、比价、总结），AI 搜索公司向「Agentic 浏览器」演进。 相关线索：AI搜索与信息获取/Perplexity</description>
+    </item>
+</channel>
+</rss>

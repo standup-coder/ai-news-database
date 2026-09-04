@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 贡献指南
+    url: https://github.com/standup-coder/ai-news-database/blob/main/CONTRIBUTING.md
+    about: 录入规范、线索模板与时间线格式
+  - name: 主题索引
+    url: https://github.com/standup-coder/ai-news-database/blob/main/_topics.md
+    about: 17 个主题与各主题线索/候选清单

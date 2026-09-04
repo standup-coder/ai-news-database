@@ -68,3 +68,6 @@ aihot-mirror/logs/
 
 # Mimosa 扫描器本地状态
 .mimosa/
+
+# feed 生成器产物（Pages artifact，不入库）
+site/
