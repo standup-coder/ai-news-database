@@ -40,7 +40,7 @@ func runCLI(t *testing.T, bin string, args ...string) (string, error) {
 	}
 	argv := append([]string{bin}, args...)
 	attr := &os.ProcAttr{
-		Dir: ".",
+		Dir:   ".",
 		Env:   append(os.Environ(), "HOME="+home, "USERPROFILE="+home),
 		Files: []*os.File{os.Stdin, w, w},
 	}
