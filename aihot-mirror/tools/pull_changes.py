@@ -41,29 +41,40 @@ EXPECTED_HOST = "aihot.virxact.com"
 API_PATH = "/api/v1/selected/changes"
 
 
-def get_changes(cursor, limit=100):
+def get_changes(cursor, limit=100, retries=3):
     # cursor 来自本地 state/CLI 参数：先做严格白名单校验，阻断任何注入进请求的可能
-    if not isinstance(cursor, str) or not re.fullmatch(r"[A-Za-z0-9_\-]{1,128}", cursor):
+    if not isinstance(cursor, str) or not re.fullmatch(r"[A-Za-z0-9_\-.]{1,200}", cursor):
         raise ValueError(f"非法 cursor: {cursor!r}")
     limit = int(limit)
     # SSRF 防护：主机名固定为常量、由 HTTPSConnection 在连接层锁定，请求路径仅含已校验参数
     path = API_PATH + "?" + urlencode({"cursor": cursor, "limit": limit})
-    conn = http.client.HTTPSConnection(EXPECTED_HOST, timeout=60)
-    try:
-        conn.request("GET", path, headers={"User-Agent": UA, "Accept": "application/json"})
-        resp = conn.getresponse()
-        body = resp.read()
-        if resp.status == 409:
-            try:
-                problem = json.loads(body)
-            except Exception:
-                problem = {"code": "snapshot_required"}
-            return None, problem
-        if resp.status != 200:
-            raise RuntimeError(f"HTTP {resp.status}: {body[:200]!r}")
-        return json.loads(body), None
-    finally:
-        conn.close()
+    last_err = None
+    for attempt in range(1, retries + 1):
+        conn = http.client.HTTPSConnection(EXPECTED_HOST, timeout=60)
+        try:
+            conn.request("GET", path, headers={"User-Agent": UA, "Accept": "application/json"})
+            resp = conn.getresponse()
+            body = resp.read()
+            if resp.status == 409:
+                try:
+                    problem = json.loads(body)
+                except Exception:
+                    problem = {"code": "snapshot_required"}
+                return None, problem
+            if resp.status != 200:
+                raise RuntimeError(f"HTTP {resp.status}: {body[:200]!r}")
+            if not body.strip():
+                # 瞬态空响应：重试
+                last_err = RuntimeError(f"第 {attempt} 次收到空响应体")
+            else:
+                return json.loads(body), None
+        except (http.client.HTTPException, OSError) as e:
+            last_err = e
+        finally:
+            conn.close()
+        if attempt < retries:
+            time.sleep(2 * attempt)
+    raise RuntimeError(f"changes 请求在 {retries} 次尝试后仍失败: {last_err}")
 
 
 def save_raw_changes(page_idx, data):

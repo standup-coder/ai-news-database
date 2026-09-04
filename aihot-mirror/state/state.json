@@ -1,11 +1,11 @@
 {
-  "cursor": "v1s.eyJrIjoic2VsZWN0ZWQtc3luYyIsInYiOjEsInciOiI1ODk3IiwiZiI6Im1pbmltYWwifQ",
+  "cursor": "v1s.eyJrIjoic2VsZWN0ZWQtc3luYyIsInYiOjEsInciOiIyMzQ4MCIsImYiOiJtaW5pbWFsIn0",
   "asOf": "2026-08-05T05:56:17.827Z",
-  "count": 3181,
+  "count": 3512,
   "fields": "minimal",
-  "fetchedAt": "2026-08-05T07:35:13+00:00",
+  "fetchedAt": "2026-09-04T05:12:03+00:00",
   "pages": 7,
-  "lastChangesAt": "2026-08-06T03:02:08+00:00",
-  "lastChangesUpsert": 41,
-  "lastChangesRemove": 14
+  "lastChangesAt": "2026-09-04T05:07:09+00:00",
+  "lastChangesUpsert": 112,
+  "lastChangesRemove": 2532
 }
