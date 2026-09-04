@@ -4,7 +4,7 @@
 别名: [Eleven Labs, 11Labs]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [ElevenLabs]
 ---
 
@@ -19,6 +19,15 @@ ElevenLabs 成立于 2022 年，由前 Palantir 工程师 Piotr Dąbkowski 与�
 在语音合成赛道，ElevenLabs 以「音质逼真 + 开发者友好 API」快速占领市场，客户涵盖出版、游戏、影视与客服行业，是评估语音生成技术演进的核心观察对象。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-26** · [Gemini 3.5 Transcribe 发布：面向实时语音交互的高精度语音转文本模型](https://aihot.virxact.com/items/cmtacq8vz0aedroj24bcix9go)
+  Google DeepMind 官方发布，补齐大模型厂商实时语音交互栈中的 ASR 一环，语音基础设施竞争从 TTS 延伸到全链路。
+- **2026-08-13** · [小红书开源连续自回归语音合成模型 dots.tts：打造可持续扩展的 TTS 基座](https://aihot.virxact.com/items/cmsrcljcc0uanroz24r5ebcz9)
+  小红书技术团队开源 dots.tts，定位可扩展的 TTS 基座，开源语音模型持续挤压商业 TTS API 的空间。
+- **2026-08-10** · [NVIDIA 发布 NemotronLabs VoiceChat 11B：开源全双工语音模型](https://aihot.virxact.com/items/cmsmhbu4w0338ronxh92vej2u)
+  支持约 450 毫秒轮换与实时工具调用，芯片巨头以开源全双工语音栈切入实时语音 Agent 场景，直接对打 Conversational AI 平台。
 
 ### 2026-07
 

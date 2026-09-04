@@ -4,7 +4,7 @@
 别名: [vLLM, SGLang, TensorRT-LLM, 推理优化]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [vLLM 社区, UC Berkeley, NVIDIA, LMSYS, DeepSeek]
 ---
 
@@ -19,6 +19,20 @@ vLLM 起源于 UC Berkeley 的 PagedAttention 论文（2023），以类操作系
 该线索追踪推理引擎的技术演进（连续批处理、投机解码、前缀缓存、分布式推理）与生态格局。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-01** · [Hugging Face 发布 @huggingface/kernels，提供 207 个 WebGPU 内核用于浏览器本地 AI 推理](https://aihot.virxact.com/items/cmtitozyq04j2ro9ydv3oxgsd)
+  Hugging Face 官方发布 kernels 库，首批 207 个 WebGPU 内核让大模型推理直接跑进浏览器——推理栈从数据中心向端侧/浏览器场景继续下沉。
+
+### 2026-08
+
+- **2026-08-20** · [Hugging Face 发布 LFM2.5 系列 DSpark 草稿模型，推理速度最高提升 3.18 倍](https://aihot.virxact.com/items/cmt1rv5n8066iroovaxgoej1b)
+  Hugging Face 官方博客宣布为 LFM2.5 系列发布 DSpark 草稿模型，推理速度最高提升 3.18 倍——DeepSeek 开源的 DSpark 投机解码框架获得官方级第三方落地。
+- **2026-08-09** · [inclusionAI 发布 Ling-3.0-flash 的 DSpark 投机解码模型 Ling3-DSpark](https://aihot.virxact.com/items/cmt333krj0fv5ro6tjw6bmtb2)
+  蚂蚁 inclusionAI 在 Hugging Face 发布 Ling3-DSpark，为 Ling-3.0-flash 配套 DSpark 投机解码草稿模型——投机解码从框架开源进入「按模型配草稿」的常规化阶段。
+- **2026-08-07** · [HPC-Ops × SGLang：腾讯混元开源高性能 Attention、Router GEMM 与 MoE 算子](https://aihot.virxact.com/items/cmsj8rfkl02ruroo5uvyqiqiq)
+  LMSYS 博客披露与腾讯混元的合作成果：高性能 Attention、Router GEMM 与 MoE 算子开源进入 SGLang——大厂以内核级贡献反哺开源推理引擎。
 
 ### 2026-07
 

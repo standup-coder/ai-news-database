@@ -4,7 +4,7 @@
 别名: [AlphaFold, AI for Science, 蛋白质结构预测]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Google DeepMind, Isomorphic Labs]
 ---
 
@@ -19,6 +19,20 @@ AlphaFold 是 DeepMind 的蛋白质结构预测系统：2020 年 AlphaFold2 在 
 该线索以 AlphaFold 为主轴，追踪 AI 在科学研究（生物、材料、气象等）中的落地进展。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-03** · [Google DeepMind 发布 WeatherNext 3 全球天气 AI 模型，hourly 更新且分辨率较上一代提升约 5 倍](https://aihot.virxact.com/items/cmtlnmh4o0fmsrow5i7pdq8b0)
+  DeepMind 官方博客发布 WeatherNext 3：小时级更新、分辨率较上一代提升约 5 倍——继 GraphCast 之后，DeepMind 气象 AI 从研究模型进入常态化业务产品线。
+
+### 2026-08
+
+- **2026-08-21** · [面壁智能 OpenBMB 推出 MathForm，面向 Lean 4 数学自动形式化的开源框架、数据集与模型](https://aihot.virxact.com/items/cmt2yscvm0ca8ro6t0u6vtfnt)
+  面壁智能官方宣布开源 MathForm：Lean 4 数学自动形式化的框架、数据集与模型全家桶——「AI 数学家」背后的形式化验证基础设施出现中文开源方案。
+- **2026-08-11** · [OpenAI 用 Astra 模型攻克 10 道数学难题，数学家既兴奋又担忧](https://aihot.virxact.com/items/cmsokd2b00viorofwaq9wrsv1)
+  The Verge 报道，OpenAI 用 Astra 模型一次性攻克 10 道数学难题，数学界对研究范式被改写既兴奋又担忧——「AI 攻克悬置难题」从孤例走向批量。
+- **2026-08-07** · [斯坦福与 Arc Institute 用 AI 设计全新病毒基因组，16 种在实验室成功杀死细菌](https://aihot.virxact.com/items/cmsiys4dz1yqironkuitnfi7t)
+  The Decoder 报道，斯坦福与 Arc Institute 用 AI 设计出全新病毒基因组，其中 16 种在实验室内成功杀死细菌——「AI 设计完整生命基因组」首次全链条实验验证，合成生物学与生物安全两条线同时被改写。
 
 ### 2026-07
 

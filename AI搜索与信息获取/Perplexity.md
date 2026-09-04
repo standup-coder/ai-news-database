@@ -20,6 +20,11 @@ Perplexity 是 AI 搜索赛道估值增长最快的公司之一，其与内容�
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-03** · [Perplexity 宣布将接入 OpenAI GPT-6 Astra](https://aihot.virxact.com/items/cmtm1xhpk0unkrow52qftlbda)
+  CEO Aravind Srinivas 宣布将接入 OpenAI 当日发布的 GPT-6 Astra，称其在 WANDR 评测中居首——延续多模型中立供应策略，也意味着答案引擎对上游前沿模型的依赖进一步加深。
+
 ### 2026-08
 
 - **2026-08-05** · [美国上诉法院推翻禁令，Perplexity 购物智能体重返 Amazon](https://aihot.virxact.com/items/cmsfyb5yy0js6roch27nbq7s2)

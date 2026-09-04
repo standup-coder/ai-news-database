@@ -4,7 +4,7 @@
 别名: [ChatGPT, ChatGPT App]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [OpenAI]
 ---
 
@@ -19,6 +19,17 @@ ChatGPT 于 2022 年 11 月 30 日发布，两个月破亿月活，创下当时�
 该线索关注 ChatGPT 作为消费级产品的功能演进、用户增长与生态位变化——它是「AI 助手」这一新品类的事实标准。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-31** · [ChatGPT Ads 年化收入达 10 亿美元并全球扩展](https://aihot.virxact.com/items/cmthb75t6092frodmg7ic1fc0)
+  OpenAI 官方披露，7-21 全量上线的广告业务一个多月即达十亿美元级年化收入并走向全球——免费用户的广告变现路线跑通。
+- **2026-08-18** · [OpenAI 推出 ChatGPT for Teens：面向青少年的学习体验与更强安全保护](https://aihot.virxact.com/items/cmsykcnkt0yh1roz0a9h404r5)
+  官方发布青少年专属产品线，学习场景与更强安全保护并行——未成年人安全从设置项升级为独立产品。
+- **2026-08-08** · [OpenAI 桌面端 ChatGPT 上线语音交互功能，可语音操控电脑执行多步骤任务](https://aihot.virxact.com/items/cmskzmhrs03rwrowg146pdv9j)
+  IT之家报道，桌面端语音入口可直接操控电脑执行多步骤任务——语音交互与 Agent 化路线在桌面端合流。
+- **2026-08-07** · [OpenAI 披露 ChatGPT 全球 10 亿用户画像：35 岁及以上用户用量上升](https://aihot.virxact.com/items/cmsilvone1jezronk60ahdbgi)
+  IT之家报道，OpenAI 首次系统披露 10 亿用户构成，35 岁以上用户用量上升——用户结构从科技尝鲜者转向主流人群。
 
 ### 2026-07
 
@@ -38,7 +49,7 @@ ChatGPT 于 2022 年 11 月 30 日发布，两个月破亿月活，创下当时�
 - **2026-06-04** · [ChatGPT 推出 Dreaming 记忆系统](https://aihot.virxact.com/items/cmpzosigs05knslkpwrpnvf65)
   官方发布更强的记忆能力，更可靠地记住用户偏好——个性化底座升级。
 - **2026-06-03** · [Sensor Tower：ChatGPT 月活破 10 亿，史上最快](https://aihot.virxact.com/items/cmpxfhah803htslckwpwwf6sf)
-  IT之家援引第三方数据；4 月底 OpenAI 刚被曝未能实现 10 亿周活目标，月活口径率先达标。
+  IT之家援引第三方数据；4 月底 OpenAI 刚被曝未能实现 10 亿周活目标，月活口径率先达标，8-11 The Verge 报道 ChatGPT 与 Gemini 双双突破 10 亿用户。
 
 ### 2026-05
 

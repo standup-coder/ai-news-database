@@ -4,7 +4,7 @@
 别名: [Chatbot Arena, LMSYS, 竞技场]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [LMSYS, UC Berkeley, LMArena 公司]
 ---
 
@@ -19,6 +19,11 @@ LMArena（原 Chatbot Arena）由 UC Berkeley/LMSYS 于 2023 年 5 月推出：�
 该线索追踪 Arena 的机制演进、商业化与围绕榜单公信力的争议。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-02** · [Qwen3.8-Max-0902 登顶 Code Arena 并以 $5/MToken 领跑 Pareto 前沿](https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje)
+  阿里通义千问官方宣布 Qwen3.8-Max-0902 登顶 Code Arena 编码赛道，并以每百万 token 5 美元的价格占据性能/价格 Pareto 前沿——中国模型首次拿下 Arena 细分赛道头名，「登顶 + 低价」成为新的冲榜组合。
 
 ### 2026-06
 

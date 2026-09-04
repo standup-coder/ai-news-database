@@ -4,7 +4,7 @@
 别名: [ChatGLM, GLM, GLM-5, 智谱AI]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [智谱AI, 唐杰]
 ---
 
@@ -22,8 +22,12 @@
 
 ### 2026-08
 
+- **2026-08-28** · [GLM-5.3 开源权重](https://aihot.virxact.com/items/cmtd32q060c3vroq546ccqp7r)
+  官方 X 兑现两周之诺开放权重下载（IT之家次日报道）：GLM 许可允许本地部署、微调与商用，仅年营收超 100 亿美元的机构对外提供服务须接受安全审查；发布前因网络防御能力专门追加了两周全面安全评估。
 - **2026-08-26** · [GLM-5.3-Flash 开源发布](https://www.zhipuai.cn/zh/research/163)
-  原生多模态 Flash 档，MIT 许可开源；据财联社、36氪报道，推理全部承载于国产算力卡（约 10 万张），API 价格约为 Claude Opus 4.8 的 1/40。VentureBeat 同步报道。
+  原生多模态 Flash 档，MIT 许可开源；据财联社、36氪报道，推理全部承载于国产算力卡（约 10 万张），API 价格约为 Claude Opus 4.8 的 1/40。VentureBeat 同步报道；次日唐杰披露其登顶 OpenRouter 周 token 份额（近 20%），定价约为前沿模型 1/100、由纯国产芯片驱动。
+- **2026-08-19** · [GLM-5.3 AA 综合智能指数 60 分，并列开源第一](https://aihot.virxact.com/items/cmszeb2mx0b3srodpef1ub0j0)
+  官方公众号：Artificial Analysis 综合智能指数 60 分，与 Claude Fable 5、GPT-5.6 Sol 同档、与 Kimi K3 并列开源第一；API 定价与 GLM-5.2 持平，自称单任务成本为旗舰模型中最低。
 - **2026-08-14** · [GLM-5.3 发布](https://z.ai/blog/glm-5.3)
   旗舰迭代，主打前沿编码与「涌现网络安全能力」（官方博客口径）；Bloomberg、VentureBeat 报道。发布时 API/Coding Plan 先行，开源权重官方承诺两周内开放。
 

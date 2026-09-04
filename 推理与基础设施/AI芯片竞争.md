@@ -4,7 +4,7 @@
 别名: [NVIDIA, GPU, TPU, AI 算力]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [NVIDIA, Google, AMD, Broadcom, OpenAI, 华为, Meta, 微软, 亚马逊]
 ---
 
@@ -19,6 +19,30 @@ AI 芯片是这轮 AI 浪潮的物理底座。NVIDIA 凭 CUDA 生态与 H100/Bla
 该线索追踪芯片产品迭代、供需格局与算力地缘政治。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-03** · [NVIDIA 宣布以 129.3 亿美元收购 Hugging Face](https://aihot.virxact.com/items/cmtli5yd109u4row52i1xg9j4)
+  NVIDIA 官方博客宣布以约 129.3 亿美元收购开源模型平台 Hugging Face，黄仁勋承诺保持开放，纳德拉、Pichai 亦表态支持开源生态（IT之家、X 多源跟进）——芯片巨头把开源模型社区收入麾下，CUDA 之上再叠一层生态锁定。
+- **2026-09-01** · [路透社调查：美国 AI 数据中心现大量幽灵用电需求，得州等多州出手整治](https://aihot.virxact.com/items/cmtipeu1u01a2ro9yi22t9cev)
+  路透社调查发现美国 AI 数据中心存在大量重复/虚增的用电申请（「幽灵负荷」），得州等多州开始整治（IT之家转引）——算力竞赛的瓶颈正式从 GPU 蔓延到电网与审批。
+
+### 2026-08
+
+- **2026-08-27** · [英伟达预计 2028 财年营收同比增 70%，黄仁勋称实际需求远高于此](https://aihot.virxact.com/items/cmtas790607swroamcmunq53y)
+  IT之家报道，英伟达给出 2028 财年销售额约 6730 亿美元的指引（同比 +70%），黄仁勋称真实需求远高于指引数字；分析师测算其单季营收指引已达 1080 亿美元、首次突破千亿大关。
+- **2026-08-26** · [英伟达 2027 财年半年报归母净利润 1180.1 亿美元，同比增长 161.1%](https://aihot.virxact.com/items/cmtaq20ih062wroamdrhb54b6)
+  IT之家报道，英伟达上半财年归母净利润 1180.1 亿美元、同比 +161.1%——「卖铲人」利润率随 Rubin 世代交付继续扩张。
+- **2026-08-26** · [亚马逊将英伟达芯片订单增至三倍，新增 200 万颗 GPU](https://aihot.virxact.com/items/cmtar8e770746roam1wznm4mi)
+  TechCrunch 报道，亚马逊把英伟达芯片订单扩大至三倍、新增 200 万颗 GPU——云巨头一边自研 Trainium 一边加倍买 NVIDIA，算力军备竞赛再校准。
+- **2026-08-25** · [Apple 发布 M6 与 M5 Ultra，性能与 AI 算力大幅跃升](https://aihot.virxact.com/items/cmt8qee503kvpro73kzthenuu)
+  Apple Newsroom 官方发布 M6 与 M5 Ultra 芯片，AI 算力大幅提升——端侧 AI 芯片加入战局，Ultra 级统一内存成为本地大模型推理的新筹码。
+- **2026-08-24** · [NVIDIA Vera Rubin NVL72 树立 AI 智能体效率新标准：每瓦特工作量提升至 30 倍](https://aihot.virxact.com/items/cmt7e0g7y232wro738qg82x67)
+  NVIDIA 官方博客披露 Rubin NVL72 机架级能效数据（每瓦特智能体工作量提升至 30 倍，官方口径）——Rubin 世代以「每瓦性能」为核心卖点进入放量期。
+- **2026-08-17** · [NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻](https://aihot.virxact.com/items/cmsx9jvre05y6romms3bo1umb)
+  NVIDIA 官方宣布与 SB Energy 合作锁定俄亥俄 PORTS-Pike 园区电力容量建设 AI 工厂，OpenAI 将入驻（黄仁勋 X 同步）——「电力先于芯片」成为新一代数据中心扩张的主导逻辑。
+- **2026-08-10** · [英伟达联合六大机构融资 5000 亿美元建 AI 工厂](https://aihot.virxact.com/items/cmsnrwnsb0i1erohfuhfjc4q6)
+  黄仁勋在 X 宣布联合六大机构以 5000 亿美元级投入建设 AI 工厂——算力基础设施投资的量级从「百亿数据中心」跃迁到「千亿产业联盟」。
 
 ### 2026-07
 

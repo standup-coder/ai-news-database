@@ -4,7 +4,7 @@
 别名: [Suno AI, Suno Music]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Suno]
 ---
 
@@ -19,6 +19,13 @@ Suno 是一家位于剑桥（马萨诸塞州）的 AI 音乐生成公司，创�
 Suno 与竞品 Udio 一起定义了「文生音乐」赛道，同时也成为唱片业版权诉讼的核心被告，是观察生成式 AI 与版权制度冲突的最佳线索之一。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-30** · [索尼与华纳起诉 Anthropic，指控其大规模盗用版权音乐训练 Claude](https://aihot.virxact.com/items/cmtfkvjwn0by7rou8vil9ysf1)
+  The Decoder 报道，两大唱片巨头起诉 Anthropic——唱片业版权战从 Suno/Udio 等音乐生成厂商蔓延到通用大模型公司，AI 音乐训练数据的版权之争全面升级。
+- **2026-08-13** · [MiniMax Music 3.0 发布：新一代开源权重、生产级全能音乐模型](https://aihot.virxact.com/items/cmsrramim02jero0nte55cfgi)
+  MiniMax 官方发布开源权重、生产级音乐模型，文生音乐赛道以「开源 + 商用」双线夹击 Suno 的订阅模式。
 
 ### 2026-07
 

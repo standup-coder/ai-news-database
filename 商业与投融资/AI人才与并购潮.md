@@ -4,8 +4,8 @@
 别名: [反向收购, acqui-hire, AI 人才战争]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
-关键角色: [Microsoft, Google, Amazon, Meta, 智谱, MiniMax, Cognition, Google(Wiz)]
+更新: 2026-09-04
+关键角色: [Microsoft, Google, Amazon, Meta, 智谱, MiniMax, Cognition, Google(Wiz), NVIDIA, SpaceX]
 ---
 
 # AI人才与并购潮
@@ -20,8 +20,19 @@
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-03** · [NVIDIA 宣布以 129.303 亿美元收购 Hugging Face](https://aihot.virxact.com/items/cmtli5yd109u4row52i1xg9j4)
+  英伟达官方博客官宣收购开源模型社区 Hugging Face（约 129.3 亿美元），黄仁勋承诺维持开放平台，纳德拉与 Pichai 相继表态支持开源生态，IT之家 9-4 跟进——开源模型生态迄今最大并购。
+
 ### 2026-08
 
+- **2026-08-29** · [OpenAI 决定终止向 Cursor 提供模型，因 SpaceX 收购后合规风险](https://aihot.virxact.com/items/cmtdqc5oj03wzro2mgyc5a49x)
+  OpenAI 官宣 11 月 12 日生效，Cursor CEO Truell 公开回应——并购引发的模型供应站队首次直接切断头部编程平台的模型访问。
+- **2026-08-14** · [Cursor 正式被 SpaceX 收购](https://aihot.virxact.com/items/cmst3joqo03pwro0658o4g1m3)
+  Cursor 官方博客确认交易正式完成，6-16 宣布的 SpaceX 全股收购落地；8-29 OpenAI 随即以合规风险为由终止向其提供模型。
+- **2026-08-06** · [Google 大规模 AI 组织调整背后的混乱政治](https://aihot.virxact.com/items/cmshkd62s0hgfronku3c71unr)
+  The Verge 深挖 Jeff Dean 离职与 Hassabis 转任后谷歌 AI 体系的重组内斗——前一日双重人事地震的后续动荡。
 - **2026-08-05** · [Jeff Dean 离开谷歌，联合创办 Discovery Loop](https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/)
   在谷歌 27 年的 AI 负责人（Google Brain 创始人、Google Research 与 DeepMind 掌舵者）与多名顶尖研究员离职创业；NYT、Wired 跟进。谷歌研究院体系迄今最高级别的流失。
 - **2026-08-05** · [Demis Hassabis 卸任 Google DeepMind CEO，转任主席与 Alphabet 首席科学家](https://aihot.virxact.com/items/cmsga8g7n01dxro3psolcouz4)
@@ -30,7 +41,7 @@
 ### 2026-07
 
 - **2026-07-12** · [苹果起诉 OpenAI 挖角窃密](https://aihot.virxact.com/items/cmrh8o88501e4bir7wzxmfpfm)
-  IT之家报道苹果起诉 OpenAI 借挖角前员工窃取硬件商业机密；TechCrunch 称指控涉及 400 多名前员工，7-17 升级为约 40 名前员工收到律师函——人才战争进入诉讼化阶段。
+  IT之家报道苹果起诉 OpenAI 借挖角前员工窃取硬件商业机密；TechCrunch 称指控涉及 400 多名前员工，7-17 升级为约 40 名前员工收到律师函，8-6 OpenAI 称苹果自身安全实践削弱其商业机密诉讼（TechCrunch）——人才战争进入诉讼化阶段。
 - **2026-07-10** · [OpenAI 高管 Fidji Simo 因慢性疾病加重辞去全职职务](https://aihot.virxact.com/items/cmrf2luxz06pxih8e4ag32u0y)
   应用条线负责人 Fidji Simo 转为兼职顾问（Brockman 官宣），OpenAI 消费应用高层变动。
 

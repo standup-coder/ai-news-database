@@ -4,7 +4,7 @@
 别名: [MiniMax, M2, M3, 海螺AI]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [MiniMax, 闫俊杰]
 ---
 
@@ -22,6 +22,8 @@ MiniMax 由前商汤副总裁闫俊杰创办，旗下大模型为 M 系列（MoE
 
 ### 2026-08
 
+- **2026-08-13** · [MiniMax Music 3.0 发布并开源权重](https://aihot.virxact.com/items/cmsrramim02jero0nte55cfgi)
+  官方博客：生产级全能音乐模型，单次生成最长约 5 分钟完整歌曲（作曲/编曲/演奏/制作一体）；Hybrid-LM 架构（8B 全局 + 0.6B 局部 LLM、2.4B 流匹配解码），开源权重上架。
 - **2026-08-03** · [MiniMax H3 正式开源](https://aihot.virxact.com/items/cmsdu3hyr015xrofzqxuosm3y)
   官方公众号宣布；通用全模态生成系统开源，支持 2K 视频与原生立体声。
 

@@ -4,7 +4,7 @@
 别名: [LLaMA, Llama 2, Llama 3, Llama 4]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Meta]
 ---
 
@@ -19,6 +19,11 @@ Llama 是 Meta 的开放权重大模型系列。2023 年 2 月首代以研究许
 该线索追踪 Llama 的版本演进、许可策略与其在开源生态中地位的起落。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-02** · [Meta 发布 Muse Spark 1.3，智能体与科学推理能力提升](https://aihot.virxact.com/items/cmtkkcguj04aurollf1lq9a9s)
+  Meta 首席 AI 官 Alexandr Wang 官宣；Artificial Analysis 口径 Intelligence Index 61-62，逼近 Claude 与 GPT-5.6——Muse 闭源路线持续挤压 Llama 的产品位置。
 
 ### 2026-07
 

@@ -4,7 +4,7 @@
 别名: [EU AI Act, AI 行政令, AI 治理]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [欧盟, 美国白宫, 英国 AISI, 中国网信办, 加州, 韩国]
 ---
 
@@ -20,8 +20,17 @@
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-02** · [OpenAI 因 Tumbler Ridge 枪击案面临 30 起新诉讼，被指协助教唆](https://aihot.virxact.com/items/cmtkaa7gs01v5romp7lhz3mwj)
+  The Verge 报道，ChatGPT 被指在枪击案中起协助教唆作用——继佛州总检察长诉讼、加拿大 BC 省起诉后，AI 产品责任诉讼进入规模化阶段。
+
 ### 2026-08
 
+- **2026-08-28** · [联邦法官裁定特朗普政府将 Anthropic 列入黑名单违法](https://aihot.virxact.com/items/cmtdbbfo6018arobxq8t77h9x)
+  Ars Technica 报道，联邦法院为政府干预 AI 公司运营的边界划出司法红线。
+- **2026-08-27** · [诉讼指控 xAI 使用儿童性虐待材料训练 Grok 模型](https://aihot.virxact.com/items/cmtc05bnj015srome8fm42xy8)
+  Ars Technica 报道，训练数据合规首次以 CSAM 指控形式被告上法庭——平台责任从输出端延伸到训练端。
 - **2026-08-05** · [美国上诉法院推翻禁令，Perplexity AI 购物智能体重返 Amazon](https://aihot.virxact.com/items/cmsfyb5yy0js6roch27nbq7s2)
   The Decoder 报道，AI Agent 商业纠纷的首个上诉判例。
 - **2026-08-04** · [工信部发布首部 L3/L4 自动驾驶系统安全要求强制性国标](https://aihot.virxact.com/items/cmsek09wz0vq7ro2eayzzt3uq)

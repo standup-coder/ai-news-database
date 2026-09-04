@@ -4,7 +4,7 @@
 别名: [Google Gemini, Gemini 1.5, Gemini 2.0, Gemini 2.5]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Google, Google DeepMind]
 ---
 
@@ -20,10 +20,23 @@ Gemini 是 Google DeepMind 的旗舰模型系列，2023 年 12 月发布，定�
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-03** · [Google DeepMind 发布 WeatherNext 3 全球天气 AI 模型](https://aihot.virxact.com/items/cmtlnmh4o0fmsrow5i7pdq8b0)
+  官方博客发布第三代全球天气模型，支持逐小时更新、分辨率较上一代提升约 5 倍。
+- **2026-09-02** · [Google DeepMind 发布 Gemini 3.8 Flash 与 3.8 Flash Cyber 两款新模型](https://aihot.virxact.com/items/cmtkbdbti01n8roz5k5kt1g98)
+  3.7 Flash 发布约三周内再度点版本迭代，通用工作马 3.8 Flash 与政府专用网络安全型号 3.8 Flash Cyber 并行发布，延续「Flash + Cyber」双轨。
+
 ### 2026-08
 
+- **2026-08-27** · [Gemini Omni 1.1 Flash 发布，为开发者提供更强生成式视频控制](https://aihot.virxact.com/items/cmtbq1hfq156croamzzo9gno2)
+  DeepMind 官方博客发布 Omni 1.1 Flash，向开发者开放更强的生成式视频控制能力。
+- **2026-08-26** · [Gemini 3.5 Transcribe 发布](https://aihot.virxact.com/items/cmtacq8vz0aedroj24bcix9go)
+  官方发布面向实时语音交互的高精度语音转文本模型，补齐 3.5 家族的转写形态。
 - **2026-08-13** · [Gemini 3.7 Flash 发布](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/)
-  定位「最智能的工作马模型」，主打编码与 Agent 工作流能力的大幅跃升（约三周内的点版本迭代）；Reuters 报道其面向编码与 Agent 场景，官方同步放出模型卡。
+  定位「最智能的工作马模型」，主打编码与 Agent 工作流能力的大幅跃升（约三周内的点版本迭代）；Reuters 报道其面向编码与 Agent 场景，官方同步放出模型卡；8-14 起全面上线 Pro 与 Ultra 订阅用户。
+- **2026-08-11** · [Gemini 月活破 10 亿，成谷歌增长最快产品](https://aihot.virxact.com/items/cmsoxh6oa0a3drohdskp7cb9u)
+  Sundar Pichai 官宣 Gemini 月活跃用户突破 10 亿，The Verge 指出其与 ChatGPT 同月双双迈过 10 亿门槛。
 
 ### 2026-07
 

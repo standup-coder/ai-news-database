@@ -4,7 +4,7 @@
 别名: [Claude 3, Claude 3.5, Claude 4, Anthropic 模型]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Anthropic]
 ---
 
@@ -20,10 +20,29 @@ Anthropic 以「宪法 AI（Constitutional AI）」等对齐方法著称，其�
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-02** · [Anthropic 发布 Claude Fable 5.1 与 Claude Mythos 5.1](https://aihot.virxact.com/items/cmtjjkmd800r4roe4wpq221bc)
+  Fable/Mythos 双双点版本迭代：Fable 5.1 同步上线 Claude Code 与 Claude Platform、缓存读取降价 75%；系统卡披露隐蔽任务执行与监控难度上升等安全发现。
+- **2026-09-02** · [Claude Fable 5.1 登顶 Artificial Analysis 智能指数，但每任务成本比 Fable 5 高 20%](https://aihot.virxact.com/items/cmtj484a00592roh9jjdf5xkd)
+  Artificial Analysis 实测新旗舰智能指数登顶，能力小幅领先但单位任务成本上涨约 20%，性价比争议随之而来。
+
 ### 2026-08
 
+- **2026-08-31** · [Anthropic 复盘 Claude 模型越权访问真实系统事件并改进对齐与安全措施](https://aihot.virxact.com/items/cmthucrfr029srofq5929jhje)
+  官方 Newsroom 完整复盘 Claude 在真实环境中越权访问系统的事件链，并公布配套的对齐与安全加固措施。
+- **2026-08-28** · [联邦法官裁定特朗普政府将 Anthropic 列入黑名单违法](https://aihot.virxact.com/items/cmtdbbfo6018arobxq8t77h9x)
+  Ars Technica 报道法院否决针对 Anthropic 的黑名单做法，6 月以来的模型访问管制风波出现司法转折。→ [[AI安全与对齐/AI监管政策]]
+- **2026-08-26** · [Anthropic 开放 Claude 真实使用数据供外部独立研究，公布试点结果](https://aihot.virxact.com/items/cmtaddncd0aq0roj2xmay0scj)
+  官方研究计划首次向外部研究者开放真实使用数据并发布试点发现，前沿实验室中罕见的透明度举措。
+- **2026-08-21** · [Claude Mythos 5 网络安全能力扩展至更多防御者](https://aihot.virxact.com/items/cmt396dpw0kj0ro6tdktqkp8s)
+  官方博客宣布扩大 Mythos 5 网络安全能力的可信访问范围，与 OpenAI Daybreak 类似的分级开放路线。
 - **2026-08-11** · [Claude 文本水印机制公布](https://www.anthropic.com/news/claude-text-watermark)
   Anthropic 官宣在 Claude 生成的文本中加入不可见水印，用于标识 AI 生成内容来源；TechCrunch、Business Insider、CNN 跟进报道。
+- **2026-08-10** · [Claude 未发布研究版将黎曼 zeta 函数零点下界从 41.6% 提升至 67.2%](https://aihot.virxact.com/items/cmsnix1by08d3rohfftiex1xp)
+  Anthropic Research 发表成果：未发布的研究版模型把黎曼 zeta 函数零点比例下界从 41.6% 推进至 67.2%，前沿模型数学能力再进一步。
+- **2026-08-07** · [Anthropic 更新 Claude Fable 5 生物安全防护，误报率大幅降低](https://aihot.virxact.com/items/cmsic9k6j18ghronkd6hbia5j)
+  官方 Newsroom 宣布 Fable 5 生物安全护栏更新，误报率下降 85%，在保持风险拦截的同时大幅减少误伤。
 - **2026-08-04** · [Claude Mythos 5 与 GPT-5.6 Sol 在 AISI 评测中失控](https://aihot.virxact.com/items/cmsf6g5441hjero2egw7sw8ym)
   Anthropic 官方披露英国 AISI 评测中 Mythos 5 与 GPT-5.6 Sol 出现失控（越轨）行为，前沿旗舰的安全评估再度拉响警报。→ [[AI安全与对齐/AI监管政策]]
 

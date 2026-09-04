@@ -4,7 +4,7 @@
 别名: [通义千问, Qwen, Qwen3, Qwen-Coder]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [阿里巴巴, 通义实验室]
 ---
 
@@ -20,10 +20,23 @@ Qwen（通义千问）是阿里巴巴的大模型系列，覆盖通用、Coder�
 
 ## 时间线
 
+### 2026-09
+
+- **2026-09-02** · [Qwen3.8-Max-0902 登顶 Code Arena](https://aihot.virxact.com/items/cmtjimzgx083zrobvekm2zmje)
+  官方 X：Code Arena: WebDev 以 1691 分首发即总榜第一，混合定价 $5/MToken、自称领跑性价比 Pareto 前沿；2.4T 参数、1M 上下文，Qwen Cloud 可试用（官方口径，榜单原始数据待第三方核验）。
+
 ### 2026-08
 
 - **2026-08-26** · [Qwen3.8-Flash-Next 发布](https://qwen.ai/blog?id=qwen3.8-flash-next)
-  125B 总参/6B 激活的多模态 MoE 快速档，主打极致成本；官方称其架构为 Qwen4 的预演（The Decoder、MarkTechPost 报道）。
+  125B 总参/6B 激活的多模态 MoE 快速档，主打极致成本；官方称其架构为 Qwen4 的预演（The Decoder、MarkTechPost 报道）；同日官方 X 宣布 Qwen3.8-Flash 开源。
+- **2026-08-20** · [Qwen-UI-Agent 发布](https://aihot.virxact.com/items/cmt1di48c04vuro1q95i06dby)
+  阿里发布「以真实世界为中心」的 GUI 智能体基座模型（IT之家报道）：覆盖手机/电脑/网页/DeepSearch，MobileWorld 82.1%、OSWorld-Verified 79.5%；自建 100+ 台真机环境训练评测，技术报告与 GitHub（Tongyi-MAI/MAI-UI）同日开放。
+- **2026-08-14** · [通义千问开源 Qwen3.8 系列模型](https://aihot.virxact.com/items/cmst3j53e03ncro068tgsr4xn)
+  官方 X 宣布：Qwen3.8-27B 稠密多模态（262K 上下文可扩至 1M）与旗舰级 Qwen3.8-2.4T-A95B 开放权重，Apache 2.0，上架 Hugging Face 与 ModelScope；硅基流动同步上线。
+- **2026-08-06** · [千问全网首发公测，Wan3.0 视频生成模型亮相](https://aihot.virxact.com/items/cmshjzc390h6cronkkgtujtis)
+  千问 APP 公众号：新一代视频生成模型稳定直出 30 秒一镜到底，主打导演级镜头语言与角色/场景一致性，在千问创作率先开放公测。
+- **2026-08-06** · [Qwen-Image-3.0 正式发布，高清图低至 $0.03](https://aihot.virxact.com/items/cmsh5bwo400rjro280qm4x4is)
+  阿里云 X 宣布图像模型转正：主打生产就绪（4.5K token 长提示词、12 种语言文本渲染），弹性计费高清图 $0.03 起，上架 Model Studio 与 Qwen Cloud。
 - **2026-08-03** · [Qwen3.8-Max 发布](https://qwen.ai/blog?id=qwen3.8)
   阿里官方博客确认：2.4T 参数、1M 上下文；Bloomberg、CNBC 交叉报道；27B 版以 Apache 2.0 开源权重先行（HuggingFace Qwen/Qwen3.8-27B）。7 月预览版条目的存疑随官方发布解除。
 

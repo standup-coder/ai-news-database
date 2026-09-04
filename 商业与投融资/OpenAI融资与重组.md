@@ -4,7 +4,7 @@
 别名: [OpenAI 估值, OpenAI 营利化重组]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [OpenAI, Microsoft, SoftBank, Thrive Capital, Amazon, NVIDIA, Anthropic]
 ---
 
@@ -19,6 +19,17 @@ OpenAI 2015 年以非营利组织创立，2019 年引入「利润上限（capped
 该线索追踪 OpenAI 的融资、估值、治理与重组进程——它是理解整个 AI 行业资本逻辑的第一线索。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-31** · [ChatGPT Ads 年化收入达 10 亿美元并全球扩展](https://aihot.virxact.com/items/cmthb75t6092frodmg7ic1fc0)
+  OpenAI 官方披露，7-21 全量上线的广告业务一个多月即达十亿美元级年化收入并走向全球——免费用户广告变现成为订阅之外的第二营收引擎。
+- **2026-08-20** · [消息称 OpenAI 首席财务官告知员工：公司最迟将于 2027 年上市](https://aihot.virxact.com/items/cmt0s2ems0dkxro2oylebzxob)
+  IT之家援引消息报道，IPO 时间表首次给出硬上限，与 6-08 S-1 机密递交、6-10「一年内上市」表态衔接。
+- **2026-08-17** · [NVIDIA 与 SB Energy 合作锁定俄亥俄州 PORTS-Pike 园区电力容量，OpenAI 将入驻](https://aihot.virxact.com/items/cmsx9jvre05y6romms3bo1umb)
+  黄仁勋官宣与 SB Energy 合作为 OpenAI 建 AI 工厂（其 8-10 已预告联合六大机构投 5000 亿美元建 AI 工厂），OpenAI 自建算力版图继续扩张。
+- **2026-08-11** · [消息称 Anthropic 最快今年 9 月上市，向投资者淡化 AI 模型竞争等挑战](https://aihot.virxact.com/items/cmso58oqr0b7trofwl3dcmz7y)
+  IT之家报道；继 OpenAI 递交 S-1 后，两大前沿实验室同步奔向资本市场。
 
 ### 2026-07
 

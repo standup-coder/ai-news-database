@@ -4,7 +4,7 @@
 别名: [RLHF, DPO, GRPO, 后训练, Post-training]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [OpenAI, Anthropic, DeepSeek, Stanford]
 ---
 
@@ -19,6 +19,11 @@
 该线索追踪后训练方法论的范式演进，是理解模型能力来源的核心线索。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-14** · [蚂蚁百灵与 ASystem 团队打通单机 Agentic RL 后训练闭环](https://aihot.virxact.com/items/cmssf79uf05rwrod09r9ocb2w)
+  蚂蚁百灵官方宣布与 ASystem 团队打通单机可跑的 Agentic RL 后训练闭环——多轮智能体任务的 RL 训练从大厂集群专属走向单机可复现，开源 RL 基础设施门槛继续下探。
 
 ### 2026-07
 

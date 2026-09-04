@@ -4,7 +4,7 @@
 别名: [深度求索, DeepSeek-V3, DeepSeek-R1]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [DeepSeek, 幻方量化]
 ---
 
@@ -22,10 +22,14 @@ DeepSeek（深度求索）是量化基金幻方（High-Flyer）孵化的 AI 实�
 
 ### 2026-08
 
+- **2026-08-31** · [DeepSeek-V4-Flash-Vision-Exp 开源](https://aihot.virxact.com/items/cmth7tmq2067orodmh6g0sxie)
+  V4 系首个多模态模型权重以 MIT 许可上架 Hugging Face（IT之家报道）；官方称多模态 Agent 能力接近 Opus-4.8，并公开覆盖视觉编码器、DFlash Attention、MoE 等模块的最小化 PyTorch 推理实现。
 - **2026-08-21** · [DeepSeek-V4-Flash-Vision-Exp 上线](https://api-docs.deepseek.com/news/news260821/)
   V4 系首个多模态实验版，视觉理解 API 开放（官方公告）；NVIDIA 开发者论坛实测与社区量化权重随即跟进。
 - **2026-08-13** · [DeepSeek V4-Pro 正式版发布并开源](https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/)
-  1.6T 总参旗舰正式版（4 月 preview 转正），延续 MIT 许可；Reuters 报道其同步推进扩张。
+  1.6T 总参旗舰正式版（4 月 preview 转正），延续 MIT 许可；官方 API 更新日志称 Agent 能力大幅增强；Reuters 报道其同步推进扩张。
+- **2026-08-13** · [DeepSeek Harness v0.1 开发者预览版发布](https://aihot.virxact.com/items/cmsrjqqfg02z0ro469zple5jl)
+  官方 X 宣布：MIT 许可开源的智能体框架，基于 Cordis 元框架、「一切皆为插件」（模型/工具/沙箱/编排均可替换），对标 Claude Cowork（IT之家报道）。
 
 ### 2026-07
 
