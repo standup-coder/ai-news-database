@@ -4,7 +4,7 @@
 别名: [ollama]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Ollama, Meta, llama.cpp 社区]
 ---
 
@@ -19,6 +19,11 @@ Ollama 2023 年由前 Docker 员工创立，以「Docker 式体验跑本地大�
 该线索追踪 Ollama 的产品演进与本地推理生态（llama.cpp、量化格式、桌面端应用）的发展。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-01** · [Hugging Face 发布 @huggingface/kernels，提供 207 个 WebGPU 内核用于浏览器本地 AI 推理](https://aihot.virxact.com/items/cmtitozyq04j2ro9ydv3oxgsd)
+  HF 官方博客发布 kernels 库，207 个 WebGPU 内核让浏览器成为零安装的本地推理运行时，本地 AI 的使用入口从命令行进一步下沉到网页端。
 
 ### 2026-07
 

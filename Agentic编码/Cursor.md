@@ -4,7 +4,7 @@
 别名: [Cursor IDE, Anysphere]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Anysphere]
 ---
 
@@ -14,11 +14,31 @@
 
 ## 概述
 
-Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。2026 年 6 月，多方报道称 Anysphere 被 SpaceX 全股收购（⚠️ 真实性待核实，见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
+Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。2026 年 6 月，多方报道称 Anysphere 被 SpaceX 全股收购，该交易已于 8 月 14 日正式完成（早期存疑记录见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
 
 该线索追踪 Cursor 的产品演进、融资与 AI IDE 赛道竞争（对 GitHub Copilot、Windsurf、Claude Code 等）。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-02** · [Cursor 推出 Self-Hosted Machines，云智能体可在企业自有机器上执行](https://aihot.virxact.com/items/cmtkffuf503cbrobqkwhimxmp)
+  官方博客发布 Self-Hosted Machines：云智能体可调度到企业自有机器运行，补齐数据合规与私有化部署短板，与 Devin Outposts 的私有环境路线正面相撞。
+
+### 2026-08
+
+- **2026-08-29** · [OpenAI 决定终止向 Cursor 提供模型，因 SpaceX 收购后合规风险](https://aihot.virxact.com/items/cmtdqc5oj03wzro2mgyc5a49x)
+  OpenAI 官方宣布 11 月 12 日起终止向 Cursor 供应模型，理由是 SpaceX 收购带来的合规风险，两大 AI 阵营从供应商关系转向对抗。
+- **2026-08-29** · [Cursor 回应 OpenAI 将封禁其模型访问](https://aihot.virxact.com/items/cmtdssm0205s8ro2mzzv9s9kq)
+  CEO Michael Truell 在 X 回应断供决定；被 OpenAI 断供后，Cursor 的模型组合将更依赖 xAI Grok 与自研 Composer 模型栈。
+- **2026-08-17** · [Cursor 推出 Origin 代码托管服务，作为 GitHub 的替代方案](https://aihot.virxact.com/items/cmsxsvb5s0a4troz0z2q2nu3h)
+  Cursor 上线自有代码托管服务 Origin，向版本控制上游延伸、绕开 GitHub，Hacker News 将其解读为 AI 编码公司自建全栈基础设施的信号。
+- **2026-08-14** · [Cursor 正式被 SpaceX 收购](https://aihot.virxact.com/items/cmst3joqo03pwro0658o4g1m3)
+  官方博客确认交易正式完成，6 月官宣的全股收购落定，Cursor 从独立公司成为 SpaceX 旗下 AI 编码业务主体。
+- **2026-08-13** · [Cursor 推出 builds：云智能体启动速度提升至 3 倍](https://aihot.virxact.com/items/cmsruj6ik02dfrozeclkuve05)
+  官方博客发布 builds，云智能体环境启动速度提升至 3 倍，并行后台 agent 的等待成本大幅降低。
+- **2026-08-12** · [Cursor 与 SpaceXAI 联合发布 Grok 4.6](https://aihot.virxact.com/items/cmsqf39o0015groxvnc7oiwop)
+  Cursor Blog 与 SpaceXAI 联合发布 Grok 4.6（与 xAI 官宣同日），长时运行智能体能力强化，SpaceX 系模型开始整合进 Cursor 的模型栈。
 
 ### 2026-07
 

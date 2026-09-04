@@ -4,7 +4,7 @@
 别名: [Model Context Protocol, MCP]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Anthropic, OpenAI, Google, Microsoft]
 ---
 
@@ -16,9 +16,14 @@
 
 Model Context Protocol（MCP）是 Anthropic 于 2024 年 11 月开源的开放协议，标准化 LLM 应用连接外部数据源与工具的方式：服务端暴露 tools/resources/prompts，客户端（Claude Desktop、IDE、Agent 框架）统一接入。它解决了「每个模型 × 每个工具都要写一遍集成」的 M×N 问题。
 
-2025 年 OpenAI、Google、Microsoft 相继宣布支持，MCP 事实上赢得了 Agent 工具层的标准之争，社区服务器数量以千计。2026 年 7 月的规范修订将协议重构为 stateless、可缓存的 Web 式架构，目标是支撑全球可扩展的企业级 Agent 工具调用。
+2025 年 OpenAI、Google、Microsoft 相继宣布支持，MCP 事实上赢得了 Agent 工具层的标准之争，社区服务器数量以千计。2026 年 7 月的规范修订将协议重构为 stateless、可缓存的 Web 式架构，目标是支撑全球可扩展的企业级 Agent 工具调用；同年 8 月 Google 联合亚马逊、微软推出 Agent Plugins 规范，工具层标准进入多方竞争阶段。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-06** · [Agent Plugins 1.0.0 发布：谷歌、亚马逊、微软等支持的统一智能体插件规范](https://aihot.virxact.com/items/cmshra4es0oycronk0wcvjv03)
+  Google Developers Blog 发布统一智能体插件规范 Agent Plugins 1.0.0，获谷歌、亚马逊、微软等共同支持——MCP 之外，超巨头开始共建自己的 Agent 工具层标准，协议层竞争再起。
 
 ### 2026-07
 

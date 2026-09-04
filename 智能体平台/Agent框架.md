@@ -4,7 +4,7 @@
 别名: [LangGraph, AutoGen, Microsoft Agent Framework, CrewAI, MAF]
 状态: 活跃
 创建: 2026-08-03
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Microsoft, LangChain, CrewAI]
 ---
 
@@ -19,6 +19,11 @@ Agent 框架是连接大模型能力与实际应用的编排层：负责工具�
 2026 年的关键事件是 Microsoft 将 AutoGen 与 Semantic Kernel 合并为统一的 Microsoft Agent Framework（MAF）并 GA，标志企业级 Agent 编排进入整合期。本线索追踪主流框架的版本演进与格局变化。
 
 ## 时间线
+
+### 2026-08
+
+- **2026-08-07** · [LangChain 推出 Managed Deep Agents 公开测试版](https://aihot.virxact.com/items/cmsj81yyp02cwroo5rcq20vke)
+  LangChain 官方博客宣布托管版 Deep Agents 进入公测，把 LangGraph 系编排能力升级为托管运行时，对标 Anthropic Managed Agents——框架厂商从「卖 SDK」走向「卖托管智能体」。
 
 ### 2026-07
 

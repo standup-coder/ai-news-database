@@ -4,7 +4,7 @@
 别名: [Claude Agent SDK, Claude Code SDK]
 状态: 活跃
 创建: 2026-07-30
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Anthropic]
 ---
 
@@ -19,6 +19,18 @@ Claude Agent SDK 前身是 2025 年 6 月发布的 Claude Code SDK，同年 9 �
 该线索追踪 Anthropic 的 Agent 平台化战略及其与 LangChain、OpenAI Agents SDK 等框架的竞争。2026 年 Anthropic 将 SDK 进一步平台化为 Claude 托管智能体（Managed Agents），并通过收购 Vercept、Stainless 补强 computer use 与 SDK/MCP 工具链。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-02** · [Claude 在 Cowork 和 Claude Code 中支持后台操作电脑](https://aihot.virxact.com/items/cmtkh71ky017vrolly7trswyx)
+  官方 X 宣布 Cowork 与 Claude Code 支持后台操作电脑，computer use 从「前台接管」走向「后台异步执行」，长时间运行的多任务智能体形态进一步成熟。
+
+### 2026-08
+
+- **2026-08-26** · [Claude in Chrome 正式全面上线](https://aihot.virxact.com/items/cmtaej1vz0czhroj2aybdbq26)
+  官方博客宣布浏览器扩展全面可用，浏览器成为 Claude 智能体的常驻执行环境，与 Cowork、Claude Code 构成「桌面-浏览器-终端」三端 Agent 布局。
+- **2026-08-20** · [Claude Platform 正式上线 Computer Use、Skills API 与 Files API，新增浏览器操作工具](https://aihot.virxact.com/items/cmt1z1q5n0c93roovlvh40tew)
+  官方博客宣布平台级 Computer Use、Skills API 与 Files API 正式上线，computer use 从产品功能升级为可编程的平台 API，Agent SDK 的核心能力全面开放给开发者。
 
 ### 2026-05
 

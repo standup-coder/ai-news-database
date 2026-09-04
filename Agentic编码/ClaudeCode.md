@@ -4,7 +4,7 @@
 别名: [Claude Code, Anthropic 编码助手]
 状态: 活跃
 创建: 2026-07-21
-更新: 2026-08-31
+更新: 2026-09-04
 关键角色: [Anthropic]
 ---
 
@@ -19,6 +19,20 @@ Claude Code 是 Anthropic 于 2025 年 2 月推出的 agentic 编码工具，定
 它是 Agentic Coding 这一细分赛道最具代表性的产品之一，其演进（研究预览 → GA → SDK → Subagents/Skills/Hooks/Plugins 生态）清晰折射出「AI 编码从助手走向自主工程师」的产业趋势。
 
 ## 时间线
+
+### 2026-09
+
+- **2026-09-02** · [Claude 在 Cowork 和 Claude Code 中支持后台操作电脑](https://aihot.virxact.com/items/cmtkh71ky017vrolly7trswyx)
+  官方 X 账号宣布 Claude 可在 Cowork 与 Claude Code 中后台操作电脑，编码智能体在跑编码任务的同时并行处理 GUI 操作，computer use 与终端 Agent 正式合流。
+- **2026-09-01** · [Claude Fable 5.1 上线 Claude Code 与 Claude Platform，缓存读取降价 75%](https://aihot.virxact.com/items/cmtj0fqet001lroh9hyk6rqu0)
+  Claude Devs 宣布新一代模型发布即进入 Claude Code，同步将缓存读取价格下调 75%，长会话编码场景的边际成本显著下降。
+
+### 2026-08
+
+- **2026-08-07** · [Claude Code 八月起默认自动模式](https://aihot.virxact.com/items/cmsjaksyd04hlroo5hdy2qd4i)
+  Claude Devs 官宣 8 月起自动模式成为默认：权限确认大幅减少，Agent 自主执行从可选项变成产品的默认形态。
+- **2026-08-07** · [Claude Code 会话间可互发消息](https://aihot.virxact.com/items/cmsjdsk6p076rroo561c8askl)
+  官方公布会话间消息传递能力，多个 Claude Code 会话可互相通信协作，多 agent 编排从「主从式」走向「点对点」，随后 Codex 侧也出现同类跨会话工作流讨论。
 
 ### 2026-07
 
