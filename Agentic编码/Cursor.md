@@ -14,7 +14,7 @@
 
 ## 概述
 
-Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。2026 年 6 月，多方报道称 Anysphere 被 SpaceX 全股收购，该交易已于 8 月 14 日正式完成（早期存疑记录见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
+Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉），核心体验包括 Tab 智能补全、Composer 多文件编辑与 Agent 模式。它把「模型能力 × 编辑器交互」打磨到极致，2024–2025 年间成为收入增长最快的开发者工具，也是 Anthropic/OpenAI 模型 API 的最大客户之一。2026 年 6 月 SpaceX 宣布以 600 亿美元全股收购 Anysphere（Reuters），交易于 8 月 14 日正式交割（Yahoo Finance、TNW 报道），Cursor 成为 SpaceX 全资子公司。
 
 该线索追踪 Cursor 的产品演进、融资与 AI IDE 赛道竞争（对 GitHub Copilot、Windsurf、Claude Code 等）。
 
@@ -52,7 +52,7 @@ Cursor 是 Anysphere 公司开发的 AI 原生代码编辑器（VS Code 分叉�
 - **2026-06-16** · [Compile 2026 大会（首届）+ Composer 2.5 上线](https://cursor.com/cn/compile)
   旧金山 Fort Mason 首届旗舰大会，CEO Michael Truell 主题演讲；Composer 2.5 亮相（5 月 18 日已随官方博客发布）。
 - **2026-06-16** · [SpaceX 全股收购 Cursor](https://aihot.virxact.com/items/cmqgp6tn201qhslic36a6ka8v)
-  CEO Michael Truell 在 Compile 大会当日官宣 SpaceX 以全股票方式收购 Cursor（Anysphere）、「联合构建有用 AI」；距估值 500 亿美元融资传闻仅两个月，是 AI 编码赛道迄今最大的并购之一。⚠️ 并购规模极端待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)）；但 04-21 训练合作、06-09 收购选择权与本次官宣在时间线上相互印证。
+  CEO Michael Truell 在 Compile 大会当日官宣 SpaceX 以全股票方式收购 Cursor（Anysphere）、「联合构建有用 AI」；Reuters 报道交易作价 600 亿美元，距估值 500 亿美元融资传闻仅两个月。✅ 已核实（2026-09-04：Reuters + Yahoo Finance/TNW 多源确认，08-14 正式交割）。
 - **2026-06（大会）** · Composer 3 预告
   支持递归子 agent（agent 可生成 agent）；计划 2026 秋季 GA，已开放候补名单。（参数量等细节见待核实清单。）
 - **2026-06-09** · [Cursor 欧洲总部落子伦敦，SpaceX 手握 600 亿美元收购选择权](https://aihot.virxact.com/items/cmq69650406cmsl5iwf8zszhp)

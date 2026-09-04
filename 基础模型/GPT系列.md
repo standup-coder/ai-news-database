@@ -36,7 +36,7 @@ GPT（Generative Pre-trained Transformer）系列是 OpenAI 的核心模型资�
 - **2026-08-18** · [OpenAI：在「关键网络能力」时代放缓模型开发节奏](https://aihot.virxact.com/items/cmsz0hbsg05l0ro204080cotv)
   官方表态因前沿模型触及 Critical 级网络安全能力而主动放慢开发与发布节奏，能力上限与部署安全的权衡进入公开议程。
 - **2026-08-12** · [xAI 发布 Grok 4.6，强化长时运行智能体能力](https://aihot.virxact.com/items/cmsqabu0f001krouc6sfhic2d)
-  xAI 官方发布新一代旗舰 Grok 4.6，主打长时运行 Agent 能力；Cursor 同日联合发布接入，中文评测称其体验逼近 Claude Fable 5。
+  官方公告 x.ai/news/grok-4-6 确认（✅ 2026-09-04 核验；品牌署名 SpaceXAI LLC，docs.x.ai 显示 08-19 上 Bedrock、08-21 上 Gemini Enterprise），主打长时运行 Agent；Cursor 同日联合发布接入，距 Grok 4.5 仅 35 天。
 - **2026-08-10** · [GPT-5.6 Cyber 面向网络防御者开放](https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/)
   经 Daybreak 计划向经审查的防御者优先提供前沿网络安全模型，上线 Deployment Safety Hub；CNBC、Axios 报道。前沿模型按安全用途分级开放的新模式。
 - **2026-08-07** · [OpenAI 将 Astra 列为首个「关键」网络安全模型，发布因风险延缓](https://aihot.virxact.com/items/cmsjbn0pq058vroo55qpgw1si)

@@ -52,7 +52,7 @@
 - **2026-06-18** · [Transformer 共同作者 Noam Shazeer 加入 OpenAI](https://aihot.virxact.com/items/cms3g97yf01kurondgk2tzruf)
   Transformer 论文联合作者、Gemini 联合负责人；Google 2024 年花 27 亿美元将其从 Character.AI 拉回，现再次离职（OpenAI 首席研究官 Mark Chen 官宣）。
 - **2026-06-16** · [SpaceX 全股收购 Cursor](https://aihot.virxact.com/items/cmqgp6tn201qhslic36a6ka8v)
-  Cursor CEO Michael Truell 官宣被 SpaceX 全股收购「联合构建有用 AI」；IT之家 6-9 已报道 SpaceX 手握 600 亿美元收购选择权——继 2 月吞并 xAI 后 SpaceX 再收 AI 编程独角兽。⚠️ 两笔 SpaceX 并购规模极端，真实性均待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)）。
+  Cursor CEO Michael Truell 官宣被 SpaceX 全股收购「联合构建有用 AI」；Reuters 报道作价 600 亿美元，IT之家 6-9 已报道收购选择权——继 2 月吞并 xAI 后 SpaceX 再收 AI 编程独角兽。✅ 已核实（2026-09-04：Reuters + Yahoo Finance 确认 08-14 正式交割）。
 - **2026-06-15** · [Salesforce 以 36 亿美元收购 AI 客服平台 Fin](https://aihot.virxact.com/items/cmqfc38a1005fsl2a21dido83)
   TechCrunch 报道，AI 客服赛道迄今最大并购之一。
 - **2026-06-11** · [OpenAI 收购 Ona](https://aihot.virxact.com/items/cmq9q3mrj0e8jslld20gniuzv)
@@ -84,7 +84,7 @@
 - **2026-02-24** · [Anthropic 收购 Vercept](https://aihot.virxact.com/items/cmnw1xugc00eqslc37cpu40e9)
   官方 Newsroom 公告收购 Vercept，以推进 Claude 的 computer use 能力。
 - **2026-02-02** · [SpaceX 收购 xAI](https://aihot.virxact.com/items/cmnwsvjeh005aslteqk9i56ip)
-  xAI 官方宣布被 SpaceX 收购，Musk 将 xAI 并入航天体系（合并后以「SpaceXAI」名义活动）——AI 军备竞赛出现「行星尺度」玩家。⚠️ 合并体估值 1.25 万亿美元规模极端，真实性待核实（见 [docs/2026待核实清单](../docs/2026待核实清单.md)；旁证：x.ai 官网署名已变更 SpaceXAI、06-27 注册商标）。
+  xAI 官方宣布被 SpaceX 收购，全股合并，合并体估值约 1.25 万亿美元（SpaceX 约 1 万亿 + xAI 约 2500 亿，Washington Post 口径）；7 月更名 SpaceXAI——AI 军备竞赛出现「行星尺度」玩家。✅ 已核实（2026-09-04：Washington Post、D&O Diary 法律评论等多源确认，交割于 2026 年 2 月初完成）。
 
 ### 2026-01
 
