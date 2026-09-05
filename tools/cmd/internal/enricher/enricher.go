@@ -1,3 +1,4 @@
+// Package enricher 借助 LLM 生成摘要与质量评分。
 package enricher
 
 import (

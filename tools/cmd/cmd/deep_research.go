@@ -136,9 +136,6 @@ var (
 
 	phaseStyle = lipgloss.NewStyle().
 			Foreground(lipgloss.Color("208"))
-
-	successStyle = lipgloss.NewStyle().
-			Foreground(lipgloss.Color("82"))
 )
 
 func printResearchHeader(topic string) {

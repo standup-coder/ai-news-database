@@ -44,7 +44,7 @@ func (c *GenericCrawler) Fetch() ([]Item, error) {
 	if err != nil {
 		return nil, fmt.Errorf("请求 %s 失败: %w", c.listURL, err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("页面返回状态码 %d", resp.StatusCode)

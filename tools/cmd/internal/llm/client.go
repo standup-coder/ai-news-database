@@ -1,3 +1,4 @@
+// Package llm 提供统一的 LLM 客户端：对话、嵌入、重试与退避。
 package llm
 
 import (
@@ -114,7 +115,7 @@ func (c *Client) doRequest(ctx context.Context, url string, reqBody any) ([]byte
 		if err != nil {
 			return fmt.Errorf("请求失败: %w", err)
 		}
-		defer resp.Body.Close()
+		defer func() { _ = resp.Body.Close() }()
 
 		body, err = io.ReadAll(resp.Body)
 		if err != nil {

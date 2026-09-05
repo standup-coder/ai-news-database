@@ -80,12 +80,10 @@ func (r *Researcher) searchWebWithRetry(query string, maxRetries int) ([]search.
 		}
 		lastErr = err
 		if attempt < maxRetries-1 {
-			select {
-			case <-time.After(backoff):
-				backoff *= 2
-				if backoff > 30*time.Second {
-					backoff = 30 * time.Second
-				}
+			time.Sleep(backoff)
+			backoff *= 2
+			if backoff > 30*time.Second {
+				backoff = 30 * time.Second
 			}
 		}
 	}
@@ -98,7 +96,7 @@ func (r *Researcher) searchWeb(query string) ([]search.SearchResult, error) {
 	if err != nil {
 		return nil, err
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != 200 {
 		return nil, fmt.Errorf("search failed: %d", resp.StatusCode)

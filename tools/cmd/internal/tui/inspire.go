@@ -1,3 +1,4 @@
+// Package tui 提供基于 Bubble Tea 的终端交互界面。
 package tui
 
 import (
@@ -102,7 +103,7 @@ func (m InspireModel) fetchCmd() tea.Cmd {
 		if err != nil {
 			return inspireErrMsg{err: fmt.Errorf("请求 HN API 失败: %w", err)}
 		}
-		defer resp.Body.Close()
+		defer func() { _ = resp.Body.Close() }()
 
 		if resp.StatusCode != http.StatusOK {
 			return inspireErrMsg{err: fmt.Errorf("HN API 返回状态码 %d", resp.StatusCode)}

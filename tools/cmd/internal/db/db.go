@@ -1,3 +1,4 @@
+// Package db 提供基于 SQLite 的本地存储与 FTS5 中文检索。
 package db
 
 import (

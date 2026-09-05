@@ -1,3 +1,4 @@
+// Package official 维护内置官方源的注册表与抓取器。
 package official
 
 import (

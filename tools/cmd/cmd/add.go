@@ -1,3 +1,4 @@
+// Package cmd 实现 AI News Database CLI 的全部子命令注册。
 package cmd
 
 import (

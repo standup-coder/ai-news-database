@@ -107,7 +107,7 @@ func TestRetryWithBackoff_ContextCancel(t *testing.T) {
 		t.Fatal("expected error")
 	}
 	if callCount != 1 {
-		t.Errorf("expected 1 call (context cancelled), got %d", callCount)
+		t.Errorf("expected 1 call (context canceled), got %d", callCount)
 	}
 }
 

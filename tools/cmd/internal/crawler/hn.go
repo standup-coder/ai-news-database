@@ -40,7 +40,7 @@ func (c *HNCrawler) Fetch() ([]Item, error) {
 	if err != nil {
 		return nil, fmt.Errorf("请求 HN API 失败: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("HN API 返回状态码 %d", resp.StatusCode)

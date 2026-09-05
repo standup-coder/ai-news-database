@@ -44,7 +44,7 @@ func (r *JinaReader) Fetch(url string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("Jina Reader 请求失败: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {

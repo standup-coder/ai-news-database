@@ -1,3 +1,4 @@
+// Package subscription 管理订阅源配置的加载与维护。
 package subscription
 
 import (

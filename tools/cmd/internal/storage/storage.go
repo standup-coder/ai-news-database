@@ -1,3 +1,4 @@
+// Package storage 管理订阅、收藏等用户数据的持久化。
 package storage
 
 import (

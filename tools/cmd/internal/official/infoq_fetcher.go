@@ -45,7 +45,7 @@ func (f *InfoQFetcher) Fetch() ([]search.SearchResult, error) {
 	if err != nil {
 		return nil, fmt.Errorf("网络请求失败: %w\n\n建议:\n1. 检查网络连接\n2. 直接访问: %s", err, f.url)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("请求失败，状态码: %d\n\n建议:\n直接访问: %s", resp.StatusCode, f.url)

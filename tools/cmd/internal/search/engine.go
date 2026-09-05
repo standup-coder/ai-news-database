@@ -1,3 +1,4 @@
+// Package search 提供本地全文检索引擎封装。
 package search
 
 import (
@@ -84,7 +85,7 @@ func (e *Engine) Search(siteURL string) ([]SearchResult, error) {
 	if err != nil {
 		return nil, fmt.Errorf("网络请求失败: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, fmt.Errorf("搜索请求失败，状态码: %d", resp.StatusCode)

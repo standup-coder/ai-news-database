@@ -1,3 +1,4 @@
+// Package config 管理应用配置的加载、保存与加密。
 package config
 
 import (

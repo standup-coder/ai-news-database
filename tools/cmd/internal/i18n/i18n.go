@@ -1,3 +1,4 @@
+// Package i18n 提供界面多语言文案。
 package i18n
 
 import "sync"

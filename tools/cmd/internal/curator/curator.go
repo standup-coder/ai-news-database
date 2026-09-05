@@ -1,3 +1,4 @@
+// Package curator 提供每日必读推荐与策展能力。
 package curator
 
 import (

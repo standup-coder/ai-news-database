@@ -1,3 +1,4 @@
+// Package deep_research 实现多阶段深度研究管线：规划、检索与报告生成。
 package deep_research
 
 import (

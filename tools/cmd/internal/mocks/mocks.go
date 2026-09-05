@@ -1,3 +1,4 @@
+// Package mocks 提供测试用的接口 mock 实现。
 package mocks
 
 import (

@@ -1,3 +1,4 @@
+// Package crawler 实现多源抓取器工厂：HN、Reddit、V2EX、通用与 JinaReader。
 package crawler
 
 import "ai-news-database/internal/official"

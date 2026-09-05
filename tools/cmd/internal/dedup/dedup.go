@@ -1,3 +1,4 @@
+// Package dedup 提供文章去重能力。
 package dedup
 
 import (

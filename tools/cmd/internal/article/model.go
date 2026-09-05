@@ -1,3 +1,4 @@
+// Package article 定义文章数据模型与规范化逻辑。
 package article
 
 import "time"

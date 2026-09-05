@@ -1,3 +1,4 @@
+// Package logger 提供统一的日志输出。
 package logger
 
 import (

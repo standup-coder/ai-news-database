@@ -1,3 +1,4 @@
+// Package rag 提供本地向量检索（SQLite + 嵌入）能力。
 package rag
 
 import (
