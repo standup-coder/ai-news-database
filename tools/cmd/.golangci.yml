@@ -60,7 +60,7 @@ linters:
     misspell:
       locale: US
     nakedret:
-      max-function-length: 40
+      max-func-lines: 40
   exclusions:
     rules:
       - path: _test\.go
