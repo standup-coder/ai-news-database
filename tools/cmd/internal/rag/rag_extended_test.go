@@ -47,7 +47,13 @@ func newTestRAG(t *testing.T) (*RAG, *db.DB, func()) {
 
 	oldHome := os.Getenv("HOME")
 	os.Setenv("HOME", tmpDir)
-	t.Cleanup(func() { os.Setenv("HOME", oldHome) })
+	// Windows 上 os.UserHomeDir() 读 USERPROFILE，两者都要指向临时目录
+	oldUserProfile := os.Getenv("USERPROFILE")
+	os.Setenv("USERPROFILE", tmpDir)
+	t.Cleanup(func() {
+		os.Setenv("HOME", oldHome)
+		os.Setenv("USERPROFILE", oldUserProfile)
+	})
 
 	database, err := db.New()
 	if err != nil {

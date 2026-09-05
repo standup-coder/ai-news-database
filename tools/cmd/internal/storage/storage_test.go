@@ -13,7 +13,13 @@ func TestStorageLoadAndSave(t *testing.T) {
 	originalHome := os.Getenv("HOME")
 	tmpHome := t.TempDir()
 	os.Setenv("HOME", tmpHome)
-	defer os.Setenv("HOME", originalHome)
+	// Windows 上 os.UserHomeDir() 读 USERPROFILE，两者都要指向临时目录
+	originalUserProfile := os.Getenv("USERPROFILE")
+	os.Setenv("USERPROFILE", tmpHome)
+	defer func() {
+		os.Setenv("HOME", originalHome)
+		os.Setenv("USERPROFILE", originalUserProfile)
+	}()
 
 	s, err := New()
 	if err != nil {
