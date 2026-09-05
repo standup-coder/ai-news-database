@@ -52,7 +52,9 @@ OpenAI 2015 年以非营利组织创立，2019 年引入「利润上限（capped
 ### 2026-05
 
 - **2026-05-28** · [Anthropic Series H 关闭，650 亿美元 / 9650 亿估值](https://www.reuters.com/business/anthropic-raises-65-billion-now-valued-965-billion-2026-05-28/)
-  领投 Altimeter、Dragoneer、Greenoaks、Sequoia；估值超越 OpenAI 当时水平。（注：Anthropic ARR 增速数据存疑，见待核实清单。）
+  领投 Altimeter、Dragoneer、Greenoaks、Sequoia；估值超越 OpenAI 当时水平。
+- **2026-05** · Anthropic ARR 达 470 亿美元，反超 OpenAI（CNBC 口径）
+  2025 全年约 100 亿美元收入，5 月年化达 470 亿；OpenAI 同期约 240-250 亿。注意口径差异：OpenAI 扣除云厂商分成而 Anthropic 不扣。✅ 已核实（2026-09-04，CNBC/Reuters/Bloomberg 多源）。
 - **2026-05-16** · [OpenAI 大规模重组，总裁 Brockman 挂帅](https://aihot.virxact.com/items/cmp81gwxx0ezsslnze6fa6wif)
   IT之家报道，总裁 Greg Brockman 在新一轮组织重组中统帅挂帅，架构向 IPO 对齐。
 - **2026-05-15** · [纳德拉：微软对 OpenAI 累计投入已超 1000 亿美元](https://aihot.virxact.com/items/cmp6ba93100fbslnzmec29858)

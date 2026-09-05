@@ -210,10 +210,12 @@ def main() -> None:
     if not items:
         raise SystemExit("未解析到任何大事记条目，请检查 _2026/_2025大事记.md 格式")
 
-    (ROOT / "feed.xml").write_text(build_feed(items, repo, args.site_url), encoding="utf-8")
+    feed = build_feed(items, repo, args.site_url)
+    (ROOT / "feed.xml").write_text(feed, encoding="utf-8")
     site_dir = ROOT / "site"
     site_dir.mkdir(exist_ok=True)
     (site_dir / "index.html").write_text(build_site(items, repo, args.site_url), encoding="utf-8")
+    (site_dir / "feed.xml").write_text(feed, encoding="utf-8")  # Pages 部署物需自带 feed
     refresh_readme(items, repo)
     print(f"✓ feed.xml（{min(len(items), FEED_SIZE)} 条）+ site/index.html + README 最近大事已生成")
 

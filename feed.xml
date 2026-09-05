@@ -6,7 +6,7 @@
     <description>持续沉淀 AI 高质量新闻与重点事件的中文 Markdown 时间线库——年度重点事件索引。</description>
     <language>zh-CN</language>
     <atom:link href='https://standup-coder.github.io/ai-news-database/feed.xml' rel='self' type='application/rss+xml' xmlns:atom='http://www.w3.org/2005/Atom'/>
-    <lastBuildDate>Fri, 04 Sep 2026 14:00:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 04:24:55 +0000</lastBuildDate>
     <item>
       <title>2026-09-03 · OpenAI 发布 GPT-6 Astra 并公布安全概览</title>
       <link>https://aihot.virxact.com/items/cmtm02uu60t2arow5vd3nq4gi</link>
@@ -386,6 +386,13 @@
       <description>主题「万物一体」。 相关线索：开源模型与生态/国产大模型群像</description>
     </item>
     <item>
+      <title>2026-05 · Anthropic ARR 达 470 亿美元反超 OpenAI</title>
+      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2026大事记.md</link>
+      <guid isPermaLink='false'>ainews-2026-05-25aaac177f</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <description>CNBC 口径；注意云厂商分成口径差异。✅ 已核实。 相关线索：商业与投融资/OpenAI融资与重组</description>
+    </item>
+    <item>
       <title>2026-04-29 · Anthropic 考虑 9000 亿美元以上估值新融资（Bloomberg）</title>
       <link>https://www.bloomberg.com/news/articles/2026-04-29/anthropic-considering-funding-offers-at-over-900-billion-value</link>
       <guid isPermaLink='false'>ainews-2026-04-29-7416463843</guid>
@@ -540,6 +547,13 @@
       <description>Anthropic Series G 关闭，300 亿美元 / 3800 亿估值 相关线索：商业与投融资/OpenAI融资与重组</description>
     </item>
     <item>
+      <title>2026-02-11 · Musk 宣布 xAI 重组，联创全部离职</title>
+      <link>https://www.cnbc.com/2026/02/11/musk-announces-xai-re-org-following-key-departures-spacex-merger.html</link>
+      <guid isPermaLink='false'>ainews-2026-02-11-9c13ad421e</guid>
+      <pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate>
+      <description>SpaceX 合并后 11 位联创零留存，创业班底不复存在。✅ 已核实。 相关线索：商业与投融资/AI人才与并购潮</description>
+    </item>
+    <item>
       <title>2026-02-11 · 智谱 GLM-5 发布并开源</title>
       <link>https://www.jiemian.com/article/14007254.html</link>
       <guid isPermaLink='false'>ainews-2026-02-11-da20945880</guid>
@@ -692,20 +706,6 @@
       <guid isPermaLink='false'>ainews-2025-08-173611b891</guid>
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
       <description>实时 720p/24fps 交互式世界生成，环境一致性保持数分钟、支持文本事件注入，与 SIMA 智能体形成「世界模型训练 Agent」闭环，被视为世界模型路线里程碑。 相关线索：世界模型/Genie</description>
-    </item>
-    <item>
-      <title>2025-07 · 美国发布《赢得 AI 竞赛：美国 AI 行动计划》</title>
-      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
-      <guid isPermaLink='false'>ainews-2025-07-ea3b0065de</guid>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <description>特朗普政府以「加速创新、基建先行、国际主导」取代拜登时期安全优先框架，放松监管、扩大算力出口；同期欧盟 GPAI 行为准则落地执行。 相关线索：AI安全与对齐/AI监管政策</description>
-    </item>
-    <item>
-      <title>2025-07 · Perplexity 发布 AI 浏览器 Comet</title>
-      <link>https://github.com/standup-coder/ai-news-database/blob/main/_2025大事记.md</link>
-      <guid isPermaLink='false'>ainews-2025-07-d5012f0ae0</guid>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <description>内置 Agent 能力、可代替用户执行浏览任务（订票、比价、总结），AI 搜索公司向「Agentic 浏览器」演进。 相关线索：AI搜索与信息获取/Perplexity</description>
     </item>
 </channel>
 </rss>

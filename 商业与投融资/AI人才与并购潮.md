@@ -83,6 +83,8 @@
 
 - **2026-02-24** · [Anthropic 收购 Vercept](https://aihot.virxact.com/items/cmnw1xugc00eqslc37cpu40e9)
   官方 Newsroom 公告收购 Vercept，以推进 Claude 的 computer use 能力。
+- **2026-02-11** · [Musk 宣布 xAI 重组，最后两位联创 Jimmy Ba 与 Tony Wu 离职](https://www.cnbc.com/2026/02/11/musk-announces-xai-re-org-following-key-departures-spacex-merger.html)
+  CNBC 报道：SpaceX 合并后的重组触发最后一批创始成员出走——至 3 月底 11 位联创全部离开（TNW），2023 年创业班底在并入 SpaceX 后不复存在；首席工程师 Babuschkin 已于 2025 年先期离职创办 AI 安全风投。✅ 已核实（2026-09-04）。
 - **2026-02-02** · [SpaceX 收购 xAI](https://aihot.virxact.com/items/cmnwsvjeh005aslteqk9i56ip)
   xAI 官方宣布被 SpaceX 收购，全股合并，合并体估值约 1.25 万亿美元（SpaceX 约 1 万亿 + xAI 约 2500 亿，Washington Post 口径）；7 月更名 SpaceXAI——AI 军备竞赛出现「行星尺度」玩家。✅ 已核实（2026-09-04：Washington Post、D&O Diary 法律评论等多源确认，交割于 2026 年 2 月初完成）。
 
