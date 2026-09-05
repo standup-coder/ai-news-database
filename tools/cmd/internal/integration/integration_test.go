@@ -26,6 +26,8 @@ func setupTestDB(t *testing.T) *db.DB {
 	tmpDir := t.TempDir()
 	origHome := os.Getenv("HOME")
 	t.Setenv("HOME", tmpDir)
+	// Windows 上 os.UserHomeDir() 读 USERPROFILE，需一并指向临时目录
+	t.Setenv("USERPROFILE", tmpDir)
 	t.Cleanup(func() { os.Setenv("HOME", origHome) })
 
 	database, err := db.New()
@@ -347,6 +349,8 @@ func TestIntegration_ConfigCrypto(t *testing.T) {
 	tmpDir := t.TempDir()
 	origHome := os.Getenv("HOME")
 	t.Setenv("HOME", tmpDir)
+	// Windows 上 os.UserHomeDir() 读 USERPROFILE，需一并指向临时目录
+	t.Setenv("USERPROFILE", tmpDir)
 	t.Cleanup(func() { os.Setenv("HOME", origHome) })
 
 	// 保存带 API Key 的配置（动态生成占位值，避免硬编码凭据形态的字符串）
