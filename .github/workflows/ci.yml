@@ -67,7 +67,7 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v7
+        uses: golangci/golangci-lint-action@v9
         with:
           version: v2.13 # 固定 v2 线：配置已迁移至 v2 格式，latest 解析出的旧二进制无法处理新工具链
           args: --timeout=5m
