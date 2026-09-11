@@ -4,7 +4,8 @@ updates:
     directory: "/tools/cmd"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 10
+    # 停用自动版本 PR：仓库策略「只保留 main 一个分支」，依赖升级改为手动
+    open-pull-requests-limit: 0
     labels:
       - "dependencies"
       - "automated"
@@ -17,7 +18,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
     labels:
       - "github-actions"
       - "automated"
